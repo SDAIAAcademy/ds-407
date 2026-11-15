@@ -359,6 +359,366 @@
       "level": "understand",
       "pool": "practice",
       "weight": 1
+    },
+    {
+      "id": "q-calib-01",
+      "type": "single",
+      "prompt": "A draft names vessel masters and their mobile numbers in a table. Fixing it changes no figure and no recommendation. Under the unit's severity scale, how is it rated?",
+      "options": [
+        "Not a finding: it is the data protection officer's matter",
+        "Minor: it is presentation, like a label",
+        "Major: personal data is serious but the decision stands",
+        "Critical: the output cannot leave the unit as it is"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "The scale makes a finding critical when the decision changes or when the output cannot leave the unit; personal data in an output is the second case.",
+      "misconceptions": [
+        "Hands the finding to someone else instead of rating it; the reviewer still blocks the release",
+        "Rates by the effect on the numbers only and forgets the clause about release",
+        "Invents a middle rating for findings that feel serious but leave the numbers alone",
+        ""
+      ],
+      "lo": [
+        "LO2"
+      ],
+      "day": "day2",
+      "session": 1,
+      "slide": "severity-scale",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-calib-02",
+      "type": "single",
+      "prompt": "Fixing one flaw moves an estimated effect from -5.36 hours to -1.37; the draft recommends action only at -2 hours or more. Fixing a second flaw moves it on to -0.94. How do the two flaws rate?",
+      "options": [
+        "First critical, second major",
+        "First major, second critical: the second leaves the smaller effect",
+        "Both critical: both move the estimate",
+        "Both major: neither alone gives the final figure"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "The first fix alone takes the effect below the decision threshold, so the decision changes; the second changes the size, not the decision.",
+      "misconceptions": [
+        "",
+        "Rates by the final figure, not by what each fix does to the decision",
+        "Treats any change in the estimate as critical, so the scale stops separating findings",
+        "Asks each flaw to explain the whole gap, which no single flaw has to do"
+      ],
+      "lo": [
+        "LO2"
+      ],
+      "day": "day2",
+      "session": 1,
+      "slide": "fix-one-at-a-time",
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-calib-03",
+      "type": "single",
+      "prompt": "Two reviewers rate the same six findings and differ by two levels on one of them. What should the calibration session produce?",
+      "options": [
+        "An average of the two ratings for that finding",
+        "A sentence added to the checklist that would have prevented the gap",
+        "A note that the two reviewers see things differently",
+        "The senior reviewer's rating, recorded as final"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "A large gap shows a checklist item that admits two readings; changing its wording is what makes the next review agree.",
+      "misconceptions": [
+        "Splits the difference, which is right for neither reading",
+        "",
+        "Records the disagreement without changing anything that caused it",
+        "Settles one case by seniority and leaves the ambiguity for the next"
+      ],
+      "lo": [
+        "LO1",
+        "LO2"
+      ],
+      "day": "day2",
+      "session": 1,
+      "slide": "disagreement-to-wording",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-audit-01",
+      "type": "single",
+      "prompt": "An assisted analysis used the approved assistant, re-ran every number and disclosed the use. The data sent to the assistant were the names and shifts of pilots. What does the audit record?",
+      "options": [
+        "No breach: the work was verified and disclosed",
+        "A breach of the disclosure rule",
+        "A breach of the data rule; tell the data protection officer and redo on anonymised data",
+        "A minor note for the analyst's feedback"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Restricted personal data left the authority's control; verification and disclosure do not undo that, and the officer must be told.",
+      "misconceptions": [
+        "Lets right figures and an honest disclosure excuse what was sent",
+        "The use was disclosed; the problem is what the assistant was given",
+        "",
+        "Downgrades a data breach to a development point"
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": "day2",
+      "session": 2,
+      "slide": "breach-table",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-audit-02",
+      "type": "single",
+      "prompt": "An assisted analysis reports 18.4% and has no verification record. You recompute 47.7% from the authority's data. What action does the audit table record?",
+      "options": [
+        "Correct the figure to 47.7% in the released paper",
+        "Ask the analyst to add a verification record",
+        "Note it for the next quarter's audit",
+        "Withdraw the figure, then re-run and re-review the analysis"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "A released figure that the data contradict must be withdrawn; the auditor's recomputation is a check, not a reviewed replacement.",
+      "misconceptions": [
+        "Releases the auditor's own number without the review the original lacked",
+        "Adds paperwork to a figure already known to be wrong",
+        "Leaves a wrong figure in circulation for a quarter",
+        ""
+      ],
+      "lo": [
+        "LO3",
+        "LO2"
+      ],
+      "day": "day2",
+      "session": 2,
+      "slide": "recompute",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-audit-03",
+      "type": "single",
+      "prompt": "An audit of five assisted analyses finds two with no verification record. What is the best change to propose?",
+      "options": [
+        "No review of assisted work starts without its verification record",
+        "Warn the two analysts in writing",
+        "Ban the assistant until the next audit",
+        "Audit every assisted analysis from now on"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Two of five points at the process: making the record a condition of review catches it every time, before release.",
+      "misconceptions": [
+        "",
+        "Treats a process gap as two personal failings, which teaches the unit to hide assistant use",
+        "Removes a tool the rules already allow with conditions",
+        "Multiplies audit hours instead of fixing the step that let the gap through"
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": "day2",
+      "session": 2,
+      "slide": "audit-to-rule",
+      "level": "evaluate",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-feedback-01",
+      "type": "single",
+      "prompt": "A reviewer found seven things in a new analyst's notebook, from a missing comparison group to variable names. How many should the feedback conversation raise?",
+      "options": [
+        "All seven, so nothing is hidden",
+        "About three that show a pattern in her reasoning",
+        "None: send the review notes instead",
+        "Only the most severe one"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Three findings that share a reasoning gap are what she can remember and act on; the rest stay in the review notes.",
+      "misconceptions": [
+        "Confuses the review of the analysis with feedback to the person",
+        "",
+        "Notes tell her what was wrong, not how to reason next time",
+        "Leaves out patterns she needs to see together"
+      ],
+      "lo": [
+        "LO4"
+      ],
+      "day": "day2",
+      "session": 3,
+      "slide": "seven-to-three",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-feedback-02",
+      "type": "single",
+      "prompt": "Which part of a feedback note does most to build an analyst's skill on a new problem?",
+      "options": [
+        "The observation: the cell and the number",
+        "The effect on the decision",
+        "The reasoning: the question she did not ask herself",
+        "The praise that opens the note"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "The reasoning line names a question she can ask on any future problem; the other parts are tied to this notebook.",
+      "misconceptions": [
+        "Locates this error but does not carry to the next problem",
+        "Shows why it mattered here without saying how to avoid it",
+        "",
+        "Helps the tone but teaches nothing unless it is specific"
+      ],
+      "lo": [
+        "LO4"
+      ],
+      "day": "day2",
+      "session": 3,
+      "slide": "four-parts",
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-feedback-03",
+      "type": "single",
+      "prompt": "A new analyst's lowest skill is verifying assisted work. Why does her three-month plan end with an analysis done without the assistant?",
+      "options": [
+        "To measure how fast she is without it",
+        "Because juniors may not use the assistant",
+        "To give her reviewer a simpler analysis",
+        "She cannot check work she cannot do herself"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Verifying an assistant's output needs the skill it replaces; unaided work builds and shows that skill.",
+      "misconceptions": [
+        "Turns a skill goal into a speed test",
+        "The rules allow juniors to use the approved assistant with conditions",
+        "Unaided work is reviewed at its normal level",
+        ""
+      ],
+      "lo": [
+        "LO4",
+        "LO3"
+      ],
+      "day": "day2",
+      "session": 3,
+      "slide": "unaided-in-plan",
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-rota-01",
+      "type": "single",
+      "prompt": "Level 3 reviews take 10 senior hours and level 4 reviews 16, plus a second reviewer. Next quarter has 12 level 3 and 4 level 4 analyses. How many senior hours do they need?",
+      "options": [
+        "184 hours",
+        "152 hours",
+        "120 hours",
+        "216 hours"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "12 × 10 + 4 × 16 = 184; the second reviewer's hours need not be a senior's.",
+      "misconceptions": [
+        "",
+        "Counts level 4 at the level 3 rate",
+        "Leaves out the level 4 reviews",
+        "Charges the second reviewers' hours to the seniors as well"
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day2",
+      "session": 4,
+      "slide": "levels-to-hours",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-rota-02",
+      "type": "single",
+      "prompt": "A co-signed level 3 review has a mid-level analyst review and a senior check the review in 2 hours, in place of 10. How many co-signed reviews close a senior shortfall of 34 hours?",
+      "options": [
+        "Four",
+        "Five",
+        "Seventeen",
+        "Three"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Each co-signed review saves 8 senior hours; four save 32, short of 34, so five are needed.",
+      "misconceptions": [
+        "Rounds down and leaves the rota 2 hours short",
+        "",
+        "Divides by the 2 co-sign hours instead of the 8 saved",
+        "Divides by 10, as if the senior spent nothing on a co-signed review"
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day2",
+      "session": 4,
+      "slide": "close-the-gap",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-rota-03",
+      "type": "tf",
+      "prompt": "True or false: a rota where two seniors end at 100% of their review hours is ready for the quarter.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "It keeps every rule but has no slack: an urgent level 3 request has nowhere to go, so the plan should say what moves when one arrives.",
+      "misconceptions": [
+        "Takes a rota that fits on paper for one that survives the quarter",
+        ""
+      ],
+      "lo": [
+        "LO1",
+        "LO4"
+      ],
+      "day": "day2",
+      "session": 4,
+      "slide": "the-rota",
+      "level": "evaluate",
+      "pool": "practice",
+      "weight": 1
     }
   ]
 }

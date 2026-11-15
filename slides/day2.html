@@ -1,158 +1,479 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: welcome; introduce yourself; one question to the room that calibrates the pace; the rhythm of the day</aside>
+  <aside class="notes"><p>Day 2 runs the system Day 1 designed: two reviewers on one analysis, an audit of assisted work, feedback to a new analyst, and a quarter's review rota. The first review is AI-off: say so now, before laptops open.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>Every lab starts from supplied files: the unit's checklist and rules are given in reference versions, so nobody depends on yesterday's output.</p></aside>
+</section>
+
+<section class="slide" id="review-day1" data-lo="LO1 LO3">
+  <div class="kicker">Review of Day 1</div>
+  <h2>Which request is graded right under yesterday's standard?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">Four requests and the level an analyst gave each, with the unit's matrix and escalators. Which one is graded right?</p>
+    <div class="opts">
+      <div class="opt" data-why="Grades the method, not the use: a staffing model that sets night pilots is a safety use, high effect and high complexity">A model that sets night pilot numbers: level 2, it is a simple regression</div>
+      <div class="opt" data-why="Lets personal data raise the level: it adds the data protection officer's check, not a level">A staff survey summary with personal data: level 3</div>
+      <div class="opt" data-why="Forgets that a figure leaving the authority adds one level, even when the method is routine">A dwell figure for the ministry's indicators: level 2</div>
+      <div class="opt" data-ok>A tariff revenue estimate for the board: level 3</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A board tariff decision is a high effect; a joined estimate is medium complexity; the matrix gives level 3 and no escalator applies.</div>
+  </div>
+  <aside class="notes"><p>Answer: the tariff estimate (N2 of Lab 1.1). The pilot model is level 4 (N3), the survey level 1 with the officer's check (N5), the ministry dwell figure level 3 (N4).</p></aside>
+</section>
 
 <!-- Session 1 -->
 
 <section class="slide section" id="s1" data-auto="section" data-session="1"></section>
 
-<section class="slide" id="s1-idea" data-lo="LO2">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
+<section class="slide" id="the-draft" data-lo="LO2">
+  <div class="kicker">The draft</div>
+  <h2>"Slot booking has halved waiting at T2. Extend it to all terminals."</h2>
   <div class="cols cols-2">
+    <pre class="code" data-file="analysis.py output"><code class="language-text">mean wait, months 13 to 24:
+  T2 7.5 h, other terminals 12.9 h
+reduction at T2: 42%
+T2 before 10.7 h, after 7.5 h</code></pre>
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li>The berth-allocation pilot: slot booking at T2 from month 13</li>
+      <li>The director of marine operations wants it extended</li>
+      <li>Two reviewers review it alone: you and Faleh Al-Musharraf</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>The re-run output of Lab 2.1, synthetic data. The text says "halved"; the output says 42%. Ask the room to hold that thought: it is one finding of six, and not the most important.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps" data-lo="LO2">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="severity-scale" data-lo="LO2">
+  <div class="kicker">Severity</div>
+  <h2>Rate a finding by what it does to the decision, not by how you found it</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>3 · Critical</h4><p class="small mb0">The decision changes, or the output cannot leave the unit</p></div>
+    <div class="card c-amber"><h4>2 · Major</h4><p class="small mb0">The size or the confidence of the result changes, not the decision</p></div>
+    <div class="card c-cyan"><h4>1 · Minor</h4><p class="small mb0">Presentation: a label, a chart, a name</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <div class="callout note mt"><b>Recap from DS-310.</b> Ranking flaws by consequence is the individual reviewer's skill. Today two reviewers must reach the same rating, and the unit's standard (S-5) writes the scale down.</div>
+  <aside class="notes"><p>The "or the output cannot leave the unit" clause is the unit's own rule: it makes a privacy finding critical whatever its effect on the decision. It is the one most reviewers forget.</p></aside>
+</section>
+
+<section class="slide" id="six-flaws" data-lo="LO2">
+  <div class="kicker">The reference review</div>
+  <h2>Six findings, two of them critical</h2>
+  <table class="t small">
+    <tr><th>Finding</th><th class="num">Severity</th></tr>
+    <tr><td>C1 · T2 compared with others after the change only; T2 was already fastest</td><td class="num">3</td></tr>
+    <tr><td>P1 · Vessel masters' names and mobile numbers in table 5</td><td class="num">3</td></tr>
+    <tr><td>C2 · Diverted calls dropped; at T2 they rose from 17 to 35</td><td class="num">2</td></tr>
+    <tr><td>M1 · "Halved" in the text; 42% in the output</td><td class="num">2</td></tr>
+    <tr><td>M2 · Weather closures in T2's before period</td><td class="num">1</td></tr>
+    <tr><td>m1 · Table 4 labelled minutes; the values are hours</td><td class="num">1</td></tr>
+  </table>
+  <aside class="notes"><p>From the Lab 2.1 answer key. 33 of the 35 diverted calls after the change are feeder vessels: that returns on Day 3 as the subgroup a sponsor wants dropped.</p></aside>
+</section>
+
+<section class="slide" id="fix-one-at-a-time" data-lo="LO2">
+  <div class="kicker">Measuring the effect</div>
+  <h2>Fix a flaw and re-run: the decision flips on C1</h2>
+  <div class="bars">
+    <div class="row"><span>As written</span><div class="bar c-coral" style="--w:100%"></div><span class="val">-5.36 h</span></div>
+    <div class="row"><span>C1 fixed</span><div class="bar c-amber" style="--w:26%"></div><span class="val">-1.37 h</span></div>
+    <div class="row"><span>C1 and C2 fixed</span><div class="bar c-cyan" style="--w:18%"></div><span class="val">-0.94 h</span></div>
+    <div class="row"><span>C1, C2 and M2 fixed</span><div class="bar c-teal" style="--w:15%"></div><span class="val">-0.78 h</span></div>
+  </div>
+  <p class="caption">Effect of slot booking on waiting at T2, hours per call (Lab 2.1 stretch). The draft recommends extending at -2 hours or more; after C1 it does not.</p>
+  <aside class="notes"><p>This is how severity stops being an opinion: re-run with the flaw fixed. C1 alone moves the effect from -5.36 to -1.37 and the decision changes: critical. C2 moves it further but does not flip it on its own: major.</p></aside>
+</section>
+
+<section class="slide" id="alone-then-compare" data-lo="LO2">
+  <div class="kicker">The method</div>
+  <h2>Review alone, then compare, then discuss only the big gaps</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · Alone</b>re-run, list findings, rate, AI-off</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>2 · Compare</b>one table, both ratings, the gap</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>3 · Discuss</b>gaps of two levels only</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>4 · Revise</b>the checklist sentence that allowed the gap</div>
+  </div>
+  <aside class="notes"><p>Why AI-off for the first pass? A reviewer who asks an assistant first anchors on its list. The catalog sets this policy for Day 2's first-pass reviews and the supervised check.</p></aside>
+</section>
+
+<section class="slide" id="agreement-table" data-lo="LO2">
+  <div class="kicker">Two reviewers</div>
+  <h2>Half the ratings agree; the biggest gap is the privacy finding</h2>
+  <table class="t small">
+    <tr><th>Finding</th><th class="num">You</th><th class="num">Faleh</th><th class="num">Gap</th></tr>
+    <tr><td>C1</td><td class="num">3</td><td class="num">3</td><td class="num">0</td></tr>
+    <tr><td>C2</td><td class="num">2</td><td class="num">3</td><td class="num">1</td></tr>
+    <tr><td>M1</td><td class="num">2</td><td class="num">2</td><td class="num">0</td></tr>
+    <tr><td>M2</td><td class="num">1</td><td class="num">2</td><td class="num">1</td></tr>
+    <tr class="hl"><td>P1</td><td class="num">3</td><td class="num">1</td><td class="num">2</td></tr>
+    <tr><td>m1</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+  </table>
+  <aside class="notes"><p>Faleh rated P1 by its effect on the decision, which is none. True, and beside the point: by the standard the output cannot leave the unit. His C2 rating is the opposite error: he rates higher because diversions feel serious, though fixing C2 alone does not flip the decision.</p></aside>
+</section>
+
+<section class="slide" id="kappa" data-lo="LO2">
+  <div class="kicker">Beyond chance</div>
+  <h2>50% agreement is a weighted kappa of 0.25</h2>
+  <div class="cols cols-2">
+    <div class="stat"><div class="big">0.25</div><div class="lbl">weighted kappa, six findings (Lab 2.1)</div></div>
+    <ul class="bullets">
+      <li>Kappa removes the agreement two reviewers reach by chance</li>
+      <li>Weighted kappa counts a gap of two as worse than a gap of one</li>
+      <li>1 is perfect agreement; 0 is no better than chance</li>
+      <li>Track it each quarter on a shared analysis</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Cohen (1968) introduced weighted kappa for ordered ratings. With six findings the number is noisy: use it as a trend over quarters, not a grade for one review. The point for the room: half agreement sounds acceptable; corrected for chance it is weak.</p><p>Sources: Cohen (1968), Weighted kappa, Psychological Bulletin.</p></aside>
+</section>
+
+<section class="slide" id="disagreement-to-wording" data-lo="LO1 LO2">
+  <div class="kicker">The output of calibration</div>
+  <h2>Each big gap becomes a sentence in the checklist</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>P1, before</h4><p class="small mb0">Is the output free of personal data, and is its classification marked?</p></div>
+    <div class="card c-teal"><h4>P1, after</h4><p class="small mb0">The same question, plus the anchor: a breach is critical whatever its effect on the decision, because the output cannot leave the unit.</p></div>
+  </div>
+  <aside class="notes"><p>Calibration that ends in a discussion is forgotten by next quarter. Calibration that ends in a changed sentence stays. Ask each pair for the sentence they would add for their own biggest gap.</p></aside>
+</section>
+
+<section class="slide" id="check-kappa" data-lo="LO2">
+  <div class="kicker">Checkpoint</div>
+  <h2>High agreement, low kappa: what happened?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">Two reviewers rate 20 findings and agree on 16 of them, 80%. Their weighted kappa is 0.3. Which explanation fits?</p>
+    <div class="opts">
+      <div class="opt" data-why="Blames the arithmetic: kappa and percent agreement measure different things, and both can be right">The kappa was computed wrongly</div>
+      <div class="opt" data-ok>Most findings were rated minor by both, so much of the agreement was expected by chance</div>
+      <div class="opt" data-why="Reads kappa as a count of disagreements: four disagreements out of twenty do not by themselves give 0.3">Four disagreements are too many for any team</div>
+      <div class="opt" data-why="Assumes more findings always raise kappa; kappa corrects for chance whatever the number of findings">Twenty findings are too few to compute kappa</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> When nearly everything is rated minor, two reviewers agree often by chance; kappa removes that, so the agreement on the rare serious findings decides it.</div>
+  </div>
+  <aside class="notes"><p>Answer: chance agreement on a skewed scale. The practical lesson: calibrate on analyses that hold serious flaws, where agreement matters.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-1" data-auto="lab" data-lab="2.1">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>AI-off until task 3: no assistant, no tutor. Faleh's ratings are in <code>data/faleh_ratings.json</code>; ask participants not to open it before task 3. In class, pair participants and have them swap ratings instead of using Faleh's. Common failure: missing P1 because "it is not about the analysis".</p></aside>
 </section>
 
 <!-- Session 2 -->
 
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea" data-lo="LO3">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
+<section class="slide" id="audit-not-review" data-lo="LO3">
+  <div class="kicker">Audit or review</div>
+  <h2>A review asks if the analysis is right; an audit asks if the rules were followed</h2>
   <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+    <div class="card c-cyan"><h4>Review</h4><p class="small mb0">One analysis, all five areas, before release. The reviewer re-runs and rates findings.</p></div>
+    <div class="card c-purple"><h4>Audit</h4><p class="small mb0">A sample of released work, against the rules for assisted analysis. The auditor checks the evidence each rule asks for.</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <div class="callout tip mt"><b>The rule of thumb.</b> No evidence, no compliance. "I checked the numbers" is a claim; a verification record is evidence.</div>
+  <aside class="notes"><p>The audit closes the loop on Day 1's rules: rules nobody audits become optional within a quarter. The catalog's evidence for outcome 3 is a rule set and an audit of five assisted analyses.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps" data-lo="LO3">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="five-records" data-lo="LO3">
+  <div class="kicker">The sample</div>
+  <h2>Five assisted analyses from the unit's log</h2>
+  <table class="t small">
+    <tr><th>Id</th><th>Analysis</th><th>What the record shows</th></tr>
+    <tr><td>A1</td><td>Tug fuel use per call</td><td>Disclosed, prompts kept, figures re-run</td></tr>
+    <tr><td>A2</td><td>Fatigue risk in the night pilot roster</td><td>Data sent: names and shifts of pilots</td></tr>
+    <tr><td>A3</td><td>Share of T1 calls waiting over 12 hours</td><td>18.4%; no verification record</td></tr>
+    <tr><td>A4</td><td>Storage-fee scenarios for the board</td><td>No disclosure line on the paper</td></tr>
+    <tr><td>A5</td><td>Gate no-show patterns</td><td>No prompts, no record; "I checked"</td></tr>
+  </table>
+  <aside class="notes"><p>Synthetic log of Lab 2.2. Give the room two minutes to guess which rule each breaks before the lab: most get A2 and A4; few say A5 breaks two rules.</p></aside>
+</section>
+
+<section class="slide" id="recompute" data-lo="LO2 LO3">
+  <div class="kicker">Recompute what you can</div>
+  <h2>A3 says 18.4%; the authority's own data say 47.7%</h2>
+  <div class="cols cols-2">
+    <pre class="code" data-file="recompute A3"><code class="language-python">t1 = calls[(calls.terminal == "T1")
+           &amp; (calls.month &gt;= 13)]
+recorded = t1.dropna(subset=["wait_h"])
+(recorded.wait_h &gt; 12).mean()   # 0.477</code></pre>
+    <ul class="bullets">
+      <li>1,387 calls with a recorded wait; 35 diverted</li>
+      <li>The record showed the number was not verified</li>
+      <li>Only the recomputation showed how wrong it was</li>
+    </ul>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>From the Lab 2.2 solution run. An audit cannot recompute everything; it recomputes the headline of the analyses whose records are missing, because that is where an assistant's error survives.</p></aside>
+</section>
+
+<section class="slide" id="breach-table" data-lo="LO3">
+  <div class="kicker">The audit table</div>
+  <h2>Each breach is recorded with the rule it breaks and the action it needs</h2>
+  <table class="t small">
+    <tr><th>Id</th><th>Rules</th><th>Action</th></tr>
+    <tr><td>A1</td><td>none</td><td>none</td></tr>
+    <tr class="hl"><td>A2</td><td>C1 data</td><td>Tell the data protection officer; redo on anonymised data</td></tr>
+    <tr><td>A3</td><td>V1 verify, K2 keep</td><td>Withdraw the figure; re-run and re-review</td></tr>
+    <tr><td>A4</td><td>D1 disclose</td><td>Disclosure note to the board secretary</td></tr>
+    <tr><td>A5</td><td>K1, K2 keep</td><td>Re-run and keep the record before reuse</td></tr>
+  </table>
+  <aside class="notes"><p>A2 is the most serious even though its numbers were right: restricted data left the authority's control, which the national guidelines forbid and no later step undoes.</p></aside>
+</section>
+
+<section class="slide" id="audit-to-rule" data-lo="LO3">
+  <div class="kicker">What the audit teaches</div>
+  <h2>Two of five had no verification record: change the process, not just the analyses</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>The rule existed; nothing made it visible before review</li>
+      <li>Proposed: no review of assisted work starts without its verification record</li>
+      <li>The checklist item C2 asks for it at every level</li>
+    </ul>
+    <div class="card c-amber"><h4>How often</h4><p class="small mb0">Five analyses a quarter, chosen at random from the assisted log, plus any the reviewers flag.</p></div>
+  </div>
+  <aside class="notes"><p>The sample size is a choice on the Director's behalf for the case; in a real unit it depends on volume. The point is that the audit is routine and random, not a reaction to an incident.</p></aside>
+</section>
+
+<section class="slide" id="audit-fairly" data-lo="LO3 LO4">
+  <div class="kicker">Tone</div>
+  <h2>An audit finds breaches of rules, not bad analysts</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Record facts</h4><p class="small mb0">What the file shows, which rule, which action</p></div>
+    <div class="card c-cyan"><h4>Fix the process</h4><p class="small mb0">Two missing records point at the process, not two people</p></div>
+    <div class="card c-purple"><h4>Feed development</h4><p class="small mb0">A pattern for one analyst goes into feedback, the next session</p></div>
+  </div>
+  <aside class="notes"><p>If an audit feels like a hunt, analysts stop disclosing assistant use, and the audit sees nothing. Keep the table factual and the follow-up developmental.</p></aside>
+</section>
+
+<section class="slide" id="check-audit-evidence" data-lo="LO3">
+  <div class="kicker">Checkpoint</div>
+  <h2>"I checked the numbers"</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">An analyst's assisted analysis has a disclosure line and correct figures when you recompute them, but no prompts and no verification record. He says he checked everything. What does the audit record?</p>
+    <div class="opts">
+      <div class="opt" data-why="Accepts a claim as evidence: the audit can only see what the files show">No breach: the figures are right</div>
+      <div class="opt" data-why="Confuses keeping records with disclosing: the disclosure line is there">A breach of the disclosure rule</div>
+      <div class="opt" data-ok>A breach of the keep rules: no prompts and no record</div>
+      <div class="opt" data-why="Escalates a missing record into a verification failure the audit did not find: the figures were right">A breach of the verify rule only</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The keep rules ask for prompts and a verification record in the repository; their absence is the breach, however right the figures turn out to be.</div>
+  </div>
+  <aside class="notes"><p>Answer: the keep rules (A5 in the lab). Some will argue the right figures excuse it: ask how the next reviewer would know which numbers were checked.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-2" data-auto="lab" data-lab="2.2">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>The audit itself is AI-off; the tutor may question the audit table afterwards. Lab 2.2 uses the reference rule set, not the participant's own from Lab 1.4, so everyone audits against the same rules. Common failure: A3 recorded as V1 only; the missing record is K2 as well.</p></aside>
 </section>
 
 <!-- Session 3 -->
 
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea" data-lo="LO4">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
+<section class="slide" id="seven-to-three" data-lo="LO4">
+  <div class="kicker">From review to feedback</div>
+  <h2>Seven findings is a review; three is feedback</h2>
   <div class="cols cols-2">
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li>Shaden Al-Ruwayshid joined six months ago; Faleh found seven things in her notebook</li>
+      <li>The review notes go to the analysis; the feedback goes to the analyst</li>
+      <li>Choose the three findings that show a pattern in her reasoning</li>
+      <li>Name one strength, specifically</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+    <div class="card c-teal"><h4>Her three</h4><p class="small mb0">No comparison group (F2), the wrong population in an average (F1), assisted cells not verified (F7)</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>The minor findings (an axis, variable names) go in the review notes, not in the conversation. Three is a memory limit, not a rule of politeness.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps" data-lo="LO4">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="four-parts" data-lo="LO4">
+  <div class="kicker">One note</div>
+  <h2>Observation, effect, reasoning, next step</h2>
+  <table class="t small">
+    <tr><th>Part</th><th>Shaden, F2</th></tr>
+    <tr><td><b>Observation</b></td><td>In cell 5 waiting at T2 is compared before and after, with no other terminal</td></tr>
+    <tr><td><b>Effect</b></td><td>Waiting fell everywhere in month 13, so most of the fall would have happened anyway</td></tr>
+    <tr><td><b>Reasoning</b></td><td>Before claiming a cause, ask what would have happened without it</td></tr>
+    <tr><td><b>Next</b></td><td>In your next comparison, write the comparison group in the first cell</td></tr>
+  </table>
+  <aside class="notes"><p>The reasoning line is what builds skill: it names the question she did not ask herself, so she can ask it next time on a different problem. The catalog calls this feedback that names the reasoning.</p></aside>
+</section>
+
+<section class="slide" id="vague-feedback" data-lo="LO4">
+  <div class="kicker">Specific</div>
+  <h2>"Be more careful with comparisons" tells her nothing she can do</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Vague</h4><p class="small mb0">Be more careful. Improve your rigour. Pay attention to the data. Good job on the charts.</p></div>
+    <div class="card c-teal"><h4>Specific</h4><p class="small mb0">Cell 3 averages imports with transshipment, 5.2 days. Print the counts by move type before every average.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <div class="callout tip mt"><b>The peer test.</b> Would a colleague reading the note know what Shaden should do differently next week? That is the evidence of outcome 4.</div>
+  <aside class="notes"><p>The lab's check flags vague words and notes without a cell or a number. Praise needs the same specificity: "the chart in cell 7 is easy to read" teaches; "good job" does not.</p></aside>
+</section>
+
+<section class="slide" id="skills-profile" data-lo="LO4">
+  <div class="kicker">The plan starts from the profile</div>
+  <h2>Her lowest skills are methods, inference and checking assisted work</h2>
+  <div class="bars">
+    <div class="row"><span>Communication</span><div class="bar c-teal" style="--w:75%"></div><span class="val">3</span></div>
+    <div class="row"><span>Framing</span><div class="bar c-cyan" style="--w:50%"></div><span class="val">2</span></div>
+    <div class="row"><span>Data handling</span><div class="bar c-cyan" style="--w:50%"></div><span class="val">2</span></div>
+    <div class="row"><span>Reproducibility</span><div class="bar c-cyan" style="--w:50%"></div><span class="val">2</span></div>
+    <div class="row"><span>Methods</span><div class="bar c-coral" style="--w:25%"></div><span class="val">1</span></div>
+    <div class="row"><span>Inference</span><div class="bar c-coral" style="--w:25%"></div><span class="val">1</span></div>
+    <div class="row"><span>Assisted-work verification</span><div class="bar c-coral" style="--w:25%"></div><span class="val">1</span></div>
+  </div>
+  <p class="caption">Shaden's skills profile, 1 to 4 (synthetic, Lab 2.3).</p>
+  <aside class="notes"><p>The three findings line up with the three lowest skills: that is not a coincidence, and it is what makes the plan credible to her.</p></aside>
+</section>
+
+<section class="slide" id="three-months" data-lo="LO4">
+  <div class="kicker">The plan</div>
+  <h2>Three months, each with a goal, the evidence and the support</h2>
+  <table class="t small">
+    <tr><th>Month</th><th>Goal</th><th>Evidence</th></tr>
+    <tr><td>1</td><td>A comparison group every time</td><td>Two analyses passed on checklist item M1</td></tr>
+    <tr><td>2</td><td>Verify every assisted number before review</td><td>Three complete verification records</td></tr>
+    <tr><td>3</td><td>State uncertainty, working unaided</td><td>An unaided analysis that passes level 2 review</td></tr>
+  </table>
+  <aside class="notes"><p>Support: pair review with Faleh in month 1, the audit checklist in month 2, a review by Saleh in month 3. The evidence column uses the unit's own checklist items, so progress is checked with the same tool as the work.</p></aside>
+</section>
+
+<section class="slide" id="unaided-in-plan" data-lo="LO4">
+  <div class="kicker">Keeping the skill</div>
+  <h2>An analyst who checks assistants must still do the work alone</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Her verification skill is 1 of 4: she cannot check what she cannot do</li>
+      <li>Month 3 is unaided: no assistant, the full analysis, a normal review</li>
+      <li>The rule set's U1 makes this a quarterly habit for everyone</li>
+    </ul>
+    <div class="callout note"><b>From the catalog.</b> Keeping unaided practice in the work is a topic of this course, not an option.</div>
+  </div>
+  <aside class="notes"><p>Expect pushback that unaided work is slower. It is, once a quarter; the alternative is a reviewer who cannot tell when an assistant is wrong.</p></aside>
+</section>
+
+<section class="slide" id="check-specific-note" data-lo="LO4">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which note will change what she does next week?</h2>
+  <div class="quiz" data-type="single" data-lo="LO4">
+    <p class="lead">Four feedback notes on the same finding: an average that mixed imports with transshipment.</p>
+    <div class="opts">
+      <div class="opt" data-ok>Cell 3 averages imports with transshipment (5.2 days); print counts by move type before every average</div>
+      <div class="opt" data-why="Names a virtue instead of an action: she cannot tell what 'careful' means for her next notebook">Be more careful with the populations you average over</div>
+      <div class="opt" data-why="Diagnoses without a next step: she knows what was wrong, not what to do instead">Your dwell figure was wrong because of transshipment</div>
+      <div class="opt" data-why="Sends her to a resource without linking it to the error she made">Read the unit's data-handling guide again this month</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> It names the cell and the number she can check, and a concrete habit she can apply to any average.</div>
+  </div>
+  <aside class="notes"><p>Answer: the first. The third is accurate but stops at the diagnosis; ask the room to add the reasoning and the next step to it.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-3" data-auto="lab" data-lab="2.3">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>AI-tutor: participants may ask the tutor to question their notes, not to write them. In class, swap notes with a neighbour for the peer test in task 4: would they know what Shaden does next week? Common failure: seven notes instead of three.</p></aside>
 </section>
 
 <!-- Session 4 -->
 
 <section class="slide section" id="s4" data-auto="section" data-session="4"></section>
 
-<section class="slide" id="s4-idea" data-lo="LO4">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
-  </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+<section class="slide" id="levels-to-hours" data-lo="LO1">
+  <div class="kicker">Capacity</div>
+  <h2>Assurance levels turn into review hours</h2>
+  <table class="t small">
+    <tr><th>Level</th><th class="num">Analyses next quarter</th><th class="num">Hours each</th><th>Who</th></tr>
+    <tr><td>1</td><td class="num">10</td><td class="num">0</td><td>the analyst</td></tr>
+    <tr><td>2</td><td class="num">14</td><td class="num">4</td><td>any non-junior peer</td></tr>
+    <tr><td>3</td><td class="num">12</td><td class="num">10</td><td>a senior</td></tr>
+    <tr><td>4</td><td class="num">4</td><td class="num">16 + 8</td><td>a senior and a second reviewer</td></tr>
+  </table>
+  <aside class="notes"><p>The hours are the unit's planning figures for the case, set on the Director's behalf; a real unit measures its own from last year's log. The point is that every level has a cost, so a standard without a rota is a wish.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps" data-lo="LO4">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="senior-bottleneck" data-lo="LO1">
+  <div class="kicker">The bottleneck</div>
+  <h2>Seniors are needed for 184 hours and have 150</h2>
+  <div class="cols cols-2">
+    <div class="stack">
+      <div class="stat"><div class="big">34 h</div><div class="lbl">short in senior review hours next quarter</div></div>
+    </div>
+    <ul class="bullets">
+      <li>Three seniors, 60, 50 and 40 review hours</li>
+      <li>Six mid-level analysts have hours to spare</li>
+      <li>The rule keeps level 3 and 4 with seniors</li>
+    </ul>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>From Lab 2.4. Ask the room for options before the next slide. The tempting one is to lower the level of a few analyses. That is the under-assurance that produced last year's errors.</p></aside>
+</section>
+
+<section class="slide" id="close-the-gap" data-lo="LO1 LO4">
+  <div class="kicker">Options</div>
+  <h2>Close the gap without lowering a level</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Co-sign</h4><p class="small mb0">A mid-level analyst reviews a level 3 analysis; a senior checks the review in 2 hours. Saves 8 senior hours.</p></div>
+    <div class="card c-cyan"><h4>Defer</h4><p class="small mb0">Move a level 3 analysis whose decision can wait to the next quarter, with the sponsor's agreement.</p></div>
+    <div class="card c-coral"><h4>Never</h4><p class="small mb0">Lower the level to fit the rota. The level comes from the risk, not the hours.</p></div>
+  </div>
+  <aside class="notes"><p>Five co-signed reviews close 34 hours at 8 each, the fewest that work. Co-signing is also training: it builds the next level 3 reviewers, the only lasting fix.</p></aside>
+</section>
+
+<section class="slide" id="the-rota" data-lo="LO1">
+  <div class="kicker">The rota</div>
+  <h2>Every rule kept: Faleh and Saleh end at full capacity</h2>
+  <div class="bars">
+    <div class="row"><span>Faleh (senior)</span><div class="bar c-coral" style="--w:100%"></div><span class="val">60 of 60 h</span></div>
+    <div class="row"><span>Saleh (senior)</span><div class="bar c-coral" style="--w:100%"></div><span class="val">50 of 50 h</span></div>
+    <div class="row"><span>Noor (senior)</span><div class="bar c-amber" style="--w:85%"></div><span class="val">34 of 40 h</span></div>
+    <div class="row"><span>Lina (mid)</span><div class="bar c-teal" style="--w:46%"></div><span class="val">32 of 70 h</span></div>
+    <div class="row"><span>Rakan (mid)</span><div class="bar c-teal" style="--w:46%"></div><span class="val">32 of 70 h</span></div>
+  </div>
+  <p class="caption">Review load from the reference rota of Lab 2.4; five co-signed level 3 reviews.</p>
+  <aside class="notes"><p>A rota at 100% for two people has no slack for an urgent board request: say so to the room. The stretch asks which mid-level analyst trains as a level 3 reviewer next; Lina has the highest mean skill of the mid-level analysts.</p></aside>
+</section>
+
+<section class="slide" id="mentoring-pairs" data-lo="LO4">
+  <div class="kicker">Mentoring</div>
+  <h2>Juniors shadow a mentor's reviews before they review</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Juniors do not review alone, but they watch reviews from their first month</li>
+      <li>One junior per mentor; the mentor reviews some of the junior's work when the rota allows</li>
+      <li>Shaden with Faleh; Turki with Lina; Dalia with Rakan</li>
+    </ul>
+    <div class="card c-purple"><h4>A trade-off to state</h4><p class="small mb0">Faleh is at full capacity and mentors Shaden. Either the shadowing fits inside his reviews, or one of his reviews moves.</p></div>
+  </div>
+  <aside class="notes"><p>Shadowing costs no booked hours, but it does cost attention. The reference pairs put Shaden with Faleh because her plan's month 1 is pair review with him: check that the rota allows it.</p></aside>
+</section>
+
+<section class="slide" id="check-shortfall" data-lo="LO1">
+  <div class="kicker">Checkpoint</div>
+  <h2>Senior hours run short: what do you do?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">Next quarter's level 3 and 4 reviews need 184 senior hours; your seniors have 150. A director asks you to "just call some of them level 2".</p>
+    <div class="opts">
+      <div class="opt" data-why="Lets capacity set the level, which is how last year's under-assured requests got through">Lower five level 3 analyses to level 2</div>
+      <div class="opt" data-why="Overloads the seniors, which quietly cuts the depth of every review instead of the number">Ask the seniors to absorb the extra hours</div>
+      <div class="opt" data-why="Moves the risk to whoever picks the reviews; a level 3 analysis still needs independent senior judgement">Let mid-level analysts review level 3 alone</div>
+      <div class="opt" data-ok>Co-sign five level 3 reviews and defer what can wait</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The level comes from the risk; co-signing keeps a senior's judgement on each level 3 review at a fifth of the hours and trains the next reviewers.</div>
+  </div>
+  <aside class="notes"><p>Answer: co-sign and defer. Ask how they would answer the director: "the level comes from what an error would cost you, not from our diary".</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-4" data-auto="lab" data-lab="2.4">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Participants may assign by hand or with code; the check is the same. The solution is a hand-made rota. Common failures: a senior assigned their own analysis (P06, P08 and P40 are by seniors); a level 4 analysis with no second reviewer.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
   <div class="kicker">Day 2 · wrap-up</div>
   <h2>Three things to keep</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-coral"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-purple"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
+    <div class="card c-teal"><h4>Calibrate</h4><p class="small mb0">Review alone, compare, and turn each big gap into a sentence of the checklist.</p></div>
+    <div class="card c-coral"><h4>Audit evidence</h4><p class="small mb0">No record, no compliance; recompute the headline where the record is missing.</p></div>
+    <div class="card c-purple"><h4>Develop people</h4><p class="small mb0">Three findings with their reasoning, a plan with evidence and unaided practice, and a rota that trains.</p></div>
   </div>
+  <aside class="notes"><p>Ask which of today's four artefacts they would introduce first in their own unit, and what would stop them.</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="Next">
   <div class="kicker">Next</div>
   <h2>Day 3: Work with sponsors</h2>
-  <p class="lead">REPLACE: what participants prepare before then; unfinished labs can be finished at home</p>
-  <aside class="notes">REPLACE: accounts, installs or reading participants need before the next unit</aside>
+  <p class="lead">Tomorrow the sponsors arrive: a deadline that moves, an evidence threshold to agree before the analysis, and a request to drop a finding. Read the slot-booking draft again tonight: you will defend what you found in it.</p>
+  <aside class="notes"><p>Day 3 has two role-plays. Recruit observers for Lab 3.1 now: one per three participants. Print the role cards from <code>labs/data/roles.json</code> if a trainer will not play the sponsor.</p></aside>
 </section>
