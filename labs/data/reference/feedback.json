@@ -1,0 +1,34 @@
+{
+  "notes": [
+    {
+      "id": "F2",
+      "observation": "In cell 5 waiting at T2 is compared before and after, with no other terminal as a comparison.",
+      "effect": "Waiting fell at every terminal in month 13, so most of the fall would have happened anyway.",
+      "reasoning": "Before saying a change caused a difference, ask what would have happened without it.",
+      "next": "Write the comparison group in the first cell of your next comparison."
+    }
+  ],
+  "plan": [
+    {
+      "month": 1,
+      "goal": "Choose a comparison group every time",
+      "activity": "Two pair reviews with a senior analyst",
+      "evidence": "Two analyses passed on item M1",
+      "support": "A senior analyst, one hour a week"
+    },
+    {
+      "month": 2,
+      "goal": "Verify every assisted number before review",
+      "activity": "A verification table in each assisted analysis",
+      "evidence": "Three analyses with complete verification records",
+      "support": "The audit checklist and a monthly check"
+    },
+    {
+      "month": 3,
+      "goal": "State uncertainty for decision numbers",
+      "activity": "One analysis done unaided, without the assistant",
+      "evidence": "An unaided analysis that passes a level 2 review",
+      "support": "A worked example and a senior review"
+    }
+  ]
+}

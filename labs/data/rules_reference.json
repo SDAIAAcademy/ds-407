@@ -1,0 +1,52 @@
+{
+  "verify": [
+    {
+      "id": "V1",
+      "rule": "Re-run every number an assistant produced from the data, in your own code, before it enters a draft."
+    },
+    {
+      "id": "V2",
+      "rule": "Read and run any code an assistant wrote before its output is used; keep the run."
+    },
+    {
+      "id": "V3",
+      "rule": "Check every claim about a method or a source against the source itself."
+    }
+  ],
+  "disclose": [
+    {
+      "id": "D1",
+      "rule": "Every deliverable with assisted content carries a disclosure line: which tool, which parts, who verified them."
+    },
+    {
+      "id": "D2",
+      "rule": "Tell the reviewer which parts were assisted before the review starts."
+    }
+  ],
+  "keep": [
+    {
+      "id": "K1",
+      "rule": "Keep the prompts and the assistant's outputs with the analysis, in the repository."
+    },
+    {
+      "id": "K2",
+      "rule": "Keep a verification record: each assisted number, its re-run value and who re-ran it."
+    }
+  ],
+  "data": [
+    {
+      "id": "C1",
+      "rule": "Only data classified public, or anonymised under the data protection officer's rule, may be sent to a hosted assistant."
+    },
+    {
+      "id": "C2",
+      "rule": "Use only assistants on the authority's approved list."
+    }
+  ],
+  "unaided": [
+    {
+      "id": "U1",
+      "rule": "Each analyst does one analysis a quarter without an assistant, reviewed like any other."
+    }
+  ]
+}

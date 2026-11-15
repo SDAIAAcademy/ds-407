@@ -3,163 +3,359 @@
   "version": 1,
   "questions": [
     {
-      "id": "q-example-1",
+      "id": "q-assure-01",
       "type": "single",
-      "prompt": "REPLACE: a practice question on LO1, as a short scenario",
+      "prompt": "A request: monthly tug fuel use per call, from one system, for an internal note that nobody acts on for at least a quarter. With the unit's matrix (effect by complexity) and its escalators, which level does it get?",
       "options": [
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: the right answer",
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: a wrong option that a common misconception makes tempting"
+        "Level 1: a low effect and a low complexity",
+        "Level 2: every analysis needs a second pair of eyes",
+        "Level 3: fuel is a cost, and costs go to the board",
+        "Level 2: the data come from an operational system"
       ],
       "correct": [
-        1
+        0
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "An error in an internal note that changes nothing for a quarter has a low effect; one source and a routine method is low complexity, and no escalator applies.",
       "misconceptions": [
-        "REPLACE: the misconception behind this option",
         "",
-        "REPLACE: the misconception behind this option",
-        "REPLACE: the misconception behind this option"
+        "Treats peer review as a minimum for all work, which spends review hours where an error does no harm",
+        "Grades the topic instead of the use: the note decides nothing",
+        "Takes the source system as a risk factor; the matrix asks what an error would change"
       ],
       "lo": [
         "LO1"
       ],
       "day": "day1",
       "session": 1,
+      "slide": "risk-two-axes",
       "level": "apply",
       "pool": "practice",
       "weight": 1
     },
     {
-      "id": "q-example-2",
-      "type": "tf",
-      "prompt": "REPLACE: a statement on LO2 that is true",
+      "id": "q-assure-02",
+      "type": "single",
+      "prompt": "Two analysts grade the same request with your written standard. One gives level 2, the other level 3. Both used the matrix correctly. What does the difference most likely show?",
       "options": [
-        "True",
-        "False"
+        "One analyst is more careful than the other",
+        "A definition in the standard can be read two ways",
+        "The matrix has too few levels to be useful",
+        "The request should go to the head of unit to decide"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "If both applied the matrix, they graded a factor differently, which means its definition admits two readings; tightening it is the fix.",
+      "misconceptions": [
+        "Blames the person, when the standard's words allowed both readings",
+        "",
+        "Adds levels, which multiplies the boundaries where readings differ",
+        "Escalates one case and leaves the ambiguous definition in place for the next"
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 1,
+      "slide": "definitions-matter",
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-assure-03",
+      "type": "single",
+      "prompt": "In a unit of twelve, the analyst who built the berth demand model is also the most senior person free to assure it. Under the four roles, what should happen?",
+      "options": [
+        "He assures it, since he knows the model best",
+        "He approves it, and a junior analyst assures it",
+        "Another senior assures it, even if that waits a week",
+        "The commissioner assures it, as the person who asked"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "The assurer must be independent of the analyst; knowing the model best is exactly why he cannot see its blind spots.",
+      "misconceptions": [
+        "Confuses expertise with independence: the author cannot assure his own work",
+        "Swaps the roles but keeps him signing off his own analysis",
+        "",
+        "Gives assurance to the person who wants the answer, who is not independent of it"
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 1,
+      "slide": "four-roles",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-check-01",
+      "type": "single",
+      "prompt": "You adapt a published 32-item checklist written for machine-learning studies. Most of the unit's work is counts and comparisons for directors. What is the best first step?",
+      "options": [
+        "Adopt all 32 items so nothing is missed",
+        "Use it only for level 4 analyses",
+        "Replace it with one question: is the work reproducible?",
+        "Map the items to the review areas and keep those the unit's work needs"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Mapping shows which items serve the unit's areas and where nothing does (communication), so the checklist fits the work and gets used.",
+      "misconceptions": [
+        "Assumes a longer checklist is safer, when reviewers skip what does not fit",
+        "Keeps the checks from the work that needs them most often",
+        "Collapses many checks into one that two reviewers would answer differently",
+        ""
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 2,
+      "slide": "adapt-not-adopt",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-check-02",
+      "type": "single",
+      "prompt": "Which checklist item can two reviewers answer the same way?",
+      "options": [
+        "Are excluded records counted, with a reason for each exclusion?",
+        "Is the analysis rigorous?",
+        "Is the data quality good enough?",
+        "Would an expert approve of the method?"
       ],
       "correct": [
         0
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "It is a yes-or-no question that names its evidence (a count per exclusion step), so both reviewers look at the same thing.",
       "misconceptions": [
         "",
-        "REPLACE: the misconception behind this option"
+        "Uses an adjective that each reviewer reads differently",
+        "Asks for a judgement with no named evidence, so each reviewer uses their own bar",
+        "Imports a hypothetical judge instead of something in the files"
+      ],
+      "lo": [
+        "LO1",
+        "LO2"
+      ],
+      "day": "day1",
+      "session": 2,
+      "slide": "item-shape",
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-check-03",
+      "type": "single",
+      "prompt": "A level 1 dashboard request is checked by its analyst. Which item must the self-check still include?",
+      "options": [
+        "An independent re-run from the repository",
+        "No personal data and the classification marked",
+        "An interval on every number",
+        "A second reviewer's severity ratings"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Leakage harms people whatever the level of the analysis, so the privacy and classification item applies from level 1.",
+      "misconceptions": [
+        "An independent re-run is the cost that level 2 and above pay",
+        "",
+        "Intervals matter where a decision depends on a number, from level 2",
+        "Second reviews belong to calibration and level 4, not a self-check"
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 2,
+      "slide": "privacy-item",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-rerun-01",
+      "type": "single",
+      "prompt": "A colleague's script runs to the end on your laptop and prints 5.18 days; the report says 4.60. Nothing failed. What do you do next?",
+      "options": [
+        "Accept the report: the code ran without errors",
+        "Accept your figure and correct the report",
+        "Look for a step that happened outside the code",
+        "Average the two figures and note the range"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "A gap with no error points to a step outside the code, such as a manual exclusion, which must be found before either figure is trusted.",
+      "misconceptions": [
+        "Takes a clean run for a correct one",
+        "Trusts the re-run over the report before knowing why they differ",
+        "",
+        "Hides a discrepancy instead of explaining it"
       ],
       "lo": [
         "LO2"
       ],
       "day": "day1",
-      "session": 1,
+      "session": 3,
+      "slide": "the-silent-gap",
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-rerun-02",
+      "type": "single",
+      "prompt": "Two runs of the same script give 5.08 and 5.17. Which repository rule prevents this?",
+      "options": [
+        "Pin every package in a lock file",
+        "Use only relative paths",
+        "Name every input file in the README",
+        "Fix the seed of every random step in the code"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Different results from the same code and data come from randomness; a fixed seed makes the run repeatable.",
+      "misconceptions": [
+        "Versions explain a failure across machines, not two runs on one",
+        "Paths make a script fail, not vary",
+        "Documentation helps a re-run start; it does not make results repeat",
+        ""
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 3,
+      "slide": "failure-kinds",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-rerun-03",
+      "type": "tf",
+      "prompt": "True or false: a reviewer should read the report first, so that the re-run can focus on the claims that matter.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Reading first sets expectations; re-running first tests whether the handed-over repository produces the report at all.",
+      "misconceptions": [
+        "Lets the prose decide what gets checked, which is how a fluent wrong report passes",
+        ""
+      ],
+      "lo": [
+        "LO2"
+      ],
+      "day": "day1",
+      "session": 3,
+      "slide": "rerun-rule",
       "level": "understand",
       "pool": "practice",
       "weight": 1
     },
     {
-      "id": "q-example-3",
+      "id": "q-rules-01",
       "type": "single",
-      "prompt": "REPLACE: a practice question on LO3, as a short scenario",
+      "prompt": "An analyst uses the approved assistant on anonymised berth data, keeps the prompts, and re-runs every number, but the board paper has no line saying an assistant was used. Under the rules, what is it?",
       "options": [
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: the right answer",
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: a wrong option that a common misconception makes tempting"
+        "A breach of the disclosure rule",
+        "Allowed: the data and the verification were right",
+        "Allowed, if the reviewer knew about it",
+        "A breach of the data rule"
       ],
       "correct": [
-        1
+        0
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "The disclosure rule asks for a line on the deliverable itself; the board must be told, whatever else was done right.",
       "misconceptions": [
-        "REPLACE: the misconception behind this option",
         "",
-        "REPLACE: the misconception behind this option",
-        "REPLACE: the misconception behind this option"
+        "Treats verification as a substitute for telling the readers",
+        "Confuses telling the reviewer with telling the recipients",
+        "The data were anonymised and the tool approved, so no data rule was broken"
       ],
       "lo": [
         "LO3"
       ],
       "day": "day1",
-      "session": 1,
+      "session": 4,
+      "slide": "four-rule-kinds",
       "level": "apply",
       "pool": "practice",
       "weight": 1
     },
     {
-      "id": "q-example-4",
-      "type": "tf",
-      "prompt": "REPLACE: a statement on LO4 that is true",
+      "id": "q-rules-02",
+      "type": "single",
+      "prompt": "Which rule can a reviewer check from the files of an analysis?",
       "options": [
-        "True",
-        "False"
+        "Use the assistant responsibly",
+        "Keep a verification record of each assisted number",
+        "Be transparent about the use of AI",
+        "Protect sensitive data where possible"
       ],
       "correct": [
-        0
+        1
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "A verification record is a file a reviewer can open; the others are intentions with no evidence behind them.",
       "misconceptions": [
+        "States a value, not an action anyone can see done",
         "",
-        "REPLACE: the misconception behind this option"
+        "Names a principle without saying what shows it was met",
+        "Leaves the exception open with 'where possible'"
       ],
       "lo": [
-        "LO4"
+        "LO3"
       ],
       "day": "day1",
-      "session": 1,
+      "session": 4,
+      "slide": "checkable-rule",
       "level": "understand",
       "pool": "practice",
       "weight": 1
     },
     {
-      "id": "q-example-5",
+      "id": "q-rules-03",
       "type": "single",
-      "prompt": "REPLACE: a practice question on LO5, as a short scenario",
+      "prompt": "Why does the unit's rule set include one analysis a quarter done without an assistant?",
       "options": [
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: the right answer",
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: a wrong option that a common misconception makes tempting"
+        "To measure how much time the assistant saves",
+        "Because the national guidelines forbid assistants for analysis",
+        "To keep the skill needed to check the assistant",
+        "To give the reviewers a lighter quarter"
       ],
       "correct": [
-        1
+        2
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "Verification needs the skill the assistant replaces; unaided work keeps it alive.",
       "misconceptions": [
-        "REPLACE: the misconception behind this option",
+        "Turns a skill rule into a productivity study",
+        "Overstates the guidelines, which set conditions for use, not a ban",
         "",
-        "REPLACE: the misconception behind this option",
-        "REPLACE: the misconception behind this option"
+        "Unaided work is reviewed like any other, so it saves no review time"
       ],
       "lo": [
-        "LO5"
+        "LO3",
+        "LO4"
       ],
       "day": "day1",
-      "session": 1,
-      "level": "apply",
-      "pool": "practice",
-      "weight": 1
-    },
-    {
-      "id": "q-example-6",
-      "type": "tf",
-      "prompt": "REPLACE: a statement on LO6 that is true",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct": [
-        0
-      ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
-      "misconceptions": [
-        "",
-        "REPLACE: the misconception behind this option"
-      ],
-      "lo": [
-        "LO6"
-      ],
-      "day": "day1",
-      "session": 1,
+      "session": 4,
+      "slide": "unaided-practice",
       "level": "understand",
       "pool": "practice",
       "weight": 1

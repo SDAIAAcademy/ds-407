@@ -1,0 +1,40 @@
+{
+  "decision": {
+    "question": "Should slot booking be extended from T2 to all four terminals next quarter?",
+    "options": [
+      "Extend to all terminals",
+      "Keep at T2 only and fix the feeder slots",
+      "Stop slot booking"
+    ]
+  },
+  "mdc": [
+    {
+      "months_after": 3,
+      "se_h": 0.404,
+      "mdc_h": 1.13
+    },
+    {
+      "months_after": 6,
+      "se_h": 0.3,
+      "mdc_h": 0.84
+    },
+    {
+      "months_after": 12,
+      "se_h": 0.236,
+      "mdc_h": 0.66
+    }
+  ],
+  "rule": {
+    "decision_rule": "Extend if waiting at T2 falls by at least 2.0 hours per call against the other terminals, and no vessel type waits more than 2.0 hours longer.",
+    "evidence_threshold_h": 2.0,
+    "data": "Months 1 to 24, weather closures left out, diverted calls at 24 hours"
+  },
+  "roles": {
+    "level": 3,
+    "analyst": "Saleh Al-Ghamlas",
+    "assurer": "Faleh Al-Musharraf",
+    "approver": "Arjwan Al-Huqail",
+    "commissioner": "Bader Al-Khayyal",
+    "signed_before": "the analysis starts"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "N1": {
+    "effect": "medium",
+    "complexity": "low",
+    "public": false,
+    "safety": false
+  },
+  "N2": {
+    "effect": "high",
+    "complexity": "medium",
+    "public": false,
+    "safety": false
+  },
+  "N3": {
+    "effect": "high",
+    "complexity": "high",
+    "public": false,
+    "safety": true
+  },
+  "N4": {
+    "effect": "medium",
+    "complexity": "low",
+    "public": true,
+    "safety": false
+  },
+  "N5": {
+    "effect": "low",
+    "complexity": "medium",
+    "public": false,
+    "safety": false
+  },
+  "N6": {
+    "effect": "high",
+    "complexity": "medium",
+    "public": false,
+    "safety": false
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "matrix": {
+    "low": {
+      "low": 1,
+      "medium": 1,
+      "high": 2
+    },
+    "medium": {
+      "low": 2,
+      "medium": 2,
+      "high": 3
+    },
+    "high": {
+      "low": 3,
+      "medium": 3,
+      "high": 4
+    }
+  },
+  "escalators": {
+    "public": 1,
+    "safety": 1
+  },
+  "max_level": 4,
+  "grades": {
+    "N1": {
+      "effect": "medium",
+      "complexity": "low",
+      "public": false,
+      "safety": false
+    },
+    "N2": {
+      "effect": "high",
+      "complexity": "medium",
+      "public": false,
+      "safety": false
+    },
+    "N3": {
+      "effect": "high",
+      "complexity": "high",
+      "public": false,
+      "safety": true
+    },
+    "N4": {
+      "effect": "medium",
+      "complexity": "low",
+      "public": true,
+      "safety": false
+    },
+    "N5": {
+      "effect": "low",
+      "complexity": "medium",
+      "public": false,
+      "safety": false
+    },
+    "N6": {
+      "effect": "high",
+      "complexity": "medium",
+      "public": false,
+      "safety": false
+    }
+  },
+  "levels": {
+    "N1": 2,
+    "N2": 3,
+    "N3": 4,
+    "N4": 3,
+    "N5": 1,
+    "N6": 3
+  },
+  "under_assured": [
+    "R03",
+    "R04",
+    "R05",
+    "R07",
+    "R13",
+    "R18",
+    "R21",
+    "R24",
+    "R29",
+    "R30"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "patches": [
+    [
+      "dwell.py",
+      "summary = summary.append({\"terminal\": t, \"mean_dwell\": round(g.dwell_days.mean(), 2)}, ignore_index=True)",
+      "summary.loc[len(summary)] = [t, round(g.dwell_days.mean(), 2)]"
+    ],
+    [
+      "dwell.py",
+      "boxes = boxes.sample(2000)",
+      "# sample removed by the reviewer"
+    ]
+  ],
+  "steps": [
+    {
+      "what failed": "absolute path to the analyst's desktop",
+      "kind": "path",
+      "fix": "relative path data/containers.csv"
+    },
+    {
+      "what failed": "the README names containers.csv; the repository holds containers_q3.csv",
+      "kind": "documentation",
+      "fix": "renamed the file in the copy"
+    },
+    {
+      "what failed": "data/berth_lookup.csv is read but not in the repository",
+      "kind": "missing input",
+      "fix": "asked for the file; added it"
+    },
+    {
+      "what failed": "DataFrame.append no longer exists in pandas 2; no version pinned",
+      "kind": "library version",
+      "fix": "the same row added with .loc"
+    },
+    {
+      "what failed": "two runs give two figures: an unseeded sample",
+      "kind": "randomness",
+      "fix": "removed the sample"
+    }
+  ],
+  "gap": {
+    "what failed": "the script keeps transshipment with imports; the report removed it by hand",
+    "kind": "manual step",
+    "fix": "filter move_type == 'import' in the script"
+  },
+  "reported": 4.6,
+  "with_transshipment": 5.18
+}

@@ -1,0 +1,129 @@
+{
+  "bader": {
+    "name": "Bader Al-Khayyal",
+    "change_after": 4,
+    "change": "The board meeting has moved forward: I need this in four working days, not five. And the deputy chief executive now also wants to know what slot booking does to the feeder lines.",
+    "topics": [
+      {
+        "id": "offer",
+        "keys": [
+          "option",
+          "propose",
+          "fits"
+        ],
+        "constraint": false,
+        "answer": "If it answers the feeder question, that works for me. Put it in writing today."
+      },
+      {
+        "id": "decision",
+        "keys": [
+          "decision",
+          "decide",
+          "for what"
+        ],
+        "constraint": true,
+        "answer": "The board decides whether slot booking goes to all four terminals next quarter. I present the recommendation."
+      },
+      {
+        "id": "deadline",
+        "keys": [
+          "when",
+          "deadline",
+          "date",
+          "week",
+          "time"
+        ],
+        "constraint": true,
+        "answer": "The board papers close in a week, five working days from today."
+      },
+      {
+        "id": "evidence",
+        "keys": [
+          "evidence",
+          "convince",
+          "believe",
+          "trust",
+          "number",
+          "measure"
+        ],
+        "constraint": true,
+        "answer": "Average waiting matters, but I will not sign anything if the shipping lines can show it hurt them."
+      },
+      {
+        "id": "already",
+        "keys": [
+          "already",
+          "know",
+          "draft",
+          "existing",
+          "report"
+        ],
+        "constraint": true,
+        "answer": "There is a draft that says waiting halved at T2. Someone told me it has problems."
+      },
+      {
+        "id": "scope",
+        "keys": [
+          "which terminal",
+          "scope",
+          "include",
+          "vessel type"
+        ],
+        "constraint": false,
+        "answer": "I care about T2 against the others. Feeders are a detail, in my view."
+      },
+      {
+        "id": "risk",
+        "keys": [
+          "risk",
+          "wrong",
+          "worst",
+          "if"
+        ],
+        "constraint": false,
+        "answer": "If we extend it and it fails, the lines will complain to the ministry. That is the risk."
+      }
+    ]
+  },
+  "faleh": {
+    "name": "Faleh Al-Musharraf",
+    "change_after": 99,
+    "change": "",
+    "topics": [
+      {
+        "id": "privacy",
+        "keys": [
+          "privacy",
+          "personal",
+          "p1",
+          "names",
+          "mobile"
+        ],
+        "constraint": true,
+        "answer": "I rated the names minor: they do not change the decision. But you are right that they cannot leave the unit."
+      },
+      {
+        "id": "diverted",
+        "keys": [
+          "divert",
+          "c2",
+          "dropped",
+          "missing"
+        ],
+        "constraint": true,
+        "answer": "I thought the diverted calls were few. I did not count them by terminal."
+      },
+      {
+        "id": "storm",
+        "keys": [
+          "storm",
+          "weather",
+          "m2",
+          "closure"
+        ],
+        "constraint": false,
+        "answer": "The closures are in the before period only for T2's comparison, so I called it minor."
+      }
+    ]
+  }
+}

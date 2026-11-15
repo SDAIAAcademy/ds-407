@@ -1,0 +1,182 @@
+[
+  {
+    "id": "A01",
+    "name": "Faleh Al-Musharraf",
+    "seniority": "senior",
+    "review_hours": 60,
+    "skills": {
+      "framing": 4,
+      "data handling": 4,
+      "methods": 3,
+      "inference": 4,
+      "communication": 4,
+      "reproducibility": 4,
+      "assisted-work verification": 3
+    }
+  },
+  {
+    "id": "A02",
+    "name": "Saleh Al-Ghamlas",
+    "seniority": "senior",
+    "review_hours": 50,
+    "skills": {
+      "framing": 4,
+      "data handling": 3,
+      "methods": 3,
+      "inference": 4,
+      "communication": 3,
+      "reproducibility": 3,
+      "assisted-work verification": 2
+    }
+  },
+  {
+    "id": "A03",
+    "name": "Noor",
+    "seniority": "senior",
+    "review_hours": 40,
+    "skills": {
+      "framing": 4,
+      "data handling": 4,
+      "methods": 3,
+      "inference": 3,
+      "communication": 3,
+      "reproducibility": 4,
+      "assisted-work verification": 4
+    }
+  },
+  {
+    "id": "A04",
+    "name": "Lina",
+    "seniority": "mid",
+    "review_hours": 70,
+    "skills": {
+      "framing": 2,
+      "data handling": 4,
+      "methods": 2,
+      "inference": 3,
+      "communication": 3,
+      "reproducibility": 3,
+      "assisted-work verification": 2
+    }
+  },
+  {
+    "id": "A05",
+    "name": "Rakan",
+    "seniority": "mid",
+    "review_hours": 70,
+    "skills": {
+      "framing": 3,
+      "data handling": 3,
+      "methods": 1,
+      "inference": 3,
+      "communication": 2,
+      "reproducibility": 3,
+      "assisted-work verification": 3
+    }
+  },
+  {
+    "id": "A06",
+    "name": "Majid",
+    "seniority": "mid",
+    "review_hours": 60,
+    "skills": {
+      "framing": 2,
+      "data handling": 3,
+      "methods": 3,
+      "inference": 2,
+      "communication": 3,
+      "reproducibility": 2,
+      "assisted-work verification": 3
+    }
+  },
+  {
+    "id": "A07",
+    "name": "Huda",
+    "seniority": "mid",
+    "review_hours": 60,
+    "skills": {
+      "framing": 3,
+      "data handling": 3,
+      "methods": 2,
+      "inference": 2,
+      "communication": 3,
+      "reproducibility": 2,
+      "assisted-work verification": 3
+    }
+  },
+  {
+    "id": "A08",
+    "name": "Omar",
+    "seniority": "mid",
+    "review_hours": 60,
+    "skills": {
+      "framing": 3,
+      "data handling": 3,
+      "methods": 3,
+      "inference": 2,
+      "communication": 2,
+      "reproducibility": 2,
+      "assisted-work verification": 3
+    }
+  },
+  {
+    "id": "A09",
+    "name": "Reema",
+    "seniority": "mid",
+    "review_hours": 50,
+    "skills": {
+      "framing": 2,
+      "data handling": 3,
+      "methods": 2,
+      "inference": 3,
+      "communication": 1,
+      "reproducibility": 1,
+      "assisted-work verification": 3
+    }
+  },
+  {
+    "id": "A10",
+    "name": "Shaden Al-Ruwayshid",
+    "seniority": "junior",
+    "review_hours": 20,
+    "skills": {
+      "framing": 2,
+      "data handling": 2,
+      "methods": 1,
+      "inference": 1,
+      "communication": 3,
+      "reproducibility": 2,
+      "assisted-work verification": 1
+    }
+  },
+  {
+    "id": "A11",
+    "name": "Turki",
+    "seniority": "junior",
+    "review_hours": 20,
+    "skills": {
+      "framing": 1,
+      "data handling": 2,
+      "methods": 2,
+      "inference": 2,
+      "communication": 3,
+      "reproducibility": 2,
+      "assisted-work verification": 1
+    }
+  },
+  {
+    "id": "A12",
+    "name": "Dalia",
+    "seniority": "junior",
+    "review_hours": 20,
+    "skills": {
+      "framing": 2,
+      "data handling": 2,
+      "methods": 2,
+      "inference": 3,
+      "communication": 2,
+      "reproducibility": 1,
+      "assisted-work verification": 1
+    }
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "C1": {
+    "title": "No baseline: T2 is compared with the other terminals after the change only; T2 already had the shortest waits before",
+    "severity": 3
+  },
+  "C2": {
+    "title": "Diverted calls dropped: vessels that left after a long wait are removed, and they rose at T2 after the change",
+    "severity": 2
+  },
+  "M1": {
+    "title": "The text says 'halved'; the printed reduction is smaller",
+    "severity": 2
+  },
+  "M2": {
+    "title": "The before period at T2 includes the weather closures of months 3 and 4",
+    "severity": 1
+  },
+  "m1": {
+    "title": "Table 4 is labelled minutes; the values are hours",
+    "severity": 1
+  },
+  "P1": {
+    "title": "Table 5 prints vessel masters' names and mobile numbers: personal data in an output",
+    "severity": 3
+  }
+}

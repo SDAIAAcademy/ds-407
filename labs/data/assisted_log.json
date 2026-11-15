@@ -1,0 +1,78 @@
+[
+  {
+    "id": "A1",
+    "title": "Tug fuel use per call, Q3",
+    "analyst": "Rakan",
+    "tool": "approved assistant",
+    "data_class": "public",
+    "disclosure": "Code drafted with the approved assistant; all figures re-run by the analyst; reviewed by Faleh Al-Musharraf.",
+    "prompts_kept": true,
+    "verification": [
+      {
+        "number": "fuel per call 412 litres",
+        "rerun": "412 litres",
+        "by": "Rakan"
+      }
+    ],
+    "reviewer": "Faleh Al-Musharraf"
+  },
+  {
+    "id": "A2",
+    "title": "Fatigue risk in the night pilot roster",
+    "analyst": "Shaden Al-Ruwayshid",
+    "tool": "approved assistant",
+    "data_class": "restricted (names and shifts of pilots)",
+    "disclosure": "Drafted with the approved assistant; figures re-run.",
+    "prompts_kept": true,
+    "verification": [
+      {
+        "number": "11 shifts above the fatigue limit",
+        "rerun": "11 shifts",
+        "by": "Shaden Al-Ruwayshid"
+      }
+    ],
+    "reviewer": "Saleh Al-Ghamlas"
+  },
+  {
+    "id": "A3",
+    "title": "Share of T1 calls waiting more than 12 hours, months 13 to 24",
+    "analyst": "Saleh Al-Ghamlas",
+    "tool": "approved assistant",
+    "data_class": "public (aggregated berth data)",
+    "disclosure": "Summary drafted with the approved assistant.",
+    "prompts_kept": true,
+    "verification": [],
+    "headline": "18.4% of calls at T1 waited more than 12 hours",
+    "reviewer": "Faleh Al-Musharraf"
+  },
+  {
+    "id": "A4",
+    "title": "Storage-fee scenarios for the board",
+    "analyst": "Lina",
+    "tool": "approved assistant",
+    "data_class": "public",
+    "disclosure": "",
+    "prompts_kept": true,
+    "verification": [
+      {
+        "number": "revenue +6.2%",
+        "rerun": "+6.2%",
+        "by": "Lina"
+      }
+    ],
+    "reviewer": "Faleh Al-Musharraf",
+    "note": "board paper sent without a disclosure line"
+  },
+  {
+    "id": "A5",
+    "title": "Gate no-show patterns",
+    "analyst": "Majid",
+    "tool": "approved assistant",
+    "data_class": "public",
+    "disclosure": "Analysis drafted with the approved assistant; figures re-run.",
+    "prompts_kept": false,
+    "verification": [],
+    "reviewer": "Saleh Al-Ghamlas",
+    "note": "the analyst says he checked the numbers; no record kept"
+  }
+]

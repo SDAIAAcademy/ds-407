@@ -1,0 +1,51 @@
+{
+  "finding": {
+    "feeder_h": 6.32,
+    "others_h": -2.88,
+    "all_h": -0.78,
+    "feeder_share_t2": 22.3,
+    "feeder_calls_t2_after": 278,
+    "feeder_diverted_t2_after": 33
+  },
+  "options": [
+    {
+      "option": "Remove the feeder table",
+      "effect": "The board decides without the condition it agreed."
+    },
+    {
+      "option": "Keep the table as it is",
+      "effect": "The finding stays; the sponsor may feel ambushed."
+    },
+    {
+      "option": "Keep the table, add context and the commercial team's plan",
+      "effect": "The finding stays, with a constructive role for the sponsor."
+    }
+  ],
+  "record": {
+    "request": "Remove the feeder table",
+    "finding_checked": "Feeders +6.32 h at T2",
+    "options": [
+      "Remove",
+      "Keep",
+      "Keep with context"
+    ],
+    "decision": "Keep the feeder table, with context",
+    "reasons": [
+      "The signed agreement includes the vessel-type condition in the decision rule.",
+      "The result is large and rests on hundreds of calls.",
+      "The local feeder lines bear the cost and would be left out of the paper."
+    ],
+    "standard_clauses": [
+      "S-7",
+      "S-8"
+    ],
+    "principles": [
+      "Fairness",
+      "Transparency & Explainability",
+      "Accountability & Responsibility"
+    ],
+    "who_told": "The requester and the sponsor",
+    "date_recorded": "the day of the request"
+  },
+  "reply": "Thank you for the note. I will keep the feeder table, because the signed agreement makes it part of the decision rule, and I will add the context your team asked for."
+}

@@ -1,0 +1,39 @@
+{
+  "statement": {
+    "level": "Level 3",
+    "checked": [
+      "re-run",
+      "comparison",
+      "numbers traced",
+      "no personal data"
+    ],
+    "by_whom": "Analyst, independent reviewer, head of unit",
+    "uncertain": [
+      "the fall in waiting is between 0.3 and 1.3 hours per call"
+    ],
+    "assisted": "Method section drafted with the approved assistant and verified",
+    "classification": "Internal"
+  },
+  "error": {
+    "released": 4.07,
+    "corrected": 4.32,
+    "duplicates": 1080,
+    "weeks": [
+      5,
+      6
+    ]
+  },
+  "notice": {
+    "what_was_wrong": "Q2 mean import dwell",
+    "released_value": "4.07 days",
+    "corrected_value": "4.32 days",
+    "cause": "Two weeks loaded twice",
+    "decisions_affected": "None changed",
+    "process_change": "Duplicate check on every extract",
+    "who_is_told": [
+      "board secretary",
+      "ministry indicator team",
+      "quarterly note readers"
+    ]
+  }
+}

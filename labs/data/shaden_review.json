@@ -1,0 +1,51 @@
+[
+  {
+    "id": "F1",
+    "cell": "cell 3",
+    "finding": "Mean dwell computed over imports and transshipment together",
+    "severity": 3,
+    "area": "data"
+  },
+  {
+    "id": "F2",
+    "cell": "cell 5",
+    "finding": "Before-and-after comparison at T2 with no comparison terminal",
+    "severity": 3,
+    "area": "method"
+  },
+  {
+    "id": "F3",
+    "cell": "cell 6",
+    "finding": "'Waiting fell sharply' with no interval; the change is 0.9 hours on 610 calls",
+    "severity": 2,
+    "area": "inference"
+  },
+  {
+    "id": "F4",
+    "cell": "cell 2",
+    "finding": "1,214 rows dropped with no count of why",
+    "severity": 2,
+    "area": "data"
+  },
+  {
+    "id": "F5",
+    "cell": "cell 7",
+    "finding": "Chart axis starts at 6 hours, so a small change looks large",
+    "severity": 1,
+    "area": "communication"
+  },
+  {
+    "id": "F6",
+    "cell": "cell 1",
+    "finding": "Variable names d1, d2, tmp",
+    "severity": 1,
+    "area": "communication"
+  },
+  {
+    "id": "F7",
+    "cell": "whole notebook",
+    "finding": "Assistant-drafted cells 3 to 6 are not disclosed; no verification record",
+    "severity": 2,
+    "area": "communication"
+  }
+]
