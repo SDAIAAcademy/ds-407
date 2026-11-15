@@ -1,0 +1,369 @@
+{
+  "$schema": "https://sdaiaacademy.github.io/engine/schemas/course.schema.json",
+  "engine": "1",
+  "id": "ds-407",
+  "code": "DS-407",
+  "version": "2027.1.0",
+  "lang": "en",
+  "title": {
+    "en": "Leading Analytical Work: Review, Standards and Stakeholders",
+    "ar": "قيادة العمل التحليلي: المراجعة والمعايير وأصحاب المصلحة"
+  },
+  "tagline": "REPLACE: one line under the title: what participants can do after the course",
+  "description": "Participants lead the analytics unit of the fictional Ras Sahil Ports Authority: twelve analysts whose work increasingly starts as an assistant's draft. They write a proportionate quality-assurance standard and review checklist, re-run and review colleagues' analyses, set the unit's rules for AI-assisted work, turn review findings into feedback, and negotiate scope, deadline and evidence with role-played sponsors, one of whom asks for an unfavourable result to be dropped. DS-310 teaches reviewing one analysis; this course sets the standards and runs the system.",
+  "track": "data-science",
+  "level": 400,
+  "badge": {
+    "name": "Data Science",
+    "level": "Expert"
+  },
+  "audience": "Specialists. Data scientists who have completed the level 300 core and practicum, or can show equivalent work: an analysis they led from question to recommendation and defended.",
+  "prerequisites": [
+    "DS-310 Problem Framing and Analytical Review",
+    "Has reviewed an analysis written by someone else and written comments the author acted on",
+    "Uses version control for analysis code"
+  ],
+  "site": {
+    "url": "https://sdaiaacademy.github.io/ds-407/",
+    "repo": "SDAIAAcademy/ds-407"
+  },
+  "outcomes": [
+    {
+      "id": "LO1",
+      "text": "Design a proportionate quality-assurance standard for analytical work, with assurance levels, a review checklist and sign-off rules, given the unit's log of 30 requests with their uses and risks",
+      "level": "Performance",
+      "evidence": "a standard with which a peer, working independently, assigns the same assurance levels to six new requests"
+    },
+    {
+      "id": "LO2",
+      "text": "Review analyses by others, including assistant-drafted ones, rank findings by their effect on the decision and calibrate severity with a second reviewer, given three seeded-flaw analysis repositories",
+      "level": "Performance",
+      "evidence": "review notes that find the seeded critical flaws, and a severity agreement table with the second reviewer"
+    },
+    {
+      "id": "LO3",
+      "text": "Design rules for AI-assisted analysis covering verification, disclosure and the process evidence each analyst keeps, and audit the unit's work against them, given the national generative AI guidelines and a log of the unit's assisted analyses",
+      "level": "Performance",
+      "evidence": "a one-page rule set and an audit of five assisted analyses against it"
+    },
+    {
+      "id": "LO4",
+      "text": "Prepare feedback and a development plan for an analyst from review findings, given a reviewed notebook and the analyst's skills profile",
+      "level": "Applied",
+      "evidence": "a feedback note and three-month plan that a peer judges specific"
+    },
+    {
+      "id": "LO5",
+      "text": "Lead a negotiation with a sponsor on scope, deadline and evidence threshold and record the agreement, given a role-played sponsor whose constraints change during the meeting",
+      "level": "Performance",
+      "evidence": "an analysis agreement and an observer's rubric score"
+    },
+    {
+      "id": "LO6",
+      "text": "Decide how to respond to pressure to change or suppress a finding, and record the reasons, given a scripted request to remove an unfavourable subgroup result",
+      "level": "Performance",
+      "evidence": "a decision record citing the unit's standard and the ethics principles"
+    }
+  ],
+  "case_study": {
+    "name": "REPLACE: the name of the fictional organisation every lab works on",
+    "summary": "REPLACE: two sentences on the case study and its synthetic data"
+  },
+  "format": "intensive",
+  "format_note": "Intensive: 3 teaching days of four sessions and a capstone day, with guided pre-work and a tracked follow-up task",
+  "hours": {
+    "instruction": 5,
+    "lab": 5,
+    "guided_self_study": 5,
+    "assessment": 1,
+    "capstone": 5
+  },
+  "unit": "day",
+  "days": [
+    {
+      "id": "day1",
+      "kind": "day",
+      "title": "Set the standard",
+      "deck": "slides/day1.html",
+      "sessions": [
+        {
+          "title": "Assurance proportionate to risk",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO1"
+          ],
+          "lab": {
+            "id": "1.1",
+            "title": "Grade six requests by risk and complexity and assign an assurance level to each",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_1_grade_six_requests.ipynb"
+          }
+        },
+        {
+          "title": "A team review checklist",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO1"
+          ],
+          "lab": {
+            "id": "1.2",
+            "title": "Draft a checklist from question to conclusion by adapting a published reproducibility checklist",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_2_draft_checklist_from.ipynb"
+          }
+        },
+        {
+          "title": "Reproducibility as a team rule",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO1"
+          ],
+          "lab": {
+            "id": "1.3",
+            "title": "Re-run a colleague's analysis from its repository and record every step that failed",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_3_re_run_colleague.ipynb"
+          }
+        },
+        {
+          "title": "Rules for AI-assisted analysis",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "1.4",
+            "title": "Write what analysts must verify, disclose and keep as evidence when an assistant drafts work",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_4_write_what_analysts.ipynb"
+          }
+        }
+      ]
+    },
+    {
+      "id": "day2",
+      "kind": "day",
+      "title": "Review and develop",
+      "deck": "slides/day2.html",
+      "sessions": [
+        {
+          "title": "Calibrating reviewers",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO2"
+          ],
+          "lab": {
+            "id": "2.1",
+            "title": "Review a seeded-flaw berth-delay analysis independently with a partner, compare severity ratings and revise the checklist where you disagree",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_1_review_seeded_flaw.ipynb"
+          }
+        },
+        {
+          "title": "Auditing assisted work",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "2.2",
+            "title": "Check five assistant-drafted analyses from the unit's log against the rules for AI-assisted work and record each breach",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_2_check_five_assistant.ipynb"
+          }
+        },
+        {
+          "title": "Feedback that builds skill",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO4"
+          ],
+          "lab": {
+            "id": "2.3",
+            "title": "Turn review findings into feedback and a three-month plan for a new analyst",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_3_turn_review_findings.ipynb"
+          }
+        },
+        {
+          "title": "Review capacity and mentoring",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO4"
+          ],
+          "lab": {
+            "id": "2.4",
+            "title": "Plan a quarter's review load and pairings for a team of twelve",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_4_plan_quarter_s.ipynb"
+          }
+        }
+      ]
+    },
+    {
+      "id": "day3",
+      "kind": "day",
+      "title": "Work with sponsors",
+      "deck": "slides/day3.html",
+      "sessions": [
+        {
+          "title": "Scope and deadline",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO5"
+          ],
+          "lab": {
+            "id": "3.1",
+            "title": "Role-play a sponsor who wants a result in a week and agree what can be answered",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_1_role_play_sponsor.ipynb"
+          }
+        },
+        {
+          "title": "Agreeing the evidence first",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO5"
+          ],
+          "lab": {
+            "id": "3.2",
+            "title": "Write an analysis agreement: question, decision rule and evidence threshold",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_2_write_analysis_agreement.ipynb"
+          }
+        },
+        {
+          "title": "Pressure on a finding",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO6"
+          ],
+          "lab": {
+            "id": "3.3",
+            "title": "Handle a scripted request to drop an unfavourable subgroup and record the decision",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_3_handle_scripted_request.ipynb"
+          }
+        },
+        {
+          "title": "Reporting quality and correcting errors",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO1"
+          ],
+          "lab": {
+            "id": "3.4",
+            "title": "Draft a board-paper quality statement (what was checked, by whom, what remains uncertain) and a correction notice for an error found after release",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_4_draft_board_paper.ipynb"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capstone",
+      "kind": "capstone",
+      "title": "Capstone project presentations",
+      "deck": "slides/capstone.html",
+      "subtitle": "REPLACE: the catalog gives 15 minutes for each presentation and nothing about questions; decide whether the questions are inside those minutes, set capstone.talk_minutes and capstone.qa_minutes in course.json and the timers of the now-presenting slide, and remove this line"
+    }
+  ],
+  "capstone": {
+    "summary": "A quality-assurance pack for one high-risk analysis (applied standard, review report, analysis agreement, board quality statement), submitted as a repository, followed by a fifteen-minute review meeting the participant chairs with a role-played analyst and sponsor",
+    "submission": "REPLACE: what participants submit and how: a public repository link, or a shared folder for a course without code",
+    "talk_minutes": 15,
+    "rubric": [
+      {
+        "criterion": "Standard",
+        "weight": 20
+      },
+      {
+        "criterion": "Review findings",
+        "weight": 30
+      },
+      {
+        "criterion": "Analysis agreement",
+        "weight": 20
+      },
+      {
+        "criterion": "Quality statement",
+        "weight": 20
+      },
+      {
+        "criterion": "Clarity",
+        "weight": 10
+      }
+    ]
+  },
+  "labs": {
+    "kind": "notebooks",
+    "base": "labs/"
+  },
+  "tools": [
+    {
+      "slot": "Notebooks and reports",
+      "examples": [
+        "Jupyter",
+        "marimo",
+        "Quarto"
+      ]
+    },
+    {
+      "slot": "Code and document review",
+      "examples": [
+        "pull or merge requests on GitHub or GitLab",
+        "comments in a shared document"
+      ]
+    },
+    {
+      "slot": "Reproducible environments",
+      "examples": [
+        "uv with a lock file",
+        "containers"
+      ]
+    },
+    {
+      "slot": "Assistant whose output is reviewed",
+      "examples": [
+        "a free hosted open-weight model",
+        "the assistant the participant's unit already uses"
+      ]
+    }
+  ]
+}
