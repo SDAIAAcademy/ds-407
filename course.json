@@ -9,7 +9,7 @@
     "en": "Leading Analytical Work: Review, Standards and Stakeholders",
     "ar": "قيادة العمل التحليلي: المراجعة والمعايير وأصحاب المصلحة"
   },
-  "tagline": "REPLACE: one line under the title: what participants can do after the course",
+  "tagline": "Set the unit's quality standard, run review as a system, and hold the line on evidence with sponsors",
   "description": "Participants lead the analytics unit of the fictional Ras Sahil Ports Authority: twelve analysts whose work increasingly starts as an assistant's draft. They write a proportionate quality-assurance standard and review checklist, re-run and review colleagues' analyses, set the unit's rules for AI-assisted work, turn review findings into feedback, and negotiate scope, deadline and evidence with role-played sponsors, one of whom asks for an unfavourable result to be dropped. DS-310 teaches reviewing one analysis; this course sets the standards and runs the system.",
   "track": "data-science",
   "level": 400,
@@ -21,7 +21,8 @@
   "prerequisites": [
     "DS-310 Problem Framing and Analytical Review",
     "Has reviewed an analysis written by someone else and written comments the author acted on",
-    "Uses version control for analysis code"
+    "Uses version control for analysis code",
+    "Setup: a laptop processor with uv, or Google Colab. Nothing downloads a model; a free hosted model key is optional (every assistant and tutor cell has a stand-in). Run 00_setup_check before Day 1; see labs/README.md."
   ],
   "site": {
     "url": "https://sdaiaacademy.github.io/ds-407/",
@@ -66,8 +67,8 @@
     }
   ],
   "case_study": {
-    "name": "REPLACE: the name of the fictional organisation every lab works on",
-    "summary": "REPLACE: two sentences on the case study and its synthetic data"
+    "name": "Ras Sahil Ports Authority",
+    "summary": "Ras Sahil Ports Authority is a fictional Gulf-coast port authority whose analytics unit of twelve analysts serves marine operations, commercial affairs, finance and staffing, with more and more work starting as a draft by Musawwada, the unit's drafting assistant. Participants, as the unit's head, write the assurance standard from a log of 30 requests, adapt a published checklist, re-run a colleague's cargo-dwell repository, set rules for assisted work and audit five assisted analyses, calibrate severity with a second reviewer on a seeded-flaw berth-delay analysis, write feedback and a review rota, and negotiate scope, evidence and a pressured subgroup finding with two role-played sponsors. The capstone is the quality-assurance pack for the marine pilot staffing analysis. All data is synthetic and generated with a fixed seed."
   },
   "format": "intensive",
   "format_note": "Intensive: 3 teaching days of four sessions and a capstone day, with guided pre-work and a tracked follow-up task",
@@ -88,69 +89,160 @@
       "sessions": [
         {
           "title": "Assurance proportionate to risk",
+          "summary": "Four roles, business risk as effect and likelihood, and four assurance levels a peer can apply",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Explain the four assurance roles and why the assurer is independent of the analyst",
+            "Grade a request by the effect of an error and the complexity of the work",
+            "Assign an assurance level with a matrix a peer applies the same way"
           ],
           "lo": [
             "LO1"
           ],
           "lab": {
             "id": "1.1",
-            "title": "Grade six requests by risk and complexity and assign an assurance level to each",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Six requests, four levels",
             "minutes": 25,
-            "href": "D1_1_grade_six_requests.ipynb"
+            "summary": "Read the unit's log of 30 requests, write the assurance matrix with its escalators, grade six new requests by risk and complexity, and compare your levels with a second reviewer's.",
+            "href": "D1_1_assurance_levels.ipynb",
+            "steps": [
+              {
+                "text": "Read the log: where errors after release came from",
+                "minutes": 5
+              },
+              {
+                "text": "Write the matrix and its escalators",
+                "minutes": 7
+              },
+              {
+                "text": "Grade the six new requests",
+                "minutes": 7
+              },
+              {
+                "text": "Compare with the second reviewer and tighten one definition",
+                "minutes": 6
+              }
+            ],
+            "stretch": "Add the sign-off rules: who may approve at each level"
           }
         },
         {
           "title": "A team review checklist",
+          "summary": "From a personal checklist to the unit's: adapt a published one, item by item, and tie each item to a level",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Adapt a published checklist to the unit's work instead of adopting it whole",
+            "Write each item as a question answered with evidence",
+            "Tie each item to the assurance levels, with a privacy and classification check in every level"
           ],
           "lo": [
-            "LO1"
+            "LO1",
+            "LO2"
           ],
           "lab": {
             "id": "1.2",
-            "title": "Draft a checklist from question to conclusion by adapting a published reproducibility checklist",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "A checklist adapted from REFORMS",
             "minutes": 25,
-            "href": "D1_2_draft_checklist_from.ipynb"
+            "summary": "Draft a checklist from question to conclusion by adapting a published reproducibility checklist (REFORMS, 32 items): keep, rewrite or drop each item, add the privacy and classification check, and set the level at which each item applies.",
+            "href": "D1_2_team_checklist.ipynb",
+            "steps": [
+              {
+                "text": "Map the 32 items to the five review areas",
+                "minutes": 6
+              },
+              {
+                "text": "Keep, rewrite or drop each item",
+                "minutes": 8
+              },
+              {
+                "text": "Add the privacy and classification item",
+                "minutes": 4
+              },
+              {
+                "text": "Set the level of each item and test the length",
+                "minutes": 7
+              }
+            ],
+            "stretch": "Add one item for work an assistant drafted"
           }
         },
         {
           "title": "Reproducibility as a team rule",
+          "summary": "Re-run before reading: the failures a re-run finds and the repository rules that prevent them",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Re-run an analysis from its repository before reading its conclusions",
+            "Classify reproduction failures by kind",
+            "Write repository rules that make a re-run routine"
           ],
           "lo": [
-            "LO1"
+            "LO1",
+            "LO2"
           ],
           "lab": {
             "id": "1.3",
-            "title": "Re-run a colleague's analysis from its repository and record every step that failed",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Re-run Saleh's repository",
             "minutes": 25,
-            "href": "D1_3_re_run_colleague.ipynb"
+            "summary": "Re-run a colleague's cargo-dwell analysis from its repository, record every step that failed and its kind, and reproduce the reported figure.",
+            "href": "D1_3_rerun_repository.ipynb",
+            "steps": [
+              {
+                "text": "Follow the README exactly",
+                "minutes": 5
+              },
+              {
+                "text": "Log each failure with its kind",
+                "minutes": 8
+              },
+              {
+                "text": "Fix a copy until it runs",
+                "minutes": 7
+              },
+              {
+                "text": "Reproduce the reported figure or explain the gap",
+                "minutes": 5
+              }
+            ],
+            "stretch": "Write the repository rule that would have prevented each failure"
           }
         },
         {
           "title": "Rules for AI-assisted analysis",
+          "summary": "What an analyst verifies, discloses and keeps when an assistant drafts the work",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Turn the national generative AI guidelines into rules for analytical work",
+            "Specify the process evidence each analyst keeps",
+            "Test a rule set on real cases before adopting it"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "1.4",
-            "title": "Write what analysts must verify, disclose and keep as evidence when an assistant drafts work",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Rules for assisted work",
             "minutes": 25,
-            "href": "D1_4_write_what_analysts.ipynb"
+            "summary": "Write what analysts must verify, disclose and keep as evidence when an assistant drafts work, on one page, and test the rules on eight scenarios from the unit.",
+            "href": "D1_4_ai_rules.ipynb",
+            "steps": [
+              {
+                "text": "Read the guideline duties",
+                "minutes": 5
+              },
+              {
+                "text": "Write the verify, disclose and keep rules",
+                "minutes": 9
+              },
+              {
+                "text": "Decide eight scenarios with your rules",
+                "minutes": 7
+              },
+              {
+                "text": "Cut the rules to one page",
+                "minutes": 4
+              }
+            ],
+            "stretch": "Add the unaided-practice rule: work each analyst still does without the assistant"
           }
         }
-      ]
+      ],
+      "subtitle": "An assurance standard, a team checklist, re-runs as a rule and rules for assisted work"
     },
     {
       "id": "day2",
@@ -160,69 +252,160 @@
       "sessions": [
         {
           "title": "Calibrating reviewers",
+          "summary": "Severity by effect on the decision, rated alone, then compared and turned into clearer wording",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Rate review findings by their effect on the decision",
+            "Measure agreement between two reviewers, beyond chance",
+            "Turn disagreements into clearer checklist wording"
           ],
           "lo": [
             "LO2"
           ],
           "lab": {
             "id": "2.1",
-            "title": "Review a seeded-flaw berth-delay analysis independently with a partner, compare severity ratings and revise the checklist where you disagree",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Two reviewers, one analysis",
             "minutes": 25,
-            "href": "D2_1_review_seeded_flaw.ipynb"
+            "summary": "Review a seeded-flaw berth-delay analysis independently with a partner (AI-off), compare severity ratings in an agreement table, and revise the checklist where you disagree.",
+            "href": "D2_1_calibrate_reviewers.ipynb",
+            "steps": [
+              {
+                "text": "Re-run and review alone",
+                "minutes": 9
+              },
+              {
+                "text": "Rate each finding by its effect on the decision",
+                "minutes": 5
+              },
+              {
+                "text": "Agreement table and weighted kappa",
+                "minutes": 6
+              },
+              {
+                "text": "Revise the checklist where you disagreed",
+                "minutes": 5
+              }
+            ],
+            "stretch": "Measure what each flaw does to the headline by fixing it alone"
           }
         },
         {
           "title": "Auditing assisted work",
+          "summary": "An audit checks the evidence a rule asks for, recomputes what it can and records each breach with its rule",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Audit work against rules from its evidence, not its claims",
+            "Recompute a number an assistant drafted",
+            "Record each breach with the rule it breaks"
           ],
           "lo": [
-            "LO3"
+            "LO3",
+            "LO2"
           ],
           "lab": {
             "id": "2.2",
-            "title": "Check five assistant-drafted analyses from the unit's log against the rules for AI-assisted work and record each breach",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Audit five assisted analyses",
             "minutes": 25,
-            "href": "D2_2_check_five_assistant.ipynb"
+            "summary": "Check five assistant-drafted analyses from the unit's log against the rules for AI-assisted work, recompute the one headline that can be recomputed, and record each breach with its rule.",
+            "href": "D2_2_audit_assisted.ipynb",
+            "steps": [
+              {
+                "text": "Read the rules and the log",
+                "minutes": 4
+              },
+              {
+                "text": "Check each record against the rules",
+                "minutes": 9
+              },
+              {
+                "text": "Recompute one headline number",
+                "minutes": 7
+              },
+              {
+                "text": "Write the audit table",
+                "minutes": 5
+              }
+            ],
+            "stretch": "Propose the one rule change the audit suggests"
           }
         },
         {
           "title": "Feedback that builds skill",
+          "summary": "From findings to feedback that names the reasoning, and a plan that keeps unaided practice in the work",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Choose the findings worth raising with an analyst",
+            "Write feedback that names the reasoning, not only the error",
+            "Plan development with goals, evidence and unaided practice"
           ],
           "lo": [
             "LO4"
           ],
           "lab": {
             "id": "2.3",
-            "title": "Turn review findings into feedback and a three-month plan for a new analyst",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Feedback and a three-month plan",
             "minutes": 25,
-            "href": "D2_3_turn_review_findings.ipynb"
+            "summary": "Turn review findings on a new analyst's notebook into a feedback note that names the reasoning, and a three-month plan built on her skills profile.",
+            "href": "D2_3_feedback_plan.ipynb",
+            "steps": [
+              {
+                "text": "Choose three findings to raise",
+                "minutes": 5
+              },
+              {
+                "text": "Write each note: observation, effect, reasoning, next step",
+                "minutes": 9
+              },
+              {
+                "text": "A three-month plan from the skills profile",
+                "minutes": 8
+              },
+              {
+                "text": "Check that every line is specific",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Write the two-line summary for the analyst's file"
           }
         },
         {
           "title": "Review capacity and mentoring",
+          "summary": "Review hours follow assurance levels; senior reviewers are the bottleneck; pairings develop analysts",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Estimate a quarter's review hours from assurance levels",
+            "Assign reviewers under separation and seniority rules",
+            "Use review pairings to develop analysts"
           ],
           "lo": [
+            "LO1",
             "LO4"
           ],
           "lab": {
             "id": "2.4",
-            "title": "Plan a quarter's review load and pairings for a team of twelve",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "A quarter's review rota",
             "minutes": 25,
-            "href": "D2_4_plan_quarter_s.ipynb"
+            "summary": "Plan a quarter's review load and pairings for a team of twelve: assign 40 planned analyses to reviewers under the separation and seniority rules, find the shortfall and choose how to close it.",
+            "href": "D2_4_review_capacity.ipynb",
+            "steps": [
+              {
+                "text": "Review hours by level for the quarter",
+                "minutes": 5
+              },
+              {
+                "text": "Assign reviewers under the rules",
+                "minutes": 9
+              },
+              {
+                "text": "Find the overload and the shortfall",
+                "minutes": 6
+              },
+              {
+                "text": "Pair the juniors with mentors",
+                "minutes": 5
+              }
+            ],
+            "stretch": "Choose which mid-level analyst trains as a level 3 reviewer, and how"
           }
         }
-      ]
+      ],
+      "subtitle": "Calibrated reviewers, audits of assisted work, feedback and a review rota"
     },
     {
       "id": "day3",
@@ -232,81 +415,175 @@
       "sessions": [
         {
           "title": "Scope and deadline",
+          "summary": "What can be answered by the deadline, offered as options and recorded when the constraints change",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Size questions against a deadline, review time included",
+            "Offer options when a request cannot be met as asked",
+            "Record what was agreed and what was not"
           ],
           "lo": [
             "LO5"
           ],
           "lab": {
             "id": "3.1",
-            "title": "Role-play a sponsor who wants a result in a week and agree what can be answered",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "A result in a week",
             "minutes": 25,
-            "href": "D3_1_role_play_sponsor.ipynb"
+            "summary": "Role-play the director of marine operations, who wants the berth-allocation result in a week: agree what can be answered by the deadline, keep the agreement when his constraints change, and record it.",
+            "href": "D3_1_scope_deadline.ipynb",
+            "steps": [
+              {
+                "text": "Size the questions against the deadline",
+                "minutes": 5
+              },
+              {
+                "text": "Open the meeting and ask",
+                "minutes": 6
+              },
+              {
+                "text": "Respond when the constraints change",
+                "minutes": 6
+              },
+              {
+                "text": "Record the scope agreement",
+                "minutes": 5
+              },
+              {
+                "text": "The observer's score",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Play the sponsor for a peer, with the role card"
           }
         },
         {
           "title": "Agreeing the evidence first",
+          "summary": "The decision rule and an evidence threshold the data can detect, written and signed before the analysis",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Write the decision rule before the analysis",
+            "Check an evidence threshold against what the data can detect",
+            "Record roles and sign-off in the agreement"
           ],
           "lo": [
             "LO5"
           ],
           "lab": {
             "id": "3.2",
-            "title": "Write an analysis agreement: question, decision rule and evidence threshold",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "An analysis agreement",
             "minutes": 25,
-            "href": "D3_2_write_analysis_agreement.ipynb"
+            "summary": "Write an analysis agreement for the pilot decision: question, decision rule and an evidence threshold the data can detect, with roles and sign-off.",
+            "href": "D3_2_analysis_agreement.ipynb",
+            "steps": [
+              {
+                "text": "The decision and its options",
+                "minutes": 5
+              },
+              {
+                "text": "Compute the change the data can detect",
+                "minutes": 8
+              },
+              {
+                "text": "Set the decision rule and the threshold",
+                "minutes": 7
+              },
+              {
+                "text": "Roles, level and sign-off",
+                "minutes": 5
+              }
+            ],
+            "stretch": "Say in the agreement what happens when the result falls between the thresholds"
           }
         },
         {
           "title": "Pressure on a finding",
+          "summary": "Challenge or pressure: check the finding, weigh the options, decide and record the reasons",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Tell a legitimate challenge from pressure to suppress",
+            "Respond with options that keep the finding",
+            "Record a decision with its reasons and references"
           ],
           "lo": [
             "LO6"
           ],
           "lab": {
             "id": "3.3",
-            "title": "Handle a scripted request to drop an unfavourable subgroup and record the decision",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Drop the feeder result?",
             "minutes": 25,
-            "href": "D3_3_handle_scripted_request.ipynb"
+            "summary": "Handle a scripted request to drop an unfavourable subgroup (feeder vessels) from the pilot evaluation: recompute it, weigh the options, decide, and record the decision citing the unit's standard and the ethics principles.",
+            "href": "D3_3_pressure_finding.ipynb",
+            "steps": [
+              {
+                "text": "Read the request and recompute the subgroup",
+                "minutes": 6
+              },
+              {
+                "text": "Weigh the options",
+                "minutes": 5
+              },
+              {
+                "text": "Decide and write the decision record",
+                "minutes": 8
+              },
+              {
+                "text": "Draft the reply",
+                "minutes": 6
+              }
+            ],
+            "stretch": "Write the escalation note for a repeated request"
           }
         },
         {
           "title": "Reporting quality and correcting errors",
+          "summary": "A quality statement says what was checked, by whom and what is uncertain; a correction says what changed, fast",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Write a quality statement a board can read",
+            "Correct a released figure quickly and openly",
+            "Link a correction to the change in process"
           ],
           "lo": [
-            "LO1"
+            "LO1",
+            "LO2"
           ],
           "lab": {
             "id": "3.4",
-            "title": "Draft a board-paper quality statement (what was checked, by whom, what remains uncertain) and a correction notice for an error found after release",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "A quality statement and a correction",
             "minutes": 25,
-            "href": "D3_4_draft_board_paper.ipynb"
+            "summary": "Draft a board-paper quality statement for the pilot evaluation (what was checked, by whom, what remains uncertain) and a correction notice for the Q2 cargo-dwell figure found wrong after release.",
+            "href": "D3_4_quality_correction.ipynb",
+            "steps": [
+              {
+                "text": "Write the quality statement",
+                "minutes": 8
+              },
+              {
+                "text": "Find and size the Q2 error",
+                "minutes": 7
+              },
+              {
+                "text": "Write the correction notice",
+                "minutes": 7
+              },
+              {
+                "text": "Check both against the standard",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Decide who is told of the correction, and in which order"
           }
         }
-      ]
+      ],
+      "subtitle": "Scope, evidence agreed first, pressure on a finding, and quality reported honestly"
     },
     {
       "id": "capstone",
       "kind": "capstone",
       "title": "Capstone project presentations",
       "deck": "slides/capstone.html",
-      "subtitle": "REPLACE: the catalog gives 15 minutes for each presentation and nothing about questions; decide whether the questions are inside those minutes, set capstone.talk_minutes and capstone.qa_minutes in course.json and the timers of the now-presenting slide, and remove this line"
+      "subtitle": "A quality-assurance pack for the marine pilot staffing analysis, and the review meeting you chair"
     }
   ],
   "capstone": {
     "summary": "A quality-assurance pack for one high-risk analysis (applied standard, review report, analysis agreement, board quality statement), submitted as a repository, followed by a fifteen-minute review meeting the participant chairs with a role-played analyst and sponsor",
-    "submission": "REPLACE: what participants submit and how: a public repository link, or a shared folder for a course without code",
+    "submission": "A public GitHub repository link holding the pack (the applied standard, the review report, the analysis agreement and the board quality statement) with its commit history; then a fifteen-minute review meeting the participant chairs with a role-played analyst and sponsor, observed against a rubric.",
     "talk_minutes": 15,
     "rubric": [
       {
@@ -363,6 +640,59 @@
       "examples": [
         "a free hosted open-weight model",
         "the assistant the participant's unit already uses"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "group": "Analytical quality assurance",
+      "items": [
+        {
+          "title": "HM Government Analysis Function: The AQuA Book, guidance on producing quality analysis for government (2025 edition)",
+          "url": "https://www.gov.uk/guidance/the-aqua-book"
+        },
+        {
+          "title": "Kapoor et al. (2024): REFORMS, consensus-based recommendations for machine-learning-based science, Science Advances",
+          "url": "https://doi.org/10.1126/sciadv.adk3452"
+        },
+        {
+          "title": "REFORMS checklist and guidelines",
+          "url": "https://reforms.cs.princeton.edu/"
+        }
+      ]
+    },
+    {
+      "group": "Review and agreement",
+      "items": [
+        {
+          "title": "Cohen (1968): Weighted kappa, Psychological Bulletin 70(4)",
+          "url": "https://doi.org/10.1037/h0026256"
+        }
+      ]
+    },
+    {
+      "group": "National references",
+      "items": [
+        {
+          "title": "SDAIA: Generative AI Guidelines for Government",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Files/GenAIGuidelinesForGovernmentENCompressed.pdf"
+        },
+        {
+          "title": "SDAIA: AI Ethics Principles",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf"
+        },
+        {
+          "title": "Personal Data Protection Law",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf"
+        },
+        {
+          "title": "Implementing Regulation of the Personal Data Protection Law",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf"
+        },
+        {
+          "title": "NDMO: Data Classification Policy",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf"
+        }
       ]
     }
   ]
