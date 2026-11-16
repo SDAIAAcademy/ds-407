@@ -97,7 +97,7 @@
       "type": "single",
       "prompt": "You adapt a published 32-item checklist written for machine-learning studies. Most of the unit's work is counts and comparisons for directors. What is the best first step?",
       "options": [
-        "Adopt all 32 items so nothing is missed",
+        "Adopt all 32 items as they stand, so that nothing the authors found is missed",
         "Use it only for level 4 analyses",
         "Replace it with one question: is the work reproducible?",
         "Map the items to the review areas and keep those the unit's work needs"
@@ -130,7 +130,7 @@
         "Are excluded records counted, with a reason for each exclusion?",
         "Is the analysis rigorous?",
         "Is the data quality good enough?",
-        "Would an expert approve of the method?"
+        "Would an experienced expert in the field approve of the method used?"
       ],
       "correct": [
         0
@@ -158,7 +158,7 @@
       "type": "single",
       "prompt": "A level 1 dashboard request is checked by its analyst. Which item must the self-check still include?",
       "options": [
-        "An independent re-run from the repository",
+        "An independent re-run of the analysis from its repository",
         "No personal data and the classification marked",
         "An interval on every number",
         "A second reviewer's severity ratings"
@@ -218,9 +218,9 @@
       "type": "single",
       "prompt": "Two runs of the same script give 5.08 and 5.17. Which repository rule prevents this?",
       "options": [
-        "Pin every package in a lock file",
+        "Pin every package version in a lock file",
         "Use only relative paths",
-        "Name every input file in the README",
+        "Name every input file and its source in the README",
         "Fix the seed of every random step in the code"
       ],
       "correct": [
@@ -306,7 +306,7 @@
       "options": [
         "Use the assistant responsibly",
         "Keep a verification record of each assisted number",
-        "Be transparent about the use of AI",
+        "Be transparent with readers about any use of AI in the work",
         "Protect sensitive data where possible"
       ],
       "correct": [
@@ -427,7 +427,7 @@
       "options": [
         "An average of the two ratings for that finding",
         "A sentence added to the checklist that would have prevented the gap",
-        "A note that the two reviewers see things differently",
+        "A note in the review file that the two reviewers see the finding differently",
         "The senior reviewer's rating, recorded as final"
       ],
       "correct": [
@@ -457,7 +457,7 @@
       "prompt": "An assisted analysis used the approved assistant, re-ran every number and disclosed the use. The data sent to the assistant were the names and shifts of pilots. What does the audit record?",
       "options": [
         "No breach: the work was verified and disclosed",
-        "A breach of the disclosure rule",
+        "A breach of the disclosure rule, since the pilots were never told their data were used",
         "A breach of the data rule; tell the data protection officer and redo on anonymised data",
         "A minor note for the analyst's feedback"
       ],
@@ -486,7 +486,7 @@
       "type": "single",
       "prompt": "An assisted analysis reports 18.4% and has no verification record. You recompute 47.7% from the authority's data. What action does the audit table record?",
       "options": [
-        "Correct the figure to 47.7% in the released paper",
+        "Correct the figure to 47.7% in the released paper and tell its readers",
         "Ask the analyst to add a verification record",
         "Note it for the next quarter's audit",
         "Withdraw the figure, then re-run and re-review the analysis"
@@ -520,7 +520,7 @@
         "No review of assisted work starts without its verification record",
         "Warn the two analysts in writing",
         "Ban the assistant until the next audit",
-        "Audit every assisted analysis from now on"
+        "Audit every assisted analysis from now on, not a sample of five"
       ],
       "correct": [
         0
@@ -547,7 +547,7 @@
       "type": "single",
       "prompt": "A reviewer found seven things in a new analyst's notebook, from a missing comparison group to variable names. How many should the feedback conversation raise?",
       "options": [
-        "All seven, so nothing is hidden",
+        "All seven of them, so that nothing is hidden from her",
         "About three that show a pattern in her reasoning",
         "None: send the review notes instead",
         "Only the most severe one"
@@ -578,7 +578,7 @@
       "prompt": "Which part of a feedback note does most to build an analyst's skill on a new problem?",
       "options": [
         "The observation: the cell and the number",
-        "The effect on the decision",
+        "The effect of the error on the decision the analysis informed",
         "The reasoning: the question she did not ask herself",
         "The praise that opens the note"
       ],
@@ -717,6 +717,364 @@
       "session": 4,
       "slide": "the-rota",
       "level": "evaluate",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-scope-01",
+      "type": "single",
+      "prompt": "A level 3 question takes 1.5 analyst days; the unit plans one review day at level 3. The deadline is in two working days and the sponsor asks for it plus a level 2 question of 1 analyst day. What fits?",
+      "options": [
+        "Both, with the level 3 review shortened to half a day",
+        "Both: 2.5 analyst days is close enough",
+        "The level 3 question alone, with its review",
+        "Neither: refuse until a later board"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "The level 3 question needs 2.5 days with review; it alone fills the deadline, so the second question becomes an option for later.",
+      "misconceptions": [
+        "Cuts the review the level requires to fit the diary",
+        "Sizes the analysis without its review and overruns the deadline",
+        "",
+        "Refuses when an option fits"
+      ],
+      "lo": [
+        "LO5",
+        "LO1"
+      ],
+      "day": "day3",
+      "session": 1,
+      "slide": "size-with-review",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-scope-02",
+      "type": "single",
+      "prompt": "At the start of a scoping meeting the sponsor says: \"I need the slot-booking result in a week.\" What is your first move?",
+      "options": [
+        "Offer the two options that fit a week",
+        "Agree, and work out the scope afterwards",
+        "Explain at once why a week is too short for a level 3 review with its re-run",
+        "Ask which decision the result informs and what evidence would convince him"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "The decision and the evidence he would accept change which option is best; offering before asking sizes the wrong request.",
+      "misconceptions": [
+        "Offers before knowing what the result is for",
+        "Promises a scope nobody has sized",
+        "Opens with a refusal before knowing what is needed",
+        ""
+      ],
+      "lo": [
+        "LO5"
+      ],
+      "day": "day3",
+      "session": 1,
+      "slide": "ask-before-offer",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-scope-03",
+      "type": "single",
+      "prompt": "Why does a scope agreement list the questions that are out of scope?",
+      "options": [
+        "So that nobody later assumes the paper answered them",
+        "Because the unit's standard limits each paper to two questions",
+        "To show the sponsor how much work was refused",
+        "To claim the extra analysis days for the next quarter"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Writing what is out, and when it comes, stops readers and the sponsor from taking silence for an answer.",
+      "misconceptions": [
+        "",
+        "Invents a rule; the limit is the days, not a count of questions",
+        "Turns a record into a complaint",
+        "Confuses a scope record with capacity planning"
+      ],
+      "lo": [
+        "LO5"
+      ],
+      "day": "day3",
+      "session": 1,
+      "slide": "scope-record",
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-agree-01",
+      "type": "single",
+      "prompt": "With twelve months of data after a change, the smallest effect the comparison can reliably detect is 0.66 hours. The operations team says the change pays only from 2 hours. Which threshold goes into the agreement?",
+      "options": [
+        "0.66 hours: the smallest detectable change",
+        "2 hours: it matters to the decision and the data can detect it",
+        "1 hour, as a compromise between the detectable change and the cost",
+        "Any fall at all, as the sponsor first asked"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "The threshold comes from the decision (2 hours pays for the scheme); the detectable change only confirms the data can test it.",
+      "misconceptions": [
+        "Takes the data's precision as the decision's threshold",
+        "",
+        "Splits the difference with no reason in the decision",
+        "Writes a rule any noise could meet"
+      ],
+      "lo": [
+        "LO5"
+      ],
+      "day": "day3",
+      "session": 2,
+      "slide": "mdc",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-agree-02",
+      "type": "single",
+      "prompt": "When should the analysis agreement, with its decision rule, be signed?",
+      "options": [
+        "After the result, so the rule fits what was found",
+        "After a first look at the data, to set a realistic threshold",
+        "Before the analysis starts",
+        "When the board paper is approved"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "A rule signed before the result cannot be bent to it; any later change is dated and signed again.",
+      "misconceptions": [
+        "Fits the rule to the result, which makes it no rule",
+        "A first look at the outcome already informs the threshold",
+        "",
+        "Signs it when it can no longer guide anything"
+      ],
+      "lo": [
+        "LO5"
+      ],
+      "day": "day3",
+      "session": 2,
+      "slide": "rule-before-result",
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-agree-03",
+      "type": "single",
+      "prompt": "An agreed rule says: extend if waiting falls by at least 2 hours and no vessel type waits more than 2 hours longer. The result: a fall of 0.78 hours overall; feeders wait 6.32 hours longer. What does the rule say?",
+      "options": [
+        "Extend: waiting fell overall",
+        "Extend to all terminals except for feeders",
+        "Re-run with a longer window until it passes",
+        "Do not extend as it is: both conditions fail"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "The fall is below 2 hours and one type loses more than 2 hours; the rule's alternative applies: keep at T2 and fix the feeder slots.",
+      "misconceptions": [
+        "Reads the sign of the effect and ignores the threshold",
+        "Invents a partial option the agreement does not contain",
+        "Changes the data window after seeing the result",
+        ""
+      ],
+      "lo": [
+        "LO5"
+      ],
+      "day": "day3",
+      "session": 2,
+      "slide": "the-estimate",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-press-01",
+      "type": "single",
+      "prompt": "A director writes: \"The subgroup table is based on very few cases; please check it before the board.\" Is this pressure or a challenge?",
+      "options": [
+        "A challenge: it questions whether the finding is sound, and can be checked",
+        "Pressure: any request from a sponsor about a finding is pressure on it, whatever it says",
+        "Pressure, because it comes from a director",
+        "Neither: subgroup tables are optional"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "It questions the evidence, not its visibility; recompute and report the count, and the finding may change.",
+      "misconceptions": [
+        "",
+        "Treats every question as an attack, which shuts out fair corrections",
+        "Judges the request by rank instead of content",
+        "Treats a finding the rule depends on as decoration"
+      ],
+      "lo": [
+        "LO6"
+      ],
+      "day": "day3",
+      "session": 3,
+      "slide": "challenge-or-pressure",
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-press-02",
+      "type": "single",
+      "prompt": "You decide to keep a subgroup result a senior asked you to remove. What must the decision record contain?",
+      "options": [
+        "The decision only, so that the record stays short and easy to read",
+        "The request, the checked finding, the options, the decision, its reasons and the rules cited",
+        "The request and the senior's name, sent to the chief executive at once",
+        "The finding with its statistical test, the count of cases and the analyst who checked it"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "Someone who was not there must see why: what was asked, what was checked, what was weighed and on what rules.",
+      "misconceptions": [
+        "Leaves the reasons out, so the decision cannot be defended later",
+        "",
+        "Makes the record about a person, not the decision",
+        "Records the evidence but not the decision taken on it"
+      ],
+      "lo": [
+        "LO6"
+      ],
+      "day": "day3",
+      "session": 3,
+      "slide": "decision-record",
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-press-03",
+      "type": "single",
+      "prompt": "Which reply best keeps both the finding and the working relationship with the senior who asked to remove it?",
+      "options": [
+        "The table stays: removing findings would breach our ethics and our standard, as you know",
+        "I will remove it once you put the request in writing to the unit",
+        "I see the concern; the agreed rule needs the table, so it stays, with context and your plan",
+        "As you prefer: I will move it to an appendix at the back of the paper"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "It acknowledges him, keeps the finding on the rule he agreed to, and gives him something to add rather than lose.",
+      "misconceptions": [
+        "Right decision, but lectures and gives him nothing to do",
+        "Trades the finding for paperwork",
+        "",
+        "Hides the finding while appearing to keep it"
+      ],
+      "lo": [
+        "LO6"
+      ],
+      "day": "day3",
+      "session": 3,
+      "slide": "the-reply",
+      "level": "evaluate",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-quality-01",
+      "type": "single",
+      "prompt": "Which sentence belongs in a board quality statement about uncertainty?",
+      "options": [
+        "Results should be interpreted with appropriate caution given the limitations of the data used",
+        "Uncertainty was assessed by the review team",
+        "The analysis used robust statistical methods",
+        "The fall is likely between 0.3 and 1.3 hours per call, below the agreed 2 hours"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "A range set beside the agreed threshold lets the board weigh the result without the method.",
+      "misconceptions": [
+        "Warns without saying how much",
+        "Says uncertainty was looked at, not what it is",
+        "Describes the method, not what remains uncertain",
+        ""
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day3",
+      "session": 4,
+      "slide": "uncertainty-number",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-quality-02",
+      "type": "single",
+      "prompt": "A released quarterly figure was understated because two weeks of an extract were loaded twice. What does the correction notice give as the cause?",
+      "options": [
+        "A load that accepted duplicated weeks, and no duplicate check",
+        "An unexplained data issue",
+        "The analyst who ran the quarterly figure",
+        "The vendor of the terminal system, which re-sent the two weeks"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "The notice names the cause in the process and the change that prevents it, so the next error gets reported.",
+      "misconceptions": [
+        "",
+        "Gives no cause, so no process changes",
+        "Blames a person, which teaches the unit to hide errors",
+        "Moves the blame outside and leaves the unit's missing check in place"
+      ],
+      "lo": [
+        "LO1",
+        "LO4"
+      ],
+      "day": "day3",
+      "session": 4,
+      "slide": "correction-notice",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1
+    },
+    {
+      "id": "q-quality-03",
+      "type": "tf",
+      "prompt": "True or false: a released figure that turns out to be too low, and so understated the authority's performance, needs no correction notice.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "The figure left the authority and others used it; whatever the direction of the error, they are told.",
+      "misconceptions": [
+        "Lets the direction of the error decide whether readers are told",
+        ""
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day3",
+      "session": 4,
+      "slide": "check-correction",
+      "level": "understand",
       "pool": "practice",
       "weight": 1
     }

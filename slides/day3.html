@@ -1,158 +1,458 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: welcome; introduce yourself; one question to the room that calibrates the pace; the rhythm of the day</aside>
+  <aside class="notes"><p>Day 3 takes the review system out of the unit, to the people who commission the work: a sponsor with a deadline, an evidence threshold agreed before the result, a request to drop a finding, and a correction. Two of the four labs are role-plays: set up the observers now.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>The thread through the day is the slot-booking evaluation from Day 2. Each lab starts from supplied files, so a participant who missed Day 2 can still do it.</p></aside>
+</section>
+
+<section class="slide" id="review-day2" data-lo="LO2 LO4">
+  <div class="kicker">Review of Day 2</div>
+  <h2>Two reviewers agree on half their ratings. What comes next?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">You and a colleague reviewed the same analysis alone. You agree on three of six severity ratings; the largest gap, two levels, is on a privacy finding.</p>
+    <div class="opts">
+      <div class="opt" data-why="Averages two readings of one rule and leaves the rule as ambiguous as before">Record a severity of 2 for the privacy finding</div>
+      <div class="opt" data-why="Settles the case by seniority; the next pair of reviewers will split the same way">Use the senior reviewer's ratings</div>
+      <div class="opt" data-ok>Discuss the privacy gap and add the sentence to the checklist that prevents it</div>
+      <div class="opt" data-why="Treats the gaps of one level as worth a meeting; calibration time goes to the large gaps">Discuss all three disagreements in turn</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A gap of two levels shows an item that admits two readings; the fix is the wording, so the next review agrees.</div>
+  </div>
+  <aside class="notes"><p>Answer: discuss the large gap and change the checklist. Recall the anchor from Lab 2.1: personal data in an output is critical, whatever its effect on the decision.</p></aside>
+</section>
 
 <!-- Session 1 -->
 
 <section class="slide section" id="s1" data-auto="section" data-session="1"></section>
 
-<section class="slide" id="s1-idea" data-lo="LO5">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
+<section class="slide" id="the-ask" data-lo="LO5">
+  <div class="kicker">The request</div>
+  <h2>"I need the slot-booking result for the board in a week"</h2>
   <div class="cols cols-2">
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li>Bader Al-Khayyal, director of marine operations, sponsors the berth-allocation pilot</li>
+      <li>One analyst is free; the board papers close in five working days</li>
+      <li>The draft he has seen says waiting "halved"; he has heard it has problems</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+    <div class="card c-amber"><h4>The trap</h4><p class="small mb0">Say yes to everything and cut the review, or say no and lose the sponsor. Both are avoidable.</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>Most heads of unit learned to say yes. The session gives them a third answer: options, each with what it leaves out, sized with the review included.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps" data-lo="LO5">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="size-with-review" data-lo="LO5 LO1">
+  <div class="kicker">Size it first</div>
+  <h2>The review is part of the time, not something after it</h2>
+  <table class="t small">
+    <tr><th>Question</th><th class="num">Level</th><th class="num">Analyst days</th><th class="num">With review</th></tr>
+    <tr><td>Q-a · Waiting at T2 against the other terminals</td><td class="num">3</td><td class="num">1.5</td><td class="num">2.5</td></tr>
+    <tr><td>Q-b · The same by vessel type, feeders separate</td><td class="num">3</td><td class="num">0.5</td><td class="num">1.5</td></tr>
+    <tr><td>Q-c · Diversions by terminal</td><td class="num">2</td><td class="num">1</td><td class="num">1.5</td></tr>
+    <tr><td>Q-d · Forecast for all four terminals</td><td class="num">4</td><td class="num">6</td><td class="num">8</td></tr>
+    <tr><td>Q-e · Cost to the shipping lines</td><td class="num">3</td><td class="num">4</td><td class="num">5</td></tr>
+  </table>
+  <aside class="notes"><p>From <code>data/inventory.json</code> of Lab 3.1, synthetic. The review days follow the level: half a day at level 2, a day at level 3, two at level 4. Everything together is 18.5 days for a five-day deadline.</p></aside>
+</section>
+
+<section class="slide" id="ask-before-offer" data-lo="LO5">
+  <div class="kicker">The meeting</div>
+  <h2>Ask four things before offering anything</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Decision</h4><p class="small mb0">Which decision will this inform, and who takes it?</p></div>
+    <div class="card c-cyan"><h4>Deadline</h4><p class="small mb0">When exactly, and is there time after it for a correction?</p></div>
+    <div class="card c-purple"><h4>Evidence</h4><p class="small mb0">What would convince you, and what would make others object?</p></div>
+    <div class="card c-amber"><h4>What exists</h4><p class="small mb0">Is there a draft, an earlier report, a number already quoted?</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>Bader's answers change the best option: "I will not sign anything if the shipping lines can show it hurt them" is the reason vessel types belong in scope. An offer made before that answer sizes the wrong request.</p></aside>
+</section>
+
+<section class="slide" id="options" data-lo="LO5">
+  <div class="kicker">Options, not refusal</div>
+  <h2>Two options fit five days; the full set needs a later board</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>A · 4.0 days</h4><p class="small mb0">Q-a and Q-c: the effect and diversions. Leaves out vessel types, the forecast and the cost to the lines.</p></div>
+    <div class="card c-cyan"><h4>B · 4.0 days</h4><p class="small mb0">Q-a and Q-b: the effect and vessel types. Leaves out diversions, the forecast and the cost.</p></div>
+    <div class="card c-purple"><h4>C · 10.5 days</h4><p class="small mb0">Q-a, Q-b, Q-c, Q-e. Leaves out the forecast; goes to the following board.</p></div>
+  </div>
+  <aside class="notes"><p>Each option names what it leaves out: that is what lets the sponsor choose instead of assuming. Q-d, the forecast, belongs after a decision to extend, not before it.</p></aside>
+</section>
+
+<section class="slide" id="constraint-changes" data-lo="LO5">
+  <div class="kicker">Halfway through</div>
+  <h2>"Four days, not five. And the deputy CEO wants the feeder lines."</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Do not</h4><p class="small mb0">Promise the same scope in fewer days. The day that disappears is the review.</p></div>
+    <div class="card c-teal"><h4>Do</h4><p class="small mb0">Go back to the options: B fits four days and answers the feeder question. Diversions move to the next board.</p></div>
+  </div>
+  <aside class="notes"><p>The scripted sponsor of Lab 3.1 changes his constraints on the fourth message, as real sponsors do. The skill is to answer the change with the options already on the table, not to start again or to absorb it.</p></aside>
+</section>
+
+<section class="slide" id="scope-record" data-lo="LO5">
+  <div class="kicker">Write it down</div>
+  <h2>The scope agreement records what is out as clearly as what is in</h2>
+  <table class="t small">
+    <tr><th>Field</th><th>Recorded</th></tr>
+    <tr><td>Decision</td><td>Whether to extend slot booking to all four terminals next quarter</td></tr>
+    <tr><td>In scope</td><td>Q-a, Q-b · 4.0 of 4 working days</td></tr>
+    <tr><td>Out of scope</td><td>Q-c and Q-e for the following board; Q-d not before a decision to extend</td></tr>
+    <tr><td>After the change</td><td>Option B: answers the feeder question; diversions move</td></tr>
+  </table>
+  <aside class="notes"><p>Send it the same day. The out-of-scope line is what protects the unit when someone later asks why the paper said nothing on diversions.</p></aside>
+</section>
+
+<section class="slide" id="observer" data-lo="LO5">
+  <div class="kicker">The observer</div>
+  <h2>Five criteria, each scored 0 to 2</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Asked before offering</li>
+      <li>Offered options, not a refusal</li>
+      <li>The agreed scope fits the deadline</li>
+      <li>Named what is out of scope</li>
+      <li>Handled the change with an option</li>
+    </ul>
+    <div class="callout tip"><b>For the observer.</b> Write down the sentence that earned or lost each point. A score without the sentence teaches nothing.</div>
+  </div>
+  <aside class="notes"><p>The same five criteria are in the lab's rule-based stand-in for participants working alone. In class, a person observes: the stand-in cannot hear tone, and tone matters with sponsors.</p></aside>
+</section>
+
+<section class="slide" id="check-deadline-cut" data-lo="LO5">
+  <div class="kicker">Checkpoint</div>
+  <h2>The deadline moves from five days to four</h2>
+  <div class="quiz" data-type="single" data-lo="LO5">
+    <p class="lead">You agreed option A, 4.0 days with review. The sponsor now says four days, and adds a question on feeder vessels. What do you answer?</p>
+    <div class="opts">
+      <div class="opt" data-why="Promises more work in the same days; the time comes out of the review the level requires">Keep A and add the feeder question; the team will work longer</div>
+      <div class="opt" data-ok>Offer B in place of A: it fits four days and answers the feeder question</div>
+      <div class="opt" data-why="Lowers the level to fit the diary; the level comes from what an error would cost the board">Drop the review to level 2 so everything fits</div>
+      <div class="opt" data-why="Refuses when an option exists, which costs the sponsor's trust and gives the board nothing">Say the deadline cannot be met and ask for a later board</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Swapping one question for another keeps the work inside the days with its review, and answers the new question.</div>
+  </div>
+  <aside class="notes"><p>Answer: offer B. Ask what they would say if no option fitted: then a later board, offered with the reason and the cost of waiting.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-1" data-auto="lab" data-lab="3.1">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>AI-off during the meeting. Groups of three: head of unit, sponsor with the role card from <code>data/roles.json</code>, observer. The sponsor changes the constraint on the fourth message. Common failure: offering option A in the first message, before asking anything.</p></aside>
 </section>
 
 <!-- Session 2 -->
 
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea" data-lo="LO5">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
+<section class="slide" id="rule-before-result" data-lo="LO5">
+  <div class="kicker">Before the analysis</div>
+  <h2>Agree what result would change the decision before anyone sees it</h2>
   <div class="cols cols-2">
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li>After the result, every threshold looks negotiable</li>
+      <li>Before it, the sponsor says what matters to him</li>
+      <li>The agreement turns "extend it if waiting falls" into a rule with numbers</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+    <div class="callout note"><b>From DS-310.</b> Pre-registering a decision rule for your own analysis is the analyst's habit. Here the head of unit agrees it with the sponsor and signs it.</div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>The catalog's evidence for outcome 5 is a signed analysis agreement. The REFORMS checklist asks studies to state their question and decision context before the results: the same idea at study scale.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps" data-lo="LO5">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
+<section class="slide" id="agreement-parts" data-lo="LO5">
+  <div class="kicker">The agreement</div>
+  <h2>Five parts, one page</h2>
   <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+    <div class="step c-teal"><b>Question</b>as the board's choice</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>Options</b>including not to act</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>Rule</b>threshold and conditions</div>
+    <div class="arrow">→</div>
+    <div class="step c-amber"><b>Data</b>window and exclusions</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>Roles</b>level and sign-off</div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>The options for slot booking: extend to all terminals, keep at T2 and fix the feeder slots, or stop. "Not to act" must be one of them, or the agreement assumes the answer.</p></aside>
+</section>
+
+<section class="slide" id="mdc" data-lo="LO5">
+  <div class="kicker">What the data can detect</div>
+  <h2>With 12 months after the change, the data can detect 0.66 hours</h2>
+  <div class="bars">
+    <div class="row"><span>3 months after</span><div class="bar c-coral" style="--w:57%"></div><span class="val">1.13 h</span></div>
+    <div class="row"><span>6 months after</span><div class="bar c-amber" style="--w:42%"></div><span class="val">0.84 h</span></div>
+    <div class="row"><span>12 months after</span><div class="bar c-teal" style="--w:33%"></div><span class="val">0.66 h</span></div>
+    <div class="row"><span>Threshold</span><div class="bar c-purple" style="--w:100%"></div><span class="val">2.0 h</span></div>
+  </div>
+  <p class="caption">Minimum detectable change of the difference in differences, about 2.8 standard errors (80% power, 5% test). Lab 3.2, synthetic berth calls.</p>
+  <aside class="notes"><p>A threshold below the detectable change is a promise the data cannot keep: the result will be "no detectable effect" whatever happens. Here 2.0 hours is well above 0.66, so the rule is testable. The estimate stays hidden until the agreement is signed.</p></aside>
+</section>
+
+<section class="slide" id="decision-rule" data-lo="LO5">
+  <div class="kicker">The rule</div>
+  <h2>Extend only if waiting falls by 2 hours and no vessel type loses more than 2</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Before</h4><p class="small mb0">"Extend it if waiting falls at all."</p></div>
+    <div class="card c-teal"><h4>Agreed</h4><p class="small mb0">Extend if waiting at T2 falls by at least 2.0 hours per call against the other terminals, and no vessel type waits more than 2.0 hours longer; otherwise keep at T2 and fix the slots for the type that lost.</p></div>
+  </div>
+  <aside class="notes"><p>The 2 hours comes from the operations team: a berth hour saved per call pays for slot booking only from 2 hours. The second condition answers Bader's own worry about the shipping lines. It decides Session 3.</p></aside>
+</section>
+
+<section class="slide" id="roles-signoff" data-lo="LO1 LO5">
+  <div class="kicker">Sign-off</div>
+  <h2>Level 3: three different people analyse, assure and approve</h2>
+  <table class="t small">
+    <tr><th>Role</th><th>Person</th></tr>
+    <tr><td>Commissioner</td><td>Bader Al-Khayyal, director of marine operations</td></tr>
+    <tr><td>Analyst</td><td>Saleh Al-Ghamlas</td></tr>
+    <tr><td>Assurer</td><td>Faleh Al-Musharraf</td></tr>
+    <tr><td>Approver</td><td>Arjwan Al-Huqail, head of the unit</td></tr>
+  </table>
+  <aside class="notes"><p>Signed before the analysis starts; any change to the rule is dated and signed again. The level is N6 of Lab 1.1: a board decision with a joined comparison, level 3.</p></aside>
+</section>
+
+<section class="slide" id="the-estimate" data-lo="LO5">
+  <div class="kicker">Then, the result</div>
+  <h2>Waiting fell 0.78 hours; feeders wait 6.32 hours longer</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">-0.78 h</div><div class="lbl">all calls at T2, against the other terminals</div></div>
+    <div class="stat"><div class="big">+6.32 h</div><div class="lbl">feeder vessels</div></div>
+    <div class="stat"><div class="big">-2.88 h</div><div class="lbl">the other vessel types</div></div>
+  </div>
+  <p class="caption">Difference in differences, Lab 3.2 and 3.3, synthetic. Both conditions of the rule fail: keep at T2, fix the feeder slots.</p>
+  <aside class="notes"><p>The real fall is smaller than 2 hours, and one type loses far more than 2. Without the signed rule, the room would now be arguing whether 0.78 is "good enough". With it, the decision is already made. The stretch asks what the agreement says between thresholds.</p></aside>
+</section>
+
+<section class="slide" id="check-threshold" data-lo="LO5">
+  <div class="kicker">Checkpoint</div>
+  <h2>A threshold the data cannot test</h2>
+  <div class="quiz" data-type="single" data-lo="LO5">
+    <p class="lead">With three months of data after the change, the minimum detectable change is 1.13 hours. The sponsor wants to extend "if waiting falls by half an hour". What do you do?</p>
+    <div class="opts">
+      <div class="opt" data-why="Signs a rule the data cannot test: any result will read as 'no detectable effect'">Sign it: the sponsor sets the threshold</div>
+      <div class="opt" data-why="Lowers the bar for evidence to fit the wish, which is how false positives reach a board">Use a looser test so half an hour can show</div>
+      <div class="opt" data-why="Agrees the rule after the result, the thing the agreement exists to prevent">Run the analysis first, then agree the threshold</div>
+      <div class="opt" data-ok>Show him the detectable change and agree a longer window or a threshold the data can test</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A rule is only useful if the data could meet it; more months after the change lower the detectable change.</div>
+  </div>
+  <aside class="notes"><p>Answer: show the detectable change and agree a window or a threshold. With 12 months the detectable change is 0.66 hours: still above half an hour, so the window alone would not do.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-2" data-auto="lab" data-lab="3.2">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>AI-tutor: the tutor may question the agreement, not write it. Ask participants not to scroll to the estimate cell before task 4. Common failure: a threshold with no data window, or roles where the assurer is the analyst.</p></aside>
 </section>
 
 <!-- Session 3 -->
 
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea" data-lo="LO6">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
+<section class="slide" id="the-email" data-lo="LO6">
+  <div class="kicker">The request</div>
+  <h2>"Please take the feeder table out of the paper"</h2>
   <div class="cols cols-2">
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li>Khaled Al-Kharji, deputy chief executive for commercial affairs</li>
+      <li>Feeders are "small local operators, less than a quarter of calls"</li>
+      <li>"The table will distract the board"; his team will handle the feeder lines</li>
+      <li>He needs the final version by the end of tomorrow</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+    <div class="card c-amber"><h4>Read it fairly</h4><p class="small mb0">The request is polite and gives reasons. Some of them could be right. Check before you decide.</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>The email in <code>data/khaled_request.md</code>, a fictional persona. Pressure rarely arrives as a threat; it arrives as a reasonable request from someone senior, with a deadline.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps" data-lo="LO6">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="challenge-or-pressure" data-lo="LO6">
+  <div class="kicker">The first question</div>
+  <h2>Is it a challenge to the finding, or pressure on it?</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>A challenge</h4><p class="small mb0">Says the finding may be wrong: too few cases, noise, a coding error. Answered by checking, and the finding may change.</p></div>
+    <div class="card c-coral"><h4>Pressure</h4><p class="small mb0">Accepts the finding but wants it unseen: "distracting", "handled elsewhere". Answered by a decision, recorded.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>Khaled's email mixes the two: "small" is a challenge about size, which can be checked; "distracting" is pressure. Treat the challenge seriously first: it is the fair part of the request.</p></aside>
+</section>
+
+<section class="slide" id="recompute-subgroup" data-lo="LO6 LO2">
+  <div class="kicker">Check it</div>
+  <h2>278 feeder calls at T2 after the change: not noise</h2>
+  <div class="cols cols-2">
+    <pre class="code" data-file="Lab 3.3"><code class="language-python">U.subgroup_did("feeder")           # +6.32 h
+U.subgroup_did(exclude="feeder")   # -2.88 h
+# feeder calls at T2 after: 278, diverted 33</code></pre>
+    <ul class="bullets">
+      <li>Hundreds of calls; the effect is many times its noise</li>
+      <li>33 of the 35 diverted T2 calls after the change were feeders</li>
+      <li>The feeder condition is in the signed rule</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The check answers the fair part of the request. Had the subgroup been 20 calls with an effect inside its noise, the right answer would have been to say so in the paper, still not to remove the table.</p></aside>
+</section>
+
+<section class="slide" id="three-options" data-lo="LO6">
+  <div class="kicker">Options</div>
+  <h2>Remove, keep, or keep with context</h2>
+  <table class="t small">
+    <tr><th>Option</th><th>What it does</th></tr>
+    <tr><td>Remove the table</td><td>The board may extend a scheme that adds hours of waiting for local lines; the signed rule is not applied</td></tr>
+    <tr><td>Keep it as it is</td><td>The rule is applied; the commercial team may feel ambushed</td></tr>
+    <tr class="hl"><td>Keep it with context</td><td>State the feeder share of calls and revenue; invite the commercial team's plan for the feeder slots</td></tr>
+  </table>
+  <aside class="notes"><p>The third option keeps the finding and the relationship: it gives Khaled something to add instead of something to lose. It is the reference decision of Lab 3.3.</p></aside>
+</section>
+
+<section class="slide" id="decision-record" data-lo="LO6">
+  <div class="kicker">The record</div>
+  <h2>Record the decision the same day, with its reasons and references</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>S-7.</b> Findings are not removed from a paper after review; a disagreement is recorded beside the finding</li>
+      <li><b>S-8.</b> Pressure on a finding is recorded the same day; if repeated, escalated to the chief executive's office</li>
+      <li>The signed rule includes the vessel-type condition</li>
+    </ul>
+    <div class="card c-purple"><h4>SDAIA AI Ethics Principles</h4><p class="small mb0">Fairness · Transparency &amp; Explainability · Accountability &amp; Responsibility</p></div>
+  </div>
+  <aside class="notes"><p>The clauses are from the unit's reference standard, <code>data/unit_standard.md</code>. The principles are cited by the names SDAIA uses. The analysis here is not an AI system, so the principles apply by analogy: the lab asks for them because the catalog does, and the participants' own work increasingly includes models.</p><p>Sources: SDAIA, AI Ethics Principles.</p></aside>
+</section>
+
+<section class="slide" id="the-reply" data-lo="LO6">
+  <div class="kicker">The reply</div>
+  <h2>Keep the relationship and the finding</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>Acknowledge</b>the concern, in his words</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>Decide</b>the table stays</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>Why</b>the signed rule, the size</div>
+    <div class="arrow">→</div>
+    <div class="step c-amber"><b>Offer</b>context and his team's plan</div>
+  </div>
+  <aside class="notes"><p>At most 150 words, and the deadline met. A reply that lectures on ethics loses him; a reply that cites the rule he and Bader agreed to keeps it a matter of process, not of persons.</p></aside>
+</section>
+
+<section class="slide" id="check-pressure" data-lo="LO6">
+  <div class="kicker">Checkpoint</div>
+  <h2>A senior asks to remove an unfavourable subgroup</h2>
+  <div class="quiz" data-type="single" data-lo="LO6">
+    <p class="lead">You checked the subgroup: hundreds of cases, a large effect, and its condition is in the signed decision rule. The deputy chief executive asks again to remove it. What do you do?</p>
+    <div class="opts">
+      <div class="opt" data-why="Changes the rule after the result was seen, the thing the agreement was signed to prevent">Remove it and mention it in a footnote</div>
+      <div class="opt" data-why="Lets seniority decide a question of evidence; the board is left without the condition it agreed">Remove it, since he outranks you</div>
+      <div class="opt" data-ok>Keep it, record the repeated request and escalate with the record</div>
+      <div class="opt" data-why="Hides the disagreement from the board instead of recording it beside the finding">Keep it, but leave the request out of the record</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The standard keeps findings after review and says a repeated request is escalated with the decision record, so the decision rests on process, not on rank.</div>
+  </div>
+  <aside class="notes"><p>Answer: keep, record and escalate (S-7, S-8). The stretch of Lab 3.3 asks for the escalation note: to whom, what is attached, what you ask them to decide.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-3" data-auto="lab" data-lab="3.3">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>AI-tutor: the decision is the participant's. In class, a trainer can play Khaled for the reply. Common failure: deciding before recomputing; or citing "the ethics principles" without naming them.</p></aside>
 </section>
 
 <!-- Session 4 -->
 
 <section class="slide section" id="s4" data-auto="section" data-session="4"></section>
 
-<section class="slide" id="s4-idea" data-lo="LO1">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
-  </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+<section class="slide" id="quality-statement" data-lo="LO1">
+  <div class="kicker">For the board</div>
+  <h2>A quality statement a board reads in a minute</h2>
+  <table class="t small">
+    <tr><th>Part</th><th>Slot-booking paper</th></tr>
+    <tr><td>Level</td><td>3: independent review, approved by the head of unit</td></tr>
+    <tr><td>Checked</td><td>Re-run to the same figures; every number traced; no personal data</td></tr>
+    <tr><td>By whom</td><td>Saleh Al-Ghamlas; reviewed by Faleh Al-Musharraf; approved by Arjwan Al-Huqail</td></tr>
+    <tr><td>Uncertain</td><td>The fall is 0.78 hours per call, likely between 0.3 and 1.3</td></tr>
+    <tr><td>Assisted</td><td>Method draft written with the approved assistant, verified line by line</td></tr>
+    <tr><td>Classification</td><td>Internal</td></tr>
+  </table>
+  <aside class="notes"><p>S-9 of the unit's standard: every paper at level 2 or above. The interval is the estimate plus and minus two standard errors (0.236). The disclosure line is the one the audit of Day 2 found missing on a board paper.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps" data-lo="LO1">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="uncertainty-number" data-lo="LO1">
+  <div class="kicker">Uncertainty</div>
+  <h2>"Results may vary" cannot be weighed; "between 0.3 and 1.3 hours" can</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Vague</h4><p class="small mb0">The results are subject to some uncertainty and should be interpreted with care.</p></div>
+    <div class="card c-teal"><h4>Usable</h4><p class="small mb0">The fall is likely between 0.3 and 1.3 hours, below the 2-hour threshold the board agreed.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>The usable version puts the range next to the threshold, so the board sees the decision without needing the method. The lab's check flags vague words in the statement.</p></aside>
+</section>
+
+<section class="slide" id="q2-error" data-lo="LO1">
+  <div class="kicker">After release</div>
+  <h2>Q2 dwell was released as 4.07 days; it is 4.32</h2>
+  <div class="cols cols-2">
+    <div class="stack">
+      <div class="stat"><div class="big">1,080</div><div class="lbl">rows loaded twice, weeks 5 and 6</div></div>
+    </div>
+    <ul class="bullets">
+      <li>The terminal system re-sent two weeks; the load accepted them</li>
+      <li>The duplicated weeks had short dwell, so the mean was understated</li>
+      <li>The figure went to the board and to the ministry's indicator team</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From Lab 3.4, synthetic. A colleague found it by re-running: the habit of Day 1 doing its job. The corrected figure is higher, which some will feel makes it less urgent. It does not: the wrong figure left the authority.</p></aside>
+</section>
+
+<section class="slide" id="correction-notice" data-lo="LO1 LO4">
+  <div class="kicker">The notice</div>
+  <h2>A correction names the process, not the person</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Released and corrected values, side by side</li>
+      <li>The cause in the process: a load that accepted duplicates, a check that did not exist</li>
+      <li>Decisions affected: quoted in the storage-fee discussion; no fee changed on it</li>
+      <li>The change: a duplicate check on every extract, from level 1 for published figures</li>
+      <li>Who is told: the board secretary, the quarterly note's readers, the ministry team</li>
+    </ul>
+    <div class="callout tip"><b>S-10.</b> Within five working days of finding the error.</div>
+  </div>
+  <aside class="notes"><p>A notice that names the analyst teaches the unit to hide the next error. One that names the process gets the next error reported. That is the culture the course aims at.</p></aside>
+</section>
+
+<section class="slide" id="who-first" data-lo="LO1">
+  <div class="kicker">Order matters</div>
+  <h2>Tell the people who acted on the figure before the people who read it</h2>
+  <div class="flow">
+    <div class="step c-coral"><b>1 · Ministry team</b>it went into a national indicator</div>
+    <div class="arrow">→</div>
+    <div class="step c-amber"><b>2 · Board secretary</b>it was in a board paper</div>
+    <div class="arrow">→</div>
+    <div class="step c-teal"><b>3 · Note readers</b>internal readers</div>
+  </div>
+  <aside class="notes"><p>The stretch of Lab 3.4. There is room for argument on the order of the first two; the point is that someone outside the authority who republished the figure should not learn of the correction last. This order is a choice made for the case.</p></aside>
+</section>
+
+<section class="slide" id="check-correction" data-lo="LO1">
+  <div class="kicker">Checkpoint</div>
+  <h2>The corrected figure is better news</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">A released figure is found to be wrong; the corrected value is higher and more favourable to the authority. No decision changed on the old one. What do you do?</p>
+    <div class="opts">
+      <div class="opt" data-why="Lets the direction of the error decide whether readers are told">Use the corrected figure from now on, without a notice</div>
+      <div class="opt" data-ok>Issue a notice within five working days, with both values and the cause in the process</div>
+      <div class="opt" data-why="Mixes a correction with the next routine release, so readers of the old figure never see it">Correct it in next quarter's paper</div>
+      <div class="opt" data-why="Puts a person where the cause is a process, which discourages the next report of an error">Issue a notice naming the analyst who released it</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The figure left the authority; whoever used it needs the notice, whatever the direction of the error.</div>
+  </div>
+  <aside class="notes"><p>Answer: a notice under S-10. The direction of the error is the most common reason corrections are skipped.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-4" data-auto="lab" data-lab="3.4">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>AI-tutor. Task 1 uses the estimate from Lab 3.2; the lab recomputes it, so nothing depends on earlier output. Common failure: a statement over 160 words, or "results may vary" in place of a range.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
   <div class="kicker">Day 3 · wrap-up</div>
   <h2>Three things to keep</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-coral"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-purple"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
+    <div class="card c-teal"><h4>Options</h4><p class="small mb0">Size with the review included, ask before offering, record what is out.</p></div>
+    <div class="card c-purple"><h4>Rule first</h4><p class="small mb0">Agree a testable threshold and sign it before the result exists.</p></div>
+    <div class="card c-coral"><h4>Keep findings</h4><p class="small mb0">Check a challenge, record pressure, correct errors openly.</p></div>
   </div>
+  <aside class="notes"><p>Ask which of the three would have changed something in their own last quarter.</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="Next">
   <div class="kicker">Next</div>
-  <h2>Capstone: Capstone project presentations</h2>
-  <p class="lead">REPLACE: what participants prepare before then; unfinished labs can be finished at home</p>
-  <aside class="notes">REPLACE: accounts, installs or reading participants need before the next unit</aside>
+  <h2>Day 4: The capstone</h2>
+  <p class="lead">You receive one high-risk analysis: a model that sets night pilot numbers. Apply your standard, review it, agree the evidence with its sponsor, write the board's quality statement, and chair the review meeting.</p>
+  <aside class="notes"><p>The practice version is in <code>labs/capstone/</code>; the assessed variants are the trainer's. Recruit the role-players for the meetings tonight.</p></aside>
 </section>
