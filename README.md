@@ -73,7 +73,7 @@ The brief and the practice version of the analysis are in [`labs/capstone/`](lab
 
 ## How the course runs
 
-Three teaching days of four 50-minute sessions: about 20 minutes of concepts, a checkpoint, then a 25-minute lab that produces one part of the unit's quality system. Day 1 sets the standard, Day 2 runs review and develops analysts, Day 3 works with sponsors. Day 2's first-pass review is done without AI assistance, so that each reviewer forms a judgement before comparing it. The role-plays use the trainer or a peer, with scripted stand-ins for practice alone.
+Three teaching days of four 50-minute sessions: about 20 minutes of concepts, a checkpoint, then a 25-minute lab that produces one part of the unit's quality system. Day 1 sets the standard, Day 2 runs review and develops analysts, Day 3 works with sponsors. Day 2's first-pass review is done without AI assistance, so that each reviewer forms a judgement before comparing it. The sponsor role-plays use trained role players (the trainer or a briefed colleague) and an observer with a rubric; scripted stand-ins in the labs are for practice alone.
 
 ## Pre-work and follow-up
 
