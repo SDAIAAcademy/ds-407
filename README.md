@@ -75,6 +75,11 @@ The brief and the practice version of the analysis are in [`labs/capstone/`](lab
 
 Three teaching days of four 50-minute sessions: about 20 minutes of concepts, a checkpoint, then a 25-minute lab that produces one part of the unit's quality system. Day 1 sets the standard, Day 2 runs review and develops analysts, Day 3 works with sponsors. Day 2's first-pass review is done without AI assistance, so that each reviewer forms a judgement before comparing it. The role-plays use the trainer or a peer, with scripted stand-ins for practice alone.
 
+## Pre-work and follow-up
+
+- **Guided pre-work, before Day 1.** Run `labs/00_setup_check.ipynb`. Read the AQuA Book's guidance on proportionate assurance and the analyst, assurer and approver roles, and skim the REFORMS checklist, both listed under Sources. Bring a note on one analysis your own unit released recently: what it was used for and how much checking it got, with no personal or restricted data. Session 1 of Day 1 starts from these notes. The practice page of the course site holds questions for each session.
+- **Tracked follow-up task, after the course.** Within six weeks, apply your checklist to one real analysis in your unit with a second reviewer, and bring back the agreement table and the checklist sentence you changed. Keep personal and restricted data out of anything you share.
+
 ## Prerequisites
 
 - DS-310 Problem Framing and Analytical Review

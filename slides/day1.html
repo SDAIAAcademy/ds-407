@@ -1,5 +1,5 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes"><p>Welcome. Everyone here has reviewed someone else's analysis (the prerequisite). Ask: "In your unit, who decides how much checking a piece of work gets?" Most rooms answer "whoever is free" or "it depends". Today turns that answer into a standard. Participants play Arjwan Al-Huqail, head of the analytics unit of Ras Sahil Ports Authority: twelve analysts, more and more work drafted by the assistant Musawwada.</p></aside>
+  <aside class="notes"><p>Welcome. Everyone here has reviewed someone else's analysis (the prerequisite). Ask: "In your unit, who decides how much checking a piece of work gets?" Most rooms answer "whoever is free" or "it depends". Today turns that answer into a standard. Participants play Arjwan Al-Huqail, head of the analytics unit of Ras Sahil Ports Authority: twelve analysts, more and more work drafted by the assistant Musawwada.</p><p>Pre-work (README, "Pre-work and follow-up"): ask who ran <code>00_setup_check</code> and who brought a released analysis from their own unit with the checking it got; those examples feed the discussion in Session 1.</p></aside>
 </section>
 
 <section class="slide" id="agenda" data-auto="agenda">
@@ -86,10 +86,10 @@
   <h2>Two uses add a level, whatever the matrix says</h2>
   <div class="cols cols-2">
     <div class="card c-coral"><h4>Public release</h4><p class="small mb0">The figure leaves the authority: a bulletin, a ministry indicator, a regulator's return. A published error cannot be quietly corrected.</p></div>
-    <div class="card c-amber"><h4>Safety use</h4><p class="small mb0">The result sets staffing, navigation or a safety rule. The effect of an error falls on people, not on a budget.</p></div>
+    <div class="card c-amber"><h4>Safety use</h4><p class="small mb0">The result sets safety staffing (pilots on duty), a navigation limit or a safety rule. The effect of an error falls on people, not on a budget.</p></div>
   </div>
   <div class="callout tip mt"><b>Personal data</b> does not raise the level. It adds a check by the data protection officer before the output leaves the unit.</div>
-  <aside class="notes"><p>Why not raise the level for personal data? The level is about whether the answer is right; personal data is about whether it may leave at all. Mixing the two makes every HR count a level 3. Keep them separate: Lab 1.2 puts the privacy check in every level.</p></aside>
+  <aside class="notes"><p>Why not raise the level for personal data? The level is about whether the answer is right; personal data is about whether it may leave at all. Mixing the two makes every HR count a level 3. Keep them separate: Lab 1.2 puts the privacy check in every level.</p><p>Safety use means the result sets who or what keeps people safe: pilots on duty, a navigation limit, a safety rule. A berth count used to set the coming month's berth windows (N1) is not a safety use.</p></aside>
 </section>
 
 <section class="slide" id="definitions-matter" data-lo="LO1">
@@ -111,7 +111,7 @@
   <h2>Six requests the unit received this month</h2>
   <table class="t small">
     <tr><th>Id</th><th>Request</th><th>Use</th></tr>
-    <tr><td>N1</td><td>Weekly berth occupancy for the tug roster meeting</td><td>Roster decision</td></tr>
+    <tr><td>N1</td><td>Weekly berth occupancy for the terminal planning meeting</td><td>Planning decision</td></tr>
     <tr><td>N2</td><td>Revenue estimate of a proposed tariff change</td><td>Board paper</td></tr>
     <tr><td>N3</td><td>Arrival-delay model to allocate marine pilots at night</td><td>Safety staffing</td></tr>
     <tr><td>N4</td><td>Average cargo dwell for the annual public statistics</td><td>Public statistic</td></tr>
@@ -355,7 +355,7 @@ data/
 </section>
 
 <section class="slide lab" id="lab-1-3" data-auto="lab" data-lab="1.3">
-  <aside class="notes"><p>The script really runs in a copy under <code>labs/out/rerun/</code>. If someone breaks their copy, <code>U.copy_repo("cargo_dwell")</code> gives a fresh one. Insist on fixing one failure at a time and logging it before the next. In Colab the first run is slower: pandas is already installed. Stretch: one rule per kind.</p></aside>
+  <aside class="notes"><p>The script really runs in a copy under <code>labs/out/rerun/</code>. If someone breaks their copy, <code>U.copy_repo("cargo_dwell")</code> gives a fresh one. Insist on fixing one failure at a time and logging it before the next. In Colab the setup cell clones the course first; pandas is already installed there. Stretch: one rule per kind.</p></aside>
 </section>
 
 <!-- Session 4 -->

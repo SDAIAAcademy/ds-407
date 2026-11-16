@@ -84,9 +84,9 @@ LOG = [
 ]
 
 NEW = [
-    {"id": "N1", "title": "Weekly berth occupancy for the tug roster meeting",
-     "detail": "A count of berth hours by terminal, from the berth system. The tug supervisor uses it to set next week's roster.",
-     "use": "roster decision", "personal_data": False},
+    {"id": "N1", "title": "Weekly berth occupancy for the terminal planning meeting",
+     "detail": "A count of berth hours by terminal, from the berth system. The terminal planners use it to set the berth windows for the coming month.",
+     "use": "planning decision", "personal_data": False},
     {"id": "N2", "title": "Revenue estimate of a proposed tariff change",
      "detail": "Applies the new tariff to last year's calls and adjusts for two shipping lines that may move. Goes to the board.",
      "use": "board paper", "personal_data": False},
@@ -556,7 +556,7 @@ ROLES = {
             {"id": "already", "keys": ["already", "know", "draft", "existing", "report"], "constraint": True,
              "answer": "There is a draft that says waiting halved at T2. Someone told me it has problems."},
             {"id": "scope", "keys": ["which terminal", "scope", "include", "vessel type"], "constraint": False,
-             "answer": "I care about T2 against the others. Feeders are a detail, in my view."},
+             "answer": "I care most about T2 against the others. Vessel types matter if the lines say they lost out."},
             {"id": "risk", "keys": ["risk", "wrong", "worst", "if"], "constraint": False,
              "answer": "If we extend it and it fails, the lines will complain to the ministry. That is the risk."},
         ],

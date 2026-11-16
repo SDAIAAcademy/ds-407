@@ -723,7 +723,7 @@
     {
       "id": "q-scope-01",
       "type": "single",
-      "prompt": "A level 3 question takes 1.5 analyst days; the unit plans one review day at level 3. The deadline is in two working days and the sponsor asks for it plus a level 2 question of 1 analyst day. What fits?",
+      "prompt": "A level 3 question takes 1.5 analyst days; the unit plans one review day at level 3. The deadline is in three working days, and the sponsor asks for it plus a level 2 question of 1 analyst day with half a day of review. What fits?",
       "options": [
         "Both, with the level 3 review shortened to half a day",
         "Both: 2.5 analyst days is close enough",
@@ -733,7 +733,7 @@
       "correct": [
         2
       ],
-      "explanation": "The level 3 question needs 2.5 days with review; it alone fills the deadline, so the second question becomes an option for later.",
+      "explanation": "The level 3 question needs 2.5 days with its review and fits; adding the level 2 question with its review makes 4 days, so the second question becomes an option for later.",
       "misconceptions": [
         "Cuts the review the level requires to fit the diary",
         "Sizes the analysis without its review and overruns the deadline",

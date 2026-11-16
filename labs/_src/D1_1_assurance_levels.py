@@ -87,7 +87,7 @@ def my_standard() -> dict:
             "complexity medium": "several sources joined, or a comparison over time or groups",
             "complexity low": "a count or average from one source, by a method the unit uses every month",
             "public": "the figure leaves the authority (bulletin, ministry indicator, regulator)",
-            "safety": "the result sets staffing, navigation or a safety rule",
+            "safety": "the result sets safety staffing (pilots on duty), a navigation limit or a safety rule",
         },
     }
     # END SOLUTION

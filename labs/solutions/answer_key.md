@@ -70,6 +70,8 @@ change in one section leaves the others as they are). The numbers below are thos
 
 **Lab 3.4 · A quality statement and a correction** (`data/containers_q2_released.csv`)
 - Weeks 5 and 6 loaded twice: 1,080 duplicated rows. Released Q2 mean import dwell 4.07 days; corrected 4.32.
+- Stretch, who is told: the board secretary (the paper of record), then the ministry indicator team, then the readers
+  of the quarterly note. The slide `who-first` of Day 3 gives the same order.
 
 ## Capstone (`capstone/data/`, practice version)
 - `staffing.py` divides the mean of 10.7 night jobs by 3 jobs a pilot and recommends 4 pilots in place of 6.

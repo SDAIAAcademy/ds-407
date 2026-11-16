@@ -394,9 +394,9 @@
   "new": [
     {
       "id": "N1",
-      "title": "Weekly berth occupancy for the tug roster meeting",
-      "detail": "A count of berth hours by terminal, from the berth system. The tug supervisor uses it to set next week's roster.",
-      "use": "roster decision",
+      "title": "Weekly berth occupancy for the terminal planning meeting",
+      "detail": "A count of berth hours by terminal, from the berth system. The terminal planners use it to set the berth windows for the coming month.",
+      "use": "planning decision",
       "personal_data": false
     },
     {
