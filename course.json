@@ -584,7 +584,6 @@
   "capstone": {
     "summary": "A quality-assurance pack for one high-risk analysis (applied standard, review report, analysis agreement, board quality statement), submitted as a repository, followed by a fifteen-minute review meeting the participant chairs with a role-played analyst and sponsor",
     "submission": "A public GitHub repository link holding the pack (the applied standard, the review report, the analysis agreement and the board quality statement) with its commit history; then a fifteen-minute review meeting the participant chairs with a role-played analyst and sponsor, observed against a rubric.",
-    "talk_minutes": 15,
     "rubric": [
       {
         "criterion": "Standard",
