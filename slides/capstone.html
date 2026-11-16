@@ -1,94 +1,196 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">Today is theirs: keep your own talking to the opening and the closing. Confirm the running order and the demo setup (screen sharing, accounts, a recorded backup) first.</aside>
+  <aside class="notes"><p>Capstone day. Check three things before the room fills: the unseen seeded-flaw analysis for the supervised check, each participant's own variant of the night pilot staffing analysis, and two role players (analyst and sponsor) with their briefs for the meetings. All are prepared outside the repository and never published.</p></aside>
 </section>
 
 <section class="slide" id="agenda" data-label="Agenda">
-  <div class="kicker">Capstone</div>
-  <h2>How the presentations run</h2>
+  <div class="kicker">Capstone day</div>
+  <h2>Review alone, build the pack, then chair the meeting</h2>
   <div class="agenda">
-    <div class="item now"><div><b>Expectations and final prep</b><small>the rubric, a last rehearsal, then the first presentations</small></div></div>
-    <div class="item"><div><b>Presentations</b><small>each one timed, with questions after it</small></div></div>
-    <div class="item"><div><b>Review and closing</b><small>peer feedback, the trainer's review, what next</small></div></div>
+    <div class="item now"><div><b>Supervised check</b><small>one short seeded-flaw analysis, reviewed without AI assistance</small></div></div>
+    <div class="item"><div><b>Build and publish the pack</b><small>standard, review report, agreement and quality statement, in a public repository by the deadline</small></div></div>
+    <div class="item"><div><b>Chaired review meetings</b><small>each with a role-played analyst and sponsor, observed</small></div></div>
+    <div class="item"><div><b>Review and closing</b><small>what the room learned, the follow-up task</small></div></div>
   </div>
+  <aside class="notes"><p>Write the publishing deadline on the board. A participant who is behind shortens the review report (the findings that change the decision first) rather than missing the deadline.</p></aside>
 </section>
 
-<section class="slide" id="rubric" data-label="The rubric">
-  <div class="kicker">How presentations are scored</div>
-  <h2>The rubric</h2>
+<section class="slide" id="supervised-check" data-label="Supervised check" data-lo="LO2">
+  <div class="kicker">20% of the result</div>
+  <h2>The supervised check: one analysis, 40 minutes, no AI</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>A short analysis you have not seen, with seeded flaws</li>
+      <li>Re-run it, list the findings and rate each by its effect on the decision</li>
+      <li>Marked against the trainer's key: the findings that change the decision count most</li>
+    </ul>
+    <div class="stack dense">
+      <div class="timer" data-minutes="40"></div>
+    </div>
+  </div>
+  <aside class="notes"><p>Laptops offline apart from the analysis and a text editor; no assistant, no tutor. The analysis and its key are in the trainer's private exam folder, a new one per cohort. Mark with the severity scale of the unit's standard (S-5): a privacy finding rated minor loses its marks, as in Lab 2.1.</p></aside>
+</section>
+
+<section class="slide" id="the-brief" data-label="The brief" data-lo="LO1 LO2 LO5">
+  <div class="kicker">The case</div>
+  <h2>Night pilots: cut the shift from six to four?</h2>
+  <div class="cols cols-2">
+    <div class="chat">
+      <div class="msg user"><span class="who">Bader Al-Khayyal, director of marine operations</span>Saleh's analysis says four night pilots are enough. I want it on the board's agenda this month.</div>
+      <div class="msg user"><span class="who">Saleh Al-Ghamlas, analyst</span>The mean is 10.7 jobs a night and a pilot does three. Four is plenty.</div>
+    </div>
+    <ul class="bullets">
+      <li><code>labs/capstone/data/pilot_jobs.csv</code>: a year of synthetic night pilotage jobs</li>
+      <li><code>labs/capstone/data/staffing.py</code>: the analysis to assure</li>
+      <li>A safety use: pilot numbers decide whether ships wait or move unpiloted</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>This is the practice version, also in <code>labs/capstone/README.md</code>. Do not help participants find the flaws: the review is assessed. Answer questions as Bader or Saleh would, in a sentence, and only what they would know.</p></aside>
+</section>
+
+<section class="slide" id="hand-in" data-label="What you hand in" data-lo="LO1 LO2 LO5">
+  <div class="kicker">The repository</div>
+  <h2>Four documents and their commit history, in a public repository</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>standard.md</h4><p class="small mb0">The level of this analysis: effect, complexity, escalators, and the roles</p></div>
+    <div class="card c-cyan"><h4>review.md</h4><p class="small mb0">The re-run log and the findings, rated by effect on the decision</p></div>
+    <div class="card c-purple"><h4>agreement.md</h4><p class="small mb0">Question, options, decision rule, a threshold the data can detect, sign-off</p></div>
+    <div class="card c-amber"><h4>quality_statement.md</h4><p class="small mb0">For the board, at most 160 words, with uncertainty as a number</p></div>
+  </div>
+  <aside class="notes"><p>AI-full is allowed in the pack: the README says where an assistant was used and the prompts are kept in the repository, the rules of Lab 1.4 applied to themselves. The commit history is inspected for authenticity: a pack that arrives in one commit is a question for the meeting.</p></aside>
+</section>
+
+<section class="slide" id="own-variant" data-label="Your variant" data-lo="LO2">
+  <div class="kicker">Authenticity</div>
+  <h2>Each participant assures a variant of the staffing analysis of their own</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>The repository holds one version, for practice</li>
+      <li>The trainer gives you your own variant this morning, with its own data and flaws</li>
+      <li>Your review report is matched against your variant's key</li>
+    </ul>
+    <div class="card c-purple"><h4>As in Lab 2.1</h4><p class="small mb0">The same severity scale, the same method: re-run first, then rate by what each finding does to the decision.</p></div>
+  </div>
+  <aside class="notes"><p>Variants and keys are prepared by the trainer outside the repository; the practice version's flaws are in the answer key and must not be used for assessment. Hand the variants out as files, one per participant, and record who had which.</p></aside>
+</section>
+
+<section class="slide" id="rubric" data-label="The rubric" data-lo="LO1 LO2 LO5">
+  <div class="kicker">The pack</div>
+  <h2>Five criteria, 100 points</h2>
   <div class="bars">
-    <div class="row"><span>Standard</span><div class="bar c-teal" style="--w:67%"></div><span class="val">20%</span></div>
-    <div class="row"><span>Review findings</span><div class="bar c-cyan" style="--w:100%"></div><span class="val">30%</span></div>
-    <div class="row"><span>Analysis agreement</span><div class="bar c-coral" style="--w:67%"></div><span class="val">20%</span></div>
-    <div class="row"><span>Quality statement</span><div class="bar c-purple" style="--w:67%"></div><span class="val">20%</span></div>
+    <div class="row"><span>Standard applied and roles</span><div class="bar c-teal" style="--w:67%"></div><span class="val">20%</span></div>
+    <div class="row"><span>Review findings ranked by effect</span><div class="bar c-cyan" style="--w:100%"></div><span class="val">30%</span></div>
+    <div class="row"><span>Analysis agreement</span><div class="bar c-purple" style="--w:67%"></div><span class="val">20%</span></div>
+    <div class="row"><span>Board quality statement</span><div class="bar c-coral" style="--w:67%"></div><span class="val">20%</span></div>
     <div class="row"><span>Clarity</span><div class="bar c-amber" style="--w:33%"></div><span class="val">10%</span></div>
   </div>
-  <div class="callout tip mt"><b>Show results from at least two measured runs.</b> A claim without a number is a plan, not a result.</div>
-  <aside class="notes">Walk through each criterion with one example of what full marks look like.</aside>
+  <aside class="notes"><p>Full marks, one example each: the safety escalator applied, so level 4 with a second reviewer; the finding that flips the decision listed first (the mean in place of the busy nights); a rule with a threshold the variant's data can detect, agreed before the result; a statement with a range and the disclosure line; documents a board secretary could read without the analyst present.</p></aside>
 </section>
 
-<section class="slide" id="format" data-label="Format">
-  <div class="kicker">Format</div>
-  <h2>15 minutes for each presentation</h2>
+<section class="slide" id="weights" data-label="How the result is made">
+  <div class="kicker">The result</div>
+  <h2>Three parts make the result, each with its own floor</h2>
+  <table class="t">
+    <tr><th>Part</th><th class="num">Weight</th></tr>
+    <tr><td>Supervised check, without AI</td><td class="num">20%</td></tr>
+    <tr><td>The pack, on the rubric</td><td class="num">50%</td></tr>
+    <tr><td>The chaired review meeting, observed</td><td class="num">30%</td></tr>
+  </table>
+  <div class="callout tip mt"><b>To pass:</b> 70% overall, and at least 60% on each part.</div>
+  <aside class="notes"><p>The floors stop a strong pack from carrying a weak meeting, or the reverse. The meeting is where the decisions in the pack are shown to be the participant's.</p></aside>
+</section>
+
+<section class="slide" id="meeting-format" data-label="The meeting" data-lo="LO5 LO6">
+  <div class="kicker">Fifteen minutes</div>
+  <h2>You chair; the analyst defends; the sponsor wants it on the agenda</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>1 · The problem</h4><p class="small mb0">Who, what, why now. One slide.</p></div>
-    <div class="card c-cyan"><h4>2 · What you built</h4><p class="small mb0">Design, decisions, trade-offs. Then the live demo.</p></div>
-    <div class="card c-coral"><h4>3 · What you measured</h4><p class="small mb0">Baseline, improvement, failures found, what comes next.</p></div>
+    <div class="card c-teal"><h4>Open · 2 min</h4><p class="small mb0">Purpose, the level, what the meeting must decide</p></div>
+    <div class="card c-cyan"><h4>Findings · 8 min</h4><p class="small mb0">The findings that change the decision first; hear the analyst on each</p></div>
+    <div class="card c-coral"><h4>Close · 5 min</h4><p class="small mb0">The decision, what changes before the board, who does what, the record</p></div>
   </div>
-  <div class="callout note mt"><b>Peer feedback.</b> After each talk, everyone writes one strength, one question and one suggestion.</div>
+  <div class="callout warn mt"><b>During the meeting</b> the sponsor presses: a date, a finding he wants softened, or a reason to skip a step. Chair through it.</div>
+  <aside class="notes"><p>The role players have briefs from the trainer's folder. The sponsor's pressure comes at about minute six, one sentence in Bader's voice; vary it between participants. The analyst defends the mean as "what we always use".</p></aside>
+</section>
+
+<section class="slide" id="meeting-rubric" data-label="Observer rubric" data-lo="LO5 LO6">
+  <div class="kicker">30% of the result</div>
+  <h2>The observer scores five things, 0 to 2 each</h2>
+  <table class="t small">
+    <tr><th>Criterion</th><th>Full marks</th></tr>
+    <tr><td>Opening</td><td>States the purpose, the level and the decision the meeting must reach</td></tr>
+    <tr><td>Findings</td><td>Puts the decision-changing findings first, with the evidence</td></tr>
+    <tr><td>The analyst</td><td>Hears the defence, accepts what is right, holds what is not</td></tr>
+    <tr><td>The sponsor's pressure</td><td>Answers with options; keeps the finding and the level</td></tr>
+    <tr><td>Close</td><td>A decision, actions with owners, and what goes in the record</td></tr>
+  </table>
+  <aside class="notes"><p>The same shape as the observer rubric of Lab 3.1, extended to the analyst and the close. The observer writes the sentence that earned or lost each point; the participant receives the sheet.</p></aside>
+</section>
+
+<section class="slide" id="practice-pressure" data-label="Practise the pressure" data-lo="LO6">
+  <div class="kicker">Practise it now</div>
+  <h2>A practice push from the sponsor: what do you say?</h2>
+  <div class="chat">
+    <div class="msg user"><span class="who">Bader Al-Khayyal</span>The board meets this month. Can we take the recommendation as it is and fix the details afterwards?</div>
+  </div>
+  <ul class="bullets mt">
+    <li>Which finding makes "as it is" impossible, and why?</li>
+    <li>What can go to this month's board, and at which level?</li>
+    <li>What goes in the record of the meeting?</li>
+  </ul>
+  <aside class="notes"><p>The meetings use other pushes. Give pairs five minutes: one plays Bader, one answers in two minutes. The weak answer refuses; the strong one offers what can go this month (the busy-night analysis, the tanker season) and keeps the recommendation off until it is reviewed at level 4.</p></aside>
 </section>
 
 <section class="slide order" id="running-order" data-label="Running order">
   <div class="kicker">Running order</div>
-  <h2>Who presents when</h2>
+  <h2>Who chairs when</h2>
   <table class="t small">
-    <tr><th>#</th><th>Presenter</th><th>Project</th></tr>
-    <tr><td>1</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>2</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>3</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>4</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>5</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>6</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>7</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
-    <tr><td>8</td><td><input placeholder="name"></td><td><input placeholder="Project"></td></tr>
+    <tr><th>#</th><th>Participant</th><th>Repository</th></tr>
+    <tr><td>1</td><td><input placeholder="Name"></td><td><input placeholder="Repository"></td></tr>
+    <tr><td>2</td><td><input placeholder="Name"></td><td><input placeholder="Repository"></td></tr>
+    <tr><td>3</td><td><input placeholder="Name"></td><td><input placeholder="Repository"></td></tr>
+    <tr><td>4</td><td><input placeholder="Name"></td><td><input placeholder="Repository"></td></tr>
+    <tr><td>5</td><td><input placeholder="Name"></td><td><input placeholder="Repository"></td></tr>
+    <tr><td>6</td><td><input placeholder="Name"></td><td><input placeholder="Repository"></td></tr>
   </table>
-  <aside class="notes">Type the names in at the start; the fields can be edited live and are not saved, so keep the list in your notes too.</aside>
+  <aside class="notes"><p>Type the names in at the start; the fields are not saved, so keep the list in your notes. Fifteen minutes a meeting plus five for the observer's sheet and changeover: six participants fill two hours.</p></aside>
 </section>
 
-<section class="slide dark" id="final-prep" data-label="Before the first presentation">
-  <div class="kicker">Before the first presentation</div>
-  <h1>Final prep · 20 minutes</h1>
-  <div class="timer" data-minutes="20"></div>
-  <p class="lead">Rehearse once, record a backup, try the demo on this screen.</p>
-  <aside class="notes">Press T to start the timer. Breaks are not slides: press B when the room needs one.</aside>
+<section class="slide dark" id="final-prep" data-label="Final prep">
+  <div class="kicker">Before the first meeting</div>
+  <h1>Fifteen minutes: open your repository as a stranger would</h1>
+  <div class="timer" data-minutes="15"></div>
+  <p class="lead">Open the public link in a private window. Are the four documents there, and could the board read your statement alone?</p>
+  <aside class="notes"><p>A private window catches a private repository and a missing push, the two most common reasons a pack cannot be marked.</p></aside>
 </section>
 
-<section class="slide dark presenting" id="now-presenting" data-label="Now presenting">
-  <div class="kicker center">Now presenting</div>
-  <div class="center"><input placeholder="Presenter · project"></div>
+<section class="slide dark presenting" id="now-presenting" data-label="Now chairing">
+  <div class="kicker center">Now chairing</div>
+  <div class="center"><input placeholder="Name and repository"></div>
   <div class="timers mt">
-    <div><h3>Talk and demo</h3><div class="timer" data-minutes="15"></div></div>
+    <div><h3>Review meeting</h3><div class="timer" data-minutes="15"></div></div>
   </div>
-  <aside class="notes">Type the presenter's name and press T to start the timer. Reuse this slide for every presenter.</aside>
+  <aside class="notes"><p>Start the timer when the participant opens. Signal the sponsor's push at about minute six. Questions to keep ready if the meeting stalls: what would the board need to see to approve four pilots? Who assures this at level 4? What goes in the record?</p></aside>
 </section>
 
-<section class="slide" id="review" data-label="Trainer review">
-  <div class="kicker">Trainer review</div>
-  <h2>What the presentations showed</h2>
+<section class="slide" id="review" data-label="Review">
+  <div class="kicker">After the meetings</div>
+  <h2>What the room learned</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>Strongest patterns</h4><p class="small mb0">What several projects got right.</p></div>
-    <div class="card c-coral"><h4>Common gaps</h4><p class="small mb0">What most projects would fix next.</p></div>
-    <div class="card c-purple"><h4>One surprise</h4><p class="small mb0">Something nobody expected.</p></div>
+    <div class="card c-teal"><h4>The clearest pack</h4><p class="small mb0">Whose quality statement could the board read without a question?</p></div>
+    <div class="card c-coral"><h4>The flaw most missed</h4><p class="small mb0">Which seeded flaw went unrated or rated low most often?</p></div>
+    <div class="card c-purple"><h4>The best chairing</h4><p class="small mb0">Who held a finding under pressure and still left the sponsor with a way forward?</p></div>
   </div>
-  <aside class="notes">Fill these in from your scoring notes during the last break. Name projects for strengths; keep gaps anonymous.</aside>
+  <aside class="notes"><p>Fill these in from the scoring sheets during the last changeover. Name participants for strengths; keep gaps anonymous.</p></aside>
 </section>
 
 <section class="slide" id="what-next" data-label="After the course">
   <div class="kicker">After the course</div>
-  <h2>Keep going</h2>
+  <h2>The follow-up task, and what comes next</h2>
   <ul class="bullets">
-    <li><b>Your project stays yours:</b> keep it reproducible and add the next improvement you named today</li>
-    <li><b>Next Academy course:</b> REPLACE: the course that follows this one</li>
+    <li><b>Follow-up task.</b> Within six weeks, apply your checklist to one real analysis in your unit with a second reviewer, and bring the agreement table and the sentence you changed; keep personal and restricted data out of anything you share.</li>
+    <li><b>Keep the repository.</b> It is evidence for the DS Expert badge.</li>
+    <li><b>Back to the start.</b> Reviewing one analysis in depth is DS-310; send your new analysts there.</li>
   </ul>
+  <aside class="notes"><p>The catalog names a tracked follow-up task for this format but not its wording; confirm the task and its deadline with the programme office before the cohort, and replace the first bullet if it differs.</p></aside>
 </section>
 
 <section class="slide dark" id="thanks" data-label="Thank you">

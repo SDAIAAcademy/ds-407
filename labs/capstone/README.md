@@ -28,7 +28,11 @@ yourself in the meeting.
 
 You chair a fifteen-minute review meeting with two role players: the analyst, who defends his recommendation, and the
 sponsor, who wants it on the board's agenda. You open, take the meeting through your findings, agree what happens
-next, and close with a decision and its record. An observer scores you against the rubric.
+next, and close with a decision and its record. During the meeting the sponsor presses once: a date, a finding he
+wants softened, or a step he wants skipped. An observer scores five criteria from 0 to 2: the opening (purpose,
+level, the decision to reach), the findings (decision-changing ones first, with evidence), the analyst (hears the
+defence, accepts what is right, holds what is not), the sponsor's pressure (answered with options, finding and level
+kept), and the close (a decision, actions with owners, the record).
 
 ## Rubric
 
