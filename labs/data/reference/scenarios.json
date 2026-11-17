@@ -1,0 +1,47 @@
+{
+  "S1": {
+    "decision": "allowed",
+    "rules": []
+  },
+  "S2": {
+    "decision": "breach",
+    "rules": [
+      "C1"
+    ]
+  },
+  "S3": {
+    "decision": "breach",
+    "rules": [
+      "D1"
+    ]
+  },
+  "S4": {
+    "decision": "needs action",
+    "rules": [
+      "K1",
+      "K2"
+    ]
+  },
+  "S5": {
+    "decision": "breach",
+    "rules": [
+      "V1"
+    ]
+  },
+  "S6": {
+    "decision": "allowed",
+    "rules": []
+  },
+  "S7": {
+    "decision": "needs action",
+    "rules": [
+      "U1"
+    ]
+  },
+  "S8": {
+    "decision": "breach",
+    "rules": [
+      "C2"
+    ]
+  }
+}

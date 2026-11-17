@@ -1,0 +1,42 @@
+{
+  "questions": [
+    {
+      "id": "Q-a",
+      "question": "How has mean waiting at T2 changed against the other terminals since slot booking? (difference in differences)",
+      "analyst_days": 1.5,
+      "level": 3
+    },
+    {
+      "id": "Q-b",
+      "question": "The same by vessel type, with feeders separate",
+      "analyst_days": 0.5,
+      "level": 3
+    },
+    {
+      "id": "Q-c",
+      "question": "How many calls diverted to other ports, by terminal, before and after",
+      "analyst_days": 1,
+      "level": 2
+    },
+    {
+      "id": "Q-d",
+      "question": "Forecast of waiting if slot booking reaches all four terminals",
+      "analyst_days": 6,
+      "level": 4
+    },
+    {
+      "id": "Q-e",
+      "question": "The cost to shipping lines of the change in waiting",
+      "analyst_days": 4,
+      "level": 3
+    }
+  ],
+  "review_days": {
+    "1": 0,
+    "2": 0.5,
+    "3": 1,
+    "4": 2
+  },
+  "working_days": 5,
+  "analysts_available": 1
+}

@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="deck" data-track="data-science">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 3 · Work with sponsors · Leading Analytical Work: Review, Standards and Stakeholders</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day3.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<div class="deck" data-course="Leading Analytical Work: Review, Standards and Stakeholders" data-track="data-science" data-day="Day 3">
+<section class="slide title" id="title" data-auto="title" data-label="Welcome" data-n="1">
+  <div class="kicker">SDAIA Academy · Leading Analytical Work: Review, Standards and Stakeholders</div>
+  <h1>Work with sponsors</h1>
+  <p class="lead mt">Day 3: Scope, evidence agreed first, pressure on a finding, and quality reported honestly</p>
+  <div class="meta"><span class="track">Data Science Track</span><span>3 teaching days + capstone day</span><span>4 sessions · 4 labs</span><span>DS-407</span></div>
+  <aside class="notes"><p>Day 3 takes the review system out of the unit, to the people who commission the work: a sponsor with a deadline, an evidence threshold agreed before the result, a request to drop a finding, and a correction. Two of the four labs are role-plays: set up the observers now.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="Agenda" data-n="2">
+  <div class="kicker">Today</div>
+  <h2>Work with sponsors</h2>
+  <div class="agenda"><div class="item"><div><b>Session 1 · Scope and deadline</b><small>What can be answered by the deadline, offered as options and recorded when the constraints change</small></div></div><div class="item"><div><b>Session 2 · Agreeing the evidence first</b><small>The decision rule and an evidence threshold the data can detect, written and signed before the analysis</small></div></div><div class="item"><div><b>Session 3 · Pressure on a finding</b><small>Challenge or pressure: check the finding, weigh the options, decide and record the reasons</small></div></div><div class="item"><div><b>Session 4 · Reporting quality and correcting errors</b><small>A quality statement says what was checked, by whom and what is uncertain; a correction says what changed, fast</small></div></div></div>
+  <aside class="notes"><p>The thread through the day is the slot-booking evaluation from Day 2. Each lab starts from supplied files, so a participant who missed Day 2 can still do it.</p></aside>
+</section>
+
+<section class="slide" id="review-day2" data-lo="LO2 LO4" data-n="3">
+  <div class="kicker">Review of Day 2</div>
+  <h2>Two reviewers agree on half their ratings. What comes next?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="review-day2-q1">
+    <p class="lead">You and a colleague reviewed the same analysis alone. You agree on three of six severity ratings; the largest gap, two levels, is on a privacy finding.</p>
+    <div class="opts">
+      <div class="opt" data-why="Averages two readings of one rule and leaves the rule as ambiguous as before" data-k="A">Record a severity of 2 for the privacy finding</div>
+      <div class="opt" data-why="Settles the case by seniority; the next pair of reviewers will split the same way" data-k="B">Use the senior reviewer's ratings</div>
+      <div class="opt" data-ok data-k="C">Discuss the privacy gap and add the sentence to the checklist that prevents it</div>
+      <div class="opt" data-why="Treats the gaps of one level as worth a meeting; calibration time goes to the large gaps" data-k="D">Discuss all three disagreements in turn</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A gap of two levels shows an item that admits two readings; the fix is the wording, so the next review agrees.</div>
+  </div>
+  <aside class="notes"><p>Answer: discuss the large gap and change the checklist. Recall the anchor from Lab 2.1: personal data in an output is critical, whatever its effect on the decision.</p></aside>
+</section>
+
+<!-- Session 1 -->
+
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="4">
+  <div class="kicker">Session 1</div>
+  <h1>Scope and deadline</h1>
+  <ul class="bullets outcomes"><li>Size questions against a deadline, review time included</li><li>Offer options when a request cannot be met as asked</li><li>Record what was agreed and what was not</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="the-ask" data-lo="LO5" data-n="5" data-session="1">
+  <div class="kicker">The request</div>
+  <h2>"I need the slot-booking result for the board in a week"</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Bader Al-Khayyal, director of marine operations, sponsors the berth-allocation pilot</li>
+      <li>One analyst is free; the board papers close in five working days</li>
+      <li>The draft he has seen says waiting "halved"; he has heard it has problems</li>
+    </ul>
+    <div class="card c-amber"><h4>The trap</h4><p class="small mb0">Say yes to everything and cut the review, or say no and lose the sponsor. Both are avoidable.</p></div>
+  </div>
+  <aside class="notes"><p>Most heads of unit learned to say yes. The session gives them a third answer: options, each with what it leaves out, sized with the review included.</p></aside>
+</section>
+
+<section class="slide" id="size-with-review" data-lo="LO5 LO1" data-n="6" data-session="1">
+  <div class="kicker">Size it first</div>
+  <h2>The review is part of the time, not something after it</h2>
+  <table class="t small">
+    <tr><th>Question</th><th class="num">Level</th><th class="num">Analyst days</th><th class="num">With review</th></tr>
+    <tr><td>Q-a · Waiting at T2 against the other terminals</td><td class="num">3</td><td class="num">1.5</td><td class="num">2.5</td></tr>
+    <tr><td>Q-b · The same by vessel type, feeders separate</td><td class="num">3</td><td class="num">0.5</td><td class="num">1.5</td></tr>
+    <tr><td>Q-c · Diversions by terminal</td><td class="num">2</td><td class="num">1</td><td class="num">1.5</td></tr>
+    <tr><td>Q-d · Forecast for all four terminals</td><td class="num">4</td><td class="num">6</td><td class="num">8</td></tr>
+    <tr><td>Q-e · Cost to the shipping lines</td><td class="num">3</td><td class="num">4</td><td class="num">5</td></tr>
+  </table>
+  <aside class="notes"><p>From <code>data/inventory.json</code> of Lab 3.1, synthetic. The review days follow the level: half a day at level 2, a day at level 3, two at level 4. Everything together is 18.5 days for a five-day deadline.</p></aside>
+</section>
+
+<section class="slide" id="ask-before-offer" data-lo="LO5" data-n="7" data-session="1">
+  <div class="kicker">The meeting</div>
+  <h2>Ask four things before offering anything</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Decision</h4><p class="small mb0">Which decision will this inform, and who takes it?</p></div>
+    <div class="card c-cyan"><h4>Deadline</h4><p class="small mb0">When exactly, and is there time after it for a correction?</p></div>
+    <div class="card c-purple"><h4>Evidence</h4><p class="small mb0">What would convince you, and what would make others object?</p></div>
+    <div class="card c-amber"><h4>What exists</h4><p class="small mb0">Is there a draft, an earlier report, a number already quoted?</p></div>
+  </div>
+  <aside class="notes"><p>Bader's answers change the best option: "I will not sign anything if the shipping lines can show it hurt them" is the reason vessel types belong in scope. An offer made before that answer sizes the wrong request.</p></aside>
+</section>
+
+<section class="slide" id="options" data-lo="LO5" data-n="8" data-session="1">
+  <div class="kicker">Options, not refusal</div>
+  <h2>Two options fit five days; the full set needs a later board</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>A · 4.0 days</h4><p class="small mb0">Q-a and Q-c: the effect and diversions. Leaves out vessel types, the forecast and the cost to the lines.</p></div>
+    <div class="card c-cyan"><h4>B · 4.0 days</h4><p class="small mb0">Q-a and Q-b: the effect and vessel types. Leaves out diversions, the forecast and the cost.</p></div>
+    <div class="card c-purple"><h4>C · 10.5 days</h4><p class="small mb0">Q-a, Q-b, Q-c, Q-e. Leaves out the forecast; goes to the following board.</p></div>
+  </div>
+  <aside class="notes"><p>Each option names what it leaves out: that is what lets the sponsor choose instead of assuming. Q-d, the forecast, belongs after a decision to extend, not before it.</p></aside>
+</section>
+
+<section class="slide" id="constraint-changes" data-lo="LO5" data-n="9" data-session="1">
+  <div class="kicker">Halfway through</div>
+  <h2>"Four days, not five. And the deputy CEO wants the feeder lines."</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Do not</h4><p class="small mb0">Promise the same scope in fewer days. The day that disappears is the review.</p></div>
+    <div class="card c-teal"><h4>Do</h4><p class="small mb0">Go back to the options: B fits four days and answers the feeder question. Diversions move to the next board.</p></div>
+  </div>
+  <aside class="notes"><p>The scripted sponsor of Lab 3.1 changes his constraints on the fourth message, as real sponsors do. The skill is to answer the change with the options already on the table, not to start again or to absorb it.</p></aside>
+</section>
+
+<section class="slide" id="scope-record" data-lo="LO5" data-n="10" data-session="1">
+  <div class="kicker">Write it down</div>
+  <h2>The scope agreement records what is out as clearly as what is in</h2>
+  <table class="t small">
+    <tr><th>Field</th><th>Recorded</th></tr>
+    <tr><td>Decision</td><td>Whether to extend slot booking to all four terminals next quarter</td></tr>
+    <tr><td>In scope</td><td>Q-a, Q-b · 4.0 of 4 working days</td></tr>
+    <tr><td>Out of scope</td><td>Q-c and Q-e for the following board; Q-d not before a decision to extend</td></tr>
+    <tr><td>After the change</td><td>Option B: answers the feeder question; diversions move</td></tr>
+  </table>
+  <aside class="notes"><p>Send it the same day. The out-of-scope line is what protects the unit when someone later asks why the paper said nothing on diversions.</p></aside>
+</section>
+
+<section class="slide" id="observer" data-lo="LO5" data-n="11" data-session="1">
+  <div class="kicker">The observer</div>
+  <h2>Five criteria, each scored 0 to 2</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Asked before offering</li>
+      <li>Offered options, not a refusal</li>
+      <li>The agreed scope fits the deadline</li>
+      <li>Named what is out of scope</li>
+      <li>Handled the change with an option</li>
+    </ul>
+    <div class="callout tip"><b>For the observer.</b> Write down the sentence that earned or lost each point. A score without the sentence teaches nothing.</div>
+  </div>
+  <aside class="notes"><p>The same five criteria are in the lab's rule-based stand-in for participants working alone. In class, a person observes: the stand-in cannot hear tone, and tone matters with sponsors.</p></aside>
+</section>
+
+<section class="slide" id="check-deadline-cut" data-lo="LO5" data-n="12" data-session="1">
+  <div class="kicker">Checkpoint</div>
+  <h2>The deadline moves from five days to four</h2>
+  <div class="quiz" data-type="single" data-lo="LO5" data-id="check-deadline-cut-q1">
+    <p class="lead">You agreed option A, 4.0 days with review. The sponsor now says four days, and adds a question on feeder vessels. What do you answer?</p>
+    <div class="opts">
+      <div class="opt" data-why="Promises more work in the same days; the time comes out of the review the level requires" data-k="A">Keep A and add the feeder question; the team will work longer</div>
+      <div class="opt" data-ok data-k="B">Offer B in place of A: it fits four days and answers the feeder question</div>
+      <div class="opt" data-why="Lowers the level to fit the diary; the level comes from what an error would cost the board" data-k="C">Drop the review to level 2 so everything fits</div>
+      <div class="opt" data-why="Refuses when an option exists, which costs the sponsor's trust and gives the board nothing" data-k="D">Say the deadline cannot be met and ask for a later board</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Swapping one question for another keeps the work inside the days with its review, and answers the new question.</div>
+  </div>
+  <aside class="notes"><p>Answer: offer B. Ask what they would say if no option fitted: then a later board, offered with the reason and the cost of waiting.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-3-1" data-auto="lab" data-lab="3.1" data-label="Lab 3.1" data-n="13" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 3.1 · 25 min</div><h2>A result in a week</h2><p class="lead small">Role-play the director of marine operations, who wants the berth-allocation result in a week: agree what can be answered by the deadline, keep the agreement when his constraints change, and record it.</p><a class="nb" href="../labs/D3_1_scope_deadline.ipynb">D3_1_scope_deadline.ipynb</a></div><ul class="checklist"><li>Size the questions against the deadline <span class="min">5 min</span></li><li>Open the meeting and ask <span class="min">6 min</span></li><li>Respond when the constraints change <span class="min">6 min</span></li><li>Record the scope agreement <span class="min">5 min</span></li><li>The observer's score <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Play the sponsor for a peer, with the role card</li></ul></div>
+  <aside class="notes"><p>AI-off during the meeting. The catalog asks for trained role players: the trainer or a colleague briefed beforehand plays Bader from the role card in <code>data/roles.json</code>, one participant chairs, another observes with the rubric; rotate so each participant chairs once. A peer with the card is the fallback when no role player is free. The sponsor changes the constraint on the fourth message. Common failure: offering option A in the first message, before asking anything.</p></aside>
+</section>
+
+<!-- Session 2 -->
+
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="14">
+  <div class="kicker">Session 2</div>
+  <h1>Agreeing the evidence first</h1>
+  <ul class="bullets outcomes"><li>Write the decision rule before the analysis</li><li>Check an evidence threshold against what the data can detect</li><li>Record roles and sign-off in the agreement</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="rule-before-result" data-lo="LO5" data-n="15" data-session="2">
+  <div class="kicker">Before the analysis</div>
+  <h2>Agree what result would change the decision before anyone sees it</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>After the result, every threshold looks negotiable</li>
+      <li>Before it, the sponsor says what matters to him</li>
+      <li>The agreement turns "extend it if waiting falls" into a rule with numbers</li>
+    </ul>
+    <div class="callout note"><b>From DS-310.</b> Pre-registering a decision rule for your own analysis is the analyst's habit. Here the head of unit agrees it with the sponsor and signs it.</div>
+  </div>
+  <aside class="notes"><p>The catalog's evidence for outcome 5 is a signed analysis agreement. The REFORMS checklist asks studies to state their question and decision context before the results: the same idea at study scale.</p></aside>
+</section>
+
+<section class="slide" id="agreement-parts" data-lo="LO5" data-n="16" data-session="2">
+  <div class="kicker">The agreement</div>
+  <h2>Five parts, one page</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>Question</b>as the board's choice</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>Options</b>including not to act</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>Rule</b>threshold and conditions</div>
+    <div class="arrow">→</div>
+    <div class="step c-amber"><b>Data</b>window and exclusions</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>Roles</b>level and sign-off</div>
+  </div>
+  <aside class="notes"><p>The options for slot booking: extend to all terminals, keep at T2 and fix the feeder slots, or stop. "Not to act" must be one of them, or the agreement assumes the answer.</p></aside>
+</section>
+
+<section class="slide" id="mdc" data-lo="LO5" data-n="17" data-session="2">
+  <div class="kicker">What the data can detect</div>
+  <h2>With 12 months after the change, the data can detect 0.66 hours</h2>
+  <div class="bars">
+    <div class="row"><span>3 months after</span><div class="bar c-coral" style="--w:57%"></div><span class="val">1.13 h</span></div>
+    <div class="row"><span>6 months after</span><div class="bar c-amber" style="--w:42%"></div><span class="val">0.84 h</span></div>
+    <div class="row"><span>12 months after</span><div class="bar c-teal" style="--w:33%"></div><span class="val">0.66 h</span></div>
+    <div class="row"><span>Threshold</span><div class="bar c-purple" style="--w:100%"></div><span class="val">2.0 h</span></div>
+  </div>
+  <p class="caption">Minimum detectable change of the difference in differences, about 2.8 standard errors (80% power, 5% test). Lab 3.2, synthetic berth calls.</p>
+  <aside class="notes"><p>A threshold below the detectable change is a promise the data cannot keep: the result will be "no detectable effect" whatever happens. Here 2.0 hours is well above 0.66, so the rule is testable. The estimate stays hidden until the agreement is signed.</p></aside>
+</section>
+
+<section class="slide" id="decision-rule" data-lo="LO5" data-n="18" data-session="2">
+  <div class="kicker">The rule</div>
+  <h2>Extend only if waiting falls by 2 hours and no vessel type loses more than 2</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Before</h4><p class="small mb0">"Extend it if waiting falls at all."</p></div>
+    <div class="card c-teal"><h4>Agreed</h4><p class="small mb0">Extend if waiting at T2 falls by at least 2.0 hours per call against the other terminals, and no vessel type waits more than 2.0 hours longer; otherwise keep at T2 and fix the slots for the type that lost.</p></div>
+  </div>
+  <aside class="notes"><p>The 2 hours comes from the operations team: a berth hour saved per call pays for slot booking only from 2 hours. The second condition answers Bader's own worry about the shipping lines. It decides Session 3.</p></aside>
+</section>
+
+<section class="slide" id="roles-signoff" data-lo="LO1 LO5" data-n="19" data-session="2">
+  <div class="kicker">Sign-off</div>
+  <h2>Level 3: three different people analyse, assure and approve</h2>
+  <table class="t small">
+    <tr><th>Role</th><th>Person</th></tr>
+    <tr><td>Commissioner</td><td>Bader Al-Khayyal, director of marine operations</td></tr>
+    <tr><td>Analyst</td><td>Saleh Al-Ghamlas</td></tr>
+    <tr><td>Assurer</td><td>Faleh Al-Musharraf</td></tr>
+    <tr><td>Approver</td><td>Arjwan Al-Huqail, head of the unit</td></tr>
+  </table>
+  <aside class="notes"><p>Signed before the analysis starts; any change to the rule is dated and signed again. The level is N6 of Lab 1.1: a board decision with a joined comparison, level 3.</p></aside>
+</section>
+
+<section class="slide" id="the-estimate" data-lo="LO5" data-n="20" data-session="2">
+  <div class="kicker">Then, the result</div>
+  <h2>Waiting fell 0.78 hours; feeders wait 6.32 hours longer</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">-0.78 h</div><div class="lbl">all calls at T2, against the other terminals</div></div>
+    <div class="stat"><div class="big">+6.32 h</div><div class="lbl">feeder vessels</div></div>
+    <div class="stat"><div class="big">-2.88 h</div><div class="lbl">the other vessel types</div></div>
+  </div>
+  <p class="caption">Difference in differences, Lab 3.2 and 3.3, synthetic. Both conditions of the rule fail: keep at T2, fix the feeder slots.</p>
+  <aside class="notes"><p>The real fall is smaller than 2 hours, and one type loses far more than 2. Without the signed rule, the room would now be arguing whether 0.78 is "good enough". With it, the decision is already made. The stretch asks what the agreement says between thresholds.</p></aside>
+</section>
+
+<section class="slide" id="check-threshold" data-lo="LO5" data-n="21" data-session="2">
+  <div class="kicker">Checkpoint</div>
+  <h2>A threshold the data cannot test</h2>
+  <div class="quiz" data-type="single" data-lo="LO5" data-id="check-threshold-q1">
+    <p class="lead">With three months of data after the change, the minimum detectable change is 1.13 hours. The sponsor wants to extend "if waiting falls by half an hour". What do you do?</p>
+    <div class="opts">
+      <div class="opt" data-why="Signs a rule the data cannot test: any result will read as 'no detectable effect'" data-k="A">Sign it: the sponsor sets the threshold</div>
+      <div class="opt" data-why="Lowers the bar for evidence to fit the wish, which is how false positives reach a board" data-k="B">Use a looser test so half an hour can show</div>
+      <div class="opt" data-why="Agrees the rule after the result, the thing the agreement exists to prevent" data-k="C">Run the analysis first, then agree the threshold</div>
+      <div class="opt" data-ok data-k="D">Show him the detectable change and agree a longer window or a threshold the data can test</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A rule is only useful if the data could meet it; more months after the change lower the detectable change.</div>
+  </div>
+  <aside class="notes"><p>Answer: show the detectable change and agree a window or a threshold. With 12 months the detectable change is 0.66 hours: still above half an hour, so the window alone would not do.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-3-2" data-auto="lab" data-lab="3.2" data-label="Lab 3.2" data-n="22" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 3.2 · 25 min</div><h2>An analysis agreement</h2><p class="lead small">Write an analysis agreement for the pilot decision: question, decision rule and an evidence threshold the data can detect, with roles and sign-off.</p><a class="nb" href="../labs/D3_2_analysis_agreement.ipynb">D3_2_analysis_agreement.ipynb</a></div><ul class="checklist"><li>The decision and its options <span class="min">5 min</span></li><li>Compute the change the data can detect <span class="min">8 min</span></li><li>Set the decision rule and the threshold <span class="min">7 min</span></li><li>Roles, level and sign-off <span class="min">5 min</span></li><li class="stretch">✱ Stretch: Say in the agreement what happens when the result falls between the thresholds</li></ul></div>
+  <aside class="notes"><p>AI-tutor: the tutor may question the agreement, not write it. Ask participants not to scroll to the estimate cell before task 4. Common failure: a threshold with no data window, or roles where the assurer is the analyst.</p></aside>
+</section>
+
+<!-- Session 3 -->
+
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="23">
+  <div class="kicker">Session 3</div>
+  <h1>Pressure on a finding</h1>
+  <ul class="bullets outcomes"><li>Tell a legitimate challenge from pressure to suppress</li><li>Respond with options that keep the finding</li><li>Record a decision with its reasons and references</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide" id="the-email" data-lo="LO6" data-n="24" data-session="3">
+  <div class="kicker">The request</div>
+  <h2>"Please take the feeder table out of the paper"</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Khaled Al-Kharji, deputy chief executive for commercial affairs</li>
+      <li>Feeders are "small local operators, less than a quarter of calls"</li>
+      <li>"The table will distract the board"; his team will handle the feeder lines</li>
+      <li>He needs the final version by the end of tomorrow</li>
+    </ul>
+    <div class="card c-amber"><h4>Read it fairly</h4><p class="small mb0">The request is polite and gives reasons. Some of them could be right. Check before you decide.</p></div>
+  </div>
+  <aside class="notes"><p>The email in <code>data/khaled_request.md</code>, a fictional persona. Pressure rarely arrives as a threat; it arrives as a reasonable request from someone senior, with a deadline.</p></aside>
+</section>
+
+<section class="slide" id="challenge-or-pressure" data-lo="LO6" data-n="25" data-session="3">
+  <div class="kicker">The first question</div>
+  <h2>Is it a challenge to the finding, or pressure on it?</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>A challenge</h4><p class="small mb0">Says the finding may be wrong: too few cases, noise, a coding error. Answered by checking, and the finding may change.</p></div>
+    <div class="card c-coral"><h4>Pressure</h4><p class="small mb0">Accepts the finding but wants it unseen: "distracting", "handled elsewhere". Answered by a decision, recorded.</p></div>
+  </div>
+  <aside class="notes"><p>Khaled's email mixes the two: "small" is a challenge about size, which can be checked; "distracting" is pressure. Treat the challenge seriously first: it is the fair part of the request.</p></aside>
+</section>
+
+<section class="slide" id="recompute-subgroup" data-lo="LO6 LO2" data-n="26" data-session="3">
+  <div class="kicker">Check it</div>
+  <h2>278 feeder calls at T2 after the change: not noise</h2>
+  <div class="cols cols-2">
+    <pre class="code" data-file="Lab 3.3"><code class="language-python">U.subgroup_did(<span class="hljs-string">&quot;feeder&quot;</span>)           <span class="hljs-comment"># +6.32 h</span>
+U.subgroup_did(exclude=<span class="hljs-string">&quot;feeder&quot;</span>)   <span class="hljs-comment"># -2.88 h</span>
+<span class="hljs-comment"># feeder calls at T2 after: 278, diverted 33</span></code></pre>
+    <ul class="bullets">
+      <li>Hundreds of calls; the effect is many times its noise</li>
+      <li>33 of the 35 diverted T2 calls after the change were feeders</li>
+      <li>The feeder condition is in the signed rule</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The check answers the fair part of the request. Had the subgroup been 20 calls with an effect inside its noise, the right answer would have been to say so in the paper, still not to remove the table.</p></aside>
+</section>
+
+<section class="slide" id="three-options" data-lo="LO6" data-n="27" data-session="3">
+  <div class="kicker">Options</div>
+  <h2>Remove, keep, or keep with context</h2>
+  <table class="t small">
+    <tr><th>Option</th><th>What it does</th></tr>
+    <tr><td>Remove the table</td><td>The board may extend a scheme that adds hours of waiting for local lines; the signed rule is not applied</td></tr>
+    <tr><td>Keep it as it is</td><td>The rule is applied; the commercial team may feel ambushed</td></tr>
+    <tr class="hl"><td>Keep it with context</td><td>State the feeder share of calls and revenue; invite the commercial team's plan for the feeder slots</td></tr>
+  </table>
+  <aside class="notes"><p>The third option keeps the finding and the relationship: it gives Khaled something to add instead of something to lose. It is the reference decision of Lab 3.3.</p></aside>
+</section>
+
+<section class="slide" id="decision-record" data-lo="LO6" data-n="28" data-session="3">
+  <div class="kicker">The record</div>
+  <h2>Record the decision the same day, with its reasons and references</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>S-7.</b> Findings are not removed from a paper after review; a disagreement is recorded beside the finding</li>
+      <li><b>S-8.</b> Pressure on a finding is recorded the same day; if repeated, escalated to the chief executive's office</li>
+      <li>The signed rule includes the vessel-type condition</li>
+    </ul>
+    <div class="card c-purple"><h4>SDAIA AI Ethics Principles</h4><p class="small mb0">Fairness · Transparency &amp; Explainability · Accountability &amp; Responsibility</p></div>
+  </div>
+  <aside class="notes"><p>The clauses are from the unit's reference standard, <code>data/unit_standard.md</code>. The principles are cited by the names SDAIA uses. The analysis here is not an AI system, so the principles apply by analogy: the lab asks for them because the catalog does, and the participants' own work increasingly includes models.</p><p>Sources: SDAIA, AI Ethics Principles.</p></aside>
+</section>
+
+<section class="slide" id="the-reply" data-lo="LO6" data-n="29" data-session="3">
+  <div class="kicker">The reply</div>
+  <h2>Keep the relationship and the finding</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>Acknowledge</b>the concern, in his words</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>Decide</b>the table stays</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>Why</b>the signed rule, the size</div>
+    <div class="arrow">→</div>
+    <div class="step c-amber"><b>Offer</b>context and his team's plan</div>
+  </div>
+  <aside class="notes"><p>At most 150 words, and the deadline met. A reply that lectures on ethics loses him; a reply that cites the rule he and Bader agreed to keeps it a matter of process, not of persons.</p></aside>
+</section>
+
+<section class="slide" id="check-pressure" data-lo="LO6" data-n="30" data-session="3">
+  <div class="kicker">Checkpoint</div>
+  <h2>A senior asks to remove an unfavourable subgroup</h2>
+  <div class="quiz" data-type="single" data-lo="LO6" data-id="check-pressure-q1">
+    <p class="lead">You checked the subgroup: hundreds of cases, a large effect, and its condition is in the signed decision rule. The deputy chief executive asks again to remove it. What do you do?</p>
+    <div class="opts">
+      <div class="opt" data-why="Changes the rule after the result was seen, the thing the agreement was signed to prevent" data-k="A">Remove it and mention it in a footnote</div>
+      <div class="opt" data-why="Lets seniority decide a question of evidence; the board is left without the condition it agreed" data-k="B">Remove it, since he outranks you</div>
+      <div class="opt" data-ok data-k="C">Keep it, record the repeated request and escalate with the record</div>
+      <div class="opt" data-why="Hides the disagreement from the board instead of recording it beside the finding" data-k="D">Keep it, but leave the request out of the record</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The standard keeps findings after review and says a repeated request is escalated with the decision record, so the decision rests on process, not on rank.</div>
+  </div>
+  <aside class="notes"><p>Answer: keep, record and escalate (S-7, S-8). The stretch of Lab 3.3 asks for the escalation note: to whom, what is attached, what you ask them to decide.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-3-3" data-auto="lab" data-lab="3.3" data-label="Lab 3.3" data-n="31" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 3.3 · 25 min</div><h2>Drop the feeder result?</h2><p class="lead small">Handle a scripted request to drop an unfavourable subgroup (feeder vessels) from the pilot evaluation: recompute it, weigh the options, decide, and record the decision citing the unit's standard and the ethics principles.</p><a class="nb" href="../labs/D3_3_pressure_finding.ipynb">D3_3_pressure_finding.ipynb</a></div><ul class="checklist"><li>Read the request and recompute the subgroup <span class="min">6 min</span></li><li>Weigh the options <span class="min">5 min</span></li><li>Decide and write the decision record <span class="min">8 min</span></li><li>Draft the reply <span class="min">6 min</span></li><li class="stretch">✱ Stretch: Write the escalation note for a repeated request</li></ul></div>
+  <aside class="notes"><p>AI-tutor: the decision is the participant's. In class, a trainer can play Khaled for the reply. Common failure: deciding before recomputing; or citing "the ethics principles" without naming them.</p></aside>
+</section>
+
+<!-- Session 4 -->
+
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="32">
+  <div class="kicker">Session 4</div>
+  <h1>Reporting quality and correcting errors</h1>
+  <ul class="bullets outcomes"><li>Write a quality statement a board can read</li><li>Correct a released figure quickly and openly</li><li>Link a correction to the change in process</li></ul>
+  <div class="sess-no">04</div>
+</section>
+
+<section class="slide" id="quality-statement" data-lo="LO1" data-n="33" data-session="4">
+  <div class="kicker">For the board</div>
+  <h2>A quality statement a board reads in a minute</h2>
+  <table class="t small">
+    <tr><th>Part</th><th>Slot-booking paper</th></tr>
+    <tr><td>Level</td><td>3: independent review, approved by the head of unit</td></tr>
+    <tr><td>Checked</td><td>Re-run to the same figures; every number traced; no personal data</td></tr>
+    <tr><td>By whom</td><td>Saleh Al-Ghamlas; reviewed by Faleh Al-Musharraf; approved by Arjwan Al-Huqail</td></tr>
+    <tr><td>Uncertain</td><td>The fall is 0.78 hours per call, likely between 0.3 and 1.3</td></tr>
+    <tr><td>Assisted</td><td>Method draft written with the approved assistant, verified line by line</td></tr>
+    <tr><td>Classification</td><td>Internal</td></tr>
+  </table>
+  <aside class="notes"><p>S-9 of the unit's standard: every paper at level 2 or above. The interval is the estimate plus and minus two standard errors (0.236). The disclosure line is the one the audit of Day 2 found missing on a board paper.</p></aside>
+</section>
+
+<section class="slide" id="uncertainty-number" data-lo="LO1" data-n="34" data-session="4">
+  <div class="kicker">Uncertainty</div>
+  <h2>"Results may vary" cannot be weighed; "between 0.3 and 1.3 hours" can</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Vague</h4><p class="small mb0">The results are subject to some uncertainty and should be interpreted with care.</p></div>
+    <div class="card c-teal"><h4>Usable</h4><p class="small mb0">The fall is likely between 0.3 and 1.3 hours, below the 2-hour threshold agreed with the sponsor.</p></div>
+  </div>
+  <aside class="notes"><p>The usable version puts the range next to the threshold, so the board sees the decision without needing the method. The lab's check flags vague words in the statement.</p></aside>
+</section>
+
+<section class="slide" id="q2-error" data-lo="LO1" data-n="35" data-session="4">
+  <div class="kicker">After release</div>
+  <h2>Q2 dwell was released as 4.07 days; it is 4.32</h2>
+  <div class="cols cols-2">
+    <div class="stack">
+      <div class="stat"><div class="big">1,080</div><div class="lbl">rows loaded twice, weeks 5 and 6</div></div>
+    </div>
+    <ul class="bullets">
+      <li>The terminal system re-sent two weeks; the load accepted them</li>
+      <li>The duplicated weeks had short dwell, so the mean was understated</li>
+      <li>The figure went to the board and to the ministry's indicator team</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From Lab 3.4, synthetic. A colleague found it by re-running: the habit of Day 1 doing its job. The corrected figure is higher, which some will feel makes it less urgent. It does not: the wrong figure left the authority.</p></aside>
+</section>
+
+<section class="slide" id="correction-notice" data-lo="LO1 LO4" data-n="36" data-session="4">
+  <div class="kicker">The notice</div>
+  <h2>A correction names the process, not the person</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Released and corrected values, side by side</li>
+      <li>The cause in the process: a load that accepted duplicates, a check that did not exist</li>
+      <li>Decisions affected: quoted in the storage-fee discussion; no fee changed on it</li>
+      <li>The change: a duplicate check on every extract, from level 1 for published figures</li>
+      <li>Who is told: the board secretary, the ministry team, the quarterly note's readers</li>
+    </ul>
+    <div class="callout tip"><b>S-10.</b> Within five working days of finding the error.</div>
+  </div>
+  <aside class="notes"><p>A notice that names the analyst teaches the unit to hide the next error. One that names the process gets the next error reported. That is the culture the course aims at.</p></aside>
+</section>
+
+<section class="slide" id="who-first" data-lo="LO1" data-n="37" data-session="4">
+  <div class="kicker">Order matters</div>
+  <h2>Tell the people who acted on the figure before the people who read it</h2>
+  <div class="flow">
+    <div class="step c-coral"><b>1 · Board secretary</b>the paper of record quoted it</div>
+    <div class="arrow">→</div>
+    <div class="step c-amber"><b>2 · Ministry team</b>it went into a national indicator</div>
+    <div class="arrow">→</div>
+    <div class="step c-teal"><b>3 · Note readers</b>internal readers</div>
+  </div>
+  <aside class="notes"><p>The stretch of Lab 3.4, in the order of its reference answer. There is room for argument on the order of the first two: the board's record comes first because the authority's own paper of record must carry the correction it sends out; the ministry team hears the same day, so someone outside the authority who republished the figure does not learn of it last. This order is a choice made for the case.</p></aside>
+</section>
+
+<section class="slide" id="check-correction" data-lo="LO1" data-n="38" data-session="4">
+  <div class="kicker">Checkpoint</div>
+  <h2>The corrected figure is better news</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-correction-q1">
+    <p class="lead">A released figure is found to be wrong; the corrected value is higher and more favourable to the authority. No decision changed on the old one. What do you do?</p>
+    <div class="opts">
+      <div class="opt" data-why="Lets the direction of the error decide whether readers are told" data-k="A">Use the corrected figure from now on, without a notice</div>
+      <div class="opt" data-ok data-k="B">Issue a notice within five working days, with both values and the cause in the process</div>
+      <div class="opt" data-why="Mixes a correction with the next routine release, so readers of the old figure never see it" data-k="C">Correct it in next quarter's paper</div>
+      <div class="opt" data-why="Puts a person where the cause is a process, which discourages the next report of an error" data-k="D">Issue a notice naming the analyst who released it</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The figure left the authority; whoever used it needs the notice, whatever the direction of the error.</div>
+  </div>
+  <aside class="notes"><p>Answer: a notice under S-10. The direction of the error is the most common reason corrections are skipped.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-3-4" data-auto="lab" data-lab="3.4" data-label="Lab 3.4" data-n="39" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 3.4 · 25 min</div><h2>A quality statement and a correction</h2><p class="lead small">Draft a board-paper quality statement for the pilot evaluation (what was checked, by whom, what remains uncertain) and a correction notice for the Q2 cargo-dwell figure found wrong after release.</p><a class="nb" href="../labs/D3_4_quality_correction.ipynb">D3_4_quality_correction.ipynb</a></div><ul class="checklist"><li>Write the quality statement <span class="min">8 min</span></li><li>Find and size the Q2 error <span class="min">7 min</span></li><li>Write the correction notice <span class="min">7 min</span></li><li>Check both against the standard <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Decide who is told of the correction, and in which order</li></ul></div>
+  <aside class="notes"><p>AI-tutor. Task 1 uses the estimate from Lab 3.2; the lab recomputes it, so nothing depends on earlier output. Common failure: a statement over 160 words, or "results may vary" in place of a range.</p></aside>
+</section>
+
+<section class="slide" id="wrap-up" data-n="40" data-session="4">
+  <div class="kicker">Day 3 · wrap-up</div>
+  <h2>Three things to keep</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Options</h4><p class="small mb0">Size with the review included, ask before offering, record what is out.</p></div>
+    <div class="card c-purple"><h4>Rule first</h4><p class="small mb0">Agree a testable threshold and sign it before the result exists.</p></div>
+    <div class="card c-coral"><h4>Keep findings</h4><p class="small mb0">Check a challenge, record pressure, correct errors openly.</p></div>
+  </div>
+  <aside class="notes"><p>Ask which of the three would have changed something in their own last quarter.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="Next" data-n="41" data-session="4">
+  <div class="kicker">Next</div>
+  <h2>Day 4: The capstone</h2>
+  <p class="lead">You receive one high-risk analysis: the one that sets night pilot numbers. Apply your standard, review it, agree the evidence with its sponsor, write the board's quality statement, and chair the review meeting.</p>
+  <aside class="notes"><p>The practice version is in <code>labs/capstone/</code>; the assessed variants are the trainer's. Recruit the role-players for the meetings tonight.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-16T00:41:43Z","version":"2027.1.0","commit":"eec130a"},"course":{"id":"ds-407","code":"DS-407","title":"Leading Analytical Work: Review, Standards and Stakeholders","track":"data-science","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/ds-407/","repo":"SDAIAAcademy/ds-407","home":"../index.html"},"deck":{"id":"day3","kind":"day","day":3,"label":"Day 3","title":"Work with sponsors","prev":"day2.html","next":"capstone.html","md":"day3.md","alt":{}},"sessions":[{"n":1,"label":"Session 1","title":"Scope and deadline","slide":"s1","outcomes":["Size questions against a deadline, review time included","Offer options when a request cannot be met as asked","Record what was agreed and what was not"],"minutes":50,"lab":{"id":"3.1","title":"A result in a week","minutes":25,"href":"../labs/D3_1_scope_deadline.ipynb"}},{"n":2,"label":"Session 2","title":"Agreeing the evidence first","slide":"s2","outcomes":["Write the decision rule before the analysis","Check an evidence threshold against what the data can detect","Record roles and sign-off in the agreement"],"minutes":50,"lab":{"id":"3.2","title":"An analysis agreement","minutes":25,"href":"../labs/D3_2_analysis_agreement.ipynb"}},{"n":3,"label":"Session 3","title":"Pressure on a finding","slide":"s3","outcomes":["Tell a legitimate challenge from pressure to suppress","Respond with options that keep the finding","Record a decision with its reasons and references"],"minutes":50,"lab":{"id":"3.3","title":"Drop the feeder result?","minutes":25,"href":"../labs/D3_3_pressure_finding.ipynb"}},{"n":4,"label":"Session 4","title":"Reporting quality and correcting errors","slide":"s4","outcomes":["Write a quality statement a board can read","Correct a released figure quickly and openly","Link a correction to the change in process"],"minutes":50,"lab":{"id":"3.4","title":"A quality statement and a correction","minutes":25,"href":"../labs/D3_4_quality_correction.ipynb"}}],"slides":[{"id":"title","n":1,"title":"Work with sponsors","kind":"title","session":0,"hash":"237e5a0d","md":"#### [day3#title] Work with sponsors\n\n*SDAIA Academy · Leading Analytical Work: Review, Standards and Stakeholders*\n\nDay 3: Scope, evidence agreed first, pressure on a finding, and quality reported honestly\n\nData Science Track · 3 teaching days + capstone day · 4 sessions · 4 labs · DS-407","notes":"Day 3 takes the review system out of the unit, to the people who commission the work: a sponsor with a deadline, an evidence threshold agreed before the result, a request to drop a finding, and a correction. Two of the four labs are role-plays: set up the observers now.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"Work with sponsors","kind":"content","session":0,"hash":"947ef2eb","md":"#### [day3#agenda] Work with sponsors\n\n*Today*\n\n- **Session 1 · Scope and deadline**: What can be answered by the deadline, offered as options and recorded when the constraints change\n- **Session 2 · Agreeing the evidence first**: The decision rule and an evidence threshold the data can detect, written and signed before the analysis\n- **Session 3 · Pressure on a finding**: Challenge or pressure: check the finding, weigh the options, decide and record the reasons\n- **Session 4 · Reporting quality and correcting errors**: A quality statement says what was checked, by whom and what is uncertain; a correction says what changed, fast","notes":"The thread through the day is the slot-booking evaluation from Day 2. Each lab starts from supplied files, so a participant who missed Day 2 can still do it.","minutes":null,"lo":[]},{"id":"review-day2","n":3,"title":"Two reviewers agree on half their ratings. What comes next?","kind":"quiz","session":0,"hash":"b470042c","md":"#### [day3#review-day2] Two reviewers agree on half their ratings. What comes next?\n\n*Review of Day 2*\n\n**Question:** You and a colleague reviewed the same analysis alone. You agree on three of six severity ratings; the largest gap, two levels, is on a privacy finding.\n\n- A. Record a severity of 2 for the privacy finding\n- B. Use the senior reviewer's ratings\n- C. Discuss the privacy gap and add the sentence to the checklist that prevents it\n- D. Discuss all three disagreements in turn","notes":"Answer: discuss the large gap and change the checklist. Recall the anchor from Lab 2.1: personal data in an output is critical, whatever its effect on the decision.","minutes":null,"lo":["LO2","LO4"]},{"id":"s1","n":4,"title":"Scope and deadline","kind":"section","session":1,"hash":"84567914","md":"#### [day3#s1] Scope and deadline\n\n*Session 1*\n\n- Size questions against a deadline, review time included\n- Offer options when a request cannot be met as asked\n- Record what was agreed and what was not","notes":"","minutes":null,"lo":["LO5"]},{"id":"the-ask","n":5,"title":"\"I need the slot-booking result for the board in a week\"","kind":"content","session":1,"hash":"7d2904f6","md":"#### [day3#the-ask] \"I need the slot-booking result for the board in a week\"\n\n*The request*\n\n- Bader Al-Khayyal, director of marine operations, sponsors the berth-allocation pilot\n- One analyst is free; the board papers close in five working days\n- The draft he has seen says waiting \"halved\"; he has heard it has problems\n\n- **The trap.** Say yes to everything and cut the review, or say no and lose the sponsor. Both are avoidable.","notes":"Most heads of unit learned to say yes. The session gives them a third answer: options, each with what it leaves out, sized with the review included.","minutes":null,"lo":["LO5"]},{"id":"size-with-review","n":6,"title":"The review is part of the time, not something after it","kind":"content","session":1,"hash":"787e4dfd","md":"#### [day3#size-with-review] The review is part of the time, not something after it\n\n*Size it first*\n\n| Question | Level | Analyst days | With review |\n| --- | --- | --- | --- |\n| Q-a · Waiting at T2 against the other terminals | 3 | 1.5 | 2.5 |\n| Q-b · The same by vessel type, feeders separate | 3 | 0.5 | 1.5 |\n| Q-c · Diversions by terminal | 2 | 1 | 1.5 |\n| Q-d · Forecast for all four terminals | 4 | 6 | 8 |\n| Q-e · Cost to the shipping lines | 3 | 4 | 5 |","notes":"From `data/inventory.json` of Lab 3.1, synthetic. The review days follow the level: half a day at level 2, a day at level 3, two at level 4. Everything together is 18.5 days for a five-day deadline.","minutes":null,"lo":["LO5","LO1"]},{"id":"ask-before-offer","n":7,"title":"Ask four things before offering anything","kind":"content","session":1,"hash":"02885a7c","md":"#### [day3#ask-before-offer] Ask four things before offering anything\n\n*The meeting*\n\n- **Decision.** Which decision will this inform, and who takes it?\n- **Deadline.** When exactly, and is there time after it for a correction?\n- **Evidence.** What would convince you, and what would make others object?\n- **What exists.** Is there a draft, an earlier report, a number already quoted?","notes":"Bader's answers change the best option: \"I will not sign anything if the shipping lines can show it hurt them\" is the reason vessel types belong in scope. An offer made before that answer sizes the wrong request.","minutes":null,"lo":["LO5"]},{"id":"options","n":8,"title":"Two options fit five days; the full set needs a later board","kind":"content","session":1,"hash":"fb18b1fc","md":"#### [day3#options] Two options fit five days; the full set needs a later board\n\n*Options, not refusal*\n\n- **A · 4.0 days.** Q-a and Q-c: the effect and diversions. Leaves out vessel types, the forecast and the cost to the lines.\n- **B · 4.0 days.** Q-a and Q-b: the effect and vessel types. Leaves out diversions, the forecast and the cost.\n- **C · 10.5 days.** Q-a, Q-b, Q-c, Q-e. Leaves out the forecast; goes to the following board.","notes":"Each option names what it leaves out: that is what lets the sponsor choose instead of assuming. Q-d, the forecast, belongs after a decision to extend, not before it.","minutes":null,"lo":["LO5"]},{"id":"constraint-changes","n":9,"title":"\"Four days, not five. And the deputy CEO wants the feeder lines.\"","kind":"content","session":1,"hash":"af87d2ff","md":"#### [day3#constraint-changes] \"Four days, not five. And the deputy CEO wants the feeder lines.\"\n\n*Halfway through*\n\n- **Do not.** Promise the same scope in fewer days. The day that disappears is the review.\n- **Do.** Go back to the options: B fits four days and answers the feeder question. Diversions move to the next board.","notes":"The scripted sponsor of Lab 3.1 changes his constraints on the fourth message, as real sponsors do. The skill is to answer the change with the options already on the table, not to start again or to absorb it.","minutes":null,"lo":["LO5"]},{"id":"scope-record","n":10,"title":"The scope agreement records what is out as clearly as what is in","kind":"content","session":1,"hash":"fa0f6203","md":"#### [day3#scope-record] The scope agreement records what is out as clearly as what is in\n\n*Write it down*\n\n| Field | Recorded |\n| --- | --- |\n| Decision | Whether to extend slot booking to all four terminals next quarter |\n| In scope | Q-a, Q-b · 4.0 of 4 working days |\n| Out of scope | Q-c and Q-e for the following board; Q-d not before a decision to extend |\n| After the change | Option B: answers the feeder question; diversions move |","notes":"Send it the same day. The out-of-scope line is what protects the unit when someone later asks why the paper said nothing on diversions.","minutes":null,"lo":["LO5"]},{"id":"observer","n":11,"title":"Five criteria, each scored 0 to 2","kind":"content","session":1,"hash":"fb8962be","md":"#### [day3#observer] Five criteria, each scored 0 to 2\n\n*The observer*\n\n- Asked before offering\n- Offered options, not a refusal\n- The agreed scope fits the deadline\n- Named what is out of scope\n- Handled the change with an option\n\n> **For the observer.** Write down the sentence that earned or lost each point. A score without the sentence teaches nothing.","notes":"The same five criteria are in the lab's rule-based stand-in for participants working alone. In class, a person observes: the stand-in cannot hear tone, and tone matters with sponsors.","minutes":null,"lo":["LO5"]},{"id":"check-deadline-cut","n":12,"title":"The deadline moves from five days to four","kind":"quiz","session":1,"hash":"9a3eb0ed","md":"#### [day3#check-deadline-cut] The deadline moves from five days to four\n\n*Checkpoint*\n\n**Question:** You agreed option A, 4.0 days with review. The sponsor now says four days, and adds a question on feeder vessels. What do you answer?\n\n- A. Keep A and add the feeder question; the team will work longer\n- B. Offer B in place of A: it fits four days and answers the feeder question\n- C. Drop the review to level 2 so everything fits\n- D. Say the deadline cannot be met and ask for a later board","notes":"Answer: offer B. Ask what they would say if no option fitted: then a later board, offered with the reason and the cost of waiting.","minutes":null,"lo":["LO5"]},{"id":"lab-3-1","n":13,"title":"A result in a week","kind":"lab","session":1,"hash":"680a66e3","md":"#### [day3#lab-3-1] A result in a week\n\nLab 3.1 · 25 min\n\nRole-play the director of marine operations, who wants the berth-allocation result in a week: agree what can be answered by the deadline, keep the agreement when his constraints change, and record it.\n\n[D3_1_scope_deadline.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D3_1_scope_deadline.ipynb)\n\n- [ ] Size the questions against the deadline (5 min)\n- [ ] Open the meeting and ask (6 min)\n- [ ] Respond when the constraints change (6 min)\n- [ ] Record the scope agreement (5 min)\n- [ ] The observer's score (3 min)\n- [ ] ✱ Stretch: Play the sponsor for a peer, with the role card","notes":"AI-off during the meeting. The catalog asks for trained role players: the trainer or a colleague briefed beforehand plays Bader from the role card in `data/roles.json`, one participant chairs, another observes with the rubric; rotate so each participant chairs once. A peer with the card is the fallback when no role player is free. The sponsor changes the constraint on the fourth message. Common failure: offering option A in the first message, before asking anything.","minutes":null,"lo":[]},{"id":"s2","n":14,"title":"Agreeing the evidence first","kind":"section","session":2,"hash":"6c9bb617","md":"#### [day3#s2] Agreeing the evidence first\n\n*Session 2*\n\n- Write the decision rule before the analysis\n- Check an evidence threshold against what the data can detect\n- Record roles and sign-off in the agreement","notes":"","minutes":null,"lo":["LO5"]},{"id":"rule-before-result","n":15,"title":"Agree what result would change the decision before anyone sees it","kind":"content","session":2,"hash":"e084c247","md":"#### [day3#rule-before-result] Agree what result would change the decision before anyone sees it\n\n*Before the analysis*\n\n- After the result, every threshold looks negotiable\n- Before it, the sponsor says what matters to him\n- The agreement turns \"extend it if waiting falls\" into a rule with numbers\n\n> **From DS-310.** Pre-registering a decision rule for your own analysis is the analyst's habit. Here the head of unit agrees it with the sponsor and signs it.","notes":"The catalog's evidence for outcome 5 is a signed analysis agreement. The REFORMS checklist asks studies to state their question and decision context before the results: the same idea at study scale.","minutes":null,"lo":["LO5"]},{"id":"agreement-parts","n":16,"title":"Five parts, one page","kind":"content","session":2,"hash":"19f35ca3","md":"#### [day3#agreement-parts] Five parts, one page\n\n*The agreement*\n\n1. **Question** as the board's choice\n2. **Options** including not to act\n3. **Rule** threshold and conditions\n4. **Data** window and exclusions\n5. **Roles** level and sign-off","notes":"The options for slot booking: extend to all terminals, keep at T2 and fix the feeder slots, or stop. \"Not to act\" must be one of them, or the agreement assumes the answer.","minutes":null,"lo":["LO5"]},{"id":"mdc","n":17,"title":"With 12 months after the change, the data can detect 0.66 hours","kind":"content","session":2,"hash":"b4625354","md":"#### [day3#mdc] With 12 months after the change, the data can detect 0.66 hours\n\n*What the data can detect*\n\n| Item | Value |\n| --- | --- |\n| 3 months after | 1.13 h |\n| 6 months after | 0.84 h |\n| 12 months after | 0.66 h |\n| Threshold | 2.0 h |\n\nMinimum detectable change of the difference in differences, about 2.8 standard errors (80% power, 5% test). Lab 3.2, synthetic berth calls.","notes":"A threshold below the detectable change is a promise the data cannot keep: the result will be \"no detectable effect\" whatever happens. Here 2.0 hours is well above 0.66, so the rule is testable. The estimate stays hidden until the agreement is signed.","minutes":null,"lo":["LO5"]},{"id":"decision-rule","n":18,"title":"Extend only if waiting falls by 2 hours and no vessel type loses more than 2","kind":"content","session":2,"hash":"42218d8b","md":"#### [day3#decision-rule] Extend only if waiting falls by 2 hours and no vessel type loses more than 2\n\n*The rule*\n\n- **Before.** \"Extend it if waiting falls at all.\"\n- **Agreed.** Extend if waiting at T2 falls by at least 2.0 hours per call against the other terminals, and no vessel type waits more than 2.0 hours longer; otherwise keep at T2 and fix the slots for the type that lost.","notes":"The 2 hours comes from the operations team: a berth hour saved per call pays for slot booking only from 2 hours. The second condition answers Bader's own worry about the shipping lines. It decides Session 3.","minutes":null,"lo":["LO5"]},{"id":"roles-signoff","n":19,"title":"Level 3: three different people analyse, assure and approve","kind":"content","session":2,"hash":"1d7768fe","md":"#### [day3#roles-signoff] Level 3: three different people analyse, assure and approve\n\n*Sign-off*\n\n| Role | Person |\n| --- | --- |\n| Commissioner | Bader Al-Khayyal, director of marine operations |\n| Analyst | Saleh Al-Ghamlas |\n| Assurer | Faleh Al-Musharraf |\n| Approver | Arjwan Al-Huqail, head of the unit |","notes":"Signed before the analysis starts; any change to the rule is dated and signed again. The level is N6 of Lab 1.1: a board decision with a joined comparison, level 3.","minutes":null,"lo":["LO1","LO5"]},{"id":"the-estimate","n":20,"title":"Waiting fell 0.78 hours; feeders wait 6.32 hours longer","kind":"content","session":2,"hash":"fac10753","md":"#### [day3#the-estimate] Waiting fell 0.78 hours; feeders wait 6.32 hours longer\n\n*Then, the result*\n\n- **-0.78 h** all calls at T2, against the other terminals\n- **+6.32 h** feeder vessels\n- **-2.88 h** the other vessel types\n\nDifference in differences, Lab 3.2 and 3.3, synthetic. Both conditions of the rule fail: keep at T2, fix the feeder slots.","notes":"The real fall is smaller than 2 hours, and one type loses far more than 2. Without the signed rule, the room would now be arguing whether 0.78 is \"good enough\". With it, the decision is already made. The stretch asks what the agreement says between thresholds.","minutes":null,"lo":["LO5"]},{"id":"check-threshold","n":21,"title":"A threshold the data cannot test","kind":"quiz","session":2,"hash":"57537d17","md":"#### [day3#check-threshold] A threshold the data cannot test\n\n*Checkpoint*\n\n**Question:** With three months of data after the change, the minimum detectable change is 1.13 hours. The sponsor wants to extend \"if waiting falls by half an hour\". What do you do?\n\n- A. Sign it: the sponsor sets the threshold\n- B. Use a looser test so half an hour can show\n- C. Run the analysis first, then agree the threshold\n- D. Show him the detectable change and agree a longer window or a threshold the data can test","notes":"Answer: show the detectable change and agree a window or a threshold. With 12 months the detectable change is 0.66 hours: still above half an hour, so the window alone would not do.","minutes":null,"lo":["LO5"]},{"id":"lab-3-2","n":22,"title":"An analysis agreement","kind":"lab","session":2,"hash":"f3e81f4e","md":"#### [day3#lab-3-2] An analysis agreement\n\nLab 3.2 · 25 min\n\nWrite an analysis agreement for the pilot decision: question, decision rule and an evidence threshold the data can detect, with roles and sign-off.\n\n[D3_2_analysis_agreement.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D3_2_analysis_agreement.ipynb)\n\n- [ ] The decision and its options (5 min)\n- [ ] Compute the change the data can detect (8 min)\n- [ ] Set the decision rule and the threshold (7 min)\n- [ ] Roles, level and sign-off (5 min)\n- [ ] ✱ Stretch: Say in the agreement what happens when the result falls between the thresholds","notes":"AI-tutor: the tutor may question the agreement, not write it. Ask participants not to scroll to the estimate cell before task 4. Common failure: a threshold with no data window, or roles where the assurer is the analyst.","minutes":null,"lo":[]},{"id":"s3","n":23,"title":"Pressure on a finding","kind":"section","session":3,"hash":"db889519","md":"#### [day3#s3] Pressure on a finding\n\n*Session 3*\n\n- Tell a legitimate challenge from pressure to suppress\n- Respond with options that keep the finding\n- Record a decision with its reasons and references","notes":"","minutes":null,"lo":["LO6"]},{"id":"the-email","n":24,"title":"\"Please take the feeder table out of the paper\"","kind":"content","session":3,"hash":"51d6f68c","md":"#### [day3#the-email] \"Please take the feeder table out of the paper\"\n\n*The request*\n\n- Khaled Al-Kharji, deputy chief executive for commercial affairs\n- Feeders are \"small local operators, less than a quarter of calls\"\n- \"The table will distract the board\"; his team will handle the feeder lines\n- He needs the final version by the end of tomorrow\n\n- **Read it fairly.** The request is polite and gives reasons. Some of them could be right. Check before you decide.","notes":"The email in `data/khaled_request.md`, a fictional persona. Pressure rarely arrives as a threat; it arrives as a reasonable request from someone senior, with a deadline.","minutes":null,"lo":["LO6"]},{"id":"challenge-or-pressure","n":25,"title":"Is it a challenge to the finding, or pressure on it?","kind":"content","session":3,"hash":"3c8823a2","md":"#### [day3#challenge-or-pressure] Is it a challenge to the finding, or pressure on it?\n\n*The first question*\n\n- **A challenge.** Says the finding may be wrong: too few cases, noise, a coding error. Answered by checking, and the finding may change.\n- **Pressure.** Accepts the finding but wants it unseen: \"distracting\", \"handled elsewhere\". Answered by a decision, recorded.","notes":"Khaled's email mixes the two: \"small\" is a challenge about size, which can be checked; \"distracting\" is pressure. Treat the challenge seriously first: it is the fair part of the request.","minutes":null,"lo":["LO6"]},{"id":"recompute-subgroup","n":26,"title":"278 feeder calls at T2 after the change: not noise","kind":"content","session":3,"hash":"7b71a528","md":"#### [day3#recompute-subgroup] 278 feeder calls at T2 after the change: not noise\n\n*Check it*\n\n```python\n# file: Lab 3.3\nU.subgroup_did(\"feeder\")           # +6.32 h\nU.subgroup_did(exclude=\"feeder\")   # -2.88 h\n# feeder calls at T2 after: 278, diverted 33\n```\n\n- Hundreds of calls; the effect is many times its noise\n- 33 of the 35 diverted T2 calls after the change were feeders\n- The feeder condition is in the signed rule","notes":"The check answers the fair part of the request. Had the subgroup been 20 calls with an effect inside its noise, the right answer would have been to say so in the paper, still not to remove the table.","minutes":null,"lo":["LO6","LO2"]},{"id":"three-options","n":27,"title":"Remove, keep, or keep with context","kind":"content","session":3,"hash":"609a5f5f","md":"#### [day3#three-options] Remove, keep, or keep with context\n\n*Options*\n\n| Option | What it does |\n| --- | --- |\n| Remove the table | The board may extend a scheme that adds hours of waiting for local lines; the signed rule is not applied |\n| Keep it as it is | The rule is applied; the commercial team may feel ambushed |\n| Keep it with context | State the feeder share of calls and revenue; invite the commercial team's plan for the feeder slots |","notes":"The third option keeps the finding and the relationship: it gives Khaled something to add instead of something to lose. It is the reference decision of Lab 3.3.","minutes":null,"lo":["LO6"]},{"id":"decision-record","n":28,"title":"Record the decision the same day, with its reasons and references","kind":"content","session":3,"hash":"473f8d6a","md":"#### [day3#decision-record] Record the decision the same day, with its reasons and references\n\n*The record*\n\n- **S-7.** Findings are not removed from a paper after review; a disagreement is recorded beside the finding\n- **S-8.** Pressure on a finding is recorded the same day; if repeated, escalated to the chief executive's office\n- The signed rule includes the vessel-type condition\n\n- **SDAIA AI Ethics Principles.** Fairness · Transparency & Explainability · Accountability & Responsibility","notes":"The clauses are from the unit's reference standard, `data/unit_standard.md`. The principles are cited by the names SDAIA uses. The analysis here is not an AI system, so the principles apply by analogy: the lab asks for them because the catalog does, and the participants' own work increasingly includes models.\n\nSources: SDAIA, AI Ethics Principles.","minutes":null,"lo":["LO6"]},{"id":"the-reply","n":29,"title":"Keep the relationship and the finding","kind":"content","session":3,"hash":"3e4d9f5c","md":"#### [day3#the-reply] Keep the relationship and the finding\n\n*The reply*\n\n1. **Acknowledge** the concern, in his words\n2. **Decide** the table stays\n3. **Why** the signed rule, the size\n4. **Offer** context and his team's plan","notes":"At most 150 words, and the deadline met. A reply that lectures on ethics loses him; a reply that cites the rule he and Bader agreed to keeps it a matter of process, not of persons.","minutes":null,"lo":["LO6"]},{"id":"check-pressure","n":30,"title":"A senior asks to remove an unfavourable subgroup","kind":"quiz","session":3,"hash":"bb4be221","md":"#### [day3#check-pressure] A senior asks to remove an unfavourable subgroup\n\n*Checkpoint*\n\n**Question:** You checked the subgroup: hundreds of cases, a large effect, and its condition is in the signed decision rule. The deputy chief executive asks again to remove it. What do you do?\n\n- A. Remove it and mention it in a footnote\n- B. Remove it, since he outranks you\n- C. Keep it, record the repeated request and escalate with the record\n- D. Keep it, but leave the request out of the record","notes":"Answer: keep, record and escalate (S-7, S-8). The stretch of Lab 3.3 asks for the escalation note: to whom, what is attached, what you ask them to decide.","minutes":null,"lo":["LO6"]},{"id":"lab-3-3","n":31,"title":"Drop the feeder result?","kind":"lab","session":3,"hash":"b559d6f9","md":"#### [day3#lab-3-3] Drop the feeder result?\n\nLab 3.3 · 25 min\n\nHandle a scripted request to drop an unfavourable subgroup (feeder vessels) from the pilot evaluation: recompute it, weigh the options, decide, and record the decision citing the unit's standard and the ethics principles.\n\n[D3_3_pressure_finding.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D3_3_pressure_finding.ipynb)\n\n- [ ] Read the request and recompute the subgroup (6 min)\n- [ ] Weigh the options (5 min)\n- [ ] Decide and write the decision record (8 min)\n- [ ] Draft the reply (6 min)\n- [ ] ✱ Stretch: Write the escalation note for a repeated request","notes":"AI-tutor: the decision is the participant's. In class, a trainer can play Khaled for the reply. Common failure: deciding before recomputing; or citing \"the ethics principles\" without naming them.","minutes":null,"lo":[]},{"id":"s4","n":32,"title":"Reporting quality and correcting errors","kind":"section","session":4,"hash":"a9cf4458","md":"#### [day3#s4] Reporting quality and correcting errors\n\n*Session 4*\n\n- Write a quality statement a board can read\n- Correct a released figure quickly and openly\n- Link a correction to the change in process","notes":"","minutes":null,"lo":["LO1","LO2"]},{"id":"quality-statement","n":33,"title":"A quality statement a board reads in a minute","kind":"content","session":4,"hash":"ce4e109c","md":"#### [day3#quality-statement] A quality statement a board reads in a minute\n\n*For the board*\n\n| Part | Slot-booking paper |\n| --- | --- |\n| Level | 3: independent review, approved by the head of unit |\n| Checked | Re-run to the same figures; every number traced; no personal data |\n| By whom | Saleh Al-Ghamlas; reviewed by Faleh Al-Musharraf; approved by Arjwan Al-Huqail |\n| Uncertain | The fall is 0.78 hours per call, likely between 0.3 and 1.3 |\n| Assisted | Method draft written with the approved assistant, verified line by line |\n| Classification | Internal |","notes":"S-9 of the unit's standard: every paper at level 2 or above. The interval is the estimate plus and minus two standard errors (0.236). The disclosure line is the one the audit of Day 2 found missing on a board paper.","minutes":null,"lo":["LO1"]},{"id":"uncertainty-number","n":34,"title":"\"Results may vary\" cannot be weighed; \"between 0.3 and 1.3 hours\" can","kind":"content","session":4,"hash":"1480a7f7","md":"#### [day3#uncertainty-number] \"Results may vary\" cannot be weighed; \"between 0.3 and 1.3 hours\" can\n\n*Uncertainty*\n\n- **Vague.** The results are subject to some uncertainty and should be interpreted with care.\n- **Usable.** The fall is likely between 0.3 and 1.3 hours, below the 2-hour threshold agreed with the sponsor.","notes":"The usable version puts the range next to the threshold, so the board sees the decision without needing the method. The lab's check flags vague words in the statement.","minutes":null,"lo":["LO1"]},{"id":"q2-error","n":35,"title":"Q2 dwell was released as 4.07 days; it is 4.32","kind":"content","session":4,"hash":"cf180f91","md":"#### [day3#q2-error] Q2 dwell was released as 4.07 days; it is 4.32\n\n*After release*\n\n**1,080** rows loaded twice, weeks 5 and 6\n\n- The terminal system re-sent two weeks; the load accepted them\n- The duplicated weeks had short dwell, so the mean was understated\n- The figure went to the board and to the ministry's indicator team","notes":"From Lab 3.4, synthetic. A colleague found it by re-running: the habit of Day 1 doing its job. The corrected figure is higher, which some will feel makes it less urgent. It does not: the wrong figure left the authority.","minutes":null,"lo":["LO1"]},{"id":"correction-notice","n":36,"title":"A correction names the process, not the person","kind":"content","session":4,"hash":"0d3bed57","md":"#### [day3#correction-notice] A correction names the process, not the person\n\n*The notice*\n\n- Released and corrected values, side by side\n- The cause in the process: a load that accepted duplicates, a check that did not exist\n- Decisions affected: quoted in the storage-fee discussion; no fee changed on it\n- The change: a duplicate check on every extract, from level 1 for published figures\n- Who is told: the board secretary, the ministry team, the quarterly note's readers\n\n> **S-10.** Within five working days of finding the error.","notes":"A notice that names the analyst teaches the unit to hide the next error. One that names the process gets the next error reported. That is the culture the course aims at.","minutes":null,"lo":["LO1","LO4"]},{"id":"who-first","n":37,"title":"Tell the people who acted on the figure before the people who read it","kind":"content","session":4,"hash":"2d526c74","md":"#### [day3#who-first] Tell the people who acted on the figure before the people who read it\n\n*Order matters*\n\n1. **1 · Board secretary** the paper of record quoted it\n2. **2 · Ministry team** it went into a national indicator\n3. **3 · Note readers** internal readers","notes":"The stretch of Lab 3.4, in the order of its reference answer. There is room for argument on the order of the first two: the board's record comes first because the authority's own paper of record must carry the correction it sends out; the ministry team hears the same day, so someone outside the authority who republished the figure does not learn of it last. This order is a choice made for the case.","minutes":null,"lo":["LO1"]},{"id":"check-correction","n":38,"title":"The corrected figure is better news","kind":"quiz","session":4,"hash":"c15f3a14","md":"#### [day3#check-correction] The corrected figure is better news\n\n*Checkpoint*\n\n**Question:** A released figure is found to be wrong; the corrected value is higher and more favourable to the authority. No decision changed on the old one. What do you do?\n\n- A. Use the corrected figure from now on, without a notice\n- B. Issue a notice within five working days, with both values and the cause in the process\n- C. Correct it in next quarter's paper\n- D. Issue a notice naming the analyst who released it","notes":"Answer: a notice under S-10. The direction of the error is the most common reason corrections are skipped.","minutes":null,"lo":["LO1"]},{"id":"lab-3-4","n":39,"title":"A quality statement and a correction","kind":"lab","session":4,"hash":"7e13e435","md":"#### [day3#lab-3-4] A quality statement and a correction\n\nLab 3.4 · 25 min\n\nDraft a board-paper quality statement for the pilot evaluation (what was checked, by whom, what remains uncertain) and a correction notice for the Q2 cargo-dwell figure found wrong after release.\n\n[D3_4_quality_correction.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D3_4_quality_correction.ipynb)\n\n- [ ] Write the quality statement (8 min)\n- [ ] Find and size the Q2 error (7 min)\n- [ ] Write the correction notice (7 min)\n- [ ] Check both against the standard (3 min)\n- [ ] ✱ Stretch: Decide who is told of the correction, and in which order","notes":"AI-tutor. Task 1 uses the estimate from Lab 3.2; the lab recomputes it, so nothing depends on earlier output. Common failure: a statement over 160 words, or \"results may vary\" in place of a range.","minutes":null,"lo":[]},{"id":"wrap-up","n":40,"title":"Three things to keep","kind":"content","session":4,"hash":"7cf92376","md":"#### [day3#wrap-up] Three things to keep\n\n*Day 3 · wrap-up*\n\n- **Options.** Size with the review included, ask before offering, record what is out.\n- **Rule first.** Agree a testable threshold and sign it before the result exists.\n- **Keep findings.** Check a challenge, record pressure, correct errors openly.","notes":"Ask which of the three would have changed something in their own last quarter.","minutes":null,"lo":[]},{"id":"next","n":41,"title":"Day 4: The capstone","kind":"content","session":4,"hash":"c977bf62","md":"#### [day3#next] Day 4: The capstone\n\n*Next*\n\nYou receive one high-risk analysis: the one that sets night pilot numbers. Apply your standard, review it, agree the evidence with its sponsor, write the board's quality statement, and chair the review meeting.","notes":"The practice version is in `labs/capstone/`; the assessed variants are the trainer's. Recruit the role-players for the meetings tonight.","minutes":null,"lo":[]}],"activities":[{"id":"review-day2-q1","slide":"review-day2","type":"single","prompt":"You and a colleague reviewed the same analysis alone. You agree on three of six severity ratings; the largest gap, two levels, is on a privacy finding.","options":[{"key":"A","text":"Record a severity of 2 for the privacy finding"},{"key":"B","text":"Use the senior reviewer's ratings"},{"key":"C","text":"Discuss the privacy gap and add the sentence to the checklist that prevents it"},{"key":"D","text":"Discuss all three disagreements in turn"}],"correct":[2],"explanation":"A gap of two levels shows an item that admits two readings; the fix is the wording, so the next review agrees.","misconceptions":["Averages two readings of one rule and leaves the rule as ambiguous as before","Settles the case by seniority; the next pair of reviewers will split the same way","","Treats the gaps of one level as worth a meeting; calibration time goes to the large gaps"],"lo":["LO2"]},{"id":"check-deadline-cut-q1","slide":"check-deadline-cut","type":"single","prompt":"You agreed option A, 4.0 days with review. The sponsor now says four days, and adds a question on feeder vessels. What do you answer?","options":[{"key":"A","text":"Keep A and add the feeder question; the team will work longer"},{"key":"B","text":"Offer B in place of A: it fits four days and answers the feeder question"},{"key":"C","text":"Drop the review to level 2 so everything fits"},{"key":"D","text":"Say the deadline cannot be met and ask for a later board"}],"correct":[1],"explanation":"Swapping one question for another keeps the work inside the days with its review, and answers the new question.","misconceptions":["Promises more work in the same days; the time comes out of the review the level requires","","Lowers the level to fit the diary; the level comes from what an error would cost the board","Refuses when an option exists, which costs the sponsor's trust and gives the board nothing"],"lo":["LO5"]},{"id":"check-threshold-q1","slide":"check-threshold","type":"single","prompt":"With three months of data after the change, the minimum detectable change is 1.13 hours. The sponsor wants to extend \"if waiting falls by half an hour\". What do you do?","options":[{"key":"A","text":"Sign it: the sponsor sets the threshold"},{"key":"B","text":"Use a looser test so half an hour can show"},{"key":"C","text":"Run the analysis first, then agree the threshold"},{"key":"D","text":"Show him the detectable change and agree a longer window or a threshold the data can test"}],"correct":[3],"explanation":"A rule is only useful if the data could meet it; more months after the change lower the detectable change.","misconceptions":["Signs a rule the data cannot test: any result will read as 'no detectable effect'","Lowers the bar for evidence to fit the wish, which is how false positives reach a board","Agrees the rule after the result, the thing the agreement exists to prevent",""],"lo":["LO5"]},{"id":"check-pressure-q1","slide":"check-pressure","type":"single","prompt":"You checked the subgroup: hundreds of cases, a large effect, and its condition is in the signed decision rule. The deputy chief executive asks again to remove it. What do you do?","options":[{"key":"A","text":"Remove it and mention it in a footnote"},{"key":"B","text":"Remove it, since he outranks you"},{"key":"C","text":"Keep it, record the repeated request and escalate with the record"},{"key":"D","text":"Keep it, but leave the request out of the record"}],"correct":[2],"explanation":"The standard keeps findings after review and says a repeated request is escalated with the decision record, so the decision rests on process, not on rank.","misconceptions":["Changes the rule after the result was seen, the thing the agreement was signed to prevent","Lets seniority decide a question of evidence; the board is left without the condition it agreed","","Hides the disagreement from the board instead of recording it beside the finding"],"lo":["LO6"]},{"id":"check-correction-q1","slide":"check-correction","type":"single","prompt":"A released figure is found to be wrong; the corrected value is higher and more favourable to the authority. No decision changed on the old one. What do you do?","options":[{"key":"A","text":"Use the corrected figure from now on, without a notice"},{"key":"B","text":"Issue a notice within five working days, with both values and the cause in the process"},{"key":"C","text":"Correct it in next quarter's paper"},{"key":"D","text":"Issue a notice naming the analyst who released it"}],"correct":[1],"explanation":"The figure left the authority; whoever used it needs the notice, whatever the direction of the error.","misconceptions":["Lets the direction of the error decide whether readers are told","","Mixes a correction with the next routine release, so readers of the old figure never see it","Puts a person where the cause is a process, which discourages the next report of an error"],"lo":["LO1"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day3.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "seeded": {
+    "reported_reduction_pct": 41.5,
+    "t2_after": 7.5,
+    "others_after": 12.9,
+    "t2_before": 10.7
+  },
+  "estimates": {
+    "did_clean": -1.18,
+    "did_feeder": 5.23,
+    "did_other_types": -2.88,
+    "diverted_t2_before": 17,
+    "diverted_t2_after": 35,
+    "diverted_t2_feeder_after": 33
+  },
+  "cargo": {
+    "q3_reported": 4.6,
+    "q3_with_transshipment": 5.18,
+    "q2_released": 4.07,
+    "q2_corrected": 4.32,
+    "q2_duplicates": 1080,
+    "q2_rows_released": 8100
+  },
+  "a3_recomputed_pct": 47.7,
+  "people": {
+    "review_hours": {
+      "1": 0,
+      "2": 4,
+      "3": 10,
+      "4": 16
+    },
+    "senior_demand": 184
+  },
+  "capstone": {
+    "mean_jobs": 10.7,
+    "p95_jobs": 18,
+    "surge_mean": 15.4
+  },
+  "under_assured": [
+    "R03",
+    "R04",
+    "R05",
+    "R07",
+    "R13",
+    "R18",
+    "R21",
+    "R24",
+    "R29",
+    "R30"
+  ],
+  "errors_under": 5,
+  "errors_other": 1
+}

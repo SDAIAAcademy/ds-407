@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="deck" data-track="data-science">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 2 · Review and develop · Leading Analytical Work: Review, Standards and Stakeholders</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day2.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<div class="deck" data-course="Leading Analytical Work: Review, Standards and Stakeholders" data-track="data-science" data-day="Day 2">
+<section class="slide title" id="title" data-auto="title" data-label="Welcome" data-n="1">
+  <div class="kicker">SDAIA Academy · Leading Analytical Work: Review, Standards and Stakeholders</div>
+  <h1>Review and develop</h1>
+  <p class="lead mt">Day 2: Calibrated reviewers, audits of assisted work, feedback and a review rota</p>
+  <div class="meta"><span class="track">Data Science Track</span><span>3 teaching days + capstone day</span><span>4 sessions · 4 labs</span><span>DS-407</span></div>
+  <aside class="notes"><p>Day 2 runs the system Day 1 designed: two reviewers on one analysis, an audit of assisted work, feedback to a new analyst, and a quarter's review rota. The first review is AI-off: say so now, before laptops open.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="Agenda" data-n="2">
+  <div class="kicker">Today</div>
+  <h2>Review and develop</h2>
+  <div class="agenda"><div class="item"><div><b>Session 1 · Calibrating reviewers</b><small>Severity by effect on the decision, rated alone, then compared and turned into clearer wording</small></div></div><div class="item"><div><b>Session 2 · Auditing assisted work</b><small>An audit checks the evidence a rule asks for, recomputes what it can and records each breach with its rule</small></div></div><div class="item"><div><b>Session 3 · Feedback that builds skill</b><small>From findings to feedback that names the reasoning, and a plan that keeps unaided practice in the work</small></div></div><div class="item"><div><b>Session 4 · Review capacity and mentoring</b><small>Review hours follow assurance levels; senior reviewers are the bottleneck; pairings develop analysts</small></div></div></div>
+  <aside class="notes"><p>Every lab starts from supplied files: the unit's checklist and rules are given in reference versions, so nobody depends on yesterday's output.</p></aside>
+</section>
+
+<section class="slide" id="review-day1" data-lo="LO1 LO3" data-n="3">
+  <div class="kicker">Review of Day 1</div>
+  <h2>Which request is graded right under yesterday's standard?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="review-day1-q1">
+    <p class="lead">Four requests and the level an analyst gave each, with the unit's matrix and escalators. Which one is graded right?</p>
+    <div class="opts">
+      <div class="opt" data-why="Grades the method, not the use: a staffing model that sets night pilots is a safety use, high effect and high complexity" data-k="A">A model that sets night pilot numbers: level 2, it is a simple regression</div>
+      <div class="opt" data-why="Lets personal data raise the level: it adds the data protection officer's check, not a level" data-k="B">A staff survey summary with personal data: level 3</div>
+      <div class="opt" data-why="Forgets that a figure leaving the authority adds one level, even when the method is routine" data-k="C">A dwell figure for the ministry's indicators: level 2</div>
+      <div class="opt" data-ok data-k="D">A tariff revenue estimate for the board: level 3</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A board tariff decision is a high effect; a joined estimate is medium complexity; the matrix gives level 3 and no escalator applies.</div>
+  </div>
+  <aside class="notes"><p>Answer: the tariff estimate (N2 of Lab 1.1). The pilot model is level 4 (N3), the survey level 1 with the officer's check (N5), the ministry dwell figure level 3 (N4).</p></aside>
+</section>
+
+<!-- Session 1 -->
+
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="4">
+  <div class="kicker">Session 1</div>
+  <h1>Calibrating reviewers</h1>
+  <ul class="bullets outcomes"><li>Rate review findings by their effect on the decision</li><li>Measure agreement between two reviewers, beyond chance</li><li>Turn disagreements into clearer checklist wording</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="the-draft" data-lo="LO2" data-n="5" data-session="1">
+  <div class="kicker">The draft</div>
+  <h2>"Slot booking has halved waiting at T2. Extend it to all terminals."</h2>
+  <div class="cols cols-2">
+    <pre class="code" data-file="analysis.py output"><code class="language-text">mean wait, months 13 to 24:
+  T2 7.5 h, other terminals 12.9 h
+reduction at T2: 42%
+T2 before 10.7 h, after 7.5 h</code></pre>
+    <ul class="bullets">
+      <li>The berth-allocation pilot: slot booking at T2 from month 13</li>
+      <li>The director of marine operations wants it extended</li>
+      <li>Two reviewers review it alone: you and Faleh Al-Musharraf</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The re-run output of Lab 2.1, synthetic data. The text says "halved"; the output says 42%. Ask the room to hold that thought: it is one finding of six, and not the most important.</p></aside>
+</section>
+
+<section class="slide" id="severity-scale" data-lo="LO2" data-n="6" data-session="1">
+  <div class="kicker">Severity</div>
+  <h2>Rate a finding by what it does to the decision, not by how you found it</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>3 · Critical</h4><p class="small mb0">The decision changes, or the output cannot leave the unit</p></div>
+    <div class="card c-amber"><h4>2 · Major</h4><p class="small mb0">The size or the confidence of the result changes, not the decision</p></div>
+    <div class="card c-cyan"><h4>1 · Minor</h4><p class="small mb0">Presentation: a label, a chart, a name</p></div>
+  </div>
+  <div class="callout note mt"><b>Recap from DS-310.</b> Ranking flaws by consequence is the individual reviewer's skill. Today two reviewers must reach the same rating, and the unit's standard (S-5) writes the scale down.</div>
+  <aside class="notes"><p>The "or the output cannot leave the unit" clause is the unit's own rule: it makes a privacy finding critical whatever its effect on the decision. It is the one most reviewers forget.</p></aside>
+</section>
+
+<section class="slide" id="six-flaws" data-lo="LO2" data-n="7" data-session="1">
+  <div class="kicker">The reference review</div>
+  <h2>Six findings, two of them critical</h2>
+  <table class="t small">
+    <tr><th>Finding</th><th class="num">Severity</th></tr>
+    <tr><td>C1 · T2 compared with others after the change only; T2 was already fastest</td><td class="num">3</td></tr>
+    <tr><td>P1 · Vessel masters' names and mobile numbers in table 5</td><td class="num">3</td></tr>
+    <tr><td>C2 · Diverted calls dropped; at T2 they rose from 17 to 35</td><td class="num">2</td></tr>
+    <tr><td>M1 · "Halved" in the text; 42% in the output</td><td class="num">2</td></tr>
+    <tr><td>M2 · Weather closures in T2's before period</td><td class="num">1</td></tr>
+    <tr><td>m1 · Table 4 labelled minutes; the values are hours</td><td class="num">1</td></tr>
+  </table>
+  <aside class="notes"><p>From the Lab 2.1 answer key. 33 of the 35 diverted calls after the change are feeder vessels: that returns on Day 3 as the subgroup a sponsor wants dropped.</p></aside>
+</section>
+
+<section class="slide" id="fix-one-at-a-time" data-lo="LO2" data-n="8" data-session="1">
+  <div class="kicker">Measuring the effect</div>
+  <h2>Fix a flaw and re-run: the decision flips on C1</h2>
+  <div class="bars">
+    <div class="row"><span>As written</span><div class="bar c-coral" style="--w:100%"></div><span class="val">-5.36 h</span></div>
+    <div class="row"><span>C1 fixed</span><div class="bar c-amber" style="--w:26%"></div><span class="val">-1.37 h</span></div>
+    <div class="row"><span>C1 and C2 fixed</span><div class="bar c-cyan" style="--w:18%"></div><span class="val">-0.94 h</span></div>
+    <div class="row"><span>C1, C2 and M2 fixed</span><div class="bar c-teal" style="--w:15%"></div><span class="val">-0.78 h</span></div>
+  </div>
+  <p class="caption">Effect of slot booking on waiting at T2, hours per call (Lab 2.1 stretch). The draft recommends extending at -2 hours or more; after C1 it does not.</p>
+  <aside class="notes"><p>This is how severity stops being an opinion: re-run with the flaw fixed. C1 alone moves the effect from -5.36 to -1.37 and the decision changes: critical. C2 moves it further but does not flip it on its own: major.</p></aside>
+</section>
+
+<section class="slide" id="alone-then-compare" data-lo="LO2" data-n="9" data-session="1">
+  <div class="kicker">The method</div>
+  <h2>Review alone, then compare, then discuss only the big gaps</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · Alone</b>re-run, list findings, rate, AI-off</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>2 · Compare</b>one table, both ratings, the gap</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>3 · Discuss</b>gaps of two levels only</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>4 · Revise</b>the checklist sentence that allowed the gap</div>
+  </div>
+  <aside class="notes"><p>Why AI-off for the first pass? A reviewer who asks an assistant first anchors on its list. The catalog sets this policy for Day 2's first-pass reviews and the supervised check.</p></aside>
+</section>
+
+<section class="slide" id="agreement-table" data-lo="LO2" data-n="10" data-session="1">
+  <div class="kicker">Two reviewers</div>
+  <h2>Half the ratings agree; the biggest gap is the privacy finding</h2>
+  <table class="t small">
+    <tr><th>Finding</th><th class="num">You</th><th class="num">Faleh</th><th class="num">Gap</th></tr>
+    <tr><td>C1</td><td class="num">3</td><td class="num">3</td><td class="num">0</td></tr>
+    <tr><td>C2</td><td class="num">2</td><td class="num">3</td><td class="num">1</td></tr>
+    <tr><td>M1</td><td class="num">2</td><td class="num">2</td><td class="num">0</td></tr>
+    <tr><td>M2</td><td class="num">1</td><td class="num">2</td><td class="num">1</td></tr>
+    <tr class="hl"><td>P1</td><td class="num">3</td><td class="num">1</td><td class="num">2</td></tr>
+    <tr><td>m1</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+  </table>
+  <aside class="notes"><p>Faleh rated P1 by its effect on the decision, which is none. True, and beside the point: by the standard the output cannot leave the unit. His C2 rating is the opposite error: he rates higher because diversions feel serious, though fixing C2 alone does not flip the decision.</p></aside>
+</section>
+
+<section class="slide" id="kappa" data-lo="LO2" data-n="11" data-session="1">
+  <div class="kicker">Beyond chance</div>
+  <h2>50% agreement is a weighted kappa of 0.25</h2>
+  <div class="cols cols-2">
+    <div class="stat"><div class="big">0.25</div><div class="lbl">weighted kappa, six findings (Lab 2.1)</div></div>
+    <ul class="bullets">
+      <li>Kappa removes the agreement two reviewers reach by chance</li>
+      <li>Weighted kappa counts a gap of two as worse than a gap of one</li>
+      <li>1 is perfect agreement; 0 is no better than chance</li>
+      <li>Track it each quarter on a shared analysis</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Cohen (1968) introduced weighted kappa for ordered ratings. With six findings the number is noisy: use it as a trend over quarters, not a grade for one review. The point for the room: half agreement sounds acceptable; corrected for chance it is weak.</p><p>Sources: Cohen (1968), Weighted kappa, Psychological Bulletin.</p></aside>
+</section>
+
+<section class="slide" id="disagreement-to-wording" data-lo="LO1 LO2" data-n="12" data-session="1">
+  <div class="kicker">The output of calibration</div>
+  <h2>Each big gap becomes a sentence in the checklist</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>P1, before</h4><p class="small mb0">Is the output free of personal data, and is its classification marked?</p></div>
+    <div class="card c-teal"><h4>P1, after</h4><p class="small mb0">The same question, plus the anchor: a breach is critical whatever its effect on the decision, because the output cannot leave the unit.</p></div>
+  </div>
+  <aside class="notes"><p>Calibration that ends in a discussion is forgotten by next quarter. Calibration that ends in a changed sentence stays. Ask each pair for the sentence they would add for their own biggest gap.</p></aside>
+</section>
+
+<section class="slide" id="check-kappa" data-lo="LO2" data-n="13" data-session="1">
+  <div class="kicker">Checkpoint</div>
+  <h2>High agreement, low kappa: what happened?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-kappa-q1">
+    <p class="lead">Two reviewers rate 20 findings and agree on 16 of them, 80%. Their weighted kappa is 0.3. Which explanation fits?</p>
+    <div class="opts">
+      <div class="opt" data-why="Blames the arithmetic: kappa and percent agreement measure different things, and both can be right" data-k="A">The kappa was computed wrongly</div>
+      <div class="opt" data-ok data-k="B">Most findings were rated minor by both, so much of the agreement was expected by chance</div>
+      <div class="opt" data-why="Reads kappa as a count of disagreements: four disagreements out of twenty do not by themselves give 0.3" data-k="C">Four disagreements are too many for any team</div>
+      <div class="opt" data-why="Assumes more findings always raise kappa; kappa corrects for chance whatever the number of findings" data-k="D">Twenty findings are too few to compute kappa</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> When nearly everything is rated minor, two reviewers agree often by chance; kappa removes that, so the agreement on the rare serious findings decides it.</div>
+  </div>
+  <aside class="notes"><p>Answer: chance agreement on a skewed scale. The practical lesson: calibrate on analyses that hold serious flaws, where agreement matters.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-1" data-auto="lab" data-lab="2.1" data-label="Lab 2.1" data-n="14" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 2.1 · 25 min</div><h2>Two reviewers, one analysis</h2><p class="lead small">Review a seeded-flaw berth-delay analysis independently with a partner (AI-off), compare severity ratings in an agreement table, and revise the checklist where you disagree.</p><a class="nb" href="../labs/D2_1_calibrate_reviewers.ipynb">D2_1_calibrate_reviewers.ipynb</a></div><ul class="checklist"><li>Re-run and review alone <span class="min">9 min</span></li><li>Rate each finding by its effect on the decision <span class="min">5 min</span></li><li>Agreement table and weighted kappa <span class="min">6 min</span></li><li>Revise the checklist where you disagreed <span class="min">5 min</span></li><li class="stretch">✱ Stretch: Measure what each flaw does to the headline by fixing it alone</li></ul></div>
+  <aside class="notes"><p>AI-off until task 3: no assistant, no tutor. Faleh's ratings are in <code>data/faleh_ratings.json</code>; ask participants not to open it before task 3. In class, pair participants and have them swap ratings instead of using Faleh's. Common failure: missing P1 because "it is not about the analysis".</p></aside>
+</section>
+
+<!-- Session 2 -->
+
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="15">
+  <div class="kicker">Session 2</div>
+  <h1>Auditing assisted work</h1>
+  <ul class="bullets outcomes"><li>Audit work against rules from its evidence, not its claims</li><li>Recompute a number an assistant drafted</li><li>Record each breach with the rule it breaks</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="audit-not-review" data-lo="LO3" data-n="16" data-session="2">
+  <div class="kicker">Audit or review</div>
+  <h2>A review asks if the analysis is right; an audit asks if the rules were followed</h2>
+  <div class="cols cols-2">
+    <div class="card c-cyan"><h4>Review</h4><p class="small mb0">One analysis, all five areas, before release. The reviewer re-runs and rates findings.</p></div>
+    <div class="card c-purple"><h4>Audit</h4><p class="small mb0">A sample of released work, against the rules for assisted analysis. The auditor checks the evidence each rule asks for.</p></div>
+  </div>
+  <div class="callout tip mt"><b>The rule of thumb.</b> No evidence, no compliance. "I checked the numbers" is a claim; a verification record is evidence.</div>
+  <aside class="notes"><p>The audit closes the loop on Day 1's rules: rules nobody audits become optional within a quarter. The catalog's evidence for outcome 3 is a rule set and an audit of five assisted analyses.</p></aside>
+</section>
+
+<section class="slide" id="five-records" data-lo="LO3" data-n="17" data-session="2">
+  <div class="kicker">The sample</div>
+  <h2>Five assisted analyses from the unit's log</h2>
+  <table class="t small">
+    <tr><th>Id</th><th>Analysis</th><th>What the record shows</th></tr>
+    <tr><td>A1</td><td>Tug fuel use per call</td><td>Disclosed, prompts kept, figures re-run</td></tr>
+    <tr><td>A2</td><td>Fatigue risk in the night pilot roster</td><td>Data sent: names and shifts of pilots</td></tr>
+    <tr><td>A3</td><td>Share of T1 calls waiting over 12 hours</td><td>18.4%; no verification record</td></tr>
+    <tr><td>A4</td><td>Storage-fee scenarios for the board</td><td>No disclosure line on the paper</td></tr>
+    <tr><td>A5</td><td>Gate no-show patterns</td><td>No prompts, no record; "I checked"</td></tr>
+  </table>
+  <aside class="notes"><p>Synthetic log of Lab 2.2. Give the room two minutes to guess which rule each breaks before the lab: most get A2 and A4; few say A5 breaks two rules.</p></aside>
+</section>
+
+<section class="slide" id="recompute" data-lo="LO2 LO3" data-n="18" data-session="2">
+  <div class="kicker">Recompute what you can</div>
+  <h2>A3 says 18.4%; the authority's own data say 47.7%</h2>
+  <div class="cols cols-2">
+    <pre class="code" data-file="recompute A3"><code class="language-python">t1 = calls[(calls.terminal == <span class="hljs-string">&quot;T1&quot;</span>)
+           &amp; (calls.month &gt;= <span class="hljs-number">13</span>)]
+recorded = t1.dropna(subset=[<span class="hljs-string">&quot;wait_h&quot;</span>])
+(recorded.wait_h &gt; <span class="hljs-number">12</span>).mean()   <span class="hljs-comment"># 0.477</span></code></pre>
+    <ul class="bullets">
+      <li>1,387 calls with a recorded wait; 35 diverted</li>
+      <li>The record showed the number was not verified</li>
+      <li>Only the recomputation showed how wrong it was</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From the Lab 2.2 solution run. An audit cannot recompute everything; it recomputes the headline of the analyses whose records are missing, because that is where an assistant's error survives.</p></aside>
+</section>
+
+<section class="slide" id="breach-table" data-lo="LO3" data-n="19" data-session="2">
+  <div class="kicker">The audit table</div>
+  <h2>Each breach is recorded with the rule it breaks and the action it needs</h2>
+  <table class="t small">
+    <tr><th>Id</th><th>Rules</th><th>Action</th></tr>
+    <tr><td>A1</td><td>none</td><td>none</td></tr>
+    <tr class="hl"><td>A2</td><td>C1 data</td><td>Tell the data protection officer; redo on anonymised data</td></tr>
+    <tr><td>A3</td><td>V1 verify, K2 keep</td><td>Withdraw the figure; re-run and re-review</td></tr>
+    <tr><td>A4</td><td>D1 disclose</td><td>Disclosure note to the board secretary</td></tr>
+    <tr><td>A5</td><td>K1, K2 keep</td><td>Re-run and keep the record before reuse</td></tr>
+  </table>
+  <aside class="notes"><p>A2 is the most serious even though its numbers were right: restricted data left the authority's control, which the national guidelines forbid and no later step undoes.</p></aside>
+</section>
+
+<section class="slide" id="audit-to-rule" data-lo="LO3" data-n="20" data-session="2">
+  <div class="kicker">What the audit teaches</div>
+  <h2>Two of five had no verification record: change the process, not just the analyses</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>The rule existed; nothing made it visible before review</li>
+      <li>Proposed: no review of assisted work starts without its verification record</li>
+      <li>The checklist item C2 asks for it at every level</li>
+    </ul>
+    <div class="card c-amber"><h4>How often</h4><p class="small mb0">Five analyses a quarter, chosen at random from the assisted log, plus any the reviewers flag.</p></div>
+  </div>
+  <aside class="notes"><p>The sample size is a choice on the Director's behalf for the case; in a real unit it depends on volume. The point is that the audit is routine and random, not a reaction to an incident.</p></aside>
+</section>
+
+<section class="slide" id="audit-fairly" data-lo="LO3 LO4" data-n="21" data-session="2">
+  <div class="kicker">Tone</div>
+  <h2>An audit finds breaches of rules, not bad analysts</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Record facts</h4><p class="small mb0">What the file shows, which rule, which action</p></div>
+    <div class="card c-cyan"><h4>Fix the process</h4><p class="small mb0">Two missing records point at the process, not two people</p></div>
+    <div class="card c-purple"><h4>Feed development</h4><p class="small mb0">A pattern for one analyst goes into feedback, the next session</p></div>
+  </div>
+  <aside class="notes"><p>If an audit feels like a hunt, analysts stop disclosing assistant use, and the audit sees nothing. Keep the table factual and the follow-up developmental.</p></aside>
+</section>
+
+<section class="slide" id="check-audit-evidence" data-lo="LO3" data-n="22" data-session="2">
+  <div class="kicker">Checkpoint</div>
+  <h2>"I checked the numbers"</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-audit-evidence-q1">
+    <p class="lead">An analyst's assisted analysis has a disclosure line and correct figures when you recompute them, but no prompts and no verification record. He says he checked everything. What does the audit record?</p>
+    <div class="opts">
+      <div class="opt" data-why="Accepts a claim as evidence: the audit can only see what the files show" data-k="A">No breach: the figures are right</div>
+      <div class="opt" data-why="Confuses keeping records with disclosing: the disclosure line is there" data-k="B">A breach of the disclosure rule</div>
+      <div class="opt" data-ok data-k="C">A breach of the keep rules: no prompts and no record</div>
+      <div class="opt" data-why="Escalates a missing record into a verification failure the audit did not find: the figures were right" data-k="D">A breach of the verify rule only</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The keep rules ask for prompts and a verification record in the repository; their absence is the breach, however right the figures turn out to be.</div>
+  </div>
+  <aside class="notes"><p>Answer: the keep rules (A5 in the lab). Some will argue the right figures excuse it: ask how the next reviewer would know which numbers were checked.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-2" data-auto="lab" data-lab="2.2" data-label="Lab 2.2" data-n="23" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 2.2 · 25 min</div><h2>Audit five assisted analyses</h2><p class="lead small">Check five assistant-drafted analyses from the unit's log against the rules for AI-assisted work, recompute the one headline that can be recomputed, and record each breach with its rule.</p><a class="nb" href="../labs/D2_2_audit_assisted.ipynb">D2_2_audit_assisted.ipynb</a></div><ul class="checklist"><li>Read the rules and the log <span class="min">4 min</span></li><li>Check each record against the rules <span class="min">9 min</span></li><li>Recompute one headline number <span class="min">7 min</span></li><li>Write the audit table <span class="min">5 min</span></li><li class="stretch">✱ Stretch: Propose the one rule change the audit suggests</li></ul></div>
+  <aside class="notes"><p>The audit itself is AI-off; the tutor may question the audit table afterwards. Lab 2.2 uses the reference rule set, not the participant's own from Lab 1.4, so everyone audits against the same rules. Common failure: A3 recorded as V1 only; the missing record is K2 as well.</p></aside>
+</section>
+
+<!-- Session 3 -->
+
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="24">
+  <div class="kicker">Session 3</div>
+  <h1>Feedback that builds skill</h1>
+  <ul class="bullets outcomes"><li>Choose the findings worth raising with an analyst</li><li>Write feedback that names the reasoning, not only the error</li><li>Plan development with goals, evidence and unaided practice</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide" id="seven-to-three" data-lo="LO4" data-n="25" data-session="3">
+  <div class="kicker">From review to feedback</div>
+  <h2>Seven findings is a review; three is feedback</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Shaden Al-Ruwayshid joined six months ago; Faleh found seven things in her notebook</li>
+      <li>The review notes go to the analysis; the feedback goes to the analyst</li>
+      <li>Choose the three findings that show a pattern in her reasoning</li>
+      <li>Name one strength, specifically</li>
+    </ul>
+    <div class="card c-teal"><h4>Her three</h4><p class="small mb0">No comparison group (F2), the wrong population in an average (F1), assisted cells not verified (F7)</p></div>
+  </div>
+  <aside class="notes"><p>The minor findings (an axis, variable names) go in the review notes, not in the conversation. Three is a memory limit, not a rule of politeness.</p></aside>
+</section>
+
+<section class="slide" id="four-parts" data-lo="LO4" data-n="26" data-session="3">
+  <div class="kicker">One note</div>
+  <h2>Observation, effect, reasoning, next step</h2>
+  <table class="t small">
+    <tr><th>Part</th><th>Shaden, F2</th></tr>
+    <tr><td><b>Observation</b></td><td>In cell 5 waiting at T2 is compared before and after, with no other terminal</td></tr>
+    <tr><td><b>Effect</b></td><td>Waiting fell everywhere in month 13, so most of the fall would have happened anyway</td></tr>
+    <tr><td><b>Reasoning</b></td><td>Before claiming a cause, ask what would have happened without it</td></tr>
+    <tr><td><b>Next</b></td><td>In your next comparison, write the comparison group in the first cell</td></tr>
+  </table>
+  <aside class="notes"><p>The reasoning line is what builds skill: it names the question she did not ask herself, so she can ask it next time on a different problem. The catalog calls this feedback that names the reasoning.</p></aside>
+</section>
+
+<section class="slide" id="vague-feedback" data-lo="LO4" data-n="27" data-session="3">
+  <div class="kicker">Specific</div>
+  <h2>"Be more careful with comparisons" tells her nothing she can do</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Vague</h4><p class="small mb0">Be more careful. Improve your rigour. Pay attention to the data. Good job on the charts.</p></div>
+    <div class="card c-teal"><h4>Specific</h4><p class="small mb0">Cell 3 averages imports with transshipment, 5.2 days. Print the counts by move type before every average.</p></div>
+  </div>
+  <div class="callout tip mt"><b>The peer test.</b> Would a colleague reading the note know what Shaden should do differently next week? That is the evidence of outcome 4.</div>
+  <aside class="notes"><p>The lab's check flags vague words and notes without a cell or a number. Praise needs the same specificity: "the chart in cell 7 is easy to read" teaches; "good job" does not.</p></aside>
+</section>
+
+<section class="slide" id="skills-profile" data-lo="LO4" data-n="28" data-session="3">
+  <div class="kicker">The plan starts from the profile</div>
+  <h2>Her lowest skills are methods, inference and checking assisted work</h2>
+  <div class="bars">
+    <div class="row"><span>Communication</span><div class="bar c-teal" style="--w:75%"></div><span class="val">3</span></div>
+    <div class="row"><span>Framing</span><div class="bar c-cyan" style="--w:50%"></div><span class="val">2</span></div>
+    <div class="row"><span>Data handling</span><div class="bar c-cyan" style="--w:50%"></div><span class="val">2</span></div>
+    <div class="row"><span>Reproducibility</span><div class="bar c-cyan" style="--w:50%"></div><span class="val">2</span></div>
+    <div class="row"><span>Methods</span><div class="bar c-coral" style="--w:25%"></div><span class="val">1</span></div>
+    <div class="row"><span>Inference</span><div class="bar c-coral" style="--w:25%"></div><span class="val">1</span></div>
+    <div class="row"><span>Assisted-work verification</span><div class="bar c-coral" style="--w:25%"></div><span class="val">1</span></div>
+  </div>
+  <p class="caption">Shaden's skills profile, 1 to 4 (synthetic, Lab 2.3).</p>
+  <aside class="notes"><p>The three findings line up with the three lowest skills: that is not a coincidence, and it is what makes the plan credible to her.</p></aside>
+</section>
+
+<section class="slide" id="three-months" data-lo="LO4" data-n="29" data-session="3">
+  <div class="kicker">The plan</div>
+  <h2>Three months, each with a goal, the evidence and the support</h2>
+  <table class="t small">
+    <tr><th>Month</th><th>Goal</th><th>Evidence</th></tr>
+    <tr><td>1</td><td>A comparison group every time</td><td>Two analyses passed on checklist item M1</td></tr>
+    <tr><td>2</td><td>Verify every assisted number before review</td><td>Three complete verification records</td></tr>
+    <tr><td>3</td><td>State uncertainty, working unaided</td><td>An unaided analysis that passes level 2 review</td></tr>
+  </table>
+  <aside class="notes"><p>Support: pair review with Faleh in month 1, the audit checklist in month 2, a review by Saleh in month 3. The evidence column uses the unit's own checklist items, so progress is checked with the same tool as the work.</p></aside>
+</section>
+
+<section class="slide" id="unaided-in-plan" data-lo="LO4" data-n="30" data-session="3">
+  <div class="kicker">Keeping the skill</div>
+  <h2>An analyst who checks assistants must still do the work alone</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Her verification skill is 1 of 4: she cannot check what she cannot do</li>
+      <li>Month 3 is unaided: no assistant, the full analysis, a normal review</li>
+      <li>The rule set's U1 makes this a quarterly habit for everyone</li>
+    </ul>
+    <div class="callout note"><b>From the catalog.</b> Keeping unaided practice in the work is a topic of this course, not an option.</div>
+  </div>
+  <aside class="notes"><p>Expect pushback that unaided work is slower. It is, once a quarter; the alternative is a reviewer who cannot tell when an assistant is wrong.</p></aside>
+</section>
+
+<section class="slide" id="check-specific-note" data-lo="LO4" data-n="31" data-session="3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which note will change what she does next week?</h2>
+  <div class="quiz" data-type="single" data-lo="LO4" data-id="check-specific-note-q1">
+    <p class="lead">Four feedback notes on the same finding: an average that mixed imports with transshipment.</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="A">Cell 3 averages imports with transshipment (5.2 days); print counts by move type before every average</div>
+      <div class="opt" data-why="Names a virtue instead of an action: she cannot tell what 'careful' means for her next notebook" data-k="B">Be more careful with the populations you average over</div>
+      <div class="opt" data-why="Diagnoses without a next step: she knows what was wrong, not what to do instead" data-k="C">Your dwell figure was wrong because of transshipment</div>
+      <div class="opt" data-why="Sends her to a resource without linking it to the error she made" data-k="D">Read the unit's data-handling guide again this month</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> It names the cell and the number she can check, and a concrete habit she can apply to any average.</div>
+  </div>
+  <aside class="notes"><p>Answer: the first. The third is accurate but stops at the diagnosis; ask the room to add the reasoning and the next step to it.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-3" data-auto="lab" data-lab="2.3" data-label="Lab 2.3" data-n="32" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 2.3 · 25 min</div><h2>Feedback and a three-month plan</h2><p class="lead small">Turn review findings on a new analyst's notebook into a feedback note that names the reasoning, and a three-month plan built on her skills profile.</p><a class="nb" href="../labs/D2_3_feedback_plan.ipynb">D2_3_feedback_plan.ipynb</a></div><ul class="checklist"><li>Choose three findings to raise <span class="min">5 min</span></li><li>Write each note: observation, effect, reasoning, next step <span class="min">9 min</span></li><li>A three-month plan from the skills profile <span class="min">8 min</span></li><li>Check that every line is specific <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Write the two-line summary for the analyst's file</li></ul></div>
+  <aside class="notes"><p>AI-tutor: participants may ask the tutor to question their notes, not to write them. In class, swap notes with a neighbour for the peer test in task 4: would they know what Shaden does next week? Common failure: seven notes instead of three.</p></aside>
+</section>
+
+<!-- Session 4 -->
+
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="33">
+  <div class="kicker">Session 4</div>
+  <h1>Review capacity and mentoring</h1>
+  <ul class="bullets outcomes"><li>Estimate a quarter's review hours from assurance levels</li><li>Assign reviewers under separation and seniority rules</li><li>Use review pairings to develop analysts</li></ul>
+  <div class="sess-no">04</div>
+</section>
+
+<section class="slide" id="levels-to-hours" data-lo="LO1" data-n="34" data-session="4">
+  <div class="kicker">Capacity</div>
+  <h2>Assurance levels turn into review hours</h2>
+  <table class="t small">
+    <tr><th>Level</th><th class="num">Analyses next quarter</th><th class="num">Hours each</th><th>Who</th></tr>
+    <tr><td>1</td><td class="num">10</td><td class="num">0</td><td>the analyst</td></tr>
+    <tr><td>2</td><td class="num">14</td><td class="num">4</td><td>any non-junior peer</td></tr>
+    <tr><td>3</td><td class="num">12</td><td class="num">10</td><td>a senior</td></tr>
+    <tr><td>4</td><td class="num">4</td><td class="num">16 + 8</td><td>a senior and a second reviewer</td></tr>
+  </table>
+  <aside class="notes"><p>The hours are the unit's planning figures for the case, set on the Director's behalf; a real unit measures its own from last year's log. The point is that every level has a cost, so a standard without a rota is a wish.</p></aside>
+</section>
+
+<section class="slide" id="senior-bottleneck" data-lo="LO1" data-n="35" data-session="4">
+  <div class="kicker">The bottleneck</div>
+  <h2>Seniors are needed for 184 hours and have 150</h2>
+  <div class="cols cols-2">
+    <div class="stack">
+      <div class="stat"><div class="big">34 h</div><div class="lbl">short in senior review hours next quarter</div></div>
+    </div>
+    <ul class="bullets">
+      <li>Three seniors, 60, 50 and 40 review hours</li>
+      <li>Six mid-level analysts have hours to spare</li>
+      <li>The rule keeps level 3 and 4 with seniors</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From Lab 2.4. Ask the room for options before the next slide. The tempting one is to lower the level of a few analyses. That is the under-assurance that produced last year's errors.</p></aside>
+</section>
+
+<section class="slide" id="close-the-gap" data-lo="LO1 LO4" data-n="36" data-session="4">
+  <div class="kicker">Options</div>
+  <h2>Close the gap without lowering a level</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Co-sign</h4><p class="small mb0">A mid-level analyst reviews a level 3 analysis; a senior checks the review in 2 hours. Saves 8 senior hours.</p></div>
+    <div class="card c-cyan"><h4>Defer</h4><p class="small mb0">Move a level 3 analysis whose decision can wait to the next quarter, with the sponsor's agreement.</p></div>
+    <div class="card c-coral"><h4>Never</h4><p class="small mb0">Lower the level to fit the rota. The level comes from the risk, not the hours.</p></div>
+  </div>
+  <aside class="notes"><p>Five co-signed reviews close 34 hours at 8 each, the fewest that work. Co-signing is also training: it builds the next level 3 reviewers, the only lasting fix.</p></aside>
+</section>
+
+<section class="slide" id="the-rota" data-lo="LO1" data-n="37" data-session="4">
+  <div class="kicker">The rota</div>
+  <h2>Every rule kept: Faleh and Saleh end at full capacity</h2>
+  <div class="bars">
+    <div class="row"><span>Faleh (senior)</span><div class="bar c-coral" style="--w:100%"></div><span class="val">60 of 60 h</span></div>
+    <div class="row"><span>Saleh (senior)</span><div class="bar c-coral" style="--w:100%"></div><span class="val">50 of 50 h</span></div>
+    <div class="row"><span>Noor (senior)</span><div class="bar c-amber" style="--w:85%"></div><span class="val">34 of 40 h</span></div>
+    <div class="row"><span>Lina (mid)</span><div class="bar c-teal" style="--w:46%"></div><span class="val">32 of 70 h</span></div>
+    <div class="row"><span>Rakan (mid)</span><div class="bar c-teal" style="--w:46%"></div><span class="val">32 of 70 h</span></div>
+  </div>
+  <p class="caption">Review load from the reference rota of Lab 2.4; five co-signed level 3 reviews.</p>
+  <aside class="notes"><p>A rota at 100% for two people has no slack for an urgent board request: say so to the room. The stretch asks which mid-level analyst trains as a level 3 reviewer next; Lina has the highest mean skill of the mid-level analysts.</p></aside>
+</section>
+
+<section class="slide" id="mentoring-pairs" data-lo="LO4" data-n="38" data-session="4">
+  <div class="kicker">Mentoring</div>
+  <h2>Juniors shadow a mentor's reviews before they review</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Juniors do not review alone, but they watch reviews from their first month</li>
+      <li>One junior per mentor; the mentor reviews some of the junior's work when the rota allows</li>
+      <li>Shaden with Faleh; Turki with Lina; Dalia with Rakan</li>
+    </ul>
+    <div class="card c-purple"><h4>A trade-off to state</h4><p class="small mb0">Faleh is at full capacity and mentors Shaden. Either the shadowing fits inside his reviews, or one of his reviews moves.</p></div>
+  </div>
+  <aside class="notes"><p>Shadowing costs no booked hours, but it does cost attention. The reference pairs put Shaden with Faleh because her plan's month 1 is pair review with him: check that the rota allows it.</p></aside>
+</section>
+
+<section class="slide" id="check-shortfall" data-lo="LO1" data-n="39" data-session="4">
+  <div class="kicker">Checkpoint</div>
+  <h2>Senior hours run short: what do you do?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-shortfall-q1">
+    <p class="lead">Next quarter's level 3 and 4 reviews need 184 senior hours; your seniors have 150. A director asks you to "just call some of them level 2".</p>
+    <div class="opts">
+      <div class="opt" data-why="Lets capacity set the level, which is how last year's under-assured requests got through" data-k="A">Lower five level 3 analyses to level 2</div>
+      <div class="opt" data-why="Overloads the seniors, which quietly cuts the depth of every review instead of the number" data-k="B">Ask the seniors to absorb the extra hours</div>
+      <div class="opt" data-why="Moves the risk to whoever picks the reviews; a level 3 analysis still needs independent senior judgement" data-k="C">Let mid-level analysts review level 3 alone</div>
+      <div class="opt" data-ok data-k="D">Co-sign five level 3 reviews and defer what can wait</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The level comes from the risk; co-signing keeps a senior's judgement on each level 3 review at a fifth of the hours and trains the next reviewers.</div>
+  </div>
+  <aside class="notes"><p>Answer: co-sign and defer. Ask how they would answer the director: "the level comes from what an error would cost you, not from our diary".</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-2-4" data-auto="lab" data-lab="2.4" data-label="Lab 2.4" data-n="40" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 2.4 · 25 min</div><h2>A quarter's review rota</h2><p class="lead small">Plan a quarter's review load and pairings for a team of twelve: assign 40 planned analyses to reviewers under the separation and seniority rules, find the shortfall and choose how to close it.</p><a class="nb" href="../labs/D2_4_review_capacity.ipynb">D2_4_review_capacity.ipynb</a></div><ul class="checklist"><li>Review hours by level for the quarter <span class="min">5 min</span></li><li>Assign reviewers under the rules <span class="min">9 min</span></li><li>Find the overload and the shortfall <span class="min">6 min</span></li><li>Pair the juniors with mentors <span class="min">5 min</span></li><li class="stretch">✱ Stretch: Choose which mid-level analyst trains as a level 3 reviewer, and how</li></ul></div>
+  <aside class="notes"><p>Participants may assign by hand or with code; the check is the same. The solution is a hand-made rota. Common failures: a senior assigned their own analysis (P06, P08 and P40 are by seniors); a level 4 analysis with no second reviewer.</p></aside>
+</section>
+
+<section class="slide" id="wrap-up" data-n="41" data-session="4">
+  <div class="kicker">Day 2 · wrap-up</div>
+  <h2>Three things to keep</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Calibrate</h4><p class="small mb0">Review alone, compare, and turn each big gap into a sentence of the checklist.</p></div>
+    <div class="card c-coral"><h4>Audit evidence</h4><p class="small mb0">No record, no compliance; recompute the headline where the record is missing.</p></div>
+    <div class="card c-purple"><h4>Develop people</h4><p class="small mb0">Three findings with their reasoning, a plan with evidence and unaided practice, and a rota that trains.</p></div>
+  </div>
+  <aside class="notes"><p>Ask which of today's four artefacts they would introduce first in their own unit, and what would stop them.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="Next" data-n="42" data-session="4">
+  <div class="kicker">Next</div>
+  <h2>Day 3: Work with sponsors</h2>
+  <p class="lead">Tomorrow the sponsors arrive: a deadline that moves, an evidence threshold to agree before the analysis, and a request to drop a finding. Read the slot-booking draft again tonight: you will defend what you found in it.</p>
+  <aside class="notes"><p>Day 3 has two role-plays. Recruit observers for Lab 3.1 now: one per three participants. Print the role cards from <code>labs/data/roles.json</code> if a trainer will not play the sponsor.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-16T00:41:43Z","version":"2027.1.0","commit":"eec130a"},"course":{"id":"ds-407","code":"DS-407","title":"Leading Analytical Work: Review, Standards and Stakeholders","track":"data-science","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/ds-407/","repo":"SDAIAAcademy/ds-407","home":"../index.html"},"deck":{"id":"day2","kind":"day","day":2,"label":"Day 2","title":"Review and develop","prev":"day1.html","next":"day3.html","md":"day2.md","alt":{}},"sessions":[{"n":1,"label":"Session 1","title":"Calibrating reviewers","slide":"s1","outcomes":["Rate review findings by their effect on the decision","Measure agreement between two reviewers, beyond chance","Turn disagreements into clearer checklist wording"],"minutes":50,"lab":{"id":"2.1","title":"Two reviewers, one analysis","minutes":25,"href":"../labs/D2_1_calibrate_reviewers.ipynb"}},{"n":2,"label":"Session 2","title":"Auditing assisted work","slide":"s2","outcomes":["Audit work against rules from its evidence, not its claims","Recompute a number an assistant drafted","Record each breach with the rule it breaks"],"minutes":50,"lab":{"id":"2.2","title":"Audit five assisted analyses","minutes":25,"href":"../labs/D2_2_audit_assisted.ipynb"}},{"n":3,"label":"Session 3","title":"Feedback that builds skill","slide":"s3","outcomes":["Choose the findings worth raising with an analyst","Write feedback that names the reasoning, not only the error","Plan development with goals, evidence and unaided practice"],"minutes":50,"lab":{"id":"2.3","title":"Feedback and a three-month plan","minutes":25,"href":"../labs/D2_3_feedback_plan.ipynb"}},{"n":4,"label":"Session 4","title":"Review capacity and mentoring","slide":"s4","outcomes":["Estimate a quarter's review hours from assurance levels","Assign reviewers under separation and seniority rules","Use review pairings to develop analysts"],"minutes":50,"lab":{"id":"2.4","title":"A quarter's review rota","minutes":25,"href":"../labs/D2_4_review_capacity.ipynb"}}],"slides":[{"id":"title","n":1,"title":"Review and develop","kind":"title","session":0,"hash":"d14e94f6","md":"#### [day2#title] Review and develop\n\n*SDAIA Academy · Leading Analytical Work: Review, Standards and Stakeholders*\n\nDay 2: Calibrated reviewers, audits of assisted work, feedback and a review rota\n\nData Science Track · 3 teaching days + capstone day · 4 sessions · 4 labs · DS-407","notes":"Day 2 runs the system Day 1 designed: two reviewers on one analysis, an audit of assisted work, feedback to a new analyst, and a quarter's review rota. The first review is AI-off: say so now, before laptops open.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"Review and develop","kind":"content","session":0,"hash":"082759f8","md":"#### [day2#agenda] Review and develop\n\n*Today*\n\n- **Session 1 · Calibrating reviewers**: Severity by effect on the decision, rated alone, then compared and turned into clearer wording\n- **Session 2 · Auditing assisted work**: An audit checks the evidence a rule asks for, recomputes what it can and records each breach with its rule\n- **Session 3 · Feedback that builds skill**: From findings to feedback that names the reasoning, and a plan that keeps unaided practice in the work\n- **Session 4 · Review capacity and mentoring**: Review hours follow assurance levels; senior reviewers are the bottleneck; pairings develop analysts","notes":"Every lab starts from supplied files: the unit's checklist and rules are given in reference versions, so nobody depends on yesterday's output.","minutes":null,"lo":[]},{"id":"review-day1","n":3,"title":"Which request is graded right under yesterday's standard?","kind":"quiz","session":0,"hash":"af6af7d4","md":"#### [day2#review-day1] Which request is graded right under yesterday's standard?\n\n*Review of Day 1*\n\n**Question:** Four requests and the level an analyst gave each, with the unit's matrix and escalators. Which one is graded right?\n\n- A. A model that sets night pilot numbers: level 2, it is a simple regression\n- B. A staff survey summary with personal data: level 3\n- C. A dwell figure for the ministry's indicators: level 2\n- D. A tariff revenue estimate for the board: level 3","notes":"Answer: the tariff estimate (N2 of Lab 1.1). The pilot model is level 4 (N3), the survey level 1 with the officer's check (N5), the ministry dwell figure level 3 (N4).","minutes":null,"lo":["LO1","LO3"]},{"id":"s1","n":4,"title":"Calibrating reviewers","kind":"section","session":1,"hash":"d15fd39c","md":"#### [day2#s1] Calibrating reviewers\n\n*Session 1*\n\n- Rate review findings by their effect on the decision\n- Measure agreement between two reviewers, beyond chance\n- Turn disagreements into clearer checklist wording","notes":"","minutes":null,"lo":["LO2"]},{"id":"the-draft","n":5,"title":"\"Slot booking has halved waiting at T2. Extend it to all terminals.\"","kind":"content","session":1,"hash":"42409914","md":"#### [day2#the-draft] \"Slot booking has halved waiting at T2. Extend it to all terminals.\"\n\n*The draft*\n\n```text\n# file: analysis.py output\nmean wait, months 13 to 24:\n  T2 7.5 h, other terminals 12.9 h\nreduction at T2: 42%\nT2 before 10.7 h, after 7.5 h\n```\n\n- The berth-allocation pilot: slot booking at T2 from month 13\n- The director of marine operations wants it extended\n- Two reviewers review it alone: you and Faleh Al-Musharraf","notes":"The re-run output of Lab 2.1, synthetic data. The text says \"halved\"; the output says 42%. Ask the room to hold that thought: it is one finding of six, and not the most important.","minutes":null,"lo":["LO2"]},{"id":"severity-scale","n":6,"title":"Rate a finding by what it does to the decision, not by how you found it","kind":"content","session":1,"hash":"547e835a","md":"#### [day2#severity-scale] Rate a finding by what it does to the decision, not by how you found it\n\n*Severity*\n\n- **3 · Critical.** The decision changes, or the output cannot leave the unit\n- **2 · Major.** The size or the confidence of the result changes, not the decision\n- **1 · Minor.** Presentation: a label, a chart, a name\n\n> **Recap from DS-310.** Ranking flaws by consequence is the individual reviewer's skill. Today two reviewers must reach the same rating, and the unit's standard (S-5) writes the scale down.","notes":"The \"or the output cannot leave the unit\" clause is the unit's own rule: it makes a privacy finding critical whatever its effect on the decision. It is the one most reviewers forget.","minutes":null,"lo":["LO2"]},{"id":"six-flaws","n":7,"title":"Six findings, two of them critical","kind":"content","session":1,"hash":"c19a94ba","md":"#### [day2#six-flaws] Six findings, two of them critical\n\n*The reference review*\n\n| Finding | Severity |\n| --- | --- |\n| C1 · T2 compared with others after the change only; T2 was already fastest | 3 |\n| P1 · Vessel masters' names and mobile numbers in table 5 | 3 |\n| C2 · Diverted calls dropped; at T2 they rose from 17 to 35 | 2 |\n| M1 · \"Halved\" in the text; 42% in the output | 2 |\n| M2 · Weather closures in T2's before period | 1 |\n| m1 · Table 4 labelled minutes; the values are hours | 1 |","notes":"From the Lab 2.1 answer key. 33 of the 35 diverted calls after the change are feeder vessels: that returns on Day 3 as the subgroup a sponsor wants dropped.","minutes":null,"lo":["LO2"]},{"id":"fix-one-at-a-time","n":8,"title":"Fix a flaw and re-run: the decision flips on C1","kind":"content","session":1,"hash":"1e3caee1","md":"#### [day2#fix-one-at-a-time] Fix a flaw and re-run: the decision flips on C1\n\n*Measuring the effect*\n\n| Item | Value |\n| --- | --- |\n| As written | -5.36 h |\n| C1 fixed | -1.37 h |\n| C1 and C2 fixed | -0.94 h |\n| C1, C2 and M2 fixed | -0.78 h |\n\nEffect of slot booking on waiting at T2, hours per call (Lab 2.1 stretch). The draft recommends extending at -2 hours or more; after C1 it does not.","notes":"This is how severity stops being an opinion: re-run with the flaw fixed. C1 alone moves the effect from -5.36 to -1.37 and the decision changes: critical. C2 moves it further but does not flip it on its own: major.","minutes":null,"lo":["LO2"]},{"id":"alone-then-compare","n":9,"title":"Review alone, then compare, then discuss only the big gaps","kind":"content","session":1,"hash":"ab77e2c9","md":"#### [day2#alone-then-compare] Review alone, then compare, then discuss only the big gaps\n\n*The method*\n\n1. **1 · Alone** re-run, list findings, rate, AI-off\n2. **2 · Compare** one table, both ratings, the gap\n3. **3 · Discuss** gaps of two levels only\n4. **4 · Revise** the checklist sentence that allowed the gap","notes":"Why AI-off for the first pass? A reviewer who asks an assistant first anchors on its list. The catalog sets this policy for Day 2's first-pass reviews and the supervised check.","minutes":null,"lo":["LO2"]},{"id":"agreement-table","n":10,"title":"Half the ratings agree; the biggest gap is the privacy finding","kind":"content","session":1,"hash":"9f402765","md":"#### [day2#agreement-table] Half the ratings agree; the biggest gap is the privacy finding\n\n*Two reviewers*\n\n| Finding | You | Faleh | Gap |\n| --- | --- | --- | --- |\n| C1 | 3 | 3 | 0 |\n| C2 | 2 | 3 | 1 |\n| M1 | 2 | 2 | 0 |\n| M2 | 1 | 2 | 1 |\n| P1 | 3 | 1 | 2 |\n| m1 | 1 | 1 | 0 |","notes":"Faleh rated P1 by its effect on the decision, which is none. True, and beside the point: by the standard the output cannot leave the unit. His C2 rating is the opposite error: he rates higher because diversions feel serious, though fixing C2 alone does not flip the decision.","minutes":null,"lo":["LO2"]},{"id":"kappa","n":11,"title":"50% agreement is a weighted kappa of 0.25","kind":"content","session":1,"hash":"306d8a6a","md":"#### [day2#kappa] 50% agreement is a weighted kappa of 0.25\n\n*Beyond chance*\n\n**0.25** weighted kappa, six findings (Lab 2.1)\n\n- Kappa removes the agreement two reviewers reach by chance\n- Weighted kappa counts a gap of two as worse than a gap of one\n- 1 is perfect agreement; 0 is no better than chance\n- Track it each quarter on a shared analysis","notes":"Cohen (1968) introduced weighted kappa for ordered ratings. With six findings the number is noisy: use it as a trend over quarters, not a grade for one review. The point for the room: half agreement sounds acceptable; corrected for chance it is weak.\n\nSources: Cohen (1968), Weighted kappa, Psychological Bulletin.","minutes":null,"lo":["LO2"]},{"id":"disagreement-to-wording","n":12,"title":"Each big gap becomes a sentence in the checklist","kind":"content","session":1,"hash":"59074b6b","md":"#### [day2#disagreement-to-wording] Each big gap becomes a sentence in the checklist\n\n*The output of calibration*\n\n- **P1, before.** Is the output free of personal data, and is its classification marked?\n- **P1, after.** The same question, plus the anchor: a breach is critical whatever its effect on the decision, because the output cannot leave the unit.","notes":"Calibration that ends in a discussion is forgotten by next quarter. Calibration that ends in a changed sentence stays. Ask each pair for the sentence they would add for their own biggest gap.","minutes":null,"lo":["LO1","LO2"]},{"id":"check-kappa","n":13,"title":"High agreement, low kappa: what happened?","kind":"quiz","session":1,"hash":"362b0112","md":"#### [day2#check-kappa] High agreement, low kappa: what happened?\n\n*Checkpoint*\n\n**Question:** Two reviewers rate 20 findings and agree on 16 of them, 80%. Their weighted kappa is 0.3. Which explanation fits?\n\n- A. The kappa was computed wrongly\n- B. Most findings were rated minor by both, so much of the agreement was expected by chance\n- C. Four disagreements are too many for any team\n- D. Twenty findings are too few to compute kappa","notes":"Answer: chance agreement on a skewed scale. The practical lesson: calibrate on analyses that hold serious flaws, where agreement matters.","minutes":null,"lo":["LO2"]},{"id":"lab-2-1","n":14,"title":"Two reviewers, one analysis","kind":"lab","session":1,"hash":"874a98f4","md":"#### [day2#lab-2-1] Two reviewers, one analysis\n\nLab 2.1 · 25 min\n\nReview a seeded-flaw berth-delay analysis independently with a partner (AI-off), compare severity ratings in an agreement table, and revise the checklist where you disagree.\n\n[D2_1_calibrate_reviewers.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D2_1_calibrate_reviewers.ipynb)\n\n- [ ] Re-run and review alone (9 min)\n- [ ] Rate each finding by its effect on the decision (5 min)\n- [ ] Agreement table and weighted kappa (6 min)\n- [ ] Revise the checklist where you disagreed (5 min)\n- [ ] ✱ Stretch: Measure what each flaw does to the headline by fixing it alone","notes":"AI-off until task 3: no assistant, no tutor. Faleh's ratings are in `data/faleh_ratings.json`; ask participants not to open it before task 3. In class, pair participants and have them swap ratings instead of using Faleh's. Common failure: missing P1 because \"it is not about the analysis\".","minutes":null,"lo":[]},{"id":"s2","n":15,"title":"Auditing assisted work","kind":"section","session":2,"hash":"77929b68","md":"#### [day2#s2] Auditing assisted work\n\n*Session 2*\n\n- Audit work against rules from its evidence, not its claims\n- Recompute a number an assistant drafted\n- Record each breach with the rule it breaks","notes":"","minutes":null,"lo":["LO3","LO2"]},{"id":"audit-not-review","n":16,"title":"A review asks if the analysis is right; an audit asks if the rules were followed","kind":"content","session":2,"hash":"70b933fa","md":"#### [day2#audit-not-review] A review asks if the analysis is right; an audit asks if the rules were followed\n\n*Audit or review*\n\n- **Review.** One analysis, all five areas, before release. The reviewer re-runs and rates findings.\n- **Audit.** A sample of released work, against the rules for assisted analysis. The auditor checks the evidence each rule asks for.\n\n> **The rule of thumb.** No evidence, no compliance. \"I checked the numbers\" is a claim; a verification record is evidence.","notes":"The audit closes the loop on Day 1's rules: rules nobody audits become optional within a quarter. The catalog's evidence for outcome 3 is a rule set and an audit of five assisted analyses.","minutes":null,"lo":["LO3"]},{"id":"five-records","n":17,"title":"Five assisted analyses from the unit's log","kind":"content","session":2,"hash":"542780de","md":"#### [day2#five-records] Five assisted analyses from the unit's log\n\n*The sample*\n\n| Id | Analysis | What the record shows |\n| --- | --- | --- |\n| A1 | Tug fuel use per call | Disclosed, prompts kept, figures re-run |\n| A2 | Fatigue risk in the night pilot roster | Data sent: names and shifts of pilots |\n| A3 | Share of T1 calls waiting over 12 hours | 18.4%; no verification record |\n| A4 | Storage-fee scenarios for the board | No disclosure line on the paper |\n| A5 | Gate no-show patterns | No prompts, no record; \"I checked\" |","notes":"Synthetic log of Lab 2.2. Give the room two minutes to guess which rule each breaks before the lab: most get A2 and A4; few say A5 breaks two rules.","minutes":null,"lo":["LO3"]},{"id":"recompute","n":18,"title":"A3 says 18.4%; the authority's own data say 47.7%","kind":"content","session":2,"hash":"a4b84fb3","md":"#### [day2#recompute] A3 says 18.4%; the authority's own data say 47.7%\n\n*Recompute what you can*\n\n```python\n# file: recompute A3\nt1 = calls[(calls.terminal == \"T1\")\n           & (calls.month >= 13)]\nrecorded = t1.dropna(subset=[\"wait_h\"])\n(recorded.wait_h > 12).mean()   # 0.477\n```\n\n- 1,387 calls with a recorded wait; 35 diverted\n- The record showed the number was not verified\n- Only the recomputation showed how wrong it was","notes":"From the Lab 2.2 solution run. An audit cannot recompute everything; it recomputes the headline of the analyses whose records are missing, because that is where an assistant's error survives.","minutes":null,"lo":["LO2","LO3"]},{"id":"breach-table","n":19,"title":"Each breach is recorded with the rule it breaks and the action it needs","kind":"content","session":2,"hash":"cd14bb51","md":"#### [day2#breach-table] Each breach is recorded with the rule it breaks and the action it needs\n\n*The audit table*\n\n| Id | Rules | Action |\n| --- | --- | --- |\n| A1 | none | none |\n| A2 | C1 data | Tell the data protection officer; redo on anonymised data |\n| A3 | V1 verify, K2 keep | Withdraw the figure; re-run and re-review |\n| A4 | D1 disclose | Disclosure note to the board secretary |\n| A5 | K1, K2 keep | Re-run and keep the record before reuse |","notes":"A2 is the most serious even though its numbers were right: restricted data left the authority's control, which the national guidelines forbid and no later step undoes.","minutes":null,"lo":["LO3"]},{"id":"audit-to-rule","n":20,"title":"Two of five had no verification record: change the process, not just the analyses","kind":"content","session":2,"hash":"7c4ffd3d","md":"#### [day2#audit-to-rule] Two of five had no verification record: change the process, not just the analyses\n\n*What the audit teaches*\n\n- The rule existed; nothing made it visible before review\n- Proposed: no review of assisted work starts without its verification record\n- The checklist item C2 asks for it at every level\n\n- **How often.** Five analyses a quarter, chosen at random from the assisted log, plus any the reviewers flag.","notes":"The sample size is a choice on the Director's behalf for the case; in a real unit it depends on volume. The point is that the audit is routine and random, not a reaction to an incident.","minutes":null,"lo":["LO3"]},{"id":"audit-fairly","n":21,"title":"An audit finds breaches of rules, not bad analysts","kind":"content","session":2,"hash":"00d2e188","md":"#### [day2#audit-fairly] An audit finds breaches of rules, not bad analysts\n\n*Tone*\n\n- **Record facts.** What the file shows, which rule, which action\n- **Fix the process.** Two missing records point at the process, not two people\n- **Feed development.** A pattern for one analyst goes into feedback, the next session","notes":"If an audit feels like a hunt, analysts stop disclosing assistant use, and the audit sees nothing. Keep the table factual and the follow-up developmental.","minutes":null,"lo":["LO3","LO4"]},{"id":"check-audit-evidence","n":22,"title":"\"I checked the numbers\"","kind":"quiz","session":2,"hash":"0f23164c","md":"#### [day2#check-audit-evidence] \"I checked the numbers\"\n\n*Checkpoint*\n\n**Question:** An analyst's assisted analysis has a disclosure line and correct figures when you recompute them, but no prompts and no verification record. He says he checked everything. What does the audit record?\n\n- A. No breach: the figures are right\n- B. A breach of the disclosure rule\n- C. A breach of the keep rules: no prompts and no record\n- D. A breach of the verify rule only","notes":"Answer: the keep rules (A5 in the lab). Some will argue the right figures excuse it: ask how the next reviewer would know which numbers were checked.","minutes":null,"lo":["LO3"]},{"id":"lab-2-2","n":23,"title":"Audit five assisted analyses","kind":"lab","session":2,"hash":"66e0599a","md":"#### [day2#lab-2-2] Audit five assisted analyses\n\nLab 2.2 · 25 min\n\nCheck five assistant-drafted analyses from the unit's log against the rules for AI-assisted work, recompute the one headline that can be recomputed, and record each breach with its rule.\n\n[D2_2_audit_assisted.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D2_2_audit_assisted.ipynb)\n\n- [ ] Read the rules and the log (4 min)\n- [ ] Check each record against the rules (9 min)\n- [ ] Recompute one headline number (7 min)\n- [ ] Write the audit table (5 min)\n- [ ] ✱ Stretch: Propose the one rule change the audit suggests","notes":"The audit itself is AI-off; the tutor may question the audit table afterwards. Lab 2.2 uses the reference rule set, not the participant's own from Lab 1.4, so everyone audits against the same rules. Common failure: A3 recorded as V1 only; the missing record is K2 as well.","minutes":null,"lo":[]},{"id":"s3","n":24,"title":"Feedback that builds skill","kind":"section","session":3,"hash":"555d14ea","md":"#### [day2#s3] Feedback that builds skill\n\n*Session 3*\n\n- Choose the findings worth raising with an analyst\n- Write feedback that names the reasoning, not only the error\n- Plan development with goals, evidence and unaided practice","notes":"","minutes":null,"lo":["LO4"]},{"id":"seven-to-three","n":25,"title":"Seven findings is a review; three is feedback","kind":"content","session":3,"hash":"abc19c58","md":"#### [day2#seven-to-three] Seven findings is a review; three is feedback\n\n*From review to feedback*\n\n- Shaden Al-Ruwayshid joined six months ago; Faleh found seven things in her notebook\n- The review notes go to the analysis; the feedback goes to the analyst\n- Choose the three findings that show a pattern in her reasoning\n- Name one strength, specifically\n\n- **Her three.** No comparison group (F2), the wrong population in an average (F1), assisted cells not verified (F7)","notes":"The minor findings (an axis, variable names) go in the review notes, not in the conversation. Three is a memory limit, not a rule of politeness.","minutes":null,"lo":["LO4"]},{"id":"four-parts","n":26,"title":"Observation, effect, reasoning, next step","kind":"content","session":3,"hash":"96d559c2","md":"#### [day2#four-parts] Observation, effect, reasoning, next step\n\n*One note*\n\n| Part | Shaden, F2 |\n| --- | --- |\n| **Observation** | In cell 5 waiting at T2 is compared before and after, with no other terminal |\n| **Effect** | Waiting fell everywhere in month 13, so most of the fall would have happened anyway |\n| **Reasoning** | Before claiming a cause, ask what would have happened without it |\n| **Next** | In your next comparison, write the comparison group in the first cell |","notes":"The reasoning line is what builds skill: it names the question she did not ask herself, so she can ask it next time on a different problem. The catalog calls this feedback that names the reasoning.","minutes":null,"lo":["LO4"]},{"id":"vague-feedback","n":27,"title":"\"Be more careful with comparisons\" tells her nothing she can do","kind":"content","session":3,"hash":"fcc6713b","md":"#### [day2#vague-feedback] \"Be more careful with comparisons\" tells her nothing she can do\n\n*Specific*\n\n- **Vague.** Be more careful. Improve your rigour. Pay attention to the data. Good job on the charts.\n- **Specific.** Cell 3 averages imports with transshipment, 5.2 days. Print the counts by move type before every average.\n\n> **The peer test.** Would a colleague reading the note know what Shaden should do differently next week? That is the evidence of outcome 4.","notes":"The lab's check flags vague words and notes without a cell or a number. Praise needs the same specificity: \"the chart in cell 7 is easy to read\" teaches; \"good job\" does not.","minutes":null,"lo":["LO4"]},{"id":"skills-profile","n":28,"title":"Her lowest skills are methods, inference and checking assisted work","kind":"content","session":3,"hash":"06f7196f","md":"#### [day2#skills-profile] Her lowest skills are methods, inference and checking assisted work\n\n*The plan starts from the profile*\n\n| Item | Value |\n| --- | --- |\n| Communication | 3 |\n| Framing | 2 |\n| Data handling | 2 |\n| Reproducibility | 2 |\n| Methods | 1 |\n| Inference | 1 |\n| Assisted-work verification | 1 |\n\nShaden's skills profile, 1 to 4 (synthetic, Lab 2.3).","notes":"The three findings line up with the three lowest skills: that is not a coincidence, and it is what makes the plan credible to her.","minutes":null,"lo":["LO4"]},{"id":"three-months","n":29,"title":"Three months, each with a goal, the evidence and the support","kind":"content","session":3,"hash":"4db11d5a","md":"#### [day2#three-months] Three months, each with a goal, the evidence and the support\n\n*The plan*\n\n| Month | Goal | Evidence |\n| --- | --- | --- |\n| 1 | A comparison group every time | Two analyses passed on checklist item M1 |\n| 2 | Verify every assisted number before review | Three complete verification records |\n| 3 | State uncertainty, working unaided | An unaided analysis that passes level 2 review |","notes":"Support: pair review with Faleh in month 1, the audit checklist in month 2, a review by Saleh in month 3. The evidence column uses the unit's own checklist items, so progress is checked with the same tool as the work.","minutes":null,"lo":["LO4"]},{"id":"unaided-in-plan","n":30,"title":"An analyst who checks assistants must still do the work alone","kind":"content","session":3,"hash":"aab6f492","md":"#### [day2#unaided-in-plan] An analyst who checks assistants must still do the work alone\n\n*Keeping the skill*\n\n- Her verification skill is 1 of 4: she cannot check what she cannot do\n- Month 3 is unaided: no assistant, the full analysis, a normal review\n- The rule set's U1 makes this a quarterly habit for everyone\n\n> **From the catalog.** Keeping unaided practice in the work is a topic of this course, not an option.","notes":"Expect pushback that unaided work is slower. It is, once a quarter; the alternative is a reviewer who cannot tell when an assistant is wrong.","minutes":null,"lo":["LO4"]},{"id":"check-specific-note","n":31,"title":"Which note will change what she does next week?","kind":"quiz","session":3,"hash":"469ff085","md":"#### [day2#check-specific-note] Which note will change what she does next week?\n\n*Checkpoint*\n\n**Question:** Four feedback notes on the same finding: an average that mixed imports with transshipment.\n\n- A. Cell 3 averages imports with transshipment (5.2 days); print counts by move type before every average\n- B. Be more careful with the populations you average over\n- C. Your dwell figure was wrong because of transshipment\n- D. Read the unit's data-handling guide again this month","notes":"Answer: the first. The third is accurate but stops at the diagnosis; ask the room to add the reasoning and the next step to it.","minutes":null,"lo":["LO4"]},{"id":"lab-2-3","n":32,"title":"Feedback and a three-month plan","kind":"lab","session":3,"hash":"c8fb8f60","md":"#### [day2#lab-2-3] Feedback and a three-month plan\n\nLab 2.3 · 25 min\n\nTurn review findings on a new analyst's notebook into a feedback note that names the reasoning, and a three-month plan built on her skills profile.\n\n[D2_3_feedback_plan.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D2_3_feedback_plan.ipynb)\n\n- [ ] Choose three findings to raise (5 min)\n- [ ] Write each note: observation, effect, reasoning, next step (9 min)\n- [ ] A three-month plan from the skills profile (8 min)\n- [ ] Check that every line is specific (3 min)\n- [ ] ✱ Stretch: Write the two-line summary for the analyst's file","notes":"AI-tutor: participants may ask the tutor to question their notes, not to write them. In class, swap notes with a neighbour for the peer test in task 4: would they know what Shaden does next week? Common failure: seven notes instead of three.","minutes":null,"lo":[]},{"id":"s4","n":33,"title":"Review capacity and mentoring","kind":"section","session":4,"hash":"165a0adf","md":"#### [day2#s4] Review capacity and mentoring\n\n*Session 4*\n\n- Estimate a quarter's review hours from assurance levels\n- Assign reviewers under separation and seniority rules\n- Use review pairings to develop analysts","notes":"","minutes":null,"lo":["LO1","LO4"]},{"id":"levels-to-hours","n":34,"title":"Assurance levels turn into review hours","kind":"content","session":4,"hash":"556f50df","md":"#### [day2#levels-to-hours] Assurance levels turn into review hours\n\n*Capacity*\n\n| Level | Analyses next quarter | Hours each | Who |\n| --- | --- | --- | --- |\n| 1 | 10 | 0 | the analyst |\n| 2 | 14 | 4 | any non-junior peer |\n| 3 | 12 | 10 | a senior |\n| 4 | 4 | 16 + 8 | a senior and a second reviewer |","notes":"The hours are the unit's planning figures for the case, set on the Director's behalf; a real unit measures its own from last year's log. The point is that every level has a cost, so a standard without a rota is a wish.","minutes":null,"lo":["LO1"]},{"id":"senior-bottleneck","n":35,"title":"Seniors are needed for 184 hours and have 150","kind":"content","session":4,"hash":"3afd4650","md":"#### [day2#senior-bottleneck] Seniors are needed for 184 hours and have 150\n\n*The bottleneck*\n\n**34 h** short in senior review hours next quarter\n\n- Three seniors, 60, 50 and 40 review hours\n- Six mid-level analysts have hours to spare\n- The rule keeps level 3 and 4 with seniors","notes":"From Lab 2.4. Ask the room for options before the next slide. The tempting one is to lower the level of a few analyses. That is the under-assurance that produced last year's errors.","minutes":null,"lo":["LO1"]},{"id":"close-the-gap","n":36,"title":"Close the gap without lowering a level","kind":"content","session":4,"hash":"6e184218","md":"#### [day2#close-the-gap] Close the gap without lowering a level\n\n*Options*\n\n- **Co-sign.** A mid-level analyst reviews a level 3 analysis; a senior checks the review in 2 hours. Saves 8 senior hours.\n- **Defer.** Move a level 3 analysis whose decision can wait to the next quarter, with the sponsor's agreement.\n- **Never.** Lower the level to fit the rota. The level comes from the risk, not the hours.","notes":"Five co-signed reviews close 34 hours at 8 each, the fewest that work. Co-signing is also training: it builds the next level 3 reviewers, the only lasting fix.","minutes":null,"lo":["LO1","LO4"]},{"id":"the-rota","n":37,"title":"Every rule kept: Faleh and Saleh end at full capacity","kind":"content","session":4,"hash":"d87ad885","md":"#### [day2#the-rota] Every rule kept: Faleh and Saleh end at full capacity\n\n*The rota*\n\n| Item | Value |\n| --- | --- |\n| Faleh (senior) | 60 of 60 h |\n| Saleh (senior) | 50 of 50 h |\n| Noor (senior) | 34 of 40 h |\n| Lina (mid) | 32 of 70 h |\n| Rakan (mid) | 32 of 70 h |\n\nReview load from the reference rota of Lab 2.4; five co-signed level 3 reviews.","notes":"A rota at 100% for two people has no slack for an urgent board request: say so to the room. The stretch asks which mid-level analyst trains as a level 3 reviewer next; Lina has the highest mean skill of the mid-level analysts.","minutes":null,"lo":["LO1"]},{"id":"mentoring-pairs","n":38,"title":"Juniors shadow a mentor's reviews before they review","kind":"content","session":4,"hash":"f2418b4b","md":"#### [day2#mentoring-pairs] Juniors shadow a mentor's reviews before they review\n\n*Mentoring*\n\n- Juniors do not review alone, but they watch reviews from their first month\n- One junior per mentor; the mentor reviews some of the junior's work when the rota allows\n- Shaden with Faleh; Turki with Lina; Dalia with Rakan\n\n- **A trade-off to state.** Faleh is at full capacity and mentors Shaden. Either the shadowing fits inside his reviews, or one of his reviews moves.","notes":"Shadowing costs no booked hours, but it does cost attention. The reference pairs put Shaden with Faleh because her plan's month 1 is pair review with him: check that the rota allows it.","minutes":null,"lo":["LO4"]},{"id":"check-shortfall","n":39,"title":"Senior hours run short: what do you do?","kind":"quiz","session":4,"hash":"7a0ded21","md":"#### [day2#check-shortfall] Senior hours run short: what do you do?\n\n*Checkpoint*\n\n**Question:** Next quarter's level 3 and 4 reviews need 184 senior hours; your seniors have 150. A director asks you to \"just call some of them level 2\".\n\n- A. Lower five level 3 analyses to level 2\n- B. Ask the seniors to absorb the extra hours\n- C. Let mid-level analysts review level 3 alone\n- D. Co-sign five level 3 reviews and defer what can wait","notes":"Answer: co-sign and defer. Ask how they would answer the director: \"the level comes from what an error would cost you, not from our diary\".","minutes":null,"lo":["LO1"]},{"id":"lab-2-4","n":40,"title":"A quarter's review rota","kind":"lab","session":4,"hash":"d96a7353","md":"#### [day2#lab-2-4] A quarter's review rota\n\nLab 2.4 · 25 min\n\nPlan a quarter's review load and pairings for a team of twelve: assign 40 planned analyses to reviewers under the separation and seniority rules, find the shortfall and choose how to close it.\n\n[D2_4_review_capacity.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D2_4_review_capacity.ipynb)\n\n- [ ] Review hours by level for the quarter (5 min)\n- [ ] Assign reviewers under the rules (9 min)\n- [ ] Find the overload and the shortfall (6 min)\n- [ ] Pair the juniors with mentors (5 min)\n- [ ] ✱ Stretch: Choose which mid-level analyst trains as a level 3 reviewer, and how","notes":"Participants may assign by hand or with code; the check is the same. The solution is a hand-made rota. Common failures: a senior assigned their own analysis (P06, P08 and P40 are by seniors); a level 4 analysis with no second reviewer.","minutes":null,"lo":[]},{"id":"wrap-up","n":41,"title":"Three things to keep","kind":"content","session":4,"hash":"3b2cb48b","md":"#### [day2#wrap-up] Three things to keep\n\n*Day 2 · wrap-up*\n\n- **Calibrate.** Review alone, compare, and turn each big gap into a sentence of the checklist.\n- **Audit evidence.** No record, no compliance; recompute the headline where the record is missing.\n- **Develop people.** Three findings with their reasoning, a plan with evidence and unaided practice, and a rota that trains.","notes":"Ask which of today's four artefacts they would introduce first in their own unit, and what would stop them.","minutes":null,"lo":[]},{"id":"next","n":42,"title":"Day 3: Work with sponsors","kind":"content","session":4,"hash":"9a2d0571","md":"#### [day2#next] Day 3: Work with sponsors\n\n*Next*\n\nTomorrow the sponsors arrive: a deadline that moves, an evidence threshold to agree before the analysis, and a request to drop a finding. Read the slot-booking draft again tonight: you will defend what you found in it.","notes":"Day 3 has two role-plays. Recruit observers for Lab 3.1 now: one per three participants. Print the role cards from `labs/data/roles.json` if a trainer will not play the sponsor.","minutes":null,"lo":[]}],"activities":[{"id":"review-day1-q1","slide":"review-day1","type":"single","prompt":"Four requests and the level an analyst gave each, with the unit's matrix and escalators. Which one is graded right?","options":[{"key":"A","text":"A model that sets night pilot numbers: level 2, it is a simple regression"},{"key":"B","text":"A staff survey summary with personal data: level 3"},{"key":"C","text":"A dwell figure for the ministry's indicators: level 2"},{"key":"D","text":"A tariff revenue estimate for the board: level 3"}],"correct":[3],"explanation":"A board tariff decision is a high effect; a joined estimate is medium complexity; the matrix gives level 3 and no escalator applies.","misconceptions":["Grades the method, not the use: a staffing model that sets night pilots is a safety use, high effect and high complexity","Lets personal data raise the level: it adds the data protection officer's check, not a level","Forgets that a figure leaving the authority adds one level, even when the method is routine",""],"lo":["LO1"]},{"id":"check-kappa-q1","slide":"check-kappa","type":"single","prompt":"Two reviewers rate 20 findings and agree on 16 of them, 80%. Their weighted kappa is 0.3. Which explanation fits?","options":[{"key":"A","text":"The kappa was computed wrongly"},{"key":"B","text":"Most findings were rated minor by both, so much of the agreement was expected by chance"},{"key":"C","text":"Four disagreements are too many for any team"},{"key":"D","text":"Twenty findings are too few to compute kappa"}],"correct":[1],"explanation":"When nearly everything is rated minor, two reviewers agree often by chance; kappa removes that, so the agreement on the rare serious findings decides it.","misconceptions":["Blames the arithmetic: kappa and percent agreement measure different things, and both can be right","","Reads kappa as a count of disagreements: four disagreements out of twenty do not by themselves give 0.3","Assumes more findings always raise kappa; kappa corrects for chance whatever the number of findings"],"lo":["LO2"]},{"id":"check-audit-evidence-q1","slide":"check-audit-evidence","type":"single","prompt":"An analyst's assisted analysis has a disclosure line and correct figures when you recompute them, but no prompts and no verification record. He says he checked everything. What does the audit record?","options":[{"key":"A","text":"No breach: the figures are right"},{"key":"B","text":"A breach of the disclosure rule"},{"key":"C","text":"A breach of the keep rules: no prompts and no record"},{"key":"D","text":"A breach of the verify rule only"}],"correct":[2],"explanation":"The keep rules ask for prompts and a verification record in the repository; their absence is the breach, however right the figures turn out to be.","misconceptions":["Accepts a claim as evidence: the audit can only see what the files show","Confuses keeping records with disclosing: the disclosure line is there","","Escalates a missing record into a verification failure the audit did not find: the figures were right"],"lo":["LO3"]},{"id":"check-specific-note-q1","slide":"check-specific-note","type":"single","prompt":"Four feedback notes on the same finding: an average that mixed imports with transshipment.","options":[{"key":"A","text":"Cell 3 averages imports with transshipment (5.2 days); print counts by move type before every average"},{"key":"B","text":"Be more careful with the populations you average over"},{"key":"C","text":"Your dwell figure was wrong because of transshipment"},{"key":"D","text":"Read the unit's data-handling guide again this month"}],"correct":[0],"explanation":"It names the cell and the number she can check, and a concrete habit she can apply to any average.","misconceptions":["","Names a virtue instead of an action: she cannot tell what 'careful' means for her next notebook","Diagnoses without a next step: she knows what was wrong, not what to do instead","Sends her to a resource without linking it to the error she made"],"lo":["LO4"]},{"id":"check-shortfall-q1","slide":"check-shortfall","type":"single","prompt":"Next quarter's level 3 and 4 reviews need 184 senior hours; your seniors have 150. A director asks you to \"just call some of them level 2\".","options":[{"key":"A","text":"Lower five level 3 analyses to level 2"},{"key":"B","text":"Ask the seniors to absorb the extra hours"},{"key":"C","text":"Let mid-level analysts review level 3 alone"},{"key":"D","text":"Co-sign five level 3 reviews and defer what can wait"}],"correct":[3],"explanation":"The level comes from the risk; co-signing keeps a senior's judgement on each level 3 review at a fifth of the hours and trains the next reviewers.","misconceptions":["Lets capacity set the level, which is how last year's under-assured requests got through","Overloads the seniors, which quietly cuts the depth of every review instead of the number","Moves the risk to whoever picks the reviews; a level 3 analysis still needs independent senior judgement",""],"lo":["LO1"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day2.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

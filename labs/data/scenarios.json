@@ -1,0 +1,34 @@
+[
+  {
+    "id": "S1",
+    "text": "An analyst asks a hosted assistant to explain a pandas error message, pasting the traceback only."
+  },
+  {
+    "id": "S2",
+    "text": "An analyst pastes the pilot roster with pilots' names and shifts into a hosted assistant to find fatigue risks."
+  },
+  {
+    "id": "S3",
+    "text": "The assistant drafts the summary of a board paper; the analyst edits the wording and sends it without a disclosure line."
+  },
+  {
+    "id": "S4",
+    "text": "The assistant writes the code of a dwell-time analysis; the analyst runs it, checks three numbers by hand and keeps the run."
+  },
+  {
+    "id": "S5",
+    "text": "The assistant gives a waiting-time reduction of 18%; the analyst copies it into the draft and plans to check it after the review."
+  },
+  {
+    "id": "S6",
+    "text": "An analyst uses the authority's approved assistant on the public cargo statistics and keeps prompts and outputs in the repository."
+  },
+  {
+    "id": "S7",
+    "text": "A new analyst has used the assistant for every analysis for six months and never worked a problem unaided."
+  },
+  {
+    "id": "S8",
+    "text": "An analyst tries a new free chatbot found online on anonymised berth data."
+  }
+]

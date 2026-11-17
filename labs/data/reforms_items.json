@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1a",
+    "module": "Study goals",
+    "item": "The population or setting the claim is about"
+  },
+  {
+    "id": "1b",
+    "module": "Study goals",
+    "item": "Why that population or setting was chosen"
+  },
+  {
+    "id": "1c",
+    "module": "Study goals",
+    "item": "Why a machine-learning method is used at all"
+  },
+  {
+    "id": "2a",
+    "module": "Computational reproducibility",
+    "item": "The datasets used, with a way to identify the exact version"
+  },
+  {
+    "id": "2b",
+    "module": "Computational reproducibility",
+    "item": "The code that produces every result, with its exact version"
+  },
+  {
+    "id": "2c",
+    "module": "Computational reproducibility",
+    "item": "The computing environment: hardware, system, packages and versions"
+  },
+  {
+    "id": "2d",
+    "module": "Computational reproducibility",
+    "item": "A README that says how to produce the results"
+  },
+  {
+    "id": "2e",
+    "module": "Computational reproducibility",
+    "item": "One script that reproduces all reported results"
+  },
+  {
+    "id": "3a",
+    "module": "Data quality",
+    "item": "Where the data come from and when, and how labels were made"
+  },
+  {
+    "id": "3b",
+    "module": "Data quality",
+    "item": "The frame the data are drawn from"
+  },
+  {
+    "id": "3c",
+    "module": "Data quality",
+    "item": "Why the data suit the task"
+  },
+  {
+    "id": "3d",
+    "module": "Data quality",
+    "item": "How the outcome is defined, with its descriptive statistics"
+  },
+  {
+    "id": "3e",
+    "module": "Data quality",
+    "item": "How many records there are"
+  },
+  {
+    "id": "3f",
+    "module": "Data quality",
+    "item": "How much is missing, and where"
+  },
+  {
+    "id": "3g",
+    "module": "Data quality",
+    "item": "Why the data represent the population of the claim"
+  },
+  {
+    "id": "4a",
+    "module": "Data preprocessing",
+    "item": "Which records were excluded, and why"
+  },
+  {
+    "id": "4b",
+    "module": "Data preprocessing",
+    "item": "How impossible or corrupt records were handled"
+  },
+  {
+    "id": "4c",
+    "module": "Data preprocessing",
+    "item": "Every transformation from raw data to the analysed data"
+  },
+  {
+    "id": "5a",
+    "module": "Modelling",
+    "item": "Every model fitted, with its features and loss"
+  },
+  {
+    "id": "5b",
+    "module": "Modelling",
+    "item": "Why these kinds of model were chosen"
+  },
+  {
+    "id": "5c",
+    "module": "Modelling",
+    "item": "How models were evaluated: splits and validation"
+  },
+  {
+    "id": "5d",
+    "module": "Modelling",
+    "item": "How the reported model was selected"
+  },
+  {
+    "id": "5e",
+    "module": "Modelling",
+    "item": "How hyperparameters were tuned"
+  },
+  {
+    "id": "5f",
+    "module": "Modelling",
+    "item": "That comparisons are made against fair baselines"
+  },
+  {
+    "id": "6a",
+    "module": "Data leakage",
+    "item": "That preprocessing and modelling use only training information"
+  },
+  {
+    "id": "6b",
+    "module": "Data leakage",
+    "item": "How duplicates and dependencies between training and test data were handled"
+  },
+  {
+    "id": "6c",
+    "module": "Data leakage",
+    "item": "That every feature is legitimate for the task"
+  },
+  {
+    "id": "7a",
+    "module": "Metrics and uncertainty",
+    "item": "The metrics used, and why they fit the question"
+  },
+  {
+    "id": "7b",
+    "module": "Metrics and uncertainty",
+    "item": "Uncertainty estimates and how they were computed"
+  },
+  {
+    "id": "7c",
+    "module": "Metrics and uncertainty",
+    "item": "Why the statistical tests fit, with their assumptions checked"
+  },
+  {
+    "id": "8a",
+    "module": "Generalisability and limitations",
+    "item": "Evidence that the result holds outside the data"
+  },
+  {
+    "id": "8b",
+    "module": "Generalisability and limitations",
+    "item": "Where the result is not expected to hold"
+  }
+]

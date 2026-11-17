@@ -1,0 +1,42 @@
+{
+  "options": {
+    "A": {
+      "questions": [
+        "Q-a",
+        "Q-c"
+      ],
+      "leaves_out": "vessel types, forecast and cost"
+    },
+    "B": {
+      "questions": [
+        "Q-a",
+        "Q-b"
+      ],
+      "leaves_out": "diversions, forecast and cost"
+    }
+  },
+  "messages": [
+    "Which decision will the board take with this?",
+    "When do the board papers close?",
+    "What evidence would convince you?",
+    "What exists already: is there a draft?",
+    "With four days, option B fits: the effect at T2 and the same by vessel type."
+  ],
+  "record": {
+    "decision": "Whether to extend slot booking to all four terminals",
+    "in_scope": [
+      "Q-a",
+      "Q-b"
+    ],
+    "out_of_scope": [
+      "Q-c and Q-e for the following board",
+      "Q-d not before a decision to extend"
+    ],
+    "working_days": 4,
+    "options_offered": [
+      "A",
+      "B"
+    ],
+    "after_change": "With four days, option B: it answers the feeder question that was added; diversions move to the next board."
+  }
+}

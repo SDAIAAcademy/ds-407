@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="deck" data-track="data-science">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 1 · Set the standard · Leading Analytical Work: Review, Standards and Stakeholders</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day1.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<div class="deck" data-course="Leading Analytical Work: Review, Standards and Stakeholders" data-track="data-science" data-day="Day 1">
+<section class="slide title" id="title" data-auto="title" data-label="Welcome" data-n="1">
+  <div class="kicker">SDAIA Academy · Leading Analytical Work: Review, Standards and Stakeholders</div>
+  <h1>Set the standard</h1>
+  <p class="lead mt">Day 1: An assurance standard, a team checklist, re-runs as a rule and rules for assisted work</p>
+  <div class="meta"><span class="track">Data Science Track</span><span>3 teaching days + capstone day</span><span>4 sessions · 4 labs</span><span>DS-407</span></div>
+  <aside class="notes"><p>Welcome. Everyone here has reviewed someone else's analysis (the prerequisite). Ask: "In your unit, who decides how much checking a piece of work gets?" Most rooms answer "whoever is free" or "it depends". Today turns that answer into a standard. Participants play Arjwan Al-Huqail, head of the analytics unit of Ras Sahil Ports Authority: twelve analysts, more and more work drafted by the assistant Musawwada.</p><p>Pre-work (README, "Pre-work and follow-up"): ask who ran <code>00_setup_check</code> and who brought a released analysis from their own unit with the checking it got; those examples feed the discussion in Session 1.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="Agenda" data-n="2">
+  <div class="kicker">Today</div>
+  <h2>Set the standard</h2>
+  <div class="agenda"><div class="item"><div><b>Session 1 · Assurance proportionate to risk</b><small>Four roles, business risk as effect and likelihood, and four assurance levels a peer can apply</small></div></div><div class="item"><div><b>Session 2 · A team review checklist</b><small>From a personal checklist to the unit's: adapt a published one, item by item, and tie each item to a level</small></div></div><div class="item"><div><b>Session 3 · Reproducibility as a team rule</b><small>Re-run before reading: the failures a re-run finds and the repository rules that prevent them</small></div></div><div class="item"><div><b>Session 4 · Rules for AI-assisted analysis</b><small>What an analyst verifies, discloses and keeps when an assistant drafts the work</small></div></div></div>
+  <aside class="notes"><p>Four sessions, four artefacts of the unit's quality system: an assurance standard, a checklist, repository rules from a re-run, and rules for assisted work. Every lab starts from supplied files: nobody needs a result from an earlier lab today.</p></aside>
+</section>
+
+<section class="slide" id="the-unit" data-lo="LO1" data-n="3">
+  <div class="kicker">The case</div>
+  <h2>Twelve analysts, four sponsors, and no shared rule for checking</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>Ras Sahil Ports Authority</b>: four terminals, marine pilots and tugs, a board that decides tariffs and capital</li>
+      <li>The analytics unit serves marine operations, commercial affairs, finance and staffing</li>
+      <li>Three senior analysts, six mid-level, three juniors</li>
+      <li>More and more drafts start with <b>Musawwada</b>, the unit's drafting assistant</li>
+    </ul>
+    <div class="card c-teal"><h4>You are Arjwan Al-Huqail</h4><p class="small mb0">Head of the unit. Your job is no longer to review one analysis well: it is to make every analysis reviewed well enough, by someone, on time.</p></div>
+  </div>
+  <aside class="notes"><p>All data and people are invented. The personas who return: Faleh Al-Musharraf (senior analyst, second reviewer), Saleh Al-Ghamlas (senior analyst whose repositories we re-run), Shaden Al-Ruwayshid (new analyst), Bader Al-Khayyal and Khaled Al-Kharji (sponsors, Day 3), Hanin Al-Mughira (data protection officer).</p></aside>
+</section>
+
+<!-- Session 1 -->
+
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="4">
+  <div class="kicker">Session 1</div>
+  <h1>Assurance proportionate to risk</h1>
+  <ul class="bullets outcomes"><li>Explain the four assurance roles and why the assurer is independent of the analyst</li><li>Grade a request by the effect of an error and the complexity of the work</li><li>Assign an assurance level with a matrix a peer applies the same way</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="log-shows" data-lo="LO1" data-n="5" data-session="1">
+  <div class="kicker">Last year's log</div>
+  <h2>The errors readers found came from work checked too little for its use</h2>
+  <div class="cols cols-2">
+    <div class="stack">
+      <div class="stat"><div class="big">5 of 10</div><div class="lbl">under-assured requests had an error found after release</div></div>
+      <div class="stat"><div class="big">1 of 20</div><div class="lbl">of the others did</div></div>
+    </div>
+    <ul class="bullets">
+      <li>"Under-assured": a lower level than the standard you write in Lab 1.1 requires</li>
+      <li>A board paper on a fee change got a self-check; so did a public dwell statistic</li>
+      <li>Two crane-downtime requests, alike in every way, got level 1 and level 3</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From Lab 1.1, the log of 30 requests (synthetic). Ask: what does R07 against R19 tell you? The level depended on who asked and who was free. That is the problem a standard solves: the same request gets the same checking, whoever handles it.</p></aside>
+</section>
+
+<section class="slide" id="four-roles" data-lo="LO1" data-n="6" data-session="1">
+  <div class="kicker">Who does what</div>
+  <h2>Four roles, and the assurer is never the analyst</h2>
+  <div class="cols cols-4">
+    <div class="card c-navy"><h4>Commissioner</h4><p class="small mb0">Asks for the analysis and owns the decision it serves</p></div>
+    <div class="card c-teal"><h4>Analyst</h4><p class="small mb0">Does the work and checks it first</p></div>
+    <div class="card c-cyan"><h4>Assurer</h4><p class="small mb0">Checks it independently, to the level required</p></div>
+    <div class="card c-purple"><h4>Approver</h4><p class="small mb0">Signs off that it is fit for its use</p></div>
+  </div>
+  <div class="callout note mt"><b>From the AQuA Book.</b> The UK government's guide to quality analysis (2025 edition) names these four roles and requires the assurer to be independent of the analyst; the degree of separation grows with the importance of the output.</div>
+  <aside class="notes"><p>The AQuA Book is a published guide, not a Saudi rule: we borrow its structure because it is the most complete public framework for analytical assurance. In a unit of twelve, one person often holds two roles; the rule is that nobody assures or approves their own analysis.</p><p>Sources: HM Government Analysis Function, The AQuA Book (2025), glossary and section 3.</p></aside>
+</section>
+
+<section class="slide" id="risk-two-axes" data-lo="LO1" data-n="7" data-session="1">
+  <div class="kicker">Proportionate</div>
+  <h2>Assurance grows with the effect of an error and the complexity of the work</h2>
+  <div class="matrix" style="grid-template-columns: 180px repeat(3, 1fr)">
+    <div class="lbl">effect \ complexity</div><div class="lbl">low</div><div class="lbl">medium</div><div class="lbl">high</div>
+    <div class="lbl">high</div><div>3</div><div>3</div><div>4</div>
+    <div class="lbl">medium</div><div>2</div><div>2</div><div>3</div>
+    <div class="lbl">low</div><div>1</div><div>1</div><div>2</div>
+  </div>
+  <p class="caption">The reference matrix of Lab 1.1. Business risk is the effect of an error and its likelihood; complexity raises the likelihood.</p>
+  <aside class="notes"><p>Read one row: a high-effect request (a board, tariff, capital or safety decision) never gets less than level 3. Complexity moves a request up only at the edges. Participants will argue for other cells: good, as long as a peer can apply them.</p><p>Sources: The AQuA Book (2025), section 3, proportionate assurance and the risk matrix.</p></aside>
+</section>
+
+<section class="slide" id="four-levels" data-lo="LO1" data-n="8" data-session="1">
+  <div class="kicker">The levels</div>
+  <h2>Each level names who checks, who re-runs and who signs</h2>
+  <table class="t small">
+    <tr><th>Level</th><th>Assurer</th><th>Re-run</th><th>Approver</th></tr>
+    <tr><td><b>1</b> Self-check</td><td>The analyst, with the checklist</td><td>By the analyst</td><td>The requester's manager</td></tr>
+    <tr><td><b>2</b> Peer review</td><td>Another analyst of the unit</td><td>By the reviewer</td><td>A senior analyst</td></tr>
+    <tr><td><b>3</b> Independent review</td><td>A senior analyst who took no part</td><td>By the reviewer, from the repository</td><td>The head of the unit</td></tr>
+    <tr><td><b>4</b> Second opinion</td><td>A senior analyst and a second reviewer</td><td>By both</td><td>Head of unit and requesting director</td></tr>
+  </table>
+  <aside class="notes"><p>Levels are defined by people and evidence, not by adjectives like "thorough". Ask: which level costs the unit most hours? Level 4 is rare by design: in next quarter's pipeline, 4 of 40 analyses (Lab 2.4).</p></aside>
+</section>
+
+<section class="slide" id="escalators" data-lo="LO1" data-n="9" data-session="1">
+  <div class="kicker">Escalators</div>
+  <h2>Two uses add a level, whatever the matrix says</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Public release</h4><p class="small mb0">The figure leaves the authority: a bulletin, a ministry indicator, a regulator's return. A published error cannot be quietly corrected.</p></div>
+    <div class="card c-amber"><h4>Safety use</h4><p class="small mb0">The result sets safety staffing (pilots on duty), a navigation limit or a safety rule. The effect of an error falls on people, not on a budget.</p></div>
+  </div>
+  <div class="callout tip mt"><b>Personal data</b> does not raise the level. It adds a check by the data protection officer before the output leaves the unit.</div>
+  <aside class="notes"><p>Why not raise the level for personal data? The level is about whether the answer is right; personal data is about whether it may leave at all. Mixing the two makes every HR count a level 3. Keep them separate: Lab 1.2 puts the privacy check in every level.</p><p>Safety use means the result sets who or what keeps people safe: pilots on duty, a navigation limit, a safety rule. A berth count used to set the coming month's berth windows (N1) is not a safety use.</p></aside>
+</section>
+
+<section class="slide" id="definitions-matter" data-lo="LO1" data-n="10" data-session="1">
+  <div class="kicker">The test of a standard</div>
+  <h2>A peer applies your words, not your intentions</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · You grade</b>effect, complexity, public, safety for six new requests</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>2 · A peer grades</b>the same six, alone, with your definitions</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>3 · Compare levels</b>every difference points at a definition</div>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> "Medium effect: a moderate impact." Two readers, two levels. Write what an error would change: "an operational decision for a month or more".</div>
+  <aside class="notes"><p>This is the evidence of outcome 1: a peer, working independently, assigns the same levels to six new requests. The usual culprit is "public": is a ministry indicator public? Is the annual statistics book? Decide and write it.</p></aside>
+</section>
+
+<section class="slide" id="six-requests" data-lo="LO1" data-n="11" data-session="1">
+  <div class="kicker">The six new requests</div>
+  <h2>Six requests the unit received this month</h2>
+  <table class="t small">
+    <tr><th>Id</th><th>Request</th><th>Use</th></tr>
+    <tr><td>N1</td><td>Weekly berth occupancy for the terminal planning meeting</td><td>Planning decision</td></tr>
+    <tr><td>N2</td><td>Revenue estimate of a proposed tariff change</td><td>Board paper</td></tr>
+    <tr><td>N3</td><td>Arrival-delay model to allocate marine pilots at night</td><td>Safety staffing</td></tr>
+    <tr><td>N4</td><td>Average cargo dwell for the annual public statistics</td><td>Public statistic</td></tr>
+    <tr><td>N5</td><td>Staff survey summary for human resources</td><td>Internal note, personal data</td></tr>
+    <tr><td>N6</td><td>Evaluation of the berth-allocation pilot: continue or stop</td><td>Board decision</td></tr>
+  </table>
+  <aside class="notes"><p>Reference levels, with the reference standard: N1 2, N2 3, N3 4, N4 3, N5 1 with the data protection officer's check, N6 3. Do not give them before the lab. N6 returns on Day 3: it is the analysis the sponsors argue about.</p></aside>
+</section>
+
+<section class="slide" id="check-public-statistic" data-lo="LO1" data-n="12" data-session="1">
+  <div class="kicker">Checkpoint</div>
+  <h2>A simple count for a public statistic: which level?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-public-statistic-q1">
+    <p class="lead">N4: mean import dwell by quarter, one source, a method the unit runs every month. It goes into the authority's published annual statistics. With the matrix and escalators on the earlier slides, what level?</p>
+    <div class="opts">
+      <div class="opt" data-why="Reads the complexity only: a simple method still has a medium effect when an operational figure is published" data-k="A">Level 1: the method is simple</div>
+      <div class="opt" data-why="Applies the matrix and forgets the escalator for a figure that leaves the authority" data-k="B">Level 2: medium effect, low complexity</div>
+      <div class="opt" data-ok data-k="C">Level 3: level 2 from the matrix, plus one for public release</div>
+      <div class="opt" data-why="Treats every public figure as a board-level risk: the escalator adds one level, it does not jump to the top" data-k="D">Level 4: anything public gets the highest level</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The matrix gives level 2 for a medium effect and low complexity; public release adds one level, so N4 gets independent review before publication.</div>
+  </div>
+  <aside class="notes"><p>Answer: level 3. If the room splits between 2 and 3, the disagreement is about whether the annual statistics are "public": exactly the definition Lab 1.1 asks you to tighten.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-1" data-auto="lab" data-lab="1.1" data-label="Lab 1.1" data-n="13" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.1 · 25 min</div><h2>Six requests, four levels</h2><p class="lead small">Read the unit's log of 30 requests, write the assurance matrix with its escalators, grade six new requests by risk and complexity, and compare your levels with a second reviewer's.</p><a class="nb" href="../labs/D1_1_assurance_levels.ipynb">D1_1_assurance_levels.ipynb</a></div><ul class="checklist"><li>Read the log: where errors after release came from <span class="min">5 min</span></li><li>Write the matrix and its escalators <span class="min">7 min</span></li><li>Grade the six new requests <span class="min">7 min</span></li><li>Compare with the second reviewer and tighten one definition <span class="min">6 min</span></li><li class="stretch">✱ Stretch: Add the sign-off rules: who may approve at each level</li></ul></div>
+  <aside class="notes"><p>Walk the room at minute 10: participants who wrote the matrix but no definitions will disagree with Faleh in task 4. The solution reaches 6 of 6; the check passes at 5. Stretch: sign-off rules. Common failure: grading N5 at level 2 because of personal data; point back to the escalators slide.</p></aside>
+</section>
+
+<!-- Session 2 -->
+
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="14">
+  <div class="kicker">Session 2</div>
+  <h1>A team review checklist</h1>
+  <ul class="bullets outcomes"><li>Adapt a published checklist to the unit's work instead of adopting it whole</li><li>Write each item as a question answered with evidence</li><li>Tie each item to the assurance levels, with a privacy and classification check in every level</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="personal-to-team" data-lo="LO1 LO2" data-n="15" data-session="2">
+  <div class="kicker">From DS-310</div>
+  <h2>Your personal checklist becomes the unit's, tied to the levels</h2>
+  <div class="cols cols-2">
+    <div class="card c-cyan"><h4>In DS-310</h4><p class="small mb0">Five areas, question fit to communication, scored 0 to 2 by one reviewer on one analysis.</p></div>
+    <div class="card c-teal"><h4>Here</h4><p class="small mb0">The same five areas as yes-or-no items with named evidence, each required from a level, used by twelve people the same way.</p></div>
+  </div>
+  <div class="callout note mt"><b>Recap only.</b> How to score one analysis is DS-310's; this session decides what the whole unit checks, and when.</div>
+  <aside class="notes"><p>One slide of recap. If someone has not taken DS-310, the five areas are: does it answer the question, are the data handled right, does the method fit, do the claims match the evidence, will the reader act correctly.</p></aside>
+</section>
+
+<section class="slide" id="adapt-not-adopt" data-lo="LO1" data-n="16" data-session="2">
+  <div class="kicker">Start from a published checklist</div>
+  <h2>REFORMS: 32 items in 8 modules, written for others' work</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Reporting standards for machine-learning-based science, by a consensus of 19 researchers</li>
+      <li>Modules from study goals and reproducibility to leakage and generalisability</li>
+      <li>Its authors say not every item fits every study: decide which are relevant</li>
+    </ul>
+    <div class="card c-amber"><h4>Adapt, do not adopt</h4><p class="small mb0">Most of the unit's work is counts and comparisons. A checklist of 32 machine-learning items gets skipped on every dashboard request.</p></div>
+  </div>
+  <aside class="notes"><p>Show the REFORMS page and the checklist template briefly. Point out the template's own advice: authors and referees decide which items are relevant. That is permission to adapt. The lab gives our short paraphrase of each item, with its REFORMS id.</p><p>Sources: Kapoor et al. (2024), Science Advances; reforms.cs.princeton.edu, checklist template.</p></aside>
+</section>
+
+<section class="slide" id="modules-to-areas" data-lo="LO1" data-n="17" data-session="2">
+  <div class="kicker">Mapping</div>
+  <h2>No REFORMS module covers communication: the unit writes those items</h2>
+  <div class="bars">
+    <div class="row"><span>Data</span><div class="bar c-teal" style="--w:100%"></div><span class="val">15 items</span></div>
+    <div class="row"><span>Method</span><div class="bar c-cyan" style="--w:60%"></div><span class="val">9</span></div>
+    <div class="row"><span>Inference</span><div class="bar c-purple" style="--w:33%"></div><span class="val">5</span></div>
+    <div class="row"><span>Question fit</span><div class="bar c-amber" style="--w:20%"></div><span class="val">3</span></div>
+    <div class="row"><span>Communication</span><div class="bar c-coral" style="--w:1%"></div><span class="val">0</span></div>
+  </div>
+  <p class="caption">The 32 REFORMS items by the review area of their module (Lab 1.2, task 1).</p>
+  <aside class="notes"><p>A reporting checklist assumes the paper is read by experts. The unit's readers are directors and a board: "does every number in the text match its output?" is the most common failure in the unit's log and no REFORMS item asks it.</p></aside>
+</section>
+
+<section class="slide" id="item-shape" data-lo="LO1 LO2" data-n="18" data-session="2">
+  <div class="kicker">One item</div>
+  <h2>An item is a yes-or-no question with the evidence that answers it</h2>
+  <table class="t small">
+    <tr><th>Weak</th><th>Usable</th></tr>
+    <tr><td>Is the work reproducible?</td><td>Does it re-run from the repository, with the lock file and README alone, to the reported numbers? <b>Evidence:</b> the re-run log</td></tr>
+    <tr><td>Are the data good?</td><td>Are excluded and missing records counted, with the reason for each exclusion? <b>Evidence:</b> a count per step</td></tr>
+    <tr><td>Is the comparison valid?</td><td>Is the comparison fair: a baseline, a control group, the same period? <b>Evidence:</b> the comparison cell</td></tr>
+  </table>
+  <aside class="notes"><p>The evidence column is what makes two reviewers agree: it tells them where to look. Item R1 merges REFORMS 2b to 2e into one check a reviewer actually does.</p></aside>
+</section>
+
+<section class="slide" id="levels-per-item" data-lo="LO1" data-n="19" data-session="2">
+  <div class="kicker">Proportionate again</div>
+  <h2>Six items at level 1, eleven from level 2</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>Level 1</b>: question, sources, exclusions, fair comparison, numbers match, privacy</li>
+      <li><b>Level 2</b> adds: decision rule first, duplicates, re-run, uncertainty, where it does not hold</li>
+      <li><b>Level 3</b> adds the model item, when there is a model</li>
+    </ul>
+    <div class="stat"><div class="big">12</div><div class="lbl">items in the Lab 1.2 checklist, drawing on 18 of the 32 REFORMS items</div></div>
+  </div>
+  <aside class="notes"><p>From the Lab 1.2 solution run. The lab's check stops at 18 items: beyond that, reviewers skip. Higher levels mostly change who checks and how deeply, not the number of items.</p></aside>
+</section>
+
+<section class="slide" id="privacy-item" data-lo="LO1 LO2" data-n="20" data-session="2">
+  <div class="kicker">Every level</div>
+  <h2>Nothing leaves the unit before the privacy and classification check</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>The item</h4><p class="small mb0">Before anything leaves the unit: is it free of personal data, and is its classification marked and respected?</p></div>
+    <ul class="bullets">
+      <li>Required from <b>level 1</b>: a dashboard leaks as easily as a board paper</li>
+      <li>Classification under the NDMO Data Classification Policy</li>
+      <li>Personal data under the Personal Data Protection Law</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The catalog requires this item in every checklist. On Day 2 it causes the biggest disagreement between two reviewers: one rates a table of vessel masters' names "minor" because it does not change the decision. The standard says it blocks release.</p></aside>
+</section>
+
+<section class="slide" id="check-every-level" data-lo="LO1" data-n="21" data-session="2">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which item belongs in every level?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-every-level-q1">
+    <p class="lead">Your checklist must stay short at level 1, the self-check that most dashboard requests get. Which of these items is required from level 1?</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="A">The output is free of personal data and its classification is marked</div>
+      <div class="opt" data-why="Assumes every analysis is a model: the model item matters only where there is a model, at level 3" data-k="B">The model is tested on data it never saw</div>
+      <div class="opt" data-why="Confuses importance with risk of leakage: an independent re-run is the cost that level 2 and above pay" data-k="C">A reviewer re-runs it from the repository</div>
+      <div class="opt" data-why="Treats every count as an estimate: an interval matters where the decision depends on a number, from level 2" data-k="D">Every number has an interval</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The harm of personal data leaving the unit does not depend on how important the analysis is, so the check cannot wait for a higher level.</div>
+  </div>
+  <aside class="notes"><p>Answer: the privacy item. Some will argue for the re-run at level 1: the analyst's own re-run is part of the self-check, but the independent re-run is level 2.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-2" data-auto="lab" data-lab="1.2" data-label="Lab 1.2" data-n="22" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.2 · 25 min</div><h2>A checklist adapted from REFORMS</h2><p class="lead small">Draft a checklist from question to conclusion by adapting a published reproducibility checklist (REFORMS, 32 items): keep, rewrite or drop each item, add the privacy and classification check, and set the level at which each item applies.</p><a class="nb" href="../labs/D1_2_team_checklist.ipynb">D1_2_team_checklist.ipynb</a></div><ul class="checklist"><li>Map the 32 items to the five review areas <span class="min">6 min</span></li><li>Keep, rewrite or drop each item <span class="min">8 min</span></li><li>Add the privacy and classification item <span class="min">4 min</span></li><li>Set the level of each item and test the length <span class="min">7 min</span></li><li class="stretch">✱ Stretch: Add one item for work an assistant drafted</li></ul></div>
+  <aside class="notes"><p>Task 2 is the long one: insist on reasons for what is dropped. The problems check fails a checklist without a re-run item, without a privacy item at level 1, or with fewer than five items traced to REFORMS. Stretch: the assisted-work item, which Lab 1.4 fills with rules.</p></aside>
+</section>
+
+<!-- Session 3 -->
+
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="23">
+  <div class="kicker">Session 3</div>
+  <h1>Reproducibility as a team rule</h1>
+  <ul class="bullets outcomes"><li>Re-run an analysis from its repository before reading its conclusions</li><li>Classify reproduction failures by kind</li><li>Write repository rules that make a re-run routine</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide" id="rerun-rule" data-lo="LO1 LO2" data-n="24" data-session="3">
+  <div class="kicker">A team rule</div>
+  <h2>From level 2, the reviewer re-runs the analysis before reading it</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · Clone</b>the repository, nothing else</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>2 · Follow the README</b>exactly as written</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>3 · Log</b>each failure, its kind, the fix</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>4 · Compare</b>the figure with the report</div>
+  </div>
+  <div class="callout note mt"><b>Recap from DS-310.</b> Re-run first, so the prose does not set your expectations. Here it becomes a rule with a log as its evidence.</div>
+  <aside class="notes"><p>The new idea is the log: one re-run catches one analysis; a year of logs shows which failures recur in the unit, and the repository rules follow from them.</p></aside>
+</section>
+
+<section class="slide" id="saleh-repo" data-lo="LO2" data-n="25" data-session="3">
+  <div class="kicker">Lab 1.3</div>
+  <h2>Saleh's repository, as he sent it</h2>
+  <div class="cols cols-2">
+    <pre class="code" data-file="cargo_dwell/"><code class="language-text">README.md
+dwell.py
+requirements.txt     pandas
+report.md            4.60 days
+data/
+  containers_q3.csv</code></pre>
+    <ul class="bullets">
+      <li>Saleh is a senior analyst; the figure goes in the quarterly note</li>
+      <li>The README says: put <code>containers.csv</code> in <code>data/</code>, install, run</li>
+      <li>Nothing is wrong that Saleh would notice: it runs on his laptop</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Ask the room to predict how many steps will fail before the script runs. Most guess one or two. It is five, and then the figure is still wrong.</p></aside>
+</section>
+
+<section class="slide" id="five-failures" data-lo="LO1 LO2" data-n="26" data-session="3">
+  <div class="kicker">The re-run log</div>
+  <h2>Five failures before the script ran to the end</h2>
+  <table class="t small">
+    <tr><th>#</th><th>What failed</th><th>Kind</th></tr>
+    <tr><td>1</td><td>A path to a folder on Saleh's own computer</td><td>path</td></tr>
+    <tr><td>2</td><td>README names <code>containers.csv</code>; the file is <code>containers_q3.csv</code></td><td>documentation</td></tr>
+    <tr><td>3</td><td><code>berth_lookup.csv</code> is read but not in the repository</td><td>missing input</td></tr>
+    <tr><td>4</td><td><code>DataFrame.append</code> is gone in pandas 2; no version pinned</td><td>library version</td></tr>
+    <tr><td>5</td><td>Two runs, two figures: an unseeded sample of 2,000</td><td>randomness</td></tr>
+  </table>
+  <aside class="notes"><p>From the Lab 1.3 solution run. Each failure announced itself with an error, except the fifth, which only shows when you run twice. Each has a cheap rule that prevents it (the stretch of the lab).</p></aside>
+</section>
+
+<section class="slide" id="the-silent-gap" data-lo="LO2" data-n="27" data-session="3">
+  <div class="kicker">The sixth failure</div>
+  <h2>It ran, and gave 5.18 days against the reported 4.60</h2>
+  <div class="cols cols-2">
+    <pre class="code" data-file="dwell.py"><code class="language-python">imports = boxes[boxes.move_type != <span class="hljs-string">&quot;export&quot;</span>]</code></pre>
+    <ul class="bullets">
+      <li>The filter keeps <b>transshipment</b> with imports</li>
+      <li>The report removed transshipment by hand, in a spreadsheet</li>
+      <li>No file records that step: only the gap shows it</li>
+      <li>Filter on imports in code: 4.60, reproduced</li>
+    </ul>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> The manual step is the dangerous one: no error, a plausible number, and a reviewer who reads before re-running never sees it.</div>
+  <aside class="notes"><p>The gap is 0.58 days. Ask: which figure was right? The report's, by luck: the hand edit was correct, but nobody could have known. A manual step makes a right answer unverifiable.</p></aside>
+</section>
+
+<section class="slide" id="failure-kinds" data-lo="LO1" data-n="28" data-session="3">
+  <div class="kicker">Rules from the log</div>
+  <h2>One repository rule for each kind of failure</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Paths and inputs</h4><p class="small mb0">Relative paths only; every input in the repository or named with its owner</p></div>
+    <div class="card c-cyan"><h4>Environment</h4><p class="small mb0">A lock file (<code>uv.lock</code>) and the one command that installs from it</p></div>
+    <div class="card c-purple"><h4>Determinism</h4><p class="small mb0">A fixed seed in code; no step outside the code</p></div>
+  </div>
+  <aside class="notes"><p>These become the unit's repository rules, checked by item R1 of the checklist. They are cheap for the analyst and save the reviewer an hour per analysis.</p></aside>
+</section>
+
+<section class="slide" id="rerun-cost" data-lo="LO1" data-n="29" data-session="3">
+  <div class="kicker">The cost</div>
+  <h2>A re-run is the cheapest check that finds the most expensive errors</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>With the rules followed, a re-run is one command and a comparison</li>
+      <li>Without them, it is the 25 minutes of Lab 1.3</li>
+      <li>The rules move the cost from the reviewer to the analyst, where it is smallest</li>
+    </ul>
+    <div class="card c-amber"><h4>Your call as head of unit</h4><p class="small mb0">A repository that does not re-run goes back to its analyst before the review starts. The review clock starts when it runs.</p></div>
+  </div>
+  <aside class="notes"><p>This is a management decision, not a technical one. Expect pushback ("we do not have time"): the answer is that review time is spent anyway, just later and on the wrong things.</p></aside>
+</section>
+
+<section class="slide" id="check-dangerous-failure" data-lo="LO2" data-n="30" data-session="3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which failure is most dangerous to the unit?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-dangerous-failure-q1">
+    <p class="lead">A re-run of a colleague's repository meets four problems. Which one most threatens the quality of what the unit releases?</p>
+    <div class="opts">
+      <div class="opt" data-why="Ranks by how alarming the error looks: a crash stops the reviewer and announces itself" data-k="A">The script crashes on a missing file</div>
+      <div class="opt" data-why="An old library call fails loudly too; pinning versions is a cheap fix, not a hidden risk" data-k="B">An old library call fails with an error</div>
+      <div class="opt" data-why="Slows the reviewer but changes no figure: a README that names the wrong file is fixed in a minute" data-k="C">The README names the wrong file</div>
+      <div class="opt" data-ok data-k="D">A step done by hand that no file records</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Every other failure stops the script and shows itself. A manual step lets the code run to a plausible number that nobody can reproduce or check.</div>
+  </div>
+  <aside class="notes"><p>Answer: the manual step. Link back to the 5.18 against 4.60 slide.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-3" data-auto="lab" data-lab="1.3" data-label="Lab 1.3" data-n="31" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.3 · 25 min</div><h2>Re-run Saleh's repository</h2><p class="lead small">Re-run a colleague's cargo-dwell analysis from its repository, record every step that failed and its kind, and reproduce the reported figure.</p><a class="nb" href="../labs/D1_3_rerun_repository.ipynb">D1_3_rerun_repository.ipynb</a></div><ul class="checklist"><li>Follow the README exactly <span class="min">5 min</span></li><li>Log each failure with its kind <span class="min">8 min</span></li><li>Fix a copy until it runs <span class="min">7 min</span></li><li>Reproduce the reported figure or explain the gap <span class="min">5 min</span></li><li class="stretch">✱ Stretch: Write the repository rule that would have prevented each failure</li></ul></div>
+  <aside class="notes"><p>The script really runs in a copy under <code>labs/out/rerun/</code>. If someone breaks their copy, <code>U.copy_repo("cargo_dwell")</code> gives a fresh one. Insist on fixing one failure at a time and logging it before the next. In Colab the setup cell clones the course first; pandas is already installed there. Stretch: one rule per kind.</p></aside>
+</section>
+
+<!-- Session 4 -->
+
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="32">
+  <div class="kicker">Session 4</div>
+  <h1>Rules for AI-assisted analysis</h1>
+  <ul class="bullets outcomes"><li>Turn the national generative AI guidelines into rules for analytical work</li><li>Specify the process evidence each analyst keeps</li><li>Test a rule set on real cases before adopting it</li></ul>
+  <div class="sess-no">04</div>
+</section>
+
+<section class="slide" id="assisted-share" data-lo="LO3" data-n="33" data-session="4">
+  <div class="kicker">Why rules now</div>
+  <h2>When an assistant drafts the analysis, the analyst's duty does not move</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Musawwada drafts code, numbers and summaries in seconds</li>
+      <li>A fluent draft looks reviewed; it is not</li>
+      <li>The national guidelines put the duty to verify on the <b>user</b></li>
+    </ul>
+    <div class="card c-teal"><h4>What a unit needs</h4><p class="small mb0">Rules an analyst can follow before the deadline and a reviewer can check from the files.</p></div>
+  </div>
+  <aside class="notes"><p>The SDAIA Generative AI Guidelines for Government state that results should be human-reviewed and that users verify outputs, especially for official reports. The rules turn "verify" into who does what and what record shows it.</p><p>Sources: SDAIA, Generative AI Guidelines for Government, scope and Appendix 2.</p></aside>
+</section>
+
+<section class="slide" id="guideline-duties" data-lo="LO3" data-n="34" data-session="4">
+  <div class="kicker">The national guidelines</div>
+  <h2>Five duties the unit's rules must carry</h2>
+  <table class="t small">
+    <tr><th>Duty, in our words</th><th>Where</th></tr>
+    <tr><td>Check generated content for accuracy before it is used</td><td>3.2 Reliability and Safety</td></tr>
+    <tr><td>Tell recipients when content was created with generative AI</td><td>3.3 Transparency and Interpretability</td></tr>
+    <tr><td>Enter no data classified restricted or higher; public data only</td><td>3.5 Privacy and Security</td></tr>
+    <tr><td>Keep a clear record of an analysis done with generative AI</td><td>Practical guidelines: analysing data</td></tr>
+    <tr><td>Verify outputs and generated code before use</td><td>Appendix 2: checklist</td></tr>
+  </table>
+  <aside class="notes"><p>Paraphrased from the guideline; the lab's digest gives seven duties with their sections. Ask participants to read the official text for the wording. Do not quote clause numbers beyond these section titles.</p><p>Sources: SDAIA, Generative AI Guidelines for Government, sections 3.2, 3.3, 3.5, practical guidelines and Appendix 2.</p></aside>
+</section>
+
+<section class="slide" id="four-rule-kinds" data-lo="LO3" data-n="35" data-session="4">
+  <div class="kicker">The rule set</div>
+  <h2>Verify, disclose, keep, and what data may go in</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>Verify</h4><p class="small mb0">Re-run every assisted number in your own code before it enters a draft</p></div>
+    <div class="card c-cyan"><h4>Disclose</h4><p class="small mb0">A line on the deliverable: which tool, which parts, who verified</p></div>
+    <div class="card c-purple"><h4>Keep</h4><p class="small mb0">Prompts, outputs and a verification record in the repository</p></div>
+    <div class="card c-coral"><h4>Data</h4><p class="small mb0">Public or anonymised data only, approved tools only</p></div>
+  </div>
+  <aside class="notes"><p>Each card is one or two rules in the reference set (V1 to V3, D1 and D2, K1 and K2, C1 and C2). The "keep" rules are the process evidence the catalog asks for: an auditor on Day 2 checks them.</p></aside>
+</section>
+
+<section class="slide" id="checkable-rule" data-lo="LO3" data-n="36" data-session="4">
+  <div class="kicker">Checkable</div>
+  <h2>A rule a reviewer cannot check from the files is a wish</h2>
+  <table class="t small">
+    <tr><th>A wish</th><th>A rule</th></tr>
+    <tr><td>Use the assistant responsibly</td><td>Re-run every number it produced, in your own code, before it enters a draft</td></tr>
+    <tr><td>Be transparent about AI use</td><td>Every deliverable with assisted content carries a disclosure line: tool, parts, verifier</td></tr>
+    <tr><td>Protect sensitive data where possible</td><td>Only public or anonymised data goes to a hosted assistant</td></tr>
+  </table>
+  <aside class="notes"><p>The lab's problems check flags vague words ("be careful", "where possible") and rules with no record behind them. One page: at most 350 words. The reference set is 176.</p></aside>
+</section>
+
+<section class="slide" id="eight-scenarios" data-lo="LO3" data-n="37" data-session="4">
+  <div class="kicker">Test before adopting</div>
+  <h2>Eight scenarios from the unit decide whether the rules work</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Allowed</h4><p class="small mb0">Explaining an error message; the approved tool on public statistics, prompts kept</p></div>
+    <div class="card c-amber"><h4>Needs action</h4><p class="small mb0">Code checked by hand but no record kept; an analyst who never works unaided</p></div>
+    <div class="card c-coral"><h4>Breach</h4><p class="small mb0">A pilot roster pasted in; no disclosure on a board paper; an unchecked 18%; an unapproved tool</p></div>
+  </div>
+  <aside class="notes"><p>A scenario your rules cannot decide shows a gap. The usual gap is S7: nothing in a verify-disclose-keep set covers an analyst who has lost the skill to check. That is the stretch: an unaided-practice rule.</p></aside>
+</section>
+
+<section class="slide" id="unaided-practice" data-lo="LO3 LO4" data-n="38" data-session="4">
+  <div class="kicker">Keeping the skill</div>
+  <h2>Who cannot do the work unaided cannot tell when the draft is wrong</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Verification needs the skill the assistant replaces</li>
+      <li>One analysis a quarter without an assistant, reviewed like any other</li>
+      <li>The supervised check of this course is AI-off for the same reason</li>
+    </ul>
+    <div class="callout note"><b>Day 2.</b> The same idea returns in development plans: every plan keeps unaided practice in the work.</div>
+  </div>
+  <aside class="notes"><p>This is a rule about people, not tools. Expect the objection that it wastes time: one analysis a quarter is a small price for reviewers who can still spot an assistant's wrong number.</p></aside>
+</section>
+
+<section class="slide" id="check-restricted-data" data-lo="LO3" data-n="39" data-session="4">
+  <div class="kicker">Checkpoint</div>
+  <h2>An approved assistant and a restricted file</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-restricted-data-q1">
+    <p class="lead">An analyst pastes the night pilot roster, with pilots' names and shifts, into the authority's approved hosted assistant to find fatigue risks. She plans to disclose it and re-run every number. Under the rules, what is it?</p>
+    <div class="opts">
+      <div class="opt" data-why="Treats approval of the tool as approval of any data: the guideline limits generative AI tools to public data, whichever tool" data-k="A">Allowed: the tool is approved</div>
+      <div class="opt" data-ok data-k="B">A breach: restricted data may not go to the assistant</div>
+      <div class="opt" data-why="Believes disclosure repairs a data breach: telling readers does not undo where the data went" data-k="C">Allowed once the deliverable is disclosed</div>
+      <div class="opt" data-why="Confuses verification with permission: re-running the numbers checks accuracy, not whether the data could be sent" data-k="D">Needs action: re-run the numbers first</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Names and shifts of staff are not public data; the guidelines forbid entering data classified restricted or higher, so no later step makes it allowed.</div>
+  </div>
+  <aside class="notes"><p>Answer: a breach (scenario S2 of the lab). The anonymised alternative is allowed: the data protection officer's rule decides what anonymised means.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-4" data-auto="lab" data-lab="1.4" data-label="Lab 1.4" data-n="40" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.4 · 25 min</div><h2>Rules for assisted work</h2><p class="lead small">Write what analysts must verify, disclose and keep as evidence when an assistant drafts work, on one page, and test the rules on eight scenarios from the unit.</p><a class="nb" href="../labs/D1_4_ai_rules.ipynb">D1_4_ai_rules.ipynb</a></div><ul class="checklist"><li>Read the guideline duties <span class="min">5 min</span></li><li>Write the verify, disclose and keep rules <span class="min">9 min</span></li><li>Decide eight scenarios with your rules <span class="min">7 min</span></li><li>Cut the rules to one page <span class="min">4 min</span></li><li class="stretch">✱ Stretch: Add the unaided-practice rule: work each analyst still does without the assistant</li></ul></div>
+  <aside class="notes"><p>AI-tutor: participants may ask the tutor to question their rules, not to write them. Common failure: rules that restate the guideline ("verify outputs") with no record behind them; the problems check flags missing re-run and prompt rules. The reference set decides all eight scenarios once the unaided rule is added.</p></aside>
+</section>
+
+<section class="slide" id="wrap-up" data-n="41" data-session="4">
+  <div class="kicker">Day 1 · wrap-up</div>
+  <h2>Three things to keep</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Proportionate</h4><p class="small mb0">The level comes from the effect of an error and the complexity, with written definitions a peer applies the same way.</p></div>
+    <div class="card c-coral"><h4>Re-run first</h4><p class="small mb0">From level 2 the reviewer re-runs from the repository and logs every failure; the log writes the repository rules.</p></div>
+    <div class="card c-purple"><h4>Checkable rules</h4><p class="small mb0">Assisted work is verified, disclosed and kept, and only public data goes to an assistant.</p></div>
+  </div>
+  <aside class="notes"><p>Ask each participant to name the definition they would tighten first in their own unit.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="Next" data-n="42" data-session="4">
+  <div class="kicker">Next</div>
+  <h2>Day 2: Review and develop</h2>
+  <p class="lead">Tomorrow's first review is AI-off: you form your own judgement before you compare it with a colleague's. Bring your Day 1 standard and checklist; the labs also supply reference versions.</p>
+  <aside class="notes"><p>Nothing to install. Unfinished Day 1 labs can be finished at home; Day 2 starts from supplied files.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-16T00:41:43Z","version":"2027.1.0","commit":"eec130a"},"course":{"id":"ds-407","code":"DS-407","title":"Leading Analytical Work: Review, Standards and Stakeholders","track":"data-science","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/ds-407/","repo":"SDAIAAcademy/ds-407","home":"../index.html"},"deck":{"id":"day1","kind":"day","day":1,"label":"Day 1","title":"Set the standard","prev":null,"next":"day2.html","md":"day1.md","alt":{}},"sessions":[{"n":1,"label":"Session 1","title":"Assurance proportionate to risk","slide":"s1","outcomes":["Explain the four assurance roles and why the assurer is independent of the analyst","Grade a request by the effect of an error and the complexity of the work","Assign an assurance level with a matrix a peer applies the same way"],"minutes":50,"lab":{"id":"1.1","title":"Six requests, four levels","minutes":25,"href":"../labs/D1_1_assurance_levels.ipynb"}},{"n":2,"label":"Session 2","title":"A team review checklist","slide":"s2","outcomes":["Adapt a published checklist to the unit's work instead of adopting it whole","Write each item as a question answered with evidence","Tie each item to the assurance levels, with a privacy and classification check in every level"],"minutes":50,"lab":{"id":"1.2","title":"A checklist adapted from REFORMS","minutes":25,"href":"../labs/D1_2_team_checklist.ipynb"}},{"n":3,"label":"Session 3","title":"Reproducibility as a team rule","slide":"s3","outcomes":["Re-run an analysis from its repository before reading its conclusions","Classify reproduction failures by kind","Write repository rules that make a re-run routine"],"minutes":50,"lab":{"id":"1.3","title":"Re-run Saleh's repository","minutes":25,"href":"../labs/D1_3_rerun_repository.ipynb"}},{"n":4,"label":"Session 4","title":"Rules for AI-assisted analysis","slide":"s4","outcomes":["Turn the national generative AI guidelines into rules for analytical work","Specify the process evidence each analyst keeps","Test a rule set on real cases before adopting it"],"minutes":50,"lab":{"id":"1.4","title":"Rules for assisted work","minutes":25,"href":"../labs/D1_4_ai_rules.ipynb"}}],"slides":[{"id":"title","n":1,"title":"Set the standard","kind":"title","session":0,"hash":"f88d1f01","md":"#### [day1#title] Set the standard\n\n*SDAIA Academy · Leading Analytical Work: Review, Standards and Stakeholders*\n\nDay 1: An assurance standard, a team checklist, re-runs as a rule and rules for assisted work\n\nData Science Track · 3 teaching days + capstone day · 4 sessions · 4 labs · DS-407","notes":"Welcome. Everyone here has reviewed someone else's analysis (the prerequisite). Ask: \"In your unit, who decides how much checking a piece of work gets?\" Most rooms answer \"whoever is free\" or \"it depends\". Today turns that answer into a standard. Participants play Arjwan Al-Huqail, head of the analytics unit of Ras Sahil Ports Authority: twelve analysts, more and more work drafted by the assistant Musawwada.\n\nPre-work (README, \"Pre-work and follow-up\"): ask who ran `00_setup_check` and who brought a released analysis from their own unit with the checking it got; those examples feed the discussion in Session 1.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"Set the standard","kind":"content","session":0,"hash":"b4d59711","md":"#### [day1#agenda] Set the standard\n\n*Today*\n\n- **Session 1 · Assurance proportionate to risk**: Four roles, business risk as effect and likelihood, and four assurance levels a peer can apply\n- **Session 2 · A team review checklist**: From a personal checklist to the unit's: adapt a published one, item by item, and tie each item to a level\n- **Session 3 · Reproducibility as a team rule**: Re-run before reading: the failures a re-run finds and the repository rules that prevent them\n- **Session 4 · Rules for AI-assisted analysis**: What an analyst verifies, discloses and keeps when an assistant drafts the work","notes":"Four sessions, four artefacts of the unit's quality system: an assurance standard, a checklist, repository rules from a re-run, and rules for assisted work. Every lab starts from supplied files: nobody needs a result from an earlier lab today.","minutes":null,"lo":[]},{"id":"the-unit","n":3,"title":"Twelve analysts, four sponsors, and no shared rule for checking","kind":"content","session":0,"hash":"10541975","md":"#### [day1#the-unit] Twelve analysts, four sponsors, and no shared rule for checking\n\n*The case*\n\n- **Ras Sahil Ports Authority**: four terminals, marine pilots and tugs, a board that decides tariffs and capital\n- The analytics unit serves marine operations, commercial affairs, finance and staffing\n- Three senior analysts, six mid-level, three juniors\n- More and more drafts start with **Musawwada**, the unit's drafting assistant\n\n- **You are Arjwan Al-Huqail.** Head of the unit. Your job is no longer to review one analysis well: it is to make every analysis reviewed well enough, by someone, on time.","notes":"All data and people are invented. The personas who return: Faleh Al-Musharraf (senior analyst, second reviewer), Saleh Al-Ghamlas (senior analyst whose repositories we re-run), Shaden Al-Ruwayshid (new analyst), Bader Al-Khayyal and Khaled Al-Kharji (sponsors, Day 3), Hanin Al-Mughira (data protection officer).","minutes":null,"lo":["LO1"]},{"id":"s1","n":4,"title":"Assurance proportionate to risk","kind":"section","session":1,"hash":"9a2f2bde","md":"#### [day1#s1] Assurance proportionate to risk\n\n*Session 1*\n\n- Explain the four assurance roles and why the assurer is independent of the analyst\n- Grade a request by the effect of an error and the complexity of the work\n- Assign an assurance level with a matrix a peer applies the same way","notes":"","minutes":null,"lo":["LO1"]},{"id":"log-shows","n":5,"title":"The errors readers found came from work checked too little for its use","kind":"content","session":1,"hash":"e6a90e6b","md":"#### [day1#log-shows] The errors readers found came from work checked too little for its use\n\n*Last year's log*\n\n- **5 of 10** under-assured requests had an error found after release\n- **1 of 20** of the others did\n\n- \"Under-assured\": a lower level than the standard you write in Lab 1.1 requires\n- A board paper on a fee change got a self-check; so did a public dwell statistic\n- Two crane-downtime requests, alike in every way, got level 1 and level 3","notes":"From Lab 1.1, the log of 30 requests (synthetic). Ask: what does R07 against R19 tell you? The level depended on who asked and who was free. That is the problem a standard solves: the same request gets the same checking, whoever handles it.","minutes":null,"lo":["LO1"]},{"id":"four-roles","n":6,"title":"Four roles, and the assurer is never the analyst","kind":"content","session":1,"hash":"71f131f1","md":"#### [day1#four-roles] Four roles, and the assurer is never the analyst\n\n*Who does what*\n\n- **Commissioner.** Asks for the analysis and owns the decision it serves\n- **Analyst.** Does the work and checks it first\n- **Assurer.** Checks it independently, to the level required\n- **Approver.** Signs off that it is fit for its use\n\n> **From the AQuA Book.** The UK government's guide to quality analysis (2025 edition) names these four roles and requires the assurer to be independent of the analyst; the degree of separation grows with the importance of the output.","notes":"The AQuA Book is a published guide, not a Saudi rule: we borrow its structure because it is the most complete public framework for analytical assurance. In a unit of twelve, one person often holds two roles; the rule is that nobody assures or approves their own analysis.\n\nSources: HM Government Analysis Function, The AQuA Book (2025), glossary and section 3.","minutes":null,"lo":["LO1"]},{"id":"risk-two-axes","n":7,"title":"Assurance grows with the effect of an error and the complexity of the work","kind":"content","session":1,"hash":"e7816df3","md":"#### [day1#risk-two-axes] Assurance grows with the effect of an error and the complexity of the work\n\n*Proportionate*\n\n| effect \\ complexity | low | medium |\n| --- | --- | --- |\n| high | high | 3 |\n| 3 | 4 | medium |\n| 2 | 2 | 3 |\n| low | 1 | 1 |\n| 2 |  |  |\n\nThe reference matrix of Lab 1.1. Business risk is the effect of an error and its likelihood; complexity raises the likelihood.","notes":"Read one row: a high-effect request (a board, tariff, capital or safety decision) never gets less than level 3. Complexity moves a request up only at the edges. Participants will argue for other cells: good, as long as a peer can apply them.\n\nSources: The AQuA Book (2025), section 3, proportionate assurance and the risk matrix.","minutes":null,"lo":["LO1"]},{"id":"four-levels","n":8,"title":"Each level names who checks, who re-runs and who signs","kind":"content","session":1,"hash":"ee0f5077","md":"#### [day1#four-levels] Each level names who checks, who re-runs and who signs\n\n*The levels*\n\n| Level | Assurer | Re-run | Approver |\n| --- | --- | --- | --- |\n| **1** Self-check | The analyst, with the checklist | By the analyst | The requester's manager |\n| **2** Peer review | Another analyst of the unit | By the reviewer | A senior analyst |\n| **3** Independent review | A senior analyst who took no part | By the reviewer, from the repository | The head of the unit |\n| **4** Second opinion | A senior analyst and a second reviewer | By both | Head of unit and requesting director |","notes":"Levels are defined by people and evidence, not by adjectives like \"thorough\". Ask: which level costs the unit most hours? Level 4 is rare by design: in next quarter's pipeline, 4 of 40 analyses (Lab 2.4).","minutes":null,"lo":["LO1"]},{"id":"escalators","n":9,"title":"Two uses add a level, whatever the matrix says","kind":"content","session":1,"hash":"cf2050b0","md":"#### [day1#escalators] Two uses add a level, whatever the matrix says\n\n*Escalators*\n\n- **Public release.** The figure leaves the authority: a bulletin, a ministry indicator, a regulator's return. A published error cannot be quietly corrected.\n- **Safety use.** The result sets safety staffing (pilots on duty), a navigation limit or a safety rule. The effect of an error falls on people, not on a budget.\n\n> **Personal data** does not raise the level. It adds a check by the data protection officer before the output leaves the unit.","notes":"Why not raise the level for personal data? The level is about whether the answer is right; personal data is about whether it may leave at all. Mixing the two makes every HR count a level 3. Keep them separate: Lab 1.2 puts the privacy check in every level.\n\nSafety use means the result sets who or what keeps people safe: pilots on duty, a navigation limit, a safety rule. A berth count used to set the coming month's berth windows (N1) is not a safety use.","minutes":null,"lo":["LO1"]},{"id":"definitions-matter","n":10,"title":"A peer applies your words, not your intentions","kind":"content","session":1,"hash":"c7435253","md":"#### [day1#definitions-matter] A peer applies your words, not your intentions\n\n*The test of a standard*\n\n1. **1 · You grade** effect, complexity, public, safety for six new requests\n2. **2 · A peer grades** the same six, alone, with your definitions\n3. **3 · Compare levels** every difference points at a definition\n\n> **What goes wrong.** \"Medium effect: a moderate impact.\" Two readers, two levels. Write what an error would change: \"an operational decision for a month or more\".","notes":"This is the evidence of outcome 1: a peer, working independently, assigns the same levels to six new requests. The usual culprit is \"public\": is a ministry indicator public? Is the annual statistics book? Decide and write it.","minutes":null,"lo":["LO1"]},{"id":"six-requests","n":11,"title":"Six requests the unit received this month","kind":"content","session":1,"hash":"7a896abd","md":"#### [day1#six-requests] Six requests the unit received this month\n\n*The six new requests*\n\n| Id | Request | Use |\n| --- | --- | --- |\n| N1 | Weekly berth occupancy for the terminal planning meeting | Planning decision |\n| N2 | Revenue estimate of a proposed tariff change | Board paper |\n| N3 | Arrival-delay model to allocate marine pilots at night | Safety staffing |\n| N4 | Average cargo dwell for the annual public statistics | Public statistic |\n| N5 | Staff survey summary for human resources | Internal note, personal data |\n| N6 | Evaluation of the berth-allocation pilot: continue or stop | Board decision |","notes":"Reference levels, with the reference standard: N1 2, N2 3, N3 4, N4 3, N5 1 with the data protection officer's check, N6 3. Do not give them before the lab. N6 returns on Day 3: it is the analysis the sponsors argue about.","minutes":null,"lo":["LO1"]},{"id":"check-public-statistic","n":12,"title":"A simple count for a public statistic: which level?","kind":"quiz","session":1,"hash":"825f97ce","md":"#### [day1#check-public-statistic] A simple count for a public statistic: which level?\n\n*Checkpoint*\n\n**Question:** N4: mean import dwell by quarter, one source, a method the unit runs every month. It goes into the authority's published annual statistics. With the matrix and escalators on the earlier slides, what level?\n\n- A. Level 1: the method is simple\n- B. Level 2: medium effect, low complexity\n- C. Level 3: level 2 from the matrix, plus one for public release\n- D. Level 4: anything public gets the highest level","notes":"Answer: level 3. If the room splits between 2 and 3, the disagreement is about whether the annual statistics are \"public\": exactly the definition Lab 1.1 asks you to tighten.","minutes":null,"lo":["LO1"]},{"id":"lab-1-1","n":13,"title":"Six requests, four levels","kind":"lab","session":1,"hash":"7c77dbca","md":"#### [day1#lab-1-1] Six requests, four levels\n\nLab 1.1 · 25 min\n\nRead the unit's log of 30 requests, write the assurance matrix with its escalators, grade six new requests by risk and complexity, and compare your levels with a second reviewer's.\n\n[D1_1_assurance_levels.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D1_1_assurance_levels.ipynb)\n\n- [ ] Read the log: where errors after release came from (5 min)\n- [ ] Write the matrix and its escalators (7 min)\n- [ ] Grade the six new requests (7 min)\n- [ ] Compare with the second reviewer and tighten one definition (6 min)\n- [ ] ✱ Stretch: Add the sign-off rules: who may approve at each level","notes":"Walk the room at minute 10: participants who wrote the matrix but no definitions will disagree with Faleh in task 4. The solution reaches 6 of 6; the check passes at 5. Stretch: sign-off rules. Common failure: grading N5 at level 2 because of personal data; point back to the escalators slide.","minutes":null,"lo":[]},{"id":"s2","n":14,"title":"A team review checklist","kind":"section","session":2,"hash":"a7a36470","md":"#### [day1#s2] A team review checklist\n\n*Session 2*\n\n- Adapt a published checklist to the unit's work instead of adopting it whole\n- Write each item as a question answered with evidence\n- Tie each item to the assurance levels, with a privacy and classification check in every level","notes":"","minutes":null,"lo":["LO1","LO2"]},{"id":"personal-to-team","n":15,"title":"Your personal checklist becomes the unit's, tied to the levels","kind":"content","session":2,"hash":"b41fef46","md":"#### [day1#personal-to-team] Your personal checklist becomes the unit's, tied to the levels\n\n*From DS-310*\n\n- **In DS-310.** Five areas, question fit to communication, scored 0 to 2 by one reviewer on one analysis.\n- **Here.** The same five areas as yes-or-no items with named evidence, each required from a level, used by twelve people the same way.\n\n> **Recap only.** How to score one analysis is DS-310's; this session decides what the whole unit checks, and when.","notes":"One slide of recap. If someone has not taken DS-310, the five areas are: does it answer the question, are the data handled right, does the method fit, do the claims match the evidence, will the reader act correctly.","minutes":null,"lo":["LO1","LO2"]},{"id":"adapt-not-adopt","n":16,"title":"REFORMS: 32 items in 8 modules, written for others' work","kind":"content","session":2,"hash":"677d6693","md":"#### [day1#adapt-not-adopt] REFORMS: 32 items in 8 modules, written for others' work\n\n*Start from a published checklist*\n\n- Reporting standards for machine-learning-based science, by a consensus of 19 researchers\n- Modules from study goals and reproducibility to leakage and generalisability\n- Its authors say not every item fits every study: decide which are relevant\n\n- **Adapt, do not adopt.** Most of the unit's work is counts and comparisons. A checklist of 32 machine-learning items gets skipped on every dashboard request.","notes":"Show the REFORMS page and the checklist template briefly. Point out the template's own advice: authors and referees decide which items are relevant. That is permission to adapt. The lab gives our short paraphrase of each item, with its REFORMS id.\n\nSources: Kapoor et al. (2024), Science Advances; reforms.cs.princeton.edu, checklist template.","minutes":null,"lo":["LO1"]},{"id":"modules-to-areas","n":17,"title":"No REFORMS module covers communication: the unit writes those items","kind":"content","session":2,"hash":"f7e77dbd","md":"#### [day1#modules-to-areas] No REFORMS module covers communication: the unit writes those items\n\n*Mapping*\n\n| Item | Value |\n| --- | --- |\n| Data | 15 items |\n| Method | 9 |\n| Inference | 5 |\n| Question fit | 3 |\n| Communication | 0 |\n\nThe 32 REFORMS items by the review area of their module (Lab 1.2, task 1).","notes":"A reporting checklist assumes the paper is read by experts. The unit's readers are directors and a board: \"does every number in the text match its output?\" is the most common failure in the unit's log and no REFORMS item asks it.","minutes":null,"lo":["LO1"]},{"id":"item-shape","n":18,"title":"An item is a yes-or-no question with the evidence that answers it","kind":"content","session":2,"hash":"38f6b9a5","md":"#### [day1#item-shape] An item is a yes-or-no question with the evidence that answers it\n\n*One item*\n\n| Weak | Usable |\n| --- | --- |\n| Is the work reproducible? | Does it re-run from the repository, with the lock file and README alone, to the reported numbers? **Evidence:** the re-run log |\n| Are the data good? | Are excluded and missing records counted, with the reason for each exclusion? **Evidence:** a count per step |\n| Is the comparison valid? | Is the comparison fair: a baseline, a control group, the same period? **Evidence:** the comparison cell |","notes":"The evidence column is what makes two reviewers agree: it tells them where to look. Item R1 merges REFORMS 2b to 2e into one check a reviewer actually does.","minutes":null,"lo":["LO1","LO2"]},{"id":"levels-per-item","n":19,"title":"Six items at level 1, eleven from level 2","kind":"content","session":2,"hash":"d6a6865a","md":"#### [day1#levels-per-item] Six items at level 1, eleven from level 2\n\n*Proportionate again*\n\n- **Level 1**: question, sources, exclusions, fair comparison, numbers match, privacy\n- **Level 2** adds: decision rule first, duplicates, re-run, uncertainty, where it does not hold\n- **Level 3** adds the model item, when there is a model\n\n**12** items in the Lab 1.2 checklist, drawing on 18 of the 32 REFORMS items","notes":"From the Lab 1.2 solution run. The lab's check stops at 18 items: beyond that, reviewers skip. Higher levels mostly change who checks and how deeply, not the number of items.","minutes":null,"lo":["LO1"]},{"id":"privacy-item","n":20,"title":"Nothing leaves the unit before the privacy and classification check","kind":"content","session":2,"hash":"230de39f","md":"#### [day1#privacy-item] Nothing leaves the unit before the privacy and classification check\n\n*Every level*\n\n- **The item.** Before anything leaves the unit: is it free of personal data, and is its classification marked and respected?\n\n- Required from **level 1**: a dashboard leaks as easily as a board paper\n- Classification under the NDMO Data Classification Policy\n- Personal data under the Personal Data Protection Law","notes":"The catalog requires this item in every checklist. On Day 2 it causes the biggest disagreement between two reviewers: one rates a table of vessel masters' names \"minor\" because it does not change the decision. The standard says it blocks release.","minutes":null,"lo":["LO1","LO2"]},{"id":"check-every-level","n":21,"title":"Which item belongs in every level?","kind":"quiz","session":2,"hash":"95ff6000","md":"#### [day1#check-every-level] Which item belongs in every level?\n\n*Checkpoint*\n\n**Question:** Your checklist must stay short at level 1, the self-check that most dashboard requests get. Which of these items is required from level 1?\n\n- A. The output is free of personal data and its classification is marked\n- B. The model is tested on data it never saw\n- C. A reviewer re-runs it from the repository\n- D. Every number has an interval","notes":"Answer: the privacy item. Some will argue for the re-run at level 1: the analyst's own re-run is part of the self-check, but the independent re-run is level 2.","minutes":null,"lo":["LO1"]},{"id":"lab-1-2","n":22,"title":"A checklist adapted from REFORMS","kind":"lab","session":2,"hash":"020b81eb","md":"#### [day1#lab-1-2] A checklist adapted from REFORMS\n\nLab 1.2 · 25 min\n\nDraft a checklist from question to conclusion by adapting a published reproducibility checklist (REFORMS, 32 items): keep, rewrite or drop each item, add the privacy and classification check, and set the level at which each item applies.\n\n[D1_2_team_checklist.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D1_2_team_checklist.ipynb)\n\n- [ ] Map the 32 items to the five review areas (6 min)\n- [ ] Keep, rewrite or drop each item (8 min)\n- [ ] Add the privacy and classification item (4 min)\n- [ ] Set the level of each item and test the length (7 min)\n- [ ] ✱ Stretch: Add one item for work an assistant drafted","notes":"Task 2 is the long one: insist on reasons for what is dropped. The problems check fails a checklist without a re-run item, without a privacy item at level 1, or with fewer than five items traced to REFORMS. Stretch: the assisted-work item, which Lab 1.4 fills with rules.","minutes":null,"lo":[]},{"id":"s3","n":23,"title":"Reproducibility as a team rule","kind":"section","session":3,"hash":"6422839f","md":"#### [day1#s3] Reproducibility as a team rule\n\n*Session 3*\n\n- Re-run an analysis from its repository before reading its conclusions\n- Classify reproduction failures by kind\n- Write repository rules that make a re-run routine","notes":"","minutes":null,"lo":["LO1","LO2"]},{"id":"rerun-rule","n":24,"title":"From level 2, the reviewer re-runs the analysis before reading it","kind":"content","session":3,"hash":"b4be1287","md":"#### [day1#rerun-rule] From level 2, the reviewer re-runs the analysis before reading it\n\n*A team rule*\n\n1. **1 · Clone** the repository, nothing else\n2. **2 · Follow the README** exactly as written\n3. **3 · Log** each failure, its kind, the fix\n4. **4 · Compare** the figure with the report\n\n> **Recap from DS-310.** Re-run first, so the prose does not set your expectations. Here it becomes a rule with a log as its evidence.","notes":"The new idea is the log: one re-run catches one analysis; a year of logs shows which failures recur in the unit, and the repository rules follow from them.","minutes":null,"lo":["LO1","LO2"]},{"id":"saleh-repo","n":25,"title":"Saleh's repository, as he sent it","kind":"content","session":3,"hash":"24e08006","md":"#### [day1#saleh-repo] Saleh's repository, as he sent it\n\n*Lab 1.3*\n\n```text\n# file: cargo_dwell/\nREADME.md\ndwell.py\nrequirements.txt     pandas\nreport.md            4.60 days\ndata/\n  containers_q3.csv\n```\n\n- Saleh is a senior analyst; the figure goes in the quarterly note\n- The README says: put `containers.csv` in `data/`, install, run\n- Nothing is wrong that Saleh would notice: it runs on his laptop","notes":"Ask the room to predict how many steps will fail before the script runs. Most guess one or two. It is five, and then the figure is still wrong.","minutes":null,"lo":["LO2"]},{"id":"five-failures","n":26,"title":"Five failures before the script ran to the end","kind":"content","session":3,"hash":"bf113efe","md":"#### [day1#five-failures] Five failures before the script ran to the end\n\n*The re-run log*\n\n| # | What failed | Kind |\n| --- | --- | --- |\n| 1 | A path to a folder on Saleh's own computer | path |\n| 2 | README names `containers.csv`; the file is `containers_q3.csv` | documentation |\n| 3 | `berth_lookup.csv` is read but not in the repository | missing input |\n| 4 | `DataFrame.append` is gone in pandas 2; no version pinned | library version |\n| 5 | Two runs, two figures: an unseeded sample of 2,000 | randomness |","notes":"From the Lab 1.3 solution run. Each failure announced itself with an error, except the fifth, which only shows when you run twice. Each has a cheap rule that prevents it (the stretch of the lab).","minutes":null,"lo":["LO1","LO2"]},{"id":"the-silent-gap","n":27,"title":"It ran, and gave 5.18 days against the reported 4.60","kind":"content","session":3,"hash":"c1e4c647","md":"#### [day1#the-silent-gap] It ran, and gave 5.18 days against the reported 4.60\n\n*The sixth failure*\n\n```python\n# file: dwell.py\nimports = boxes[boxes.move_type != \"export\"]\n```\n\n- The filter keeps **transshipment** with imports\n- The report removed transshipment by hand, in a spreadsheet\n- No file records that step: only the gap shows it\n- Filter on imports in code: 4.60, reproduced\n\n> **What goes wrong.** The manual step is the dangerous one: no error, a plausible number, and a reviewer who reads before re-running never sees it.","notes":"The gap is 0.58 days. Ask: which figure was right? The report's, by luck: the hand edit was correct, but nobody could have known. A manual step makes a right answer unverifiable.","minutes":null,"lo":["LO2"]},{"id":"failure-kinds","n":28,"title":"One repository rule for each kind of failure","kind":"content","session":3,"hash":"aa5ade72","md":"#### [day1#failure-kinds] One repository rule for each kind of failure\n\n*Rules from the log*\n\n- **Paths and inputs.** Relative paths only; every input in the repository or named with its owner\n- **Environment.** A lock file (`uv.lock`) and the one command that installs from it\n- **Determinism.** A fixed seed in code; no step outside the code","notes":"These become the unit's repository rules, checked by item R1 of the checklist. They are cheap for the analyst and save the reviewer an hour per analysis.","minutes":null,"lo":["LO1"]},{"id":"rerun-cost","n":29,"title":"A re-run is the cheapest check that finds the most expensive errors","kind":"content","session":3,"hash":"c6e3bd1d","md":"#### [day1#rerun-cost] A re-run is the cheapest check that finds the most expensive errors\n\n*The cost*\n\n- With the rules followed, a re-run is one command and a comparison\n- Without them, it is the 25 minutes of Lab 1.3\n- The rules move the cost from the reviewer to the analyst, where it is smallest\n\n- **Your call as head of unit.** A repository that does not re-run goes back to its analyst before the review starts. The review clock starts when it runs.","notes":"This is a management decision, not a technical one. Expect pushback (\"we do not have time\"): the answer is that review time is spent anyway, just later and on the wrong things.","minutes":null,"lo":["LO1"]},{"id":"check-dangerous-failure","n":30,"title":"Which failure is most dangerous to the unit?","kind":"quiz","session":3,"hash":"7439098e","md":"#### [day1#check-dangerous-failure] Which failure is most dangerous to the unit?\n\n*Checkpoint*\n\n**Question:** A re-run of a colleague's repository meets four problems. Which one most threatens the quality of what the unit releases?\n\n- A. The script crashes on a missing file\n- B. An old library call fails with an error\n- C. The README names the wrong file\n- D. A step done by hand that no file records","notes":"Answer: the manual step. Link back to the 5.18 against 4.60 slide.","minutes":null,"lo":["LO2"]},{"id":"lab-1-3","n":31,"title":"Re-run Saleh's repository","kind":"lab","session":3,"hash":"65f970aa","md":"#### [day1#lab-1-3] Re-run Saleh's repository\n\nLab 1.3 · 25 min\n\nRe-run a colleague's cargo-dwell analysis from its repository, record every step that failed and its kind, and reproduce the reported figure.\n\n[D1_3_rerun_repository.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D1_3_rerun_repository.ipynb)\n\n- [ ] Follow the README exactly (5 min)\n- [ ] Log each failure with its kind (8 min)\n- [ ] Fix a copy until it runs (7 min)\n- [ ] Reproduce the reported figure or explain the gap (5 min)\n- [ ] ✱ Stretch: Write the repository rule that would have prevented each failure","notes":"The script really runs in a copy under `labs/out/rerun/`. If someone breaks their copy, `U.copy_repo(\"cargo_dwell\")` gives a fresh one. Insist on fixing one failure at a time and logging it before the next. In Colab the setup cell clones the course first; pandas is already installed there. Stretch: one rule per kind.","minutes":null,"lo":[]},{"id":"s4","n":32,"title":"Rules for AI-assisted analysis","kind":"section","session":4,"hash":"1162b1f6","md":"#### [day1#s4] Rules for AI-assisted analysis\n\n*Session 4*\n\n- Turn the national generative AI guidelines into rules for analytical work\n- Specify the process evidence each analyst keeps\n- Test a rule set on real cases before adopting it","notes":"","minutes":null,"lo":["LO3"]},{"id":"assisted-share","n":33,"title":"When an assistant drafts the analysis, the analyst's duty does not move","kind":"content","session":4,"hash":"301b2805","md":"#### [day1#assisted-share] When an assistant drafts the analysis, the analyst's duty does not move\n\n*Why rules now*\n\n- Musawwada drafts code, numbers and summaries in seconds\n- A fluent draft looks reviewed; it is not\n- The national guidelines put the duty to verify on the **user**\n\n- **What a unit needs.** Rules an analyst can follow before the deadline and a reviewer can check from the files.","notes":"The SDAIA Generative AI Guidelines for Government state that results should be human-reviewed and that users verify outputs, especially for official reports. The rules turn \"verify\" into who does what and what record shows it.\n\nSources: SDAIA, Generative AI Guidelines for Government, scope and Appendix 2.","minutes":null,"lo":["LO3"]},{"id":"guideline-duties","n":34,"title":"Five duties the unit's rules must carry","kind":"content","session":4,"hash":"21ced0a1","md":"#### [day1#guideline-duties] Five duties the unit's rules must carry\n\n*The national guidelines*\n\n| Duty, in our words | Where |\n| --- | --- |\n| Check generated content for accuracy before it is used | 3.2 Reliability and Safety |\n| Tell recipients when content was created with generative AI | 3.3 Transparency and Interpretability |\n| Enter no data classified restricted or higher; public data only | 3.5 Privacy and Security |\n| Keep a clear record of an analysis done with generative AI | Practical guidelines: analysing data |\n| Verify outputs and generated code before use | Appendix 2: checklist |","notes":"Paraphrased from the guideline; the lab's digest gives seven duties with their sections. Ask participants to read the official text for the wording. Do not quote clause numbers beyond these section titles.\n\nSources: SDAIA, Generative AI Guidelines for Government, sections 3.2, 3.3, 3.5, practical guidelines and Appendix 2.","minutes":null,"lo":["LO3"]},{"id":"four-rule-kinds","n":35,"title":"Verify, disclose, keep, and what data may go in","kind":"content","session":4,"hash":"2b1b4aec","md":"#### [day1#four-rule-kinds] Verify, disclose, keep, and what data may go in\n\n*The rule set*\n\n- **Verify.** Re-run every assisted number in your own code before it enters a draft\n- **Disclose.** A line on the deliverable: which tool, which parts, who verified\n- **Keep.** Prompts, outputs and a verification record in the repository\n- **Data.** Public or anonymised data only, approved tools only","notes":"Each card is one or two rules in the reference set (V1 to V3, D1 and D2, K1 and K2, C1 and C2). The \"keep\" rules are the process evidence the catalog asks for: an auditor on Day 2 checks them.","minutes":null,"lo":["LO3"]},{"id":"checkable-rule","n":36,"title":"A rule a reviewer cannot check from the files is a wish","kind":"content","session":4,"hash":"a0c83268","md":"#### [day1#checkable-rule] A rule a reviewer cannot check from the files is a wish\n\n*Checkable*\n\n| A wish | A rule |\n| --- | --- |\n| Use the assistant responsibly | Re-run every number it produced, in your own code, before it enters a draft |\n| Be transparent about AI use | Every deliverable with assisted content carries a disclosure line: tool, parts, verifier |\n| Protect sensitive data where possible | Only public or anonymised data goes to a hosted assistant |","notes":"The lab's problems check flags vague words (\"be careful\", \"where possible\") and rules with no record behind them. One page: at most 350 words. The reference set is 176.","minutes":null,"lo":["LO3"]},{"id":"eight-scenarios","n":37,"title":"Eight scenarios from the unit decide whether the rules work","kind":"content","session":4,"hash":"40b3938b","md":"#### [day1#eight-scenarios] Eight scenarios from the unit decide whether the rules work\n\n*Test before adopting*\n\n- **Allowed.** Explaining an error message; the approved tool on public statistics, prompts kept\n- **Needs action.** Code checked by hand but no record kept; an analyst who never works unaided\n- **Breach.** A pilot roster pasted in; no disclosure on a board paper; an unchecked 18%; an unapproved tool","notes":"A scenario your rules cannot decide shows a gap. The usual gap is S7: nothing in a verify-disclose-keep set covers an analyst who has lost the skill to check. That is the stretch: an unaided-practice rule.","minutes":null,"lo":["LO3"]},{"id":"unaided-practice","n":38,"title":"Who cannot do the work unaided cannot tell when the draft is wrong","kind":"content","session":4,"hash":"39479dfd","md":"#### [day1#unaided-practice] Who cannot do the work unaided cannot tell when the draft is wrong\n\n*Keeping the skill*\n\n- Verification needs the skill the assistant replaces\n- One analysis a quarter without an assistant, reviewed like any other\n- The supervised check of this course is AI-off for the same reason\n\n> **Day 2.** The same idea returns in development plans: every plan keeps unaided practice in the work.","notes":"This is a rule about people, not tools. Expect the objection that it wastes time: one analysis a quarter is a small price for reviewers who can still spot an assistant's wrong number.","minutes":null,"lo":["LO3","LO4"]},{"id":"check-restricted-data","n":39,"title":"An approved assistant and a restricted file","kind":"quiz","session":4,"hash":"098c33f0","md":"#### [day1#check-restricted-data] An approved assistant and a restricted file\n\n*Checkpoint*\n\n**Question:** An analyst pastes the night pilot roster, with pilots' names and shifts, into the authority's approved hosted assistant to find fatigue risks. She plans to disclose it and re-run every number. Under the rules, what is it?\n\n- A. Allowed: the tool is approved\n- B. A breach: restricted data may not go to the assistant\n- C. Allowed once the deliverable is disclosed\n- D. Needs action: re-run the numbers first","notes":"Answer: a breach (scenario S2 of the lab). The anonymised alternative is allowed: the data protection officer's rule decides what anonymised means.","minutes":null,"lo":["LO3"]},{"id":"lab-1-4","n":40,"title":"Rules for assisted work","kind":"lab","session":4,"hash":"6a36790d","md":"#### [day1#lab-1-4] Rules for assisted work\n\nLab 1.4 · 25 min\n\nWrite what analysts must verify, disclose and keep as evidence when an assistant drafts work, on one page, and test the rules on eight scenarios from the unit.\n\n[D1_4_ai_rules.ipynb](https://sdaiaacademy.github.io/ds-407/labs/D1_4_ai_rules.ipynb)\n\n- [ ] Read the guideline duties (5 min)\n- [ ] Write the verify, disclose and keep rules (9 min)\n- [ ] Decide eight scenarios with your rules (7 min)\n- [ ] Cut the rules to one page (4 min)\n- [ ] ✱ Stretch: Add the unaided-practice rule: work each analyst still does without the assistant","notes":"AI-tutor: participants may ask the tutor to question their rules, not to write them. Common failure: rules that restate the guideline (\"verify outputs\") with no record behind them; the problems check flags missing re-run and prompt rules. The reference set decides all eight scenarios once the unaided rule is added.","minutes":null,"lo":[]},{"id":"wrap-up","n":41,"title":"Three things to keep","kind":"content","session":4,"hash":"fcb7bacc","md":"#### [day1#wrap-up] Three things to keep\n\n*Day 1 · wrap-up*\n\n- **Proportionate.** The level comes from the effect of an error and the complexity, with written definitions a peer applies the same way.\n- **Re-run first.** From level 2 the reviewer re-runs from the repository and logs every failure; the log writes the repository rules.\n- **Checkable rules.** Assisted work is verified, disclosed and kept, and only public data goes to an assistant.","notes":"Ask each participant to name the definition they would tighten first in their own unit.","minutes":null,"lo":[]},{"id":"next","n":42,"title":"Day 2: Review and develop","kind":"content","session":4,"hash":"a9086576","md":"#### [day1#next] Day 2: Review and develop\n\n*Next*\n\nTomorrow's first review is AI-off: you form your own judgement before you compare it with a colleague's. Bring your Day 1 standard and checklist; the labs also supply reference versions.","notes":"Nothing to install. Unfinished Day 1 labs can be finished at home; Day 2 starts from supplied files.","minutes":null,"lo":[]}],"activities":[{"id":"check-public-statistic-q1","slide":"check-public-statistic","type":"single","prompt":"N4: mean import dwell by quarter, one source, a method the unit runs every month. It goes into the authority's published annual statistics. With the matrix and escalators on the earlier slides, what level?","options":[{"key":"A","text":"Level 1: the method is simple"},{"key":"B","text":"Level 2: medium effect, low complexity"},{"key":"C","text":"Level 3: level 2 from the matrix, plus one for public release"},{"key":"D","text":"Level 4: anything public gets the highest level"}],"correct":[2],"explanation":"The matrix gives level 2 for a medium effect and low complexity; public release adds one level, so N4 gets independent review before publication.","misconceptions":["Reads the complexity only: a simple method still has a medium effect when an operational figure is published","Applies the matrix and forgets the escalator for a figure that leaves the authority","","Treats every public figure as a board-level risk: the escalator adds one level, it does not jump to the top"],"lo":["LO1"]},{"id":"check-every-level-q1","slide":"check-every-level","type":"single","prompt":"Your checklist must stay short at level 1, the self-check that most dashboard requests get. Which of these items is required from level 1?","options":[{"key":"A","text":"The output is free of personal data and its classification is marked"},{"key":"B","text":"The model is tested on data it never saw"},{"key":"C","text":"A reviewer re-runs it from the repository"},{"key":"D","text":"Every number has an interval"}],"correct":[0],"explanation":"The harm of personal data leaving the unit does not depend on how important the analysis is, so the check cannot wait for a higher level.","misconceptions":["","Assumes every analysis is a model: the model item matters only where there is a model, at level 3","Confuses importance with risk of leakage: an independent re-run is the cost that level 2 and above pay","Treats every count as an estimate: an interval matters where the decision depends on a number, from level 2"],"lo":["LO1"]},{"id":"check-dangerous-failure-q1","slide":"check-dangerous-failure","type":"single","prompt":"A re-run of a colleague's repository meets four problems. Which one most threatens the quality of what the unit releases?","options":[{"key":"A","text":"The script crashes on a missing file"},{"key":"B","text":"An old library call fails with an error"},{"key":"C","text":"The README names the wrong file"},{"key":"D","text":"A step done by hand that no file records"}],"correct":[3],"explanation":"Every other failure stops the script and shows itself. A manual step lets the code run to a plausible number that nobody can reproduce or check.","misconceptions":["Ranks by how alarming the error looks: a crash stops the reviewer and announces itself","An old library call fails loudly too; pinning versions is a cheap fix, not a hidden risk","Slows the reviewer but changes no figure: a README that names the wrong file is fixed in a minute",""],"lo":["LO2"]},{"id":"check-restricted-data-q1","slide":"check-restricted-data","type":"single","prompt":"An analyst pastes the night pilot roster, with pilots' names and shifts, into the authority's approved hosted assistant to find fatigue risks. She plans to disclose it and re-run every number. Under the rules, what is it?","options":[{"key":"A","text":"Allowed: the tool is approved"},{"key":"B","text":"A breach: restricted data may not go to the assistant"},{"key":"C","text":"Allowed once the deliverable is disclosed"},{"key":"D","text":"Needs action: re-run the numbers first"}],"correct":[1],"explanation":"Names and shifts of staff are not public data; the guidelines forbid entering data classified restricted or higher, so no later step makes it allowed.","misconceptions":["Treats approval of the tool as approval of any data: the guideline limits generative AI tools to public data, whichever tool","","Believes disclosure repairs a data breach: telling readers does not undo where the data went","Confuses verification with permission: re-running the numbers checks accuracy, not whether the data could be sent"],"lo":["LO3"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day1.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

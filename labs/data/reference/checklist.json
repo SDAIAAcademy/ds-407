@@ -1,0 +1,134 @@
+[
+  {
+    "id": "Q1",
+    "area": "question fit",
+    "from": [
+      "1a"
+    ],
+    "item": "Does the analysis answer the decision question in the agreement, for the population it names?",
+    "evidence": "the agreement and the headline cell",
+    "min_level": 1
+  },
+  {
+    "id": "Q2",
+    "area": "question fit",
+    "from": [],
+    "item": "Is the decision rule written down before the results, and is the result read against it?",
+    "evidence": "the dated agreement",
+    "min_level": 2
+  },
+  {
+    "id": "D1",
+    "area": "data",
+    "from": [
+      "2a",
+      "3a"
+    ],
+    "item": "Are the data sources and extract dates recorded, so the same files can be found again?",
+    "evidence": "the data manifest",
+    "min_level": 1
+  },
+  {
+    "id": "D2",
+    "area": "data",
+    "from": [
+      "4a",
+      "3f"
+    ],
+    "item": "Are excluded and missing records counted, with the reason for each exclusion?",
+    "evidence": "a count per exclusion step",
+    "min_level": 1
+  },
+  {
+    "id": "D3",
+    "area": "data",
+    "from": [
+      "6b"
+    ],
+    "item": "Have duplicates been looked for, and removed or explained?",
+    "evidence": "the duplicate count",
+    "min_level": 2
+  },
+  {
+    "id": "R1",
+    "area": "data",
+    "from": [
+      "2b",
+      "2c",
+      "2d",
+      "2e"
+    ],
+    "item": "Does the analysis re-run from the repository, with the lock file and the README alone, to the reported numbers?",
+    "evidence": "the re-run log",
+    "min_level": 2
+  },
+  {
+    "id": "M1",
+    "area": "method",
+    "from": [
+      "5f"
+    ],
+    "item": "Is the comparison fair: a baseline, a control group, the same period?",
+    "evidence": "the comparison cell",
+    "min_level": 1
+  },
+  {
+    "id": "M2",
+    "area": "method",
+    "from": [
+      "5c",
+      "6a",
+      "6c"
+    ],
+    "item": "For a model: is it tested on data it never saw, with only legitimate features?",
+    "evidence": "the split and the feature list",
+    "min_level": 3
+  },
+  {
+    "id": "I1",
+    "area": "inference",
+    "from": [
+      "7b"
+    ],
+    "item": "Is uncertainty stated for every number the decision depends on?",
+    "evidence": "an interval or a range",
+    "min_level": 2
+  },
+  {
+    "id": "I2",
+    "area": "inference",
+    "from": [
+      "3g",
+      "8a",
+      "8b"
+    ],
+    "item": "Are the groups and conditions where the result does not hold named?",
+    "evidence": "the subgroup table",
+    "min_level": 2
+  },
+  {
+    "id": "C1",
+    "area": "communication",
+    "from": [],
+    "item": "Does every number in the text match the output it comes from?",
+    "evidence": "each number traced to a cell",
+    "min_level": 1
+  },
+  {
+    "id": "C2",
+    "area": "communication",
+    "from": [],
+    "item": "Is any part drafted by an assistant disclosed, and was each of its numbers re-run?",
+    "evidence": "the disclosure line and the verification record",
+    "min_level": 1
+  },
+  {
+    "id": "P1",
+    "area": "communication",
+    "from": [],
+    "item": "Before anything leaves the unit: is it free of personal data, and is its classification marked and respected?",
+    "evidence": "the classification mark and a scan of the output",
+    "min_level": 1,
+    "privacy": true
+  }
+]
